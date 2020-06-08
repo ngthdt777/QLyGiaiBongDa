@@ -1,0 +1,48 @@
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
+E:\Docu\This sem\Tài liệu nmcnpm\Nh-p-m-n-CNPM_Qu-n-L-gi-i-b-ng-\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
+C:\Users\COMPUTER\Desktop\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeam.resources
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayer.resources
+E:\Docu\This sem\Tài liệu nmcnpm\QuanLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources
