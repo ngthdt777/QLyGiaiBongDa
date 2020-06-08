@@ -87,11 +87,35 @@
     <Compile Include="GUI\usrHomepage.Designer.cs">
       <DependentUpon>usrHomepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\usrNewTour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrNewTour.Designer.cs">
+      <DependentUpon>usrNewTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\usrPlayer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\usrPlayer.Designer.cs">
       <DependentUpon>usrPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\usrPlayerGoal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrPlayerGoal.Designer.cs">
+      <DependentUpon>usrPlayerGoal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\usrResultMatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrResultMatch.Designer.cs">
+      <DependentUpon>usrResultMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\usrStanding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrStanding.Designer.cs">
+      <DependentUpon>usrStanding.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\usrTeam.cs">
       <SubType>UserControl</SubType>
@@ -110,8 +134,20 @@
     <EmbeddedResource Include="GUI\usrHomepage.resx">
       <DependentUpon>usrHomepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrNewTour.resx">
+      <DependentUpon>usrNewTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrPlayer.resx">
       <DependentUpon>usrPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrPlayerGoal.resx">
+      <DependentUpon>usrPlayerGoal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrResultMatch.resx">
+      <DependentUpon>usrResultMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrStanding.resx">
+      <DependentUpon>usrStanding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrTeam.resx">
       <DependentUpon>usrTeam.cs</DependentUpon>

@@ -31,5 +31,10 @@ namespace QlyGiaiBongDa.GUI
         {
 
         }
+
+        private void usrTeam_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
