@@ -223,7 +223,7 @@
             // 
             this.gunaLabel3.BackColor = System.Drawing.Color.White;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(825, 116);
+            this.gunaLabel3.Location = new System.Drawing.Point(818, 116);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(130, 50);
             this.gunaLabel3.TabIndex = 8;

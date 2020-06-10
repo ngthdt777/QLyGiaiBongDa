@@ -81,6 +81,12 @@
     <Compile Include="GUI\frmQLGBD.Designer.cs">
       <DependentUpon>frmQLGBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\usrCreateMatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrCreateMatch.Designer.cs">
+      <DependentUpon>usrCreateMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\usrHomepage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     <Compile Include="GUI\usrResultMatch.Designer.cs">
       <DependentUpon>usrResultMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\usrRulesChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrRulesChange.Designer.cs">
+      <DependentUpon>usrRulesChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\usrStanding.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,9 @@
     <EmbeddedResource Include="GUI\frmQLGBD.resx">
       <DependentUpon>frmQLGBD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrCreateMatch.resx">
+      <DependentUpon>usrCreateMatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrHomepage.resx">
       <DependentUpon>usrHomepage.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrResultMatch.resx">
       <DependentUpon>usrResultMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrRulesChange.resx">
+      <DependentUpon>usrRulesChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrStanding.resx">
       <DependentUpon>usrStanding.cs</DependentUpon>

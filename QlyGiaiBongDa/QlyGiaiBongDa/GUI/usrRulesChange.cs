@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QlyGiaiBongDa.GUI
 {
-    public partial class usrNewTour : UserControl
+    public partial class usrRulesChange : UserControl
     {
-        public usrNewTour()
+        public usrRulesChange()
         {
             InitializeComponent();
-        }
-
-        private void gb_HSDB_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

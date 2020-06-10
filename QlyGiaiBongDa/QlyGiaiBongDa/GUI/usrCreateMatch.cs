@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QlyGiaiBongDa.GUI
 {
-    public partial class usrNewTour : UserControl
+    public partial class usrCreateMatch : UserControl
     {
-        public usrNewTour()
+        public usrCreateMatch()
         {
             InitializeComponent();
         }
 
-        private void gb_HSDB_Click(object sender, EventArgs e)
+        private void gunaButton1_Click(object sender, EventArgs e)
         {
 
         }

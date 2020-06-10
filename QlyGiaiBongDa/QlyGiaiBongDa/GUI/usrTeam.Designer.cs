@@ -95,7 +95,7 @@
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
             this.gb_HSDB.Location = new System.Drawing.Point(3, 140);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 198);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 181);
             this.gb_HSDB.TabIndex = 1;
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -109,7 +109,7 @@
             this.tb_SanNha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SanNha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SanNha.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_SanNha.Location = new System.Drawing.Point(803, 129);
+            this.tb_SanNha.Location = new System.Drawing.Point(800, 103);
             this.tb_SanNha.Name = "tb_SanNha";
             this.tb_SanNha.PasswordChar = '\0';
             this.tb_SanNha.SelectedText = "";
@@ -125,7 +125,7 @@
             this.tb_TenDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_TenDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_TenDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_TenDoi.Location = new System.Drawing.Point(803, 78);
+            this.tb_TenDoi.Location = new System.Drawing.Point(800, 52);
             this.tb_TenDoi.Name = "tb_TenDoi";
             this.tb_TenDoi.PasswordChar = '\0';
             this.tb_TenDoi.SelectedText = "";
@@ -141,7 +141,7 @@
             this.tb_SCT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SCT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SCT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_SCT.Location = new System.Drawing.Point(397, 129);
+            this.tb_SCT.Location = new System.Drawing.Point(397, 103);
             this.tb_SCT.Name = "tb_SCT";
             this.tb_SCT.PasswordChar = '\0';
             this.tb_SCT.SelectedText = "";
@@ -157,7 +157,7 @@
             this.tb_MaDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_MaDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_MaDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_MaDoi.Location = new System.Drawing.Point(397, 78);
+            this.tb_MaDoi.Location = new System.Drawing.Point(397, 52);
             this.tb_MaDoi.Name = "tb_MaDoi";
             this.tb_MaDoi.PasswordChar = '\0';
             this.tb_MaDoi.SelectedText = "";
@@ -169,7 +169,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.BackColor = System.Drawing.Color.Red;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(250, 129);
+            this.gunaLabel4.Location = new System.Drawing.Point(250, 103);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(134, 32);
             this.gunaLabel4.TabIndex = 3;
@@ -180,7 +180,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.BackColor = System.Drawing.Color.Red;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(680, 129);
+            this.gunaLabel3.Location = new System.Drawing.Point(677, 103);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(106, 32);
             this.gunaLabel3.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.BackColor = System.Drawing.Color.Red;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(680, 78);
+            this.gunaLabel2.Location = new System.Drawing.Point(677, 52);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(99, 32);
             this.gunaLabel2.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Red;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(250, 78);
+            this.gunaLabel1.Location = new System.Drawing.Point(250, 52);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(95, 32);
             this.gunaLabel1.TabIndex = 0;
@@ -248,12 +248,12 @@
             this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_HSDB.EnableHeadersVisualStyles = false;
             this.dgv_HSDB.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_HSDB.Location = new System.Drawing.Point(0, 344);
+            this.dgv_HSDB.Location = new System.Drawing.Point(0, 327);
             this.dgv_HSDB.Name = "dgv_HSDB";
             this.dgv_HSDB.RowHeadersVisible = false;
             this.dgv_HSDB.RowTemplate.Height = 24;
             this.dgv_HSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_HSDB.Size = new System.Drawing.Size(1251, 263);
+            this.dgv_HSDB.Size = new System.Drawing.Size(1251, 280);
             this.dgv_HSDB.TabIndex = 3;
             this.dgv_HSDB.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_HSDB.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

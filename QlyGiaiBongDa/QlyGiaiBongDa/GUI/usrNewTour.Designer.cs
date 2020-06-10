@@ -82,6 +82,7 @@
             this.gb_HSDB.TabIndex = 2;
             this.gb_HSDB.Text = "Chọn loại thông tin khởi tạo lại";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            this.gb_HSDB.Click += new System.EventHandler(this.gb_HSDB_Click);
             // 
             // btn_Done
             // 
@@ -95,7 +96,7 @@
             this.btn_Done.ForeColor = System.Drawing.Color.Black;
             this.btn_Done.Image = ((System.Drawing.Image)(resources.GetObject("btn_Done.Image")));
             this.btn_Done.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Done.Location = new System.Drawing.Point(497, 303);
+            this.btn_Done.Location = new System.Drawing.Point(604, 272);
             this.btn_Done.Name = "btn_Done";
             this.btn_Done.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Done.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -112,11 +113,10 @@
             this.checkb_LTD.CheckedOffColor = System.Drawing.Color.Gray;
             this.checkb_LTD.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.checkb_LTD.FillColor = System.Drawing.Color.White;
-            this.checkb_LTD.Location = new System.Drawing.Point(607, 170);
+            this.checkb_LTD.Location = new System.Drawing.Point(708, 188);
             this.checkb_LTD.Name = "checkb_LTD";
-            this.checkb_LTD.Size = new System.Drawing.Size(341, 32);
+            this.checkb_LTD.Size = new System.Drawing.Size(20, 20);
             this.checkb_LTD.TabIndex = 5;
-            this.checkb_LTD.Text = "Click để tạo Lịch thi đấu-Bàn thắng";
             // 
             // checkb_DSDB
             // 
@@ -124,18 +124,18 @@
             this.checkb_DSDB.CheckedOffColor = System.Drawing.Color.Gray;
             this.checkb_DSDB.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.checkb_DSDB.FillColor = System.Drawing.Color.White;
-            this.checkb_DSDB.Location = new System.Drawing.Point(607, 114);
+            this.checkb_DSDB.Location = new System.Drawing.Point(708, 132);
             this.checkb_DSDB.Name = "checkb_DSDB";
-            this.checkb_DSDB.Size = new System.Drawing.Size(286, 25);
+            this.checkb_DSDB.Size = new System.Drawing.Size(32, 25);
             this.checkb_DSDB.TabIndex = 4;
-            this.checkb_DSDB.Text = "Click để tạo danh sách mới";
+            this.checkb_DSDB.Text = " ";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(250, 170);
+            this.gunaLabel4.Location = new System.Drawing.Point(366, 176);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(273, 32);
             this.gunaLabel4.TabIndex = 3;
@@ -146,7 +146,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(280, 114);
+            this.gunaLabel1.Location = new System.Drawing.Point(396, 120);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(243, 32);
             this.gunaLabel1.TabIndex = 0;
