@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ObjTeamDao.cs" />
+    <Compile Include="BLL\ObjTeamDAL.cs" />
     <Compile Include="DAL\banthang.cs" />
     <Compile Include="DAL\cauthu.cs" />
     <Compile Include="BLL\DataProvider.cs" />
