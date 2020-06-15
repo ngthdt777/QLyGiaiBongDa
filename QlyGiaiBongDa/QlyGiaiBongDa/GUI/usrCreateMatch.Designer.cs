@@ -32,42 +32,41 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.lb_creatematch = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
-            this.btn_CapNhat = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.cb_VongDau = new System.Windows.Forms.ComboBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btn_CapNhat = new Guna.UI.WinForms.GunaButton();
             this.dgv_TLTD = new Guna.UI.WinForms.GunaDataGridView();
             this.btn_PhatSinh = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TLTD)).BeginInit();
             this.SuspendLayout();
             // 
-            // gunaButton1
+            // lb_creatematch
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Teal;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton1.Location = new System.Drawing.Point(3, 3);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
-            this.gunaButton1.TabIndex = 2;
-            this.gunaButton1.Text = "Tạo lịch thi đấu";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.lb_creatematch.AnimationHoverSpeed = 0.07F;
+            this.lb_creatematch.AnimationSpeed = 0.03F;
+            this.lb_creatematch.BaseColor = System.Drawing.Color.Teal;
+            this.lb_creatematch.BorderColor = System.Drawing.Color.Black;
+            this.lb_creatematch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.lb_creatematch.FocusedColor = System.Drawing.Color.Empty;
+            this.lb_creatematch.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_creatematch.ForeColor = System.Drawing.Color.White;
+            this.lb_creatematch.Image = ((System.Drawing.Image)(resources.GetObject("lb_creatematch.Image")));
+            this.lb_creatematch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lb_creatematch.ImageSize = new System.Drawing.Size(40, 40);
+            this.lb_creatematch.Location = new System.Drawing.Point(3, 3);
+            this.lb_creatematch.Name = "lb_creatematch";
+            this.lb_creatematch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.lb_creatematch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.lb_creatematch.OnHoverForeColor = System.Drawing.Color.White;
+            this.lb_creatematch.OnHoverImage = null;
+            this.lb_creatematch.OnPressedColor = System.Drawing.Color.Black;
+            this.lb_creatematch.Size = new System.Drawing.Size(1248, 144);
+            this.lb_creatematch.TabIndex = 2;
+            this.lb_creatematch.Text = "Tạo lịch thi đấu";
+            this.lb_creatematch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gb_HSDB
             // 
@@ -84,6 +83,26 @@
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Chọn vòng thi đấu";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // cb_VongDau
+            // 
+            this.cb_VongDau.FormattingEnabled = true;
+            this.cb_VongDau.Location = new System.Drawing.Point(642, 59);
+            this.cb_VongDau.Name = "cb_VongDau";
+            this.cb_VongDau.Size = new System.Drawing.Size(121, 30);
+            this.cb_VongDau.TabIndex = 21;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(388, 55);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(161, 32);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Vòng thi đấu";
             // 
             // btn_CapNhat
             // 
@@ -107,25 +126,6 @@
             this.btn_CapNhat.Size = new System.Drawing.Size(179, 42);
             this.btn_CapNhat.TabIndex = 20;
             this.btn_CapNhat.Text = "Cập nhật";
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(388, 55);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(161, 32);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Vòng thi đấu";
-            // 
-            // cb_VongDau
-            // 
-            this.cb_VongDau.FormattingEnabled = true;
-            this.cb_VongDau.Location = new System.Drawing.Point(642, 59);
-            this.cb_VongDau.Name = "cb_VongDau";
-            this.cb_VongDau.Size = new System.Drawing.Size(121, 30);
-            this.cb_VongDau.TabIndex = 21;
             // 
             // dgv_TLTD
             // 
@@ -216,7 +216,7 @@
             this.Controls.Add(this.dgv_TLTD);
             this.Controls.Add(this.gb_HSDB);
             this.Controls.Add(this.btn_CapNhat);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.lb_creatematch);
             this.Name = "usrCreateMatch";
             this.Size = new System.Drawing.Size(1254, 697);
             this.gb_HSDB.ResumeLayout(false);
@@ -228,7 +228,7 @@
 
         #endregion
 
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton lb_creatematch;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
         private Guna.UI.WinForms.GunaButton btn_CapNhat;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;

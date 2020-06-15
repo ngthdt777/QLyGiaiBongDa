@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.lb_hsdb = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.tb_SanNha = new Guna.UI.WinForms.GunaTextBox();
             this.tb_TenDoi = new Guna.UI.WinForms.GunaTextBox();
             this.tb_SCT = new Guna.UI.WinForms.GunaTextBox();
             this.tb_MaDoi = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lb_team_slg = new Guna.UI.WinForms.GunaLabel();
+            this.lb_team_san = new Guna.UI.WinForms.GunaLabel();
+            this.lb_team_name = new Guna.UI.WinForms.GunaLabel();
+            this.lb_team_id = new Guna.UI.WinForms.GunaLabel();
             this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             this.gunaImageReplaceColor2 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             this.dgv_HSDB = new Guna.UI.WinForms.GunaDataGridView();
@@ -53,30 +53,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HSDB)).BeginInit();
             this.SuspendLayout();
             // 
-            // gunaButton1
+            // lb_hsdb
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Teal;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton1.Location = new System.Drawing.Point(3, 0);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
-            this.gunaButton1.TabIndex = 0;
-            this.gunaButton1.Text = "Hồ sơ đội bóng";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lb_hsdb.AnimationHoverSpeed = 0.07F;
+            this.lb_hsdb.AnimationSpeed = 0.03F;
+            this.lb_hsdb.BaseColor = System.Drawing.Color.Teal;
+            this.lb_hsdb.BorderColor = System.Drawing.Color.Black;
+            this.lb_hsdb.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.lb_hsdb.FocusedColor = System.Drawing.Color.Empty;
+            this.lb_hsdb.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb.ForeColor = System.Drawing.Color.White;
+            this.lb_hsdb.Image = ((System.Drawing.Image)(resources.GetObject("lb_hsdb.Image")));
+            this.lb_hsdb.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lb_hsdb.ImageSize = new System.Drawing.Size(40, 40);
+            this.lb_hsdb.Location = new System.Drawing.Point(3, 0);
+            this.lb_hsdb.Name = "lb_hsdb";
+            this.lb_hsdb.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.lb_hsdb.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.lb_hsdb.OnHoverForeColor = System.Drawing.Color.White;
+            this.lb_hsdb.OnHoverImage = null;
+            this.lb_hsdb.OnPressedColor = System.Drawing.Color.Black;
+            this.lb_hsdb.Size = new System.Drawing.Size(1248, 144);
+            this.lb_hsdb.TabIndex = 0;
+            this.lb_hsdb.Text = "Hồ sơ đội bóng";
+            this.lb_hsdb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gb_HSDB
             // 
@@ -87,10 +87,10 @@
             this.gb_HSDB.Controls.Add(this.tb_TenDoi);
             this.gb_HSDB.Controls.Add(this.tb_SCT);
             this.gb_HSDB.Controls.Add(this.tb_MaDoi);
-            this.gb_HSDB.Controls.Add(this.gunaLabel4);
-            this.gb_HSDB.Controls.Add(this.gunaLabel3);
-            this.gb_HSDB.Controls.Add(this.gunaLabel2);
-            this.gb_HSDB.Controls.Add(this.gunaLabel1);
+            this.gb_HSDB.Controls.Add(this.lb_team_slg);
+            this.gb_HSDB.Controls.Add(this.lb_team_san);
+            this.gb_HSDB.Controls.Add(this.lb_team_name);
+            this.gb_HSDB.Controls.Add(this.lb_team_id);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
             this.gb_HSDB.Location = new System.Drawing.Point(3, 140);
@@ -109,7 +109,7 @@
             this.tb_SanNha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SanNha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SanNha.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_SanNha.Location = new System.Drawing.Point(800, 103);
+            this.tb_SanNha.Location = new System.Drawing.Point(754, 103);
             this.tb_SanNha.Name = "tb_SanNha";
             this.tb_SanNha.PasswordChar = '\0';
             this.tb_SanNha.SelectedText = "";
@@ -125,7 +125,7 @@
             this.tb_TenDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_TenDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_TenDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_TenDoi.Location = new System.Drawing.Point(800, 52);
+            this.tb_TenDoi.Location = new System.Drawing.Point(754, 52);
             this.tb_TenDoi.Name = "tb_TenDoi";
             this.tb_TenDoi.PasswordChar = '\0';
             this.tb_TenDoi.SelectedText = "";
@@ -141,7 +141,7 @@
             this.tb_SCT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SCT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SCT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_SCT.Location = new System.Drawing.Point(397, 103);
+            this.tb_SCT.Location = new System.Drawing.Point(327, 103);
             this.tb_SCT.Name = "tb_SCT";
             this.tb_SCT.PasswordChar = '\0';
             this.tb_SCT.SelectedText = "";
@@ -157,56 +157,60 @@
             this.tb_MaDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_MaDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_MaDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_MaDoi.Location = new System.Drawing.Point(397, 52);
+            this.tb_MaDoi.Location = new System.Drawing.Point(327, 52);
             this.tb_MaDoi.Name = "tb_MaDoi";
             this.tb_MaDoi.PasswordChar = '\0';
             this.tb_MaDoi.SelectedText = "";
             this.tb_MaDoi.Size = new System.Drawing.Size(160, 32);
             this.tb_MaDoi.TabIndex = 4;
             // 
-            // gunaLabel4
+            // lb_team_slg
             // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(250, 103);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(134, 32);
-            this.gunaLabel4.TabIndex = 3;
-            this.gunaLabel4.Text = "Số cầu thủ:";
+            this.lb_team_slg.AutoSize = true;
+            this.lb_team_slg.BackColor = System.Drawing.Color.Transparent;
+            this.lb_team_slg.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_slg.ForeColor = System.Drawing.Color.Black;
+            this.lb_team_slg.Location = new System.Drawing.Point(177, 103);
+            this.lb_team_slg.Name = "lb_team_slg";
+            this.lb_team_slg.Size = new System.Drawing.Size(134, 32);
+            this.lb_team_slg.TabIndex = 3;
+            this.lb_team_slg.Text = "Số cầu thủ:";
             // 
-            // gunaLabel3
+            // lb_team_san
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(677, 103);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(106, 32);
-            this.gunaLabel3.TabIndex = 2;
-            this.gunaLabel3.Text = "Sân nhà:";
+            this.lb_team_san.AutoSize = true;
+            this.lb_team_san.BackColor = System.Drawing.Color.Transparent;
+            this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_san.ForeColor = System.Drawing.Color.Black;
+            this.lb_team_san.Location = new System.Drawing.Point(619, 103);
+            this.lb_team_san.Name = "lb_team_san";
+            this.lb_team_san.Size = new System.Drawing.Size(106, 32);
+            this.lb_team_san.TabIndex = 2;
+            this.lb_team_san.Text = "Sân nhà:";
             // 
-            // gunaLabel2
+            // lb_team_name
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(677, 52);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(99, 32);
-            this.gunaLabel2.TabIndex = 1;
-            this.gunaLabel2.Text = "Tên đội:";
+            this.lb_team_name.AutoSize = true;
+            this.lb_team_name.BackColor = System.Drawing.Color.Transparent;
+            this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_name.ForeColor = System.Drawing.Color.Black;
+            this.lb_team_name.Location = new System.Drawing.Point(619, 52);
+            this.lb_team_name.Name = "lb_team_name";
+            this.lb_team_name.Size = new System.Drawing.Size(99, 32);
+            this.lb_team_name.TabIndex = 1;
+            this.lb_team_name.Text = "Tên đội:";
             // 
-            // gunaLabel1
+            // lb_team_id
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(250, 52);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(95, 32);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Mã đội:";
+            this.lb_team_id.AutoSize = true;
+            this.lb_team_id.BackColor = System.Drawing.Color.Transparent;
+            this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_id.ForeColor = System.Drawing.Color.Black;
+            this.lb_team_id.Location = new System.Drawing.Point(177, 52);
+            this.lb_team_id.Name = "lb_team_id";
+            this.lb_team_id.Size = new System.Drawing.Size(95, 32);
+            this.lb_team_id.TabIndex = 0;
+            this.lb_team_id.Text = "Mã đội:";
             // 
             // gunaImageReplaceColor1
             // 
@@ -287,19 +291,21 @@
             this.Btn_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.Btn_xoa.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_xoa.ForeColor = System.Drawing.Color.White;
+            this.Btn_xoa.ForeColor = System.Drawing.Color.Black;
             this.Btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("Btn_xoa.Image")));
+            this.Btn_xoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btn_xoa.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_xoa.Location = new System.Drawing.Point(842, 623);
+            this.Btn_xoa.Location = new System.Drawing.Point(866, 613);
             this.Btn_xoa.Name = "Btn_xoa";
             this.Btn_xoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Btn_xoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.Btn_xoa.OnHoverForeColor = System.Drawing.Color.White;
             this.Btn_xoa.OnHoverImage = null;
             this.Btn_xoa.OnPressedColor = System.Drawing.Color.Black;
-            this.Btn_xoa.Size = new System.Drawing.Size(160, 42);
+            this.Btn_xoa.Size = new System.Drawing.Size(169, 52);
             this.Btn_xoa.TabIndex = 4;
             this.Btn_xoa.Text = "Xoá";
+            this.Btn_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Them
             // 
@@ -310,19 +316,21 @@
             this.btn_Them.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Them.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.ForeColor = System.Drawing.Color.White;
+            this.btn_Them.ForeColor = System.Drawing.Color.Black;
             this.btn_Them.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them.Image")));
+            this.btn_Them.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Them.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Them.Location = new System.Drawing.Point(608, 623);
+            this.btn_Them.Location = new System.Drawing.Point(661, 613);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Them.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Them.OnHoverImage = null;
             this.btn_Them.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Them.Size = new System.Drawing.Size(160, 42);
+            this.btn_Them.Size = new System.Drawing.Size(169, 52);
             this.btn_Them.TabIndex = 5;
             this.btn_Them.Text = "Thêm";
+            this.btn_Them.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Btn_sua
             // 
@@ -333,19 +341,21 @@
             this.Btn_sua.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn_sua.FocusedColor = System.Drawing.Color.Empty;
             this.Btn_sua.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_sua.ForeColor = System.Drawing.Color.White;
+            this.Btn_sua.ForeColor = System.Drawing.Color.Black;
             this.Btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("Btn_sua.Image")));
+            this.Btn_sua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btn_sua.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_sua.Location = new System.Drawing.Point(1067, 623);
+            this.Btn_sua.Location = new System.Drawing.Point(1067, 613);
             this.Btn_sua.Name = "Btn_sua";
             this.Btn_sua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Btn_sua.OnHoverBorderColor = System.Drawing.Color.Black;
             this.Btn_sua.OnHoverForeColor = System.Drawing.Color.White;
             this.Btn_sua.OnHoverImage = null;
             this.Btn_sua.OnPressedColor = System.Drawing.Color.Black;
-            this.Btn_sua.Size = new System.Drawing.Size(160, 42);
+            this.Btn_sua.Size = new System.Drawing.Size(169, 52);
             this.Btn_sua.TabIndex = 6;
             this.Btn_sua.Text = "Sửa";
+            this.Btn_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // usrTeam
             // 
@@ -356,7 +366,7 @@
             this.Controls.Add(this.Btn_xoa);
             this.Controls.Add(this.dgv_HSDB);
             this.Controls.Add(this.gb_HSDB);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.lb_hsdb);
             this.Name = "usrTeam";
             this.Size = new System.Drawing.Size(1254, 679);
             this.Load += new System.EventHandler(this.usrTeam_Load);
@@ -369,16 +379,16 @@
 
         #endregion
 
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton lb_hsdb;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
         private Guna.UI.WinForms.GunaTextBox tb_SanNha;
         private Guna.UI.WinForms.GunaTextBox tb_TenDoi;
         private Guna.UI.WinForms.GunaTextBox tb_SCT;
         private Guna.UI.WinForms.GunaTextBox tb_MaDoi;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lb_team_slg;
+        private Guna.UI.WinForms.GunaLabel lb_team_san;
+        private Guna.UI.WinForms.GunaLabel lb_team_name;
+        private Guna.UI.WinForms.GunaLabel lb_team_id;
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor1;
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor2;
         private Guna.UI.WinForms.GunaDataGridView dgv_HSDB;

@@ -132,7 +132,8 @@
             // gunaLabel7
             // 
             this.gunaLabel7.BackColor = System.Drawing.Color.White;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel7.Location = new System.Drawing.Point(861, 179);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(67, 50);
@@ -158,8 +159,9 @@
             // gunaLabel6
             // 
             this.gunaLabel6.BackColor = System.Drawing.Color.White;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(646, 179);
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel6.Location = new System.Drawing.Point(656, 179);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(74, 50);
             this.gunaLabel6.TabIndex = 13;
@@ -168,7 +170,8 @@
             // gunaLabel5
             // 
             this.gunaLabel5.BackColor = System.Drawing.Color.White;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel5.Location = new System.Drawing.Point(184, 179);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(130, 50);
@@ -212,7 +215,8 @@
             // gunaLabel4
             // 
             this.gunaLabel4.BackColor = System.Drawing.Color.White;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel4.Location = new System.Drawing.Point(184, 116);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(130, 50);
@@ -222,8 +226,9 @@
             // gunaLabel3
             // 
             this.gunaLabel3.BackColor = System.Drawing.Color.White;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(818, 116);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel3.Location = new System.Drawing.Point(819, 116);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(130, 50);
             this.gunaLabel3.TabIndex = 8;
@@ -296,7 +301,8 @@
             // gunaLabel2
             // 
             this.gunaLabel2.BackColor = System.Drawing.Color.White;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel2.Location = new System.Drawing.Point(729, 37);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(192, 50);
@@ -306,7 +312,8 @@
             // gunaLabel1
             // 
             this.gunaLabel1.BackColor = System.Drawing.Color.White;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(184, 46);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(130, 50);
@@ -330,7 +337,7 @@
             this.dtp_KQTD.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtp_KQTD.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtp_KQTD.OnPressedColor = System.Drawing.Color.Black;
-            this.dtp_KQTD.Size = new System.Drawing.Size(290, 30);
+            this.dtp_KQTD.Size = new System.Drawing.Size(290, 32);
             this.dtp_KQTD.TabIndex = 0;
             this.dtp_KQTD.Text = "Tuesday, June 9, 2020";
             this.dtp_KQTD.Value = new System.DateTime(2020, 6, 9, 0, 5, 1, 781);
@@ -419,6 +426,7 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.Black;
             this.btn_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_Thoat.Image")));
+            this.btn_Thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Thoat.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_Thoat.Location = new System.Drawing.Point(942, 626);
             this.btn_Thoat.Name = "btn_Thoat";
@@ -430,6 +438,7 @@
             this.btn_Thoat.Size = new System.Drawing.Size(159, 42);
             this.btn_Thoat.TabIndex = 23;
             this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_CapNhat
             // 
@@ -442,6 +451,7 @@
             this.btn_CapNhat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CapNhat.ForeColor = System.Drawing.Color.Black;
             this.btn_CapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhat.Image")));
+            this.btn_CapNhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_CapNhat.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_CapNhat.Location = new System.Drawing.Point(721, 626);
             this.btn_CapNhat.Name = "btn_CapNhat";
@@ -453,6 +463,7 @@
             this.btn_CapNhat.Size = new System.Drawing.Size(166, 42);
             this.btn_CapNhat.TabIndex = 24;
             this.btn_CapNhat.Text = "Cập nhật";
+            this.btn_CapNhat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // usrResultMatch
             // 

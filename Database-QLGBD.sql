@@ -18,6 +18,7 @@ create table DOIBONG
 MaDoi varchar(45) primary key not null,
 TenDoi varchar(45),
 SanNha varchar(45),
+SoCauThu int,
 )
 
 go

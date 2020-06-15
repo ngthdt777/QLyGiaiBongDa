@@ -12,6 +12,16 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class usrRulesChange : UserControl
     {
+        private static usrRulesChange _instance;
+        public static usrRulesChange Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new usrRulesChange();
+                return _instance;
+            }
+        }
         public usrRulesChange()
         {
             InitializeComponent();

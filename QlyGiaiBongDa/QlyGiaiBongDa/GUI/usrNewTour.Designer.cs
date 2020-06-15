@@ -126,7 +126,7 @@
             this.checkb_DSDB.FillColor = System.Drawing.Color.White;
             this.checkb_DSDB.Location = new System.Drawing.Point(708, 132);
             this.checkb_DSDB.Name = "checkb_DSDB";
-            this.checkb_DSDB.Size = new System.Drawing.Size(32, 25);
+            this.checkb_DSDB.Size = new System.Drawing.Size(30, 20);
             this.checkb_DSDB.TabIndex = 4;
             this.checkb_DSDB.Text = " ";
             // 
@@ -135,6 +135,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel4.Location = new System.Drawing.Point(366, 176);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(273, 32);
@@ -146,6 +147,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(396, 120);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(243, 32);

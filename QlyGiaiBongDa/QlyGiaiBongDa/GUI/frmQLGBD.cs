@@ -24,38 +24,10 @@ namespace QlyGiaiBongDa.GUI
             usrHomepage.Instance.BringToFront();
         }
 
-
-
-        private void toolStripMenuItem13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void lb_gbd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btt_doibong_Click(object sender, EventArgs e)
         {
             if (!pnlMain.Controls.Contains(usrTeam.Instance))
@@ -90,6 +62,55 @@ namespace QlyGiaiBongDa.GUI
             }
             else
                 usrHomepage.Instance.BringToFront();
+        }
+
+        private void btt_dieule_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(usrRulesChange.Instance))
+            {
+                pnlMain.Controls.Add(usrRulesChange.Instance);
+                usrRulesChange.Instance.Dock = DockStyle.Fill;
+                usrRulesChange.Instance.BringToFront();
+            }
+            else
+                usrRulesChange.Instance.BringToFront();
+        }
+
+        private void btt_kqvd_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(usrResultMatch.Instance))
+            {
+                pnlMain.Controls.Add(usrResultMatch.Instance);
+                usrResultMatch.Instance.Dock = DockStyle.Fill;
+                usrResultMatch.Instance.BringToFront();
+            }
+            else
+                usrResultMatch.Instance.BringToFront();
+        }
+
+        private void btt_lichtd_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(usrCreateMatch.Instance))
+            {
+                pnlMain.Controls.Add(usrCreateMatch.Instance);
+                usrCreateMatch.Instance.Dock = DockStyle.Fill;
+                usrCreateMatch.Instance.BringToFront();
+            }
+            else
+                usrCreateMatch.Instance.BringToFront();
+        }
+
+
+        private void btt_baocao_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(usrPlayerGoal.Instance))
+            {
+                pnlMain.Controls.Add(usrPlayerGoal.Instance);
+                usrPlayerGoal.Instance.Dock = DockStyle.Fill;
+                usrPlayerGoal.Instance.BringToFront();
+            }
+            else
+                usrPlayerGoal.Instance.BringToFront();
         }
     }
 }

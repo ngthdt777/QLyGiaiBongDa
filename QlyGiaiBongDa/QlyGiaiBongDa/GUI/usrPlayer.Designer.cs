@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI.WinForms.GunaLabel lb_player_id;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
@@ -50,11 +51,11 @@
             this.cb_LoaiCT = new Guna.UI.WinForms.GunaComboBox();
             this.tb_HoTen = new Guna.UI.WinForms.GunaTextBox();
             this.tb_MaCT = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lb_player_name = new Guna.UI.WinForms.GunaLabel();
+            this.lb_player_type = new Guna.UI.WinForms.GunaLabel();
+            this.lb_player_team = new Guna.UI.WinForms.GunaLabel();
             this.dgv_TCCT = new Guna.UI.WinForms.GunaDataGridView();
+            lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
             this.SuspendLayout();
@@ -105,10 +106,10 @@
             this.gb_HSDB.Controls.Add(this.cb_LoaiCT);
             this.gb_HSDB.Controls.Add(this.tb_HoTen);
             this.gb_HSDB.Controls.Add(this.tb_MaCT);
-            this.gb_HSDB.Controls.Add(this.gunaLabel4);
-            this.gb_HSDB.Controls.Add(this.gunaLabel3);
-            this.gb_HSDB.Controls.Add(this.gunaLabel2);
-            this.gb_HSDB.Controls.Add(this.gunaLabel1);
+            this.gb_HSDB.Controls.Add(this.lb_player_name);
+            this.gb_HSDB.Controls.Add(this.lb_player_type);
+            this.gb_HSDB.Controls.Add(this.lb_player_team);
+            this.gb_HSDB.Controls.Add(lb_player_id);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
             this.gb_HSDB.Location = new System.Drawing.Point(1, 153);
@@ -229,50 +230,55 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(940, 106);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 29);
+            this.label5.Size = new System.Drawing.Size(58, 32);
             this.label5.TabIndex = 13;
             this.label5.Text = "đến";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(809, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 29);
+            this.label4.Size = new System.Drawing.Size(40, 32);
             this.label4.TabIndex = 12;
             this.label4.Text = "từ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(707, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 29);
+            this.label3.Size = new System.Drawing.Size(101, 32);
             this.label3.TabIndex = 11;
             this.label3.Text = "Ghi chú";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(707, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 29);
+            this.label2.Size = new System.Drawing.Size(166, 32);
             this.label2.TabIndex = 10;
             this.label2.Text = "Số bàn thắng";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(707, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
+            this.label1.Size = new System.Drawing.Size(101, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Độ tuổi";
             // 
@@ -367,76 +373,80 @@
             this.tb_MaCT.Size = new System.Drawing.Size(160, 32);
             this.tb_MaCT.TabIndex = 4;
             // 
-            // gunaLabel4
+            // lb_player_name
             // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(188, 99);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(124, 32);
-            this.gunaLabel4.TabIndex = 3;
-            this.gunaLabel4.Text = "Họ và tên:";
+            this.lb_player_name.AutoSize = true;
+            this.lb_player_name.BackColor = System.Drawing.Color.Transparent;
+            this.lb_player_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_player_name.ForeColor = System.Drawing.Color.Black;
+            this.lb_player_name.Location = new System.Drawing.Point(188, 99);
+            this.lb_player_name.Name = "lb_player_name";
+            this.lb_player_name.Size = new System.Drawing.Size(124, 32);
+            this.lb_player_name.TabIndex = 3;
+            this.lb_player_name.Text = "Họ và tên:";
             // 
-            // gunaLabel3
+            // lb_player_type
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(188, 152);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(150, 32);
-            this.gunaLabel3.TabIndex = 2;
-            this.gunaLabel3.Text = "Loại cầu thủ:";
+            this.lb_player_type.AutoSize = true;
+            this.lb_player_type.BackColor = System.Drawing.Color.Transparent;
+            this.lb_player_type.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_player_type.ForeColor = System.Drawing.Color.Black;
+            this.lb_player_type.Location = new System.Drawing.Point(188, 152);
+            this.lb_player_type.Name = "lb_player_type";
+            this.lb_player_type.Size = new System.Drawing.Size(150, 32);
+            this.lb_player_type.TabIndex = 2;
+            this.lb_player_type.Text = "Loại cầu thủ:";
             // 
-            // gunaLabel2
+            // lb_player_team
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(188, 204);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(120, 32);
-            this.gunaLabel2.TabIndex = 1;
-            this.gunaLabel2.Text = "Đội bóng:";
+            this.lb_player_team.AutoSize = true;
+            this.lb_player_team.BackColor = System.Drawing.Color.Transparent;
+            this.lb_player_team.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_player_team.ForeColor = System.Drawing.Color.Black;
+            this.lb_player_team.Location = new System.Drawing.Point(188, 204);
+            this.lb_player_team.Name = "lb_player_team";
+            this.lb_player_team.Size = new System.Drawing.Size(120, 32);
+            this.lb_player_team.TabIndex = 1;
+            this.lb_player_team.Text = "Đội bóng:";
             // 
-            // gunaLabel1
+            // lb_player_id
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Red;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(188, 45);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(141, 32);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Mã cầu thủ:";
+            lb_player_id.AutoSize = true;
+            lb_player_id.BackColor = System.Drawing.Color.Transparent;
+            lb_player_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lb_player_id.ForeColor = System.Drawing.Color.Black;
+            lb_player_id.Location = new System.Drawing.Point(188, 45);
+            lb_player_id.Name = "lb_player_id";
+            lb_player_id.Size = new System.Drawing.Size(141, 32);
+            lb_player_id.TabIndex = 0;
+            lb_player_id.Text = "Mã cầu thủ:";
             // 
             // dgv_TCCT
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_TCCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_TCCT.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_TCCT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TCCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_TCCT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_TCCT.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_TCCT.EnableHeadersVisualStyles = false;
             this.dgv_TCCT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.Location = new System.Drawing.Point(3, 413);
@@ -494,10 +504,9 @@
         private Guna.UI.WinForms.GunaComboBox cb_LoaiCT;
         private Guna.UI.WinForms.GunaTextBox tb_HoTen;
         private Guna.UI.WinForms.GunaTextBox tb_MaCT;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lb_player_name;
+        private Guna.UI.WinForms.GunaLabel lb_player_type;
+        private Guna.UI.WinForms.GunaLabel lb_player_team;
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaTextBox tb_GhiChu;
         private Guna.UI.WinForms.GunaComboBox cb_LoaiSoSanh;

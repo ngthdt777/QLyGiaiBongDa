@@ -12,6 +12,16 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class usrResultMatch : UserControl
     {
+        private static usrResultMatch _instance;
+        public static usrResultMatch Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new usrResultMatch();
+                return _instance;
+            }
+        }
         public usrResultMatch()
         {
             InitializeComponent();

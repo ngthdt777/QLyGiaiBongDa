@@ -27,11 +27,6 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
-        private void uc_Module1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void usrTeam_Load(object sender, EventArgs e)
         {
 

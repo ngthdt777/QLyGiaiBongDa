@@ -12,6 +12,16 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class usrPlayerGoal : UserControl
     {
+        private static usrPlayerGoal _instance;
+        public static usrPlayerGoal Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new usrPlayerGoal();
+                return _instance;
+            }
+        }
         public usrPlayerGoal()
         {
             InitializeComponent();

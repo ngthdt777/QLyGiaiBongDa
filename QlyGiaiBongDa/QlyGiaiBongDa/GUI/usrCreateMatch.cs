@@ -12,14 +12,19 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class usrCreateMatch : UserControl
     {
+        private static usrCreateMatch _instance;
+        public static usrCreateMatch Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new usrCreateMatch();
+                return _instance;
+            }
+        }
         public usrCreateMatch()
         {
             InitializeComponent();
-        }
-
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

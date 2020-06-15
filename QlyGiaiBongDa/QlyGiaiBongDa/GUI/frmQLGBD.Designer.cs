@@ -134,6 +134,7 @@
             this.btt_dieule.TabIndex = 14;
             this.btt_dieule.Text = "Điều lệ";
             this.btt_dieule.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_dieule.Click += new System.EventHandler(this.btt_dieule_Click);
             // 
             // btt_baocao
             // 
@@ -162,6 +163,7 @@
             this.btt_baocao.TabIndex = 13;
             this.btt_baocao.Text = "Báo cáo";
             this.btt_baocao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_baocao.Click += new System.EventHandler(this.btt_baocao_Click);
             // 
             // btt_kqvd
             // 
@@ -190,6 +192,7 @@
             this.btt_kqvd.TabIndex = 12;
             this.btt_kqvd.Text = "Kết quả vòng đấu";
             this.btt_kqvd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_kqvd.Click += new System.EventHandler(this.btt_kqvd_Click);
             // 
             // btt_lichtd
             // 
@@ -218,6 +221,7 @@
             this.btt_lichtd.TabIndex = 11;
             this.btt_lichtd.Text = "Lịch thi đấu";
             this.btt_lichtd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_lichtd.Click += new System.EventHandler(this.btt_lichtd_Click);
             // 
             // btt_cauthu
             // 

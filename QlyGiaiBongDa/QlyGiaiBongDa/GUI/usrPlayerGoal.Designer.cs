@@ -113,7 +113,8 @@
             // gunaLabel2
             // 
             this.gunaLabel2.BackColor = System.Drawing.Color.White;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel2.Location = new System.Drawing.Point(640, 73);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(146, 50);
@@ -123,7 +124,8 @@
             // gunaLabel1
             // 
             this.gunaLabel1.BackColor = System.Drawing.Color.White;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(172, 73);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(130, 50);
@@ -221,6 +223,7 @@
             this.btn_XuatBaocao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatBaocao.ForeColor = System.Drawing.Color.Black;
             this.btn_XuatBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btn_XuatBaocao.Image")));
+            this.btn_XuatBaocao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_XuatBaocao.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_XuatBaocao.Location = new System.Drawing.Point(1030, 634);
             this.btn_XuatBaocao.Name = "btn_XuatBaocao";
@@ -232,6 +235,7 @@
             this.btn_XuatBaocao.Size = new System.Drawing.Size(208, 42);
             this.btn_XuatBaocao.TabIndex = 22;
             this.btn_XuatBaocao.Text = "Xuất báo cáo";
+            this.btn_XuatBaocao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_TimKiem
             // 
@@ -244,6 +248,7 @@
             this.btn_TimKiem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
             this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
+            this.btn_TimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_TimKiem.Location = new System.Drawing.Point(822, 634);
             this.btn_TimKiem.Name = "btn_TimKiem";
@@ -255,6 +260,7 @@
             this.btn_TimKiem.Size = new System.Drawing.Size(179, 42);
             this.btn_TimKiem.TabIndex = 10;
             this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // usrPlayerGoal
             // 
