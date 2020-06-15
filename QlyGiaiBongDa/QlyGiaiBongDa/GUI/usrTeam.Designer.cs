@@ -387,7 +387,6 @@
         private Guna.UI.WinForms.GunaLabel lb_team_id;
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor1;
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor2;
-        private Guna.UI.WinForms.GunaDataGridView dgv_HSDB;
         private Guna.UI.WinForms.GunaButton Btn_xoa;
         private Guna.UI.WinForms.GunaButton btn_Them;
         private Guna.UI.WinForms.GunaButton Btn_sua;
@@ -395,5 +394,6 @@
         public Guna.UI.WinForms.GunaTextBox tb_TenDoi;
         public Guna.UI.WinForms.GunaTextBox tb_SCT;
         public Guna.UI.WinForms.GunaTextBox tb_MaDoi;
+        public Guna.UI.WinForms.GunaDataGridView dgv_HSDB;
     }
 }

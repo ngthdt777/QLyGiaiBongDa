@@ -12,24 +12,24 @@ using System.Windows.Forms;
 
 namespace QlyGiaiBongDa.BLL
 {
-    public class ObjTeamDAL
+    public class ObjTeamBLL
     {
 
-        private static ObjTeamDAL instance;
+        private static ObjTeamBLL instance;
 
-        public static ObjTeamDAL Instance
+        public static ObjTeamBLL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ObjTeamDAL();
+                    instance = new ObjTeamBLL();
                 }
                 return instance;
             }
             set { instance = value; }
         }
-        private ObjTeamDAL() { }
+        private ObjTeamBLL() { }
 
         public DoiBong Team = new DoiBong();
         string LoadQuery = "SELECT * FROM DOIBONG";
@@ -41,6 +41,7 @@ namespace QlyGiaiBongDa.BLL
             return data;
 
         }
+
         bool CheckMaDoi(string id)
         {
             /*string query = "SELECT MaDoi FROM DOIBONG WHERE MaDoi = '" + id + "' ";

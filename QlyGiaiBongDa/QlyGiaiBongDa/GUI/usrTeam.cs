@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -29,7 +30,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void usrTeam_Load(object sender, EventArgs e)
         {
-
+            dgv_HSDB.DataSource = ObjTeamBLL 
         }
     }
 }

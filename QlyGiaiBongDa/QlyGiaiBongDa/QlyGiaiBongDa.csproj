@@ -61,15 +61,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ObjTeamDAL.cs" />
-    <Compile Include="DAL\banthang.cs" />
-    <Compile Include="DAL\cauthu.cs" />
+    <Compile Include="BLL\ObjTeamBLL.cs" />
+    <Compile Include="DAL\ObjGoalDAL.cs" />
+    <Compile Include="DAL\ObjPlayerDAL.cs" />
     <Compile Include="BLL\DataProvider.cs" />
-    <Compile Include="DAL\DoiBong.cs" />
-    <Compile Include="DAL\loaicauthu.cs" />
-    <Compile Include="DAL\thamso.cs" />
-    <Compile Include="DAL\trandau.cs" />
-    <Compile Include="DAL\vongdau.cs" />
+    <Compile Include="DAL\ObjTeamDAL.cs" />
+    <Compile Include="DAL\ObjPlayerTypeDAL.cs" />
+    <Compile Include="DAL\ObjthamsoDAL.cs" />
+    <Compile Include="DAL\ObjMatchDAL.cs" />
+    <Compile Include="DAL\ObjRoundDAL.cs" />
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
