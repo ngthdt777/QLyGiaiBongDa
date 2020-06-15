@@ -381,10 +381,6 @@
 
         private Guna.UI.WinForms.GunaButton lb_hsdb;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
-        private Guna.UI.WinForms.GunaTextBox tb_SanNha;
-        private Guna.UI.WinForms.GunaTextBox tb_TenDoi;
-        private Guna.UI.WinForms.GunaTextBox tb_SCT;
-        private Guna.UI.WinForms.GunaTextBox tb_MaDoi;
         private Guna.UI.WinForms.GunaLabel lb_team_slg;
         private Guna.UI.WinForms.GunaLabel lb_team_san;
         private Guna.UI.WinForms.GunaLabel lb_team_name;
@@ -395,5 +391,9 @@
         private Guna.UI.WinForms.GunaButton Btn_xoa;
         private Guna.UI.WinForms.GunaButton btn_Them;
         private Guna.UI.WinForms.GunaButton Btn_sua;
+        public Guna.UI.WinForms.GunaTextBox tb_SanNha;
+        public Guna.UI.WinForms.GunaTextBox tb_TenDoi;
+        public Guna.UI.WinForms.GunaTextBox tb_SCT;
+        public Guna.UI.WinForms.GunaTextBox tb_MaDoi;
     }
 }
