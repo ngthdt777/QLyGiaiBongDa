@@ -14,7 +14,10 @@ namespace QlyGiaiBongDa.BLL
 {
     public class ObjTeamBLL
     {
-
+        public DataTable GetListTeam()
+        {
+            return ObjTeamDAL.Instance.LoadListTeam();
+        }
        
     }
 }

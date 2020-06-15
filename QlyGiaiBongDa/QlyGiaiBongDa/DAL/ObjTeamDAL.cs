@@ -46,16 +46,12 @@ namespace QlyGiaiBongDa.DAL
 
         public DoiBong Team = new DoiBong();
 
-        public DataTable LoadCustomerData()
+        public DataTable LoadListTeam()
         {
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT* FROM DOIBONG";
-            dt = DataProvider.Instance.ExecuteQuery("SELECT* FROM DOIBONG");
+            string LoadQuery = "SELECT * FROM DoiBong";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
-
-
         }
 
         bool CheckMaDoi(string id)

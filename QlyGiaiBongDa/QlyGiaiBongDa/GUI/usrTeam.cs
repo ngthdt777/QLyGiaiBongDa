@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QlyGiaiBongDa.BLL;
+using QlyGiaiBongDa.DAL;
 
 namespace QlyGiaiBongDa.GUI
 {
     public partial class usrTeam : UserControl
     {
+        public ObjTeamBLL ObjTeamBLL;
         private static usrTeam _instance;
         public static usrTeam Instance
         {
@@ -30,7 +32,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void usrTeam_Load(object sender, EventArgs e)
         {
-            dgv_HSDB.DataSource = ObjTeamBLL 
+            dgv_HSDB.DataSource = ObjTeamDAL.Instance.LoadListTeam();
         }
     }
 }
