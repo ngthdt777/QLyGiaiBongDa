@@ -64,7 +64,7 @@
     <Compile Include="BLL\ObjTeamBLL.cs" />
     <Compile Include="DAL\ObjGoalDAL.cs" />
     <Compile Include="DAL\ObjPlayerDAL.cs" />
-    <Compile Include="BLL\DataProvider.cs" />
+    <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\ObjTeamDAL.cs" />
     <Compile Include="DAL\ObjPlayerTypeDAL.cs" />
     <Compile Include="DAL\ObjthamsoDAL.cs" />
