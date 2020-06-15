@@ -5,7 +5,7 @@ go
 USE QLGBD
 
 go
--- tạo bảng đội bóng
+
 create table Dangnhap
 ( 
  taikhoan varchar(45),
@@ -152,11 +152,22 @@ alter table THAMSO add constraint check_ThoiDiemGhiBan Check ( ThoiDiemGhiBanToi
 INSERT INTO Dangnhap(taikhoan,matkhau)
  VALUES('ADMIN','ADMIN')
 
+ go
 
 
+ insert into DOIBONG(MaDoi, TenDoi, SanNha, SoCauThu) values ( 1, 'Long An', ' Tan An ', 5)
+ insert into DOIBONG values ( 2, ' HoChiMinh', ' Thong Nhat', 5)
+ insert into DOIBONG values ( 3, ' Binh Duong', ' Go Dau ', 6)
+
+ go
+
+ alter table DOIBONG add  SoCauThu int  
 
 
+ insert into LOAICAUTHU values ( ' 001TN ' , ' Trong nước ')
+ insert into LOAICAUTHU values ( ' 001NN'  , ' Nước Ngoài' )
 
 
-
-
+ insert into CAUTHU values ( 1000, ' Tran Thanh Lam', 2000-07-18, ' 001TN' , ' Thi Dau 3 nam ' , 1)
+ insert into CAUTHU values ( 1001, ' Luong Duy Bao', 2000-01-01, ' 001TN' , ' Thi Dau 10 nam ' , 2)
+ insert into CAUTHU values ( 1002, ' Luong Duy Bao', 2000-01-02, ' 002NN' , ' Thi Dau 2 nam ' , 3)
