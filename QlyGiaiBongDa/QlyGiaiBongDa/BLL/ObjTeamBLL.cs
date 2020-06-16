@@ -28,7 +28,7 @@ namespace QlyGiaiBongDa.BLL
             }
             set { instance = value; }
         }
-        public DataTable GetListTeam()
+       public DataTable GetListTeam()
         {
             return ObjTeamDAL.Instance.LoadListTeam();
         }
@@ -40,6 +40,12 @@ namespace QlyGiaiBongDa.BLL
         {
             return ObjTeamDAL.Instance.PlayerView();
         }
-       
+
+        // goi lai ham thay doi tu DAL, Duy Bao Change
+        public void Delete()
+        {
+            ObjTeamDAL.Instance.Delete();
+        }
+
     }
 }

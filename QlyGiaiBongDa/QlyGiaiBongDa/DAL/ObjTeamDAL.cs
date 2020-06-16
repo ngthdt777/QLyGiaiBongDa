@@ -53,7 +53,7 @@ namespace QlyGiaiBongDa.DAL
             string LoadQuery = "SELECT * FROM DoiBong";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
-        }
+        } 
 
         bool CheckMaDoi(string id)
         {
@@ -108,19 +108,38 @@ namespace QlyGiaiBongDa.DAL
             return data;
         }
 
+        // xoa doi bong bang ma doi
+        public void Delete()
+        {
+            string id = usrTeam.Instance.tb_MaDoi.Text;
+
+            string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+            if (result > 0)
+            {
+                MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
 
 
         public void Bindings()
         {
             System.Windows.Forms.UserControl u = new usrTeam();
+
             ((usrTeam)u).tb_MaDoi.DataBindings.Clear();
             ((usrTeam)u).tb_TenDoi.DataBindings.Clear();
             ((usrTeam)u).tb_SCT.DataBindings.Clear();
             ((usrTeam)u).tb_SanNha.DataBindings.Clear();
+
             ((usrTeam)u).tb_MaDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "MaDoi"));
             ((usrTeam)u).tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
             ((usrTeam)u).tb_SCT.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "slgct"));
             ((usrTeam)u).tb_SanNha.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "SanNha"));
+
+            // Ban thay doi cua Duy Bao
+            ((usrTeam)u).DataBindings.Clear();
         }
     }
 }
