@@ -66,15 +66,19 @@ namespace QlyGiaiBongDa.DAL
         }
         public void Add()
         {
+            // khởi tạo giá trị text box
+            string id = usrTeam.Instance.tb_MaDoi.Text;
+            string tendoi = usrTeam.Instance.tb_TenDoi.Text;
+            string slgct = usrTeam.Instance.tb_SCT.Text;
+            string sannha = usrTeam.Instance.tb_SanNha.Text;
 
-            string id = ((usrTeam)u).tb_MaDoi.Text;
-            string tendoi = ((usrTeam)u).tb_TenDoi.Text;
-            string slgct = ((usrTeam)u).tb_SCT.Text;
-            string sannha = ((usrTeam)u).tb_SanNha.Text;
+
             Team.id = id;
             Team.ten = tendoi;
             Team.slgct = slgct;
             Team.ten_sannha = sannha;
+
+
             if (true)
             {
                 if (CheckMaDoi(Team.id) == true)
@@ -94,10 +98,12 @@ namespace QlyGiaiBongDa.DAL
         public DataTable PlayerView()
         {
             string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
-            string tendoi = usrTeam.Instance.tb_TenDoi.Text;
+            string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
+
             string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi " +
-                "FROM CAUTHU,DOIBONG,LOAICAUTHU " +
-               " Where CAUTHU.MaDoi = '" + id + "'AND LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu";
+                "FROM CAUTHU , DOIBONG,LOAICAUTHU " +
+               //  " Where LOAICAUTHU.MaLoaiCauThu = CAUTHU.MaLoaiCauThu" +
+               " Where LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu and CAUTHU.MaDoi= DOIBONG.MaDoi and CAUTHU.MaDoi = '" + id + "' ";
             DataTable data = DataProvider.Instance.ExecuteQuery(FindQuery);
             return data;
         }
