@@ -45,6 +45,7 @@ namespace QlyGiaiBongDa.DAL
         private ObjTeamDAL() { }
 
         public DoiBong Team = new DoiBong();
+        System.Windows.Forms.UserControl u = new usrTeam();
 
         public DataTable LoadListTeam()
         {
@@ -65,7 +66,7 @@ namespace QlyGiaiBongDa.DAL
         }
         public void Add()
         {
-            System.Windows.Forms.UserControl u = new usrTeam();
+
             string id = ((usrTeam)u).tb_MaDoi.Text;
             string tendoi = ((usrTeam)u).tb_TenDoi.Text;
             string slgct = ((usrTeam)u).tb_SCT.Text;
@@ -90,6 +91,19 @@ namespace QlyGiaiBongDa.DAL
             }
             else MessageBox.Show("Mã đội bóng phải nhỏ hơn 5 và lớn hơn 0 kí tự ", "Thông báo", MessageBoxButtons.OK);
         }
+        public DataTable PlayerView()
+        {
+            string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
+            string tendoi = usrTeam.Instance.tb_TenDoi.Text;
+            string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi " +
+                "FROM CAUTHU,DOIBONG,LOAICAUTHU " +
+               " Where CAUTHU.MaDoi = '" + id + "'AND LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu";
+            DataTable data = DataProvider.Instance.ExecuteQuery(FindQuery);
+            return data;
+        }
+
+
+
         public void Bindings()
         {
             System.Windows.Forms.UserControl u = new usrTeam();

@@ -1,5 +1,6 @@
-﻿Create database QLGBD
-use QLGBD
+﻿Create database QLGBDVDQG
+DROP DATABASE QLGBD
+use QLGBDVDQG
 go 
 
 USE QLGBD
@@ -33,16 +34,17 @@ MaLoaiCauThu varchar(45),
 GhiChu varchar(45),
 MaDoi varchar(45),
 )
+alter table CAUTHU add constraint fk_MaDoi foreign key (MaDoi) references DOIBONG(MaDoi)
 
 go 
 
 -- tạo bảng loại cầu thủ
 Create table LOAICAUTHU
 (
-MaLoaiCauThu varchar(45) primary key not null ,
+MaLoaiCauThu varchar(45),
 TenLoaiCauThu varchar(45),
 )
-
+--alter table CAUTHU add constraint fk_MaLoaiCauThu foreign key (MaLoaiCauThu) references LOAICAUTHU(MaLoaiCauThu)
 go
 
 -- tạo bảng bàn thắng
@@ -63,6 +65,7 @@ create table LOAIBANTHANG
 MaLoaiBanThang varchar(45) primary key not null ,
 TenLoaiBanThang varchar(45),
 )
+
 
 go
 
@@ -114,14 +117,12 @@ go
 
 
 -- tạo liên kết khóa ngoại cho các bảng
-
-alter table CAUTHU add constraint fk_MaDoi foreign key (MaDoi) references DOIBONG(MaDoi)
-alter table CAUTHU add constraint fk_MaLoaiCauThu foreign key (MaLoaiCauThu) references LOAICAUTHU(MaLoaiCauThu)
+/*
 alter table BANTHANG add constraint fk_MaCauThu foreign key (MaCauThu) references CAUTHU(MaCauThu)
 alter table BANTHANG add constraint fk_MaTranDau foreign key (MaTranDau) references TranDau(MaTranDau)
 alter table TRANDAU add constraint fk_MaVongDau foreign key (MaTranDau) references VONGDAU(MaVongDau)
 alter table BANTHANG add constraint fk_MaLoaiBanThang foreign key (MaLoaiBanThang) references LOAIBANTHANG(MaLoaiBanThang)
-
+*/
 -- tạo các ràng buộc theo các yêu cầu
 
 -- YÊU CẦU 1
@@ -161,9 +162,6 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
  go
 
- alter table DOIBONG add  SoCauThu int  
-
-
  insert into LOAICAUTHU values ( ' 001TN ' , ' Trong nước ')
  insert into LOAICAUTHU values ( ' 001NN'  , ' Nước Ngoài' )
 
@@ -171,3 +169,6 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
  insert into CAUTHU values ( 1000, ' Tran Thanh Lam', 2000-07-18, ' 001TN' , ' Thi Dau 3 nam ' , 1)
  insert into CAUTHU values ( 1001, ' Luong Duy Bao', 2000-01-01, ' 001TN' , ' Thi Dau 10 nam ' , 2)
  insert into CAUTHU values ( 1002, ' Luong Duy Bao', 2000-01-02, ' 002NN' , ' Thi Dau 2 nam ' , 3)
+
+ SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi FROM CAUTHU,DOIBONG,LOAICAUTHU
+	WHERE CAUTHU.MaDoi='1' And LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu

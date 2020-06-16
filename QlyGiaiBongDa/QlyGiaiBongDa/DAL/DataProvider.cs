@@ -23,7 +23,7 @@ namespace QlyGiaiBongDa.BLL
             private set => instance = value;
         }
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBD;Integrated Security=True";
+        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query)

@@ -14,9 +14,31 @@ namespace QlyGiaiBongDa.BLL
 {
     public class ObjTeamBLL
     {
+        private static ObjTeamBLL instance;
+
+        public static ObjTeamBLL Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ObjTeamBLL();
+                }
+                return instance;
+            }
+            set { instance = value; }
+        }
         public DataTable GetListTeam()
         {
             return ObjTeamDAL.Instance.LoadListTeam();
+        }
+        public void Add()
+        {
+            ObjTeamDAL.Instance.Add();
+        }
+        public DataTable PlayerView()
+        {
+            return ObjTeamDAL.Instance.PlayerView();
         }
        
     }

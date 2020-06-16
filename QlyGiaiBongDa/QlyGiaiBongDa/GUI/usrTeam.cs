@@ -30,9 +30,21 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
-        private void usrTeam_Load(object sender, EventArgs e)
+       private void usrTeam_Load(object sender, EventArgs e)
         {
-            dgv_HSDB.DataSource = ObjTeamDAL.Instance.LoadListTeam();
+            dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            ObjTeamBLL.Instance.Add();
+        }
+
+        private void btt_Team_View_Click(object sender, EventArgs e)
+        {
+            dgv_HSDB.Controls.Clear();
+            //System.Windows.Forms.UserControl u = new usrTeam();
+            dgv_HSDB.DataSource = ObjTeamBLL.Instance.PlayerView();
         }
     }
 }
