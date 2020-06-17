@@ -46,6 +46,5 @@ namespace QlyGiaiBongDa.BLL
         {
             ObjTeamDAL.Instance.Delete();
         }
-
     }
 }

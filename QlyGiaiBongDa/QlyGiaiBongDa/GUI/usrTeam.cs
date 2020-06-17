@@ -33,7 +33,7 @@ namespace QlyGiaiBongDa.GUI
 
        private void usrTeam_Load(object sender, EventArgs e)
         {
-            dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
+           // dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
         }
 
         // ham Data Check - Duy Bao Change

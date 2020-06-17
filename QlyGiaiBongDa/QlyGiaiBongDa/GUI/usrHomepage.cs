@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QlyGiaiBongDa.BLL;
+using QlyGiaiBongDa.DAL;
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -31,5 +33,16 @@ namespace QlyGiaiBongDa.GUI
         {
 
         }
+
+        private void btt_team_view_Click(object sender, EventArgs e)
+        {
+            dgv_Home.Visible = btt_team_add.Visible = btt_team_era.Visible = btt_team_fix.Visible = true;
+            lb_team_id.Visible = true; tb_MaDoi.Visible = true;
+            lb_team_name.Visible = true; tb_TenDoi.Visible = true;
+            lb_team_san.Visible = true; tb_SanNha.Visible = true;
+            lb_team_slg.Visible = true; tb_SCT.Visible = true;
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+        }
+
     }
 }

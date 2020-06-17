@@ -122,8 +122,6 @@ namespace QlyGiaiBongDa.DAL
 
         }
 
-
-
         public void Bindings()
         {
             System.Windows.Forms.UserControl u = new usrTeam();
