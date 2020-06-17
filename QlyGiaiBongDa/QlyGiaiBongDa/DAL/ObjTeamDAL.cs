@@ -64,7 +64,7 @@ namespace QlyGiaiBongDa.DAL
             else return true;*/
             return true;
         }
-        public void Add()
+        public void AddPlayer()
         {
             // khởi tạo giá trị text box
             string id = usrTeam.Instance.tb_MaDoi.Text;
@@ -79,8 +79,7 @@ namespace QlyGiaiBongDa.DAL
             Team.ten_sannha = sannha;
 
 
-            if (true)
-            {
+
                 if (CheckMaDoi(Team.id) == true)
                 {
                     string AddQuery = "INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu" +
@@ -92,9 +91,39 @@ namespace QlyGiaiBongDa.DAL
                     }
                 }
                 else MessageBox.Show("Ton tai");
-            }
-            else MessageBox.Show("Mã đội bóng phải nhỏ hơn 5 và lớn hơn 0 kí tự ", "Thông báo", MessageBoxButtons.OK);
+
+
         }
+        public void AddTeam()
+        {
+            string id = usrHomepage.Instance.tb_MaDoi.Text;
+            string tendoi = usrHomepage.Instance.tb_TenDoi.Text;
+            string slgct = usrHomepage.Instance.tb_SCT.Text;
+            string sannha = usrHomepage.Instance.tb_SanNha.Text;
+
+            Team.id = id;
+            Team.ten = tendoi;
+            Team.slgct = slgct;
+            Team.ten_sannha = sannha;
+
+            if (CheckMaDoi(Team.id) == true)
+            {
+                string AddQuery = "INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)" +
+                        "VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')";
+                int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+                if (result > 0)
+                {
+                    MessageBox.Show("OKE da add ");
+                }
+            }
+            else MessageBox.Show("Doi bong da ton toi");
+        }
+
+
+
+
+
+
         public DataTable PlayerView()
         {
             string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
@@ -109,9 +138,21 @@ namespace QlyGiaiBongDa.DAL
         }
 
         // xoa doi bong bang ma doi
-        public void Delete()
+        public void DeletePlayer()
         {
             string id = usrTeam.Instance.tb_MaDoi.Text;
+
+            string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+            if (result > 0)
+            {
+                MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+        public void DeleteTeam()
+        {
+            string id = usrHomepage.Instance.tb_MaDoi.Text;
 
             string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);

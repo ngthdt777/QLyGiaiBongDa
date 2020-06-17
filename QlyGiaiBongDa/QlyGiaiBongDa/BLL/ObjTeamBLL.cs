@@ -32,9 +32,9 @@ namespace QlyGiaiBongDa.BLL
         {
             return ObjTeamDAL.Instance.LoadListTeam();
         }
-        public void Add()
+        public void AddPlayer()
         {
-            ObjTeamDAL.Instance.Add();
+            ObjTeamDAL.Instance.AddPlayer();
         }
         public DataTable PlayerView()
         {
@@ -42,9 +42,17 @@ namespace QlyGiaiBongDa.BLL
         }
 
         // goi lai ham thay doi tu DAL, Duy Bao Change
-        public void Delete()
+        public void DeletePlayer()
         {
-            ObjTeamDAL.Instance.Delete();
+            ObjTeamDAL.Instance.DeletePlayer();
+        }
+        public void AddTeam()
+        {
+            ObjTeamDAL.Instance.AddTeam();
+        }
+        public void DeleteTeam()
+        {
+            ObjTeamDAL.Instance.DeleteTeam();
         }
     }
 }

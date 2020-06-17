@@ -179,3 +179,6 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
  SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi FROM CAUTHU,DOIBONG,LOAICAUTHU
   WHERE CAUTHU.MaDoi=DOIBONG.MaDoi And LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu
+
+  INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)
+                        VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')

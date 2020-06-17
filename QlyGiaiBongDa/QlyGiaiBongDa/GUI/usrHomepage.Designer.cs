@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btt_team_view = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_era = new Guna.UI.WinForms.GunaGradientButton();
@@ -109,6 +110,7 @@
             this.btt_team_add.Text = "Thêm ";
             this.btt_team_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_add.Visible = false;
+            this.btt_team_add.Click += new System.EventHandler(this.btt_team_add_Click);
             // 
             // btt_team_era
             // 
@@ -137,6 +139,7 @@
             this.btt_team_era.Text = "Xóa";
             this.btt_team_era.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_era.Visible = false;
+            this.btt_team_era.Click += new System.EventHandler(this.btt_team_era_Click);
             // 
             // btt_team_fix
             // 
@@ -319,20 +322,22 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgv_Home.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Home.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Home.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Home.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Home.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Home.ColumnHeadersHeight = 30;
+            this.dgv_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
             this.TenDoi,
@@ -348,12 +353,14 @@
             this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Home.EnableHeadersVisualStyles = false;
             this.dgv_Home.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Home.Location = new System.Drawing.Point(3, 297);
+            this.dgv_Home.Location = new System.Drawing.Point(207, 297);
             this.dgv_Home.Name = "dgv_Home";
-            this.dgv_Home.RowHeadersVisible = false;
+            this.dgv_Home.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_Home.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Home.RowTemplate.Height = 24;
-            this.dgv_Home.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Home.Size = new System.Drawing.Size(1248, 369);
+            this.dgv_Home.Size = new System.Drawing.Size(1044, 369);
             this.dgv_Home.TabIndex = 12;
             this.dgv_Home.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_Home.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -367,8 +374,8 @@
             this.dgv_Home.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             this.dgv_Home.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Home.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_Home.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Home.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgv_Home.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Home.ThemeStyle.HeaderStyle.Height = 22;
             this.dgv_Home.ThemeStyle.ReadOnly = false;
             this.dgv_Home.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Home.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -377,18 +384,20 @@
             this.dgv_Home.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_Home.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Home.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_Home.Visible = false;
+            this.dgv_Home.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Home_CellContentClick);
+            this.dgv_Home.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Home_RowHeaderMouseClick);
             // 
             // MaDoi
             // 
             this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.FillWeight = 40F;
+            this.MaDoi.FillWeight = 20F;
             this.MaDoi.HeaderText = "Mã Đội";
             this.MaDoi.Name = "MaDoi";
             // 
             // TenDoi
             // 
             this.TenDoi.DataPropertyName = "TenDoi";
+            this.TenDoi.FillWeight = 20F;
             this.TenDoi.HeaderText = "Tên Đội";
             this.TenDoi.Name = "TenDoi";
             // 
@@ -402,6 +411,7 @@
             // SanNha
             // 
             this.SanNha.DataPropertyName = "SanNha";
+            this.SanNha.FillWeight = 20F;
             this.SanNha.HeaderText = "Sân Nhà";
             this.SanNha.Name = "SanNha";
             // 

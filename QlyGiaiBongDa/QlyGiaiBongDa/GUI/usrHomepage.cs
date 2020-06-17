@@ -41,8 +41,64 @@ namespace QlyGiaiBongDa.GUI
             lb_team_name.Visible = true; tb_TenDoi.Visible = true;
             lb_team_san.Visible = true; tb_SanNha.Visible = true;
             lb_team_slg.Visible = true; tb_SCT.Visible = true;
-            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            btt_team_view.Text = "Tải lại";
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam(); 
         }
 
+        public bool CheckData()
+        {
+            if (string.IsNullOrEmpty(tb_MaDoi.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập mã đội bóng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_MaDoi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_TenDoi.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tên đội bóng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_TenDoi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_SCT.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập số cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_SCT.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_SanNha.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập sân nhà", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_SanNha.Focus();
+                return false;
+            }
+
+            return true;
+        }
+        private void btt_team_add_Click(object sender, EventArgs e)
+        {
+            if (CheckData())
+            {
+                ObjTeamBLL.Instance.AddTeam();
+            }
+        }
+
+        private void btt_team_era_Click(object sender, EventArgs e)
+        {
+            ObjTeamBLL.Instance.DeleteTeam();
+        }
+
+        private void dgv_Home_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+            tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        private void dgv_Home_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

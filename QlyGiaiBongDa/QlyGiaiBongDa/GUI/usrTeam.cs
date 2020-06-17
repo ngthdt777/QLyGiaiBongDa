@@ -72,7 +72,7 @@ namespace QlyGiaiBongDa.GUI
         {
             if (CheckData())
             {
-                ObjTeamBLL.Instance.Add();
+                ObjTeamBLL.Instance.AddTeam();
                 ObjTeamBLL.Instance.GetListTeam();
             }
         }
@@ -105,7 +105,7 @@ namespace QlyGiaiBongDa.GUI
         // su kien xoa
         private void Btn_xoa_Click_1(object sender, EventArgs e)
         {
-            ObjTeamBLL.Instance.Delete();
+            ObjTeamBLL.Instance.DeleteTeam();
             if (tb_MaDoi.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn đội", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
