@@ -44,7 +44,7 @@ namespace QlyGiaiBongDa.DAL
         }
         private ObjTeamDAL() { }
 
-        public DoiBong Team = new DoiBong();
+    //    public DoiBong Team = new DoiBong();
         System.Windows.Forms.UserControl u = new usrTeam();
 
         public DataTable LoadListTeam()
@@ -64,26 +64,18 @@ namespace QlyGiaiBongDa.DAL
             else return true;*/
             return true;
         }
-        public void AddPlayer()
+       public void AddPlayer()
         {
-            // khởi tạo giá trị text box
-            string id = usrTeam.Instance.tb_MaDoi.Text;
-            string tendoi = usrTeam.Instance.tb_TenDoi.Text;
-            string slgct = usrTeam.Instance.tb_SCT.Text;
-            string sannha = usrTeam.Instance.tb_SanNha.Text;
+          /*  // khởi tạo giá trị text box
+            string id = usrTeam.Instance.tb_hsdb_mact.Text;
+            string tenct = usrTeam.Instance.tb_hsdb_tenct.Text;
+            string ngsinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
+            string loaict = usrTeam.Instance.tb_hsdb_loaict.Text;
 
-
-            Team.id = id;
-            Team.ten = tendoi;
-            Team.slgct = slgct;
-            Team.ten_sannha = sannha;
-
-
-
-                if (CheckMaDoi(Team.id) == true)
+                if (CheckMaDoi(id) == true)
                 {
                     string AddQuery = "INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu" +
-                        "VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')";
+                        "VALUES('" + id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')";
                     int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
@@ -92,7 +84,7 @@ namespace QlyGiaiBongDa.DAL
                 }
                 else MessageBox.Show("Ton tai");
 
-
+    */
         }
         public void AddTeam()
         {
@@ -101,15 +93,11 @@ namespace QlyGiaiBongDa.DAL
             string slgct = usrHomepage.Instance.tb_SCT.Text;
             string sannha = usrHomepage.Instance.tb_SanNha.Text;
 
-            Team.id = id;
-            Team.ten = tendoi;
-            Team.slgct = slgct;
-            Team.ten_sannha = sannha;
 
-            if (CheckMaDoi(Team.id) == true)
+            if (CheckMaDoi(id) == true)
             {
                 string AddQuery = "INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)" +
-                        "VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')";
+                        "VALUES('" + id + "', '" + tendoi + "', '" + sannha + "', '" + slgct + "')";
                 int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                 if (result > 0)
                 {
@@ -131,54 +119,66 @@ namespace QlyGiaiBongDa.DAL
 
             string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi " +
                 "FROM CAUTHU , DOIBONG,LOAICAUTHU " +
-               //  " Where LOAICAUTHU.MaLoaiCauThu = CAUTHU.MaLoaiCauThu" +
                " Where LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu and CAUTHU.MaDoi= DOIBONG.MaDoi and CAUTHU.MaDoi = '" + id + "' ";
             DataTable data = DataProvider.Instance.ExecuteQuery(FindQuery);
             return data;
         }
 
+
+
+
         // xoa doi bong bang ma doi
-        public void DeletePlayer()
-        {
-            string id = usrTeam.Instance.tb_MaDoi.Text;
-
-            string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
-            int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
-            if (result > 0)
-            {
-                MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
         public void DeleteTeam()
         {
+            System.Windows.Forms.UserControl usr = new usrHomepage();
             string id = usrHomepage.Instance.tb_MaDoi.Text;
 
-            string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
-            int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
-            if (result > 0)
+            string CheckQuery = "SELECT * " +
+             "FROM DOIBONG WHERE MaDoi = '" + id + "' ";
+
+            DataTable dt = DataProvider.Instance.ExecuteQuery(CheckQuery);
+            if (dt.Rows.Count != 0)
             {
-                MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(id);
+                string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                if (result > 0)
+                {
+                    MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+        }
+        public void DeletePlayer()
+        {
+              string id = usrHomepage.Instance.tb_MaDoi.Text;
+
+          
+           
+            if (usrHomepage.Instance.tb_MaDoi.Text != "")
+            {
+                string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                if (result > 0)
+                {
+                    MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
 
         }
 
         public void Bindings()
         {
-            System.Windows.Forms.UserControl u = new usrTeam();
+          //  System.Windows.Forms.UserControl u = new usrTeam();
 
-            ((usrTeam)u).tb_MaDoi.DataBindings.Clear();
-            ((usrTeam)u).tb_TenDoi.DataBindings.Clear();
-            ((usrTeam)u).tb_SCT.DataBindings.Clear();
-            ((usrTeam)u).tb_SanNha.DataBindings.Clear();
-
-            ((usrTeam)u).tb_MaDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "MaDoi"));
-            ((usrTeam)u).tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
-            ((usrTeam)u).tb_SCT.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "slgct"));
-            ((usrTeam)u).tb_SanNha.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "SanNha"));
+            usrTeam.Instance.tb_MaDoi.DataBindings.Clear();
+            usrTeam.Instance.tb_TenDoi.DataBindings.Clear();
+            usrTeam.Instance.tb_MaDoi.DataBindings.Add(new Binding("Text", usrTeam.Instance.dgv_HSDB.DataSource, "MaDoi"));
+            usrTeam.Instance.tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
 
             // Ban thay doi cua Duy Bao
-            ((usrTeam)u).DataBindings.Clear();
+            usrTeam.Instance.DataBindings.Clear();
         }
     }
 }

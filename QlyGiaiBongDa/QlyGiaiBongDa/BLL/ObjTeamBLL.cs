@@ -34,7 +34,7 @@ namespace QlyGiaiBongDa.BLL
         }
         public void AddPlayer()
         {
-            ObjTeamDAL.Instance.AddPlayer();
+           ObjTeamDAL.Instance.AddPlayer();
         }
         public DataTable PlayerView()
         {
@@ -53,6 +53,10 @@ namespace QlyGiaiBongDa.BLL
         public void DeleteTeam()
         {
             ObjTeamDAL.Instance.DeleteTeam();
+        }
+        public void Bindings()
+        {
+            ObjTeamDAL.Instance.Bindings();
         }
     }
 }

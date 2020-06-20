@@ -87,18 +87,25 @@ namespace QlyGiaiBongDa.GUI
             ObjTeamBLL.Instance.DeleteTeam();
         }
 
-        private void dgv_Home_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+  /*   public void  dgv_Home_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
             tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[0].Value.ToString();
             tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[1].Value.ToString();
             tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells[2].Value.ToString();
             tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
-
+*/
         private void dgv_Home_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
+                tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells["TenDoi"].Value.ToString();
+                tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells["SoCauThu"].Value.ToString();
+                tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells["SanNha"].Value.ToString();
+            }
         }
     }
 }

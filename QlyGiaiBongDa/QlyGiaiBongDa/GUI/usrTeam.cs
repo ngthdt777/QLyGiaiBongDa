@@ -51,18 +51,6 @@ namespace QlyGiaiBongDa.GUI
                 tb_TenDoi.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_SCT.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập số cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_SCT.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(tb_SanNha.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập sân nhà", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_SanNha.Focus();
-                return false;
-            }
 
             return true;
         }
@@ -72,22 +60,29 @@ namespace QlyGiaiBongDa.GUI
         {
             if (CheckData())
             {
-                ObjTeamBLL.Instance.AddTeam();
+                ObjTeamBLL.Instance.AddPlayer();
                 ObjTeamBLL.Instance.GetListTeam();
             }
         }
 
         private void btt_Team_View_Click(object sender, EventArgs e)
         {
-            dgv_HSDB.Controls.Clear();
-          
+            dgv_HSDB.Visible = true;
+            btt_hsdb_capnhat.Visible = true;
+         //   lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
+          //  tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
             dgv_HSDB.DataSource = ObjTeamBLL.Instance.PlayerView();
         }
 
         // ham click du lieu tren database
         private void dgv_HSDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
+                tb_TenDoi.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
+            }
         }
 
         private void dgv_HSDB_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,8 +92,7 @@ namespace QlyGiaiBongDa.GUI
             {
                 tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
                 tb_TenDoi.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
-                tb_SCT.Text = dgv_HSDB.Rows[index].Cells["NgaySinh"].Value.ToString();
-                tb_SanNha.Text = dgv_HSDB.Rows[index].Cells["TenLoaiCauThu"].Value.ToString();
+
             }
         }
 
@@ -110,6 +104,16 @@ namespace QlyGiaiBongDa.GUI
             {
                 MessageBox.Show("Bạn chưa chọn đội", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            ObjTeamBLL.Instance.Bindings();
+        }
+
+        private void btt_hsdb_capnhat_Click(object sender, EventArgs e)
+        {
+            lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
+            tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
+            lb_team_name.Visible = tb_TenDoi.Visible = false;
+            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
+            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
         }
     }
 }
