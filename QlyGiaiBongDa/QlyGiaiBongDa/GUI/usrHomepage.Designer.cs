@@ -168,6 +168,7 @@
             this.btt_team_fix.Text = "Sửa";
             this.btt_team_fix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_fix.Visible = false;
+            this.btt_team_fix.Click += new System.EventHandler(this.btt_team_fix_Click);
             // 
             // gb_HSDB
             // 

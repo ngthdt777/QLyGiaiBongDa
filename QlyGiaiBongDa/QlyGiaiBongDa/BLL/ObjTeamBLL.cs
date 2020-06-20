@@ -58,5 +58,9 @@ namespace QlyGiaiBongDa.BLL
         {
             ObjTeamDAL.Instance.Bindings();
         }
+        public void UpdateTeam()
+        {
+            ObjTeamDAL.Instance.UpdateTeam();
+        }
     }
 }

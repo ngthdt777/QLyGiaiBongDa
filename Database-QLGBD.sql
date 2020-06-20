@@ -34,6 +34,9 @@ MaDoi varchar(45),
 )
 alter table CAUTHU add constraint fk_MaDoi foreign key (MaDoi) references DOIBONG(MaDoi)
 
+-- Xoa khoa ngoai cau thu
+
+alter table CAUTHU drop constraint fk_MaDoi  
 go 
 
 -- tạo bảng loại cầu thủ
@@ -182,3 +185,7 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
   INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)
                         VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')
+
+		Update DOIBONG SET  TenDoi='CanTho', SoCauThu='10',SanNha='VungTau' where MaDoi=1;
+
+		select * from DOIBONG

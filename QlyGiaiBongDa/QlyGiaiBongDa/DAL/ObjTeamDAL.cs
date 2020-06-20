@@ -49,8 +49,9 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListTeam()
         {
+
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT * FROM DoiBong";
+            string LoadQuery = "SELECT * FROM DOIBONG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         } 
@@ -66,17 +67,19 @@ namespace QlyGiaiBongDa.DAL
         }
        public void AddPlayer()
         {
-          /*  // khởi tạo giá trị text box
+  // khởi tạo giá trị text box
             string id = usrTeam.Instance.tb_hsdb_mact.Text;
             string tenct = usrTeam.Instance.tb_hsdb_tenct.Text;
             string ngsinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
             string loaict = usrTeam.Instance.tb_hsdb_loaict.Text;
+            string madb = usrTeam.Instance.tb_MaDoi.Text;
+            string ghichu = usrTeam.Instance.tb_hsdb_ghichu.Text;
 
                 if (CheckMaDoi(id) == true)
                 {
-                    string AddQuery = "INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu" +
-                        "VALUES('" + id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')";
-                    int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)"+
+                        "VALUES('" + id + "', '" + tenct + "', '" +ngsinh + "', '" + loaict + "', '" + madb + "', '" + ghichu +"')";
+                int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
                         MessageBox.Show("OKE da add ");
@@ -84,7 +87,6 @@ namespace QlyGiaiBongDa.DAL
                 }
                 else MessageBox.Show("Ton tai");
 
-    */
         }
         public void AddTeam()
         {
@@ -146,10 +148,33 @@ namespace QlyGiaiBongDa.DAL
                 {
                     MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-
             }
         }
+        public void UpdateTeam()
+        {
+            System.Windows.Forms.UserControl usr = new usrHomepage();
+            string id = usrHomepage.Instance.tb_MaDoi.Text;
+            string tendoi = usrHomepage.Instance.tb_TenDoi.Text;
+            string slgct = usrHomepage.Instance.tb_SCT.Text;
+            string sannha = usrHomepage.Instance.tb_SanNha.Text;
+            // MessageBox.Show(id);
+            string UpdateQuery = "UPDATE DOIBONG " +
+                 "SET TenDoi = '" + tendoi + "',SoCauThu = '" + slgct + "',SanNha = '" + sannha + "' " +
+                 " WHERE MaDoi = '"+id+"'";
+            int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
+                if (result > 0)
+                {
+                    MessageBox.Show("Đội bóng đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+        }
+
+
+
+
+
+
+
+
         public void DeletePlayer()
         {
               string id = usrHomepage.Instance.tb_MaDoi.Text;

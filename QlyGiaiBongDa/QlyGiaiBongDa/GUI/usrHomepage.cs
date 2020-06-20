@@ -107,5 +107,10 @@ namespace QlyGiaiBongDa.GUI
                 tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells["SanNha"].Value.ToString();
             }
         }
+
+        private void btt_team_fix_Click(object sender, EventArgs e)
+        {
+            ObjTeamBLL.Instance.UpdateTeam();
+        }
     }
 }
