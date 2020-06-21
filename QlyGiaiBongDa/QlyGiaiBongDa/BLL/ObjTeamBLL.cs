@@ -28,39 +28,72 @@ namespace QlyGiaiBongDa.BLL
             }
             set { instance = value; }
         }
+
+
        public DataTable GetListTeam()
         {
             return ObjTeamDAL.Instance.LoadListTeam();
         }
+
+
+        public DataTable GetListPlayer()
+        {
+            return ObjTeamDAL.Instance.LoadListPlayer();
+        }
+
+
+
         public void AddPlayer()
         {
            ObjTeamDAL.Instance.AddPlayer();
         }
-        public DataTable PlayerView()
+
+
+
+
+      /*  public DataTable PlayerView()
         {
             return ObjTeamDAL.Instance.PlayerView();
-        }
+        }*/
+
+
+
 
         // goi lai ham thay doi tu DAL, Duy Bao Change
         public void DeletePlayer()
         {
             ObjTeamDAL.Instance.DeletePlayer();
         }
+
+
         public void AddTeam()
         {
             ObjTeamDAL.Instance.AddTeam();
         }
+
+
         public void DeleteTeam()
         {
             ObjTeamDAL.Instance.DeleteTeam();
         }
+
+
         public void Bindings()
         {
             ObjTeamDAL.Instance.Bindings();
         }
+
+
+
         public void UpdateTeam()
         {
             ObjTeamDAL.Instance.UpdateTeam();
         }
+
+        public void UpdatePlayer()
+        {
+            ObjTeamDAL.Instance.UpdatePlayer();
+        }
+
     }
 }

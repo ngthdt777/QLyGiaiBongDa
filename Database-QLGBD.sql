@@ -39,6 +39,8 @@ alter table CAUTHU add constraint fk_MaDoi foreign key (MaDoi) references DOIBON
 alter table CAUTHU drop constraint fk_MaDoi  
 go 
 
+
+drop table LOAICAUTHU
 -- tạo bảng loại cầu thủ
 Create table LOAICAUTHU
 (
@@ -46,6 +48,8 @@ MaLoaiCauThu varchar(45),
 TenLoaiCauThu varchar(45),
 )
 alter table CAUTHU add constraint fk_MaLoaiCauThu foreign key (MaLoaiCauThu) references LOAICAUTHU(MaLoaiCauThu)
+
+Alter table CAUTHU drop constraint fk_MaLoaiCauThu
 go
 
 -- tạo bảng bàn thắng
@@ -167,13 +171,17 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
  insert into LOAICAUTHU values ( ' 001NN'  , ' Nước Ngoài' )
 
 
- insert into CAUTHU values ( 1003, ' Tran Thanh Lam', '18-07-2000', ' 001TN' , ' Thi Dau 3 nam ' , 1)
- insert into CAUTHU values ( 1004, ' Tran Quoc Thang', '01-01-2000', ' 001TN' , ' Thi Dau 6 nam ' , 1)
- insert into CAUTHU values ( 1001, ' Luong Duy Bao', 2000-01-01, ' 001TN' , ' Thi Dau 10 nam ' , 2)
- insert into CAUTHU values ( 1002, ' Luong Duy Bao', 2000-01-02, ' 002NN' , ' Thi Dau 2 nam ' , 3)
- 
- go 
+ insert into CAUTHU values ( 1003, ' Tran Thanh Lam', '18-07-2000', ' TrongNuoc' , ' Thi Dau 3 nam ' , '1')
+ insert into CAUTHU values ( 1004, ' Tran Quoc Thang', '01-01-2000', ' NgoaiNuoc' , ' Thi Dau 6 nam ' , '1')
+ insert into CAUTHU values ( 1001, ' Luong Duy Bao', '2000-01-01', 'TrongNuoc ' , ' Thi Dau 10 nam ' , '2')
+ insert into CAUTHU values ( 1002, ' Luong Duy Bao', '2000-01-02', ' NgoaiNuoc' , ' Thi Dau 2 nam ' , '3')
+  insert into CAUTHU values ( 1005, ' Nguyen Thanh Det', '2000-01-02', ' TrongNuoC' , ' Thi Dau 10000 nam ' , '1')
 
+  go
+
+  delete from CAUTHU
+ go 
+ SELECT * FROM CAUTHU WHERE MaDoi='1'
  set dateformat dmy
 
  go
@@ -186,6 +194,3 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
   INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)
                         VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')
 
-		Update DOIBONG SET  TenDoi='CanTho', SoCauThu='10',SanNha='VungTau' where MaDoi=1;
-
-		select * from DOIBONG

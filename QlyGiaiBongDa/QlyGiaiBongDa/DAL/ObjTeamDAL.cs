@@ -47,6 +47,13 @@ namespace QlyGiaiBongDa.DAL
     //    public DoiBong Team = new DoiBong();
         System.Windows.Forms.UserControl u = new usrTeam();
 
+
+
+
+
+
+
+
         public DataTable LoadListTeam()
         {
 
@@ -55,6 +62,24 @@ namespace QlyGiaiBongDa.DAL
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         } 
+
+        
+
+
+
+        public DataTable LoadListPlayer()
+        {
+            string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT * FROM CAUTHU WHERE MaDoi='" + id + "'";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
+
+
+
+
 
         bool CheckMaDoi(string id)
         {
@@ -65,29 +90,44 @@ namespace QlyGiaiBongDa.DAL
             else return true;*/
             return true;
         }
+
+
+
+
+
+
+
+
+
        public void AddPlayer()
         {
   // khởi tạo giá trị text box
             string id = usrTeam.Instance.tb_hsdb_mact.Text;
             string tenct = usrTeam.Instance.tb_hsdb_tenct.Text;
             string ngsinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
-            string loaict = usrTeam.Instance.tb_hsdb_loaict.Text;
-            string madb = usrTeam.Instance.tb_MaDoi.Text;
+            string loaict = usrTeam.Instance.tb_hsdb_loaict.Text.ToString();        
+            string madoi = usrTeam.Instance.tb_MaDoi.Text;
             string ghichu = usrTeam.Instance.tb_hsdb_ghichu.Text;
 
                 if (CheckMaDoi(id) == true)
                 {
                     string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)"+
-                        "VALUES('" + id + "', '" + tenct + "', '" +ngsinh + "', '" + loaict + "', '" + madb + "', '" + ghichu +"')";
+                        "VALUES('" + id + "', '" + tenct + "', '" +ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi +"')";
                 int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
-                        MessageBox.Show("OKE da add ");
+                        MessageBox.Show("OKE đã thêm ");
                     }
                 }
-                else MessageBox.Show("Ton tai");
+                else MessageBox.Show("Cầu thủ tồn tại");
 
         }
+
+
+
+
+
+
         public void AddTeam()
         {
             string id = usrHomepage.Instance.tb_MaDoi.Text;
@@ -119,7 +159,7 @@ namespace QlyGiaiBongDa.DAL
             string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
             string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
 
-            string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi " +
+            string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,GhiChu " +
                 "FROM CAUTHU , DOIBONG,LOAICAUTHU " +
                " Where LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu and CAUTHU.MaDoi= DOIBONG.MaDoi and CAUTHU.MaDoi = '" + id + "' ";
             DataTable data = DataProvider.Instance.ExecuteQuery(FindQuery);
@@ -150,6 +190,14 @@ namespace QlyGiaiBongDa.DAL
                 }
             }
         }
+
+
+
+
+
+
+
+        // cap nhap team
         public void UpdateTeam()
         {
             System.Windows.Forms.UserControl usr = new usrHomepage();
@@ -169,6 +217,29 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+        // cap nhat player
+
+        public void UpdatePlayer()
+        {
+            System.Windows.Forms.UserControl usr = new usrTeam();
+            string id = usrTeam.Instance.tb_hsdb_mact.Text;
+            string tencauthu = usrTeam.Instance.tb_hsdb_tenct.Text;
+            string ngaysinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
+            string loaiCT = usrTeam.Instance.tb_hsdb_loaict.Text;
+            string GhiChu = usrTeam.Instance.tb_hsdb_ghichu.Text;
+            // MessageBox.Show(id);
+
+
+            string UpdateQuery = "UPDATE CAUTHU " +
+                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', GhiChu = '" + GhiChu + "' " +
+                 " WHERE MaCauThu = '" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
+            if (result > 0)
+            {
+                MessageBox.Show("Cầu thủ đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
 
 
 
@@ -177,21 +248,32 @@ namespace QlyGiaiBongDa.DAL
 
         public void DeletePlayer()
         {
-              string id = usrHomepage.Instance.tb_MaDoi.Text;
+            System.Windows.Forms.UserControl usr = new usrTeam();
+            string id = usrTeam.Instance.tb_hsdb_mact.Text;
 
-          
-           
-            if (usrHomepage.Instance.tb_MaDoi.Text != "")
+           // string CheckQuery = "SELECT * " +
+             //"FROM CAUTHU WHERE MaDoi = '" + id + "' ";
+
+           // DataTable dt = DataProvider.Instance.ExecuteQuery(CheckQuery);
+
+            if (usrTeam.Instance.tb_hsdb_mact.Text != "")
             {
-                string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                MessageBox.Show("ok chua");
+
+                string DeleteQuery = "DELETE FROM CAUTHU WHERE MaCauThu = '" + id + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
                 if (result > 0)
                 {
-                    MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cầu thủ đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
         }
+
+
+
+
+
 
         public void Bindings()
         {

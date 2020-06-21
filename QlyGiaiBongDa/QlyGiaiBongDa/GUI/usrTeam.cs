@@ -45,15 +45,44 @@ namespace QlyGiaiBongDa.GUI
                 tb_MaDoi.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_TenDoi.Text))
+            if (string.IsNullOrEmpty(tb_hsdb_mact.Text))
             {
-                MessageBox.Show("Bạn chưa nhập tên đội bóng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_TenDoi.Focus();
+                MessageBox.Show("Bạn chưa nhập mã cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_mact.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_hsdb_tenct.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tên cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_tenct.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_hsdb_ngsinh.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập ngày sinh cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_ngsinh.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_hsdb_loaict.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập loại cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_loaict.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_hsdb_ghichu.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập ghi chú của cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_ghichu.Focus();
                 return false;
             }
 
             return true;
         }
+
+
+
+
+
 
         // su kien chon nut them - Duy Bao Change
         private void btn_Them_Click(object sender, EventArgs e)
@@ -61,18 +90,34 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.AddPlayer();
-                ObjTeamBLL.Instance.GetListTeam();
+               // ObjTeamBLL.Instance.GetListPlayer();
             }
         }
+
+
+
+
+
+
+
 
         private void btt_Team_View_Click(object sender, EventArgs e)
         {
             dgv_HSDB.Visible = true;
-            btt_hsdb_capnhat.Visible = true;
-         //   lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
-          //  tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
-            dgv_HSDB.DataSource = ObjTeamBLL.Instance.PlayerView();
+            lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
+            tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
+            lb_team_name.Visible = tb_TenDoi.Visible = false;
+            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
+            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
+            btt_Team_View.Text = "Tải lại";
+            dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
         }
+
+
+
+
+
+
 
         // ham click du lieu tren database
         private void dgv_HSDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -80,12 +125,20 @@ namespace QlyGiaiBongDa.GUI
             int index = e.RowIndex;
             if (index >= 0)
             {
-                tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
-                tb_TenDoi.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
+                tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaDoi"].Value.ToString();
+                tb_hsdb_mact.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
+                tb_hsdb_loaict.Text = dgv_HSDB.Rows[index].Cells["MaLoaiCauThu"].Value.ToString();
+                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[index].Cells["NgaySinh"].Value.ToString();
+                tb_hsdb_tenct.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
+                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[index].Cells["GhiChu"].Value.ToString();
             }
         }
 
-        private void dgv_HSDB_CellClick(object sender, DataGridViewCellEventArgs e)
+
+
+
+
+     /*   private void dgv_HSDB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             if (index >= 0)
@@ -94,7 +147,7 @@ namespace QlyGiaiBongDa.GUI
                 tb_TenDoi.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
 
             }
-        }
+        }*/
 
         // su kien xoa
         private void Btn_xoa_Click_1(object sender, EventArgs e)
@@ -107,6 +160,13 @@ namespace QlyGiaiBongDa.GUI
             ObjTeamBLL.Instance.Bindings();
         }
 
+
+
+
+
+
+
+
         private void btt_hsdb_capnhat_Click(object sender, EventArgs e)
         {
             lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
@@ -114,6 +174,25 @@ namespace QlyGiaiBongDa.GUI
             lb_team_name.Visible = tb_TenDoi.Visible = false;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
+
+            ObjTeamBLL.Instance.GetListPlayer();
+
+        }
+
+
+
+
+
+
+
+        private void Btt_xoa_Click(object sender, EventArgs e)
+        {
+            ObjTeamBLL.Instance.DeletePlayer();
+        }
+
+        private void Btt_sua_Click(object sender, EventArgs e)
+        {
+            ObjTeamBLL.Instance.UpdatePlayer();
         }
     }
 }
