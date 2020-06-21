@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ObjGoalBLL.cs" />
     <Compile Include="BLL\ObjTeamBLL.cs" />
     <Compile Include="DAL\ObjGoalDAL.cs" />
     <Compile Include="DAL\ObjPlayerDAL.cs" />

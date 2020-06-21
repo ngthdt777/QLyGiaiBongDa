@@ -45,7 +45,7 @@ namespace QlyGiaiBongDa.DAL
         private ObjTeamDAL() { }
 
     //    public DoiBong Team = new DoiBong();
-        System.Windows.Forms.UserControl u = new usrTeam();
+      System.Windows.Forms.UserControl u = new usrTeam();
 
 
 

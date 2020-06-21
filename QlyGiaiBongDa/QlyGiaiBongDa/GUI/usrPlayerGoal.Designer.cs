@@ -38,11 +38,15 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.dtp_CauThuGiBan1 = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.dgv_BXH = new Guna.UI.WinForms.GunaDataGridView();
+            this.dgv_BXH_playergoal = new Guna.UI.WinForms.GunaDataGridView();
             this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
+            this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_HSDB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH_playergoal)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaButton1
@@ -154,24 +158,35 @@
             this.dtp_CauThuGiBan1.Text = "Tuesday, June 9, 2020";
             this.dtp_CauThuGiBan1.Value = new System.DateTime(2020, 6, 9, 0, 5, 1, 781);
             // 
-            // dgv_BXH
+            // dgv_BXH_playergoal
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_BXH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_BXH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_BXH.BackgroundColor = System.Drawing.Color.Gray;
-            this.dgv_BXH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_BXH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_BXH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_BXH_playergoal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_BXH_playergoal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_BXH_playergoal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_BXH_playergoal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_BXH_playergoal.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_BXH_playergoal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_BXH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_BXH.ColumnHeadersHeight = 4;
+            this.dgv_BXH_playergoal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_BXH_playergoal.ColumnHeadersHeight = 35;
+            this.dgv_BXH_playergoal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenCauThu,
+            this.TenDoi,
+            this.MaLoaiCauThu,
+            this.SoLuongLoaiBanThang});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -179,38 +194,38 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_BXH.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_BXH.EnableHeadersVisualStyles = false;
-            this.dgv_BXH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.Location = new System.Drawing.Point(3, 304);
-            this.dgv_BXH.Name = "dgv_BXH";
-            this.dgv_BXH.RowHeadersVisible = false;
-            this.dgv_BXH.RowTemplate.Height = 24;
-            this.dgv_BXH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_BXH.Size = new System.Drawing.Size(1251, 312);
-            this.dgv_BXH.TabIndex = 5;
-            this.dgv_BXH.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_BXH.ThemeStyle.BackColor = System.Drawing.Color.Gray;
-            this.dgv_BXH.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_BXH.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgv_BXH.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_BXH.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_BXH.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgv_BXH.ThemeStyle.ReadOnly = false;
-            this.dgv_BXH.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_BXH.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_BXH.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgv_BXH.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_BXH.ThemeStyle.RowsStyle.Height = 24;
-            this.dgv_BXH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_BXH_playergoal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_BXH_playergoal.EnableHeadersVisualStyles = false;
+            this.dgv_BXH_playergoal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_BXH_playergoal.Location = new System.Drawing.Point(0, 304);
+            this.dgv_BXH_playergoal.Name = "dgv_BXH_playergoal";
+            this.dgv_BXH_playergoal.RowHeadersVisible = false;
+            this.dgv_BXH_playergoal.RowTemplate.Height = 24;
+            this.dgv_BXH_playergoal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_BXH_playergoal.Size = new System.Drawing.Size(1251, 312);
+            this.dgv_BXH_playergoal.TabIndex = 5;
+            this.dgv_BXH_playergoal.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dgv_BXH_playergoal.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_BXH_playergoal.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_BXH_playergoal.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_BXH_playergoal.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_BXH_playergoal.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_BXH_playergoal.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgv_BXH_playergoal.ThemeStyle.ReadOnly = false;
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.Height = 24;
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // btn_XuatBaocao
             // 
@@ -261,6 +276,31 @@
             this.btn_TimKiem.TabIndex = 10;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // TenCauThu
+            // 
+            this.TenCauThu.FillWeight = 10.15228F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.FillWeight = 10.15228F;
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // MaLoaiCauThu
+            // 
+            this.MaLoaiCauThu.FillWeight = 5F;
+            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
+            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
+            // 
+            // SoLuongLoaiBanThang
+            // 
+            this.SoLuongLoaiBanThang.FillWeight = 5F;
+            this.SoLuongLoaiBanThang.HeaderText = "Số Bàn Thắng";
+            this.SoLuongLoaiBanThang.Name = "SoLuongLoaiBanThang";
             // 
             // usrPlayerGoal
             // 
@@ -268,13 +308,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.btn_XuatBaocao);
-            this.Controls.Add(this.dgv_BXH);
+            this.Controls.Add(this.dgv_BXH_playergoal);
             this.Controls.Add(this.gb_HSDB);
             this.Controls.Add(this.gunaButton1);
             this.Name = "usrPlayerGoal";
-            this.Size = new System.Drawing.Size(1254, 697);
+            this.Size = new System.Drawing.Size(1259, 697);
             this.gb_HSDB.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH_playergoal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,8 +327,12 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaDateTimePicker dtp_CauThuGiBan1;
-        private Guna.UI.WinForms.GunaDataGridView dgv_BXH;
         private Guna.UI.WinForms.GunaButton btn_XuatBaocao;
         private Guna.UI.WinForms.GunaButton btn_TimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongLoaiBanThang;
+        public Guna.UI.WinForms.GunaDataGridView dgv_BXH_playergoal;
     }
 }

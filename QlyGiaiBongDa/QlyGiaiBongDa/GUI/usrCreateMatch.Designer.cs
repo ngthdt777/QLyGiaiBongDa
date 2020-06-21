@@ -116,7 +116,7 @@
             this.btn_CapNhat.ForeColor = System.Drawing.Color.Black;
             this.btn_CapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhat.Image")));
             this.btn_CapNhat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_CapNhat.Location = new System.Drawing.Point(1005, 634);
+            this.btn_CapNhat.Location = new System.Drawing.Point(1036, 634);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_CapNhat.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -197,7 +197,7 @@
             this.btn_PhatSinh.ForeColor = System.Drawing.Color.Black;
             this.btn_PhatSinh.Image = ((System.Drawing.Image)(resources.GetObject("btn_PhatSinh.Image")));
             this.btn_PhatSinh.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_PhatSinh.Location = new System.Drawing.Point(719, 634);
+            this.btn_PhatSinh.Location = new System.Drawing.Point(740, 634);
             this.btn_PhatSinh.Name = "btn_PhatSinh";
             this.btn_PhatSinh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_PhatSinh.OnHoverBorderColor = System.Drawing.Color.Black;

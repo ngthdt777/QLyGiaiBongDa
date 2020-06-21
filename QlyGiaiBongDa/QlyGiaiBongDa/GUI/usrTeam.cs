@@ -125,12 +125,12 @@ namespace QlyGiaiBongDa.GUI
             int index = e.RowIndex;
             if (index >= 0)
             {
-                tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaDoi"].Value.ToString();
-                tb_hsdb_mact.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
-                tb_hsdb_loaict.Text = dgv_HSDB.Rows[index].Cells["MaLoaiCauThu"].Value.ToString();
-                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[index].Cells["NgaySinh"].Value.ToString();
-                tb_hsdb_tenct.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
-                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[index].Cells["GhiChu"].Value.ToString();
+                tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
+                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
+                tb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
+                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+                tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
+                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
             }
         }
 
@@ -138,16 +138,19 @@ namespace QlyGiaiBongDa.GUI
 
 
 
-     /*   private void dgv_HSDB_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void dgv_HSDB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             if (index >= 0)
             {
-                tb_MaDoi.Text = dgv_HSDB.Rows[index].Cells["MaCauThu"].Value.ToString();
-                tb_TenDoi.Text = dgv_HSDB.Rows[index].Cells["TenCauThu"].Value.ToString();
-
+                tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
+                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
+                tb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
+                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+                tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
+                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
             }
-        }*/
+        }
 
         // su kien xoa
         private void Btn_xoa_Click_1(object sender, EventArgs e)

@@ -31,9 +31,9 @@ namespace QlyGiaiBongDa.BLL
 
 
        public DataTable GetListTeam()
-        {
+       {
             return ObjTeamDAL.Instance.LoadListTeam();
-        }
+       }
 
 
         public DataTable GetListPlayer()

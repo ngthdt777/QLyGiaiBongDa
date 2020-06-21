@@ -395,11 +395,11 @@
             // 
             this.MaDoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.FillWeight = 20F;
+            this.MaDoi.FillWeight = 5F;
             this.MaDoi.HeaderText = "Mã Đội";
             this.MaDoi.Name = "MaDoi";
             this.MaDoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaDoi.Width = 249;
+            this.MaDoi.Width = 120;
             // 
             // TenDoi
             // 
@@ -412,7 +412,7 @@
             // SoCauThu
             // 
             this.SoCauThu.DataPropertyName = "SoCauThu";
-            this.SoCauThu.FillWeight = 40F;
+            this.SoCauThu.FillWeight = 10F;
             this.SoCauThu.HeaderText = "Số Cầu Thủ";
             this.SoCauThu.Name = "SoCauThu";
             this.SoCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.False;

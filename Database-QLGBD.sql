@@ -89,6 +89,18 @@ MaVongDau varchar(45),
 )
 
 
+insert TRANDAU values ('Vong1LD' , ' BinhDuong' , ' LongAn' , '01-01-2020 ' , '4:00' , ' Tan An' , ' 30', 'Vong1' )
+insert TRANDAU values ('Vong2LD' , ' KhanhHoa' , ' HaNoi' , '02-01-2020 ' , '4:20' , ' Hang Day' , ' 2-1', 'Vong2' )
+
+insert BANTHANG values ('00A' , ' 1001' , 'A' , ' 69p' , 'Vong1LD')
+insert BANTHANG values ('00A' , ' 1001' , 'C' , ' 72p' , 'Vong1LD')
+insert BANTHANG values ('00A' , ' 1001' , 'B' , ' 90p' , 'Vong1LD')
+
+select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG from DOIBONG, CAUTHU, BANTHANG 
+where  DOIBONG.MaDoi= CAUTHU.MaDoi 
+and CAUTHU.MaCauThu = '1001'
+group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang
+
 go
 
 -- tạo bảng vòng đấu
