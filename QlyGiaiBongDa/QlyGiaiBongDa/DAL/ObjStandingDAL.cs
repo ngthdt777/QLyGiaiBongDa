@@ -8,50 +8,56 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+
+
+
+
 namespace QlyGiaiBongDa.DAL
 {
-    class banthang
+    public class Standing
     {
-        public string mab { get; set; }
-        public string ma_ct { get; set; }
-        public string ma_lbt { get; set; }
-        public string thoidiem { get; set; }
-        public string id_td { get; set; }
-        public banthang() { }
+        public string DiemSoThang { get; set; }
+        public string DiemSoHoa { get; set; }
+        public string DiemSoThua { get; set; }
+        public string ThuTuUuTienXepHang { get; set; }
+        public string MaTranDau { get; set; }
+        public string MaVongDau { get; set; }
+        public Standing() { }
+
     }
 
 
-    public class ObjGoalDAL
-    {
-        private static ObjGoalDAL instance;
 
-        public static ObjGoalDAL Instance
+
+    public class ObjStandingDAL
+    {
+        private static ObjStandingDAL instance;
+
+        public static ObjStandingDAL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ObjGoalDAL();
+                    instance = new ObjStandingDAL();
                 }
                 return instance;
             }
             set { instance = value; }
         }
-        private ObjGoalDAL() { }
 
 
-        //    System.Windows.Forms.UserControl u = new usrPlayerGoal(); // Tao usrPlayerGoal moi
 
 
-        public DataTable LoadListPlayerGoal()
+        private ObjStandingDAL() { }
+
+
+        public DataTable LoadListStanding()
         {
             DataTable dt = new DataTable();
-
-
             string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
                 " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
                 "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
-
 
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
@@ -59,5 +65,3 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
-    }
-}

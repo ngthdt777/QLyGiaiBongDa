@@ -62,10 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ObjGoalBLL.cs" />
+    <Compile Include="BLL\ObjStandingBLL.cs" />
     <Compile Include="BLL\ObjTeamBLL.cs" />
     <Compile Include="DAL\ObjGoalDAL.cs" />
     <Compile Include="DAL\ObjPlayerDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\ObjStandingDAL.cs" />
     <Compile Include="DAL\ObjTeamDAL.cs" />
     <Compile Include="DAL\ObjPlayerTypeDAL.cs" />
     <Compile Include="DAL\ObjthamsoDAL.cs" />

@@ -390,7 +390,7 @@
             this.dgv_BXH.RowHeadersVisible = false;
             this.dgv_BXH.RowTemplate.Height = 24;
             this.dgv_BXH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_BXH.Size = new System.Drawing.Size(1251, 225);
+            this.dgv_BXH.Size = new System.Drawing.Size(1251, 251);
             this.dgv_BXH.TabIndex = 7;
             this.dgv_BXH.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -428,7 +428,7 @@
             this.btn_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_Thoat.Image")));
             this.btn_Thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Thoat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Thoat.Location = new System.Drawing.Point(942, 626);
+            this.btn_Thoat.Location = new System.Drawing.Point(1020, 639);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Thoat.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -453,7 +453,7 @@
             this.btn_CapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhat.Image")));
             this.btn_CapNhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_CapNhat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_CapNhat.Location = new System.Drawing.Point(721, 626);
+            this.btn_CapNhat.Location = new System.Drawing.Point(768, 639);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_CapNhat.OnHoverBorderColor = System.Drawing.Color.Black;

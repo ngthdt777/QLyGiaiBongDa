@@ -199,6 +199,7 @@
             this.btn_TimKiem.Size = new System.Drawing.Size(179, 42);
             this.btn_TimKiem.TabIndex = 9;
             this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // gunaButton2
             // 
