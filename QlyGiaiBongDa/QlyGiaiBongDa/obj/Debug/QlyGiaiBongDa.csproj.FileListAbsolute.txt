@@ -160,3 +160,27 @@ C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\Q
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrNewTour.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayer.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayerGoal.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrResultMatch.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrRulesChange.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrStanding.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeam.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
+E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete

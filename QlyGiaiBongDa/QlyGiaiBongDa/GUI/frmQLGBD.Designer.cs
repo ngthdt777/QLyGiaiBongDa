@@ -440,6 +440,6 @@
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel2;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel3;
         public Guna.UI.WinForms.GunaButton lb_gbd;
-        private Guna.UI.WinForms.GunaPanel pnlMain;
+        public Guna.UI.WinForms.GunaPanel pnlMain;
     }
 }

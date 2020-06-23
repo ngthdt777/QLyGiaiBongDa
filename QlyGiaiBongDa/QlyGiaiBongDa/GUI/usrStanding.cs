@@ -7,13 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.GUI
 {
     public partial class usrStanding : UserControl
     {
+        private static usrStanding _instance;
+        public static usrStanding Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new usrStanding();
+                return _instance;
+            }
+        }
         public usrStanding()
         {
             InitializeComponent();

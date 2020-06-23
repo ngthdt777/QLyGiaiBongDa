@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -25,6 +26,11 @@ namespace QlyGiaiBongDa.GUI
         public usrCreateMatch()
         {
             InitializeComponent();
+        }
+
+        private void btn_CapNhat_Click(object sender, EventArgs e)
+        {
+            dgv_TLTD.DataSource = ObjRoundMatchBLL.Instance.GetListRoundMatch();
         }
     }
 }

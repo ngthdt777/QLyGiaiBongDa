@@ -12,7 +12,7 @@ using System.Data;
 
 namespace QlyGiaiBongDa.DAL
 {
-    class cauthu
+    public class cauthu
     {
         public string ma { get; set; }
         public string ten { get; set; }
@@ -20,9 +20,9 @@ namespace QlyGiaiBongDa.DAL
         public string maloaict { get; set; }
         public string ghichu { get; set; }
         public string ma_doi { get; set; }
-        public cauthu(string ma, string ten, DateTime ngsinh, string maloaict,string ghichu, string ma_doi)
+        public cauthu(string ma, string ten, DateTime ngsinh, string maloaict, string ghichu, string ma_doi)
         {
-            this.ma=ma;
+            this.ma = ma;
             this.ten = ten;
             this.ngsinh = ngsinh;
             this.maloaict = maloaict;
@@ -31,32 +31,43 @@ namespace QlyGiaiBongDa.DAL
         }
         public cauthu() { }
     }
-}
-/*public class ObjPlayerDAL
-{
-    private static ObjPlayerDAL instance;
-
-    public static ObjPlayerDAL Instance
+    public class ObjPlayerDAL
     {
-        get
+        private static ObjPlayerDAL instance;
+
+        public static ObjPlayerDAL Instance
         {
-            if (instance == null)
+            get
             {
-                instance = new ObjPlayerDAL();
+                if (instance == null)
+                {
+                    instance = new ObjPlayerDAL();
+                }
+                return instance;
             }
-            return instance;
+            set { instance = value; }
         }
-        set { instance = value; }
-    }
-    private ObjPlayerDAL() { }
-   // public cauthu player = new cauthu();
-    System.Windows.Forms.UserControl u = new usrPlayer();
+        private ObjPlayerDAL() { }
 
-    public DataTable LoadListTeam()
-    {
-        DataTable dt = new DataTable();
-        string LoadQuery = "SELECT * FROM DoiBong";
-        dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
-        return dt;
+
+
+        public DataTable LoadListFindPlayer()
+        {
+            DataTable dt = new DataTable();
+
+
+            string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
+                " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
+                "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
+
+
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
+
+
+
     }
-    */
+}

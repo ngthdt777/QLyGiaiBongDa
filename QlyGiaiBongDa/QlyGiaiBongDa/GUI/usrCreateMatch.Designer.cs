@@ -126,6 +126,7 @@
             this.btn_CapNhat.Size = new System.Drawing.Size(179, 42);
             this.btn_CapNhat.TabIndex = 20;
             this.btn_CapNhat.Text = "Cập nhật";
+            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
             // 
             // dgv_TLTD
             // 

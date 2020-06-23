@@ -14,6 +14,10 @@ namespace QlyGiaiBongDa.GUI
     public partial class usrPlayer : UserControl
     {
         public ObjTeamBLL ObjTeamBLL;
+
+
+        public ObjPlayerBLL ObjPlayerBLL;
+
         private static usrPlayer _instance;
         public static usrPlayer Instance
         {
@@ -42,6 +46,11 @@ namespace QlyGiaiBongDa.GUI
         private void cb_DoiBong_SelectionChangeCommitted(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            dgv_TCCT.DataSource = ObjPlayerBLL.Instance.GetListFindPlayer();
         }
     }
 }

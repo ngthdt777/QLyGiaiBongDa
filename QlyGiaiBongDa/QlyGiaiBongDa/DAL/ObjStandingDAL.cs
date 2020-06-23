@@ -55,6 +55,8 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadListStanding()
         {
             DataTable dt = new DataTable();
+
+
             string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
                 " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
                 "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
@@ -63,5 +65,7 @@ namespace QlyGiaiBongDa.DAL
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
+    }
+}
 
 
