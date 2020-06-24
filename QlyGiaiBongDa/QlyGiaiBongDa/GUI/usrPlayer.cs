@@ -32,15 +32,13 @@ namespace QlyGiaiBongDa.GUI
         {
             InitializeComponent();
         }
-        public void ShowCombobox()
-        {
-            cb_DoiBong.DataSource= ObjTeamBLL.Instance.GetListTeam();
-            cb_DoiBong.DisplayMember = "TenDoi";
-            cb_DoiBong.ValueMember = "MaDoi";
-        }
         private void usrPlayer_Load(object sender, EventArgs e)
         {
-
+            cb_DoiBong.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_DoiBong.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_DoiBong.DisplayMember = "TenDoi";
+            cb_DoiBong.ValueMember = "TenDoi";
+            cb_DoiBong.DataSource = ObjTeamBLL.Instance.GetNameTeam();
         }
 
         private void cb_DoiBong_SelectionChangeCommitted(object sender, EventArgs e)
