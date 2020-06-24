@@ -38,6 +38,22 @@ namespace QlyGiaiBongDa.BLL
                 return data;
             }
         }
+
+   /*     public void ExecuteReader(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+            }
+        }
+*/
+
+
+
+
+
         public int ExecuteNonQuery(string query)
         {
 

@@ -59,7 +59,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
+            this.gunaButton1.Size = new System.Drawing.Size(1248, 82);
             this.gunaButton1.TabIndex = 1;
             this.gunaButton1.Text = "Tạo giải đấu mới";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -76,9 +76,9 @@
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(6, 153);
+            this.gb_HSDB.Location = new System.Drawing.Point(6, 91);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 409);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 603);
             this.gb_HSDB.TabIndex = 2;
             this.gb_HSDB.Text = "Chọn loại thông tin khởi tạo lại";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);

@@ -160,7 +160,6 @@ C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\Q
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
-E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources

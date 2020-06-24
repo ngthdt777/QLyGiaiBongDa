@@ -52,7 +52,6 @@
             this.dtp_KQTD = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.dgv_BXH = new Guna.UI.WinForms.GunaDataGridView();
-            this.btn_Thoat = new Guna.UI.WinForms.GunaButton();
             this.btn_CapNhat = new Guna.UI.WinForms.GunaButton();
             this.btt_Bxh = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
@@ -79,7 +78,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
+            this.gunaButton1.Size = new System.Drawing.Size(1248, 72);
             this.gunaButton1.TabIndex = 4;
             this.gunaButton1.Text = "Kết quả trận đấu";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -107,9 +106,9 @@
             this.gb_HSDB.Controls.Add(this.dtp_KQTD);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(6, 150);
+            this.gb_HSDB.Location = new System.Drawing.Point(3, 78);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 229);
+            this.gb_HSDB.Size = new System.Drawing.Size(1251, 301);
             this.gb_HSDB.TabIndex = 5;
             this.gb_HSDB.Text = "Thông tin trận đấu";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -188,7 +187,7 @@
             this.gunaTextBox6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox6.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox6.Location = new System.Drawing.Point(562, 116);
+            this.gunaTextBox6.Location = new System.Drawing.Point(561, 116);
             this.gunaTextBox6.Name = "gunaTextBox6";
             this.gunaTextBox6.PasswordChar = '\0';
             this.gunaTextBox6.SelectedText = "";
@@ -386,12 +385,12 @@
             this.dgv_BXH.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_BXH.EnableHeadersVisualStyles = false;
             this.dgv_BXH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.Location = new System.Drawing.Point(6, 382);
+            this.dgv_BXH.Location = new System.Drawing.Point(6, 324);
             this.dgv_BXH.Name = "dgv_BXH";
             this.dgv_BXH.RowHeadersVisible = false;
             this.dgv_BXH.RowTemplate.Height = 24;
             this.dgv_BXH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_BXH.Size = new System.Drawing.Size(1245, 251);
+            this.dgv_BXH.Size = new System.Drawing.Size(1245, 309);
             this.dgv_BXH.TabIndex = 7;
             this.dgv_BXH.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -416,31 +415,6 @@
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.AnimationHoverSpeed = 0.07F;
-            this.btn_Thoat.AnimationSpeed = 0.03F;
-            this.btn_Thoat.BaseColor = System.Drawing.Color.Teal;
-            this.btn_Thoat.BorderColor = System.Drawing.Color.Black;
-            this.btn_Thoat.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Thoat.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.ForeColor = System.Drawing.Color.Black;
-            this.btn_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_Thoat.Image")));
-            this.btn_Thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Thoat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Thoat.Location = new System.Drawing.Point(1067, 639);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Thoat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Thoat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Thoat.OnHoverImage = null;
-            this.btn_Thoat.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Thoat.Size = new System.Drawing.Size(159, 42);
-            this.btn_Thoat.TabIndex = 23;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btn_CapNhat
             // 
             this.btn_CapNhat.AnimationHoverSpeed = 0.07F;
@@ -454,7 +428,7 @@
             this.btn_CapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhat.Image")));
             this.btn_CapNhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_CapNhat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_CapNhat.Location = new System.Drawing.Point(886, 639);
+            this.btn_CapNhat.Location = new System.Drawing.Point(1076, 639);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_CapNhat.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -499,7 +473,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btt_Bxh);
             this.Controls.Add(this.btn_CapNhat);
-            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.dgv_BXH);
             this.Controls.Add(this.gb_HSDB);
             this.Controls.Add(this.gunaButton1);
@@ -533,7 +506,6 @@
         private Guna.UI.WinForms.GunaTextBox tb_MaTran;
         private Guna.UI.WinForms.GunaContextMenuStrip gunaContextMenuStrip1;
         private Guna.UI.WinForms.GunaDataGridView dgv_BXH;
-        private Guna.UI.WinForms.GunaButton btn_Thoat;
         private Guna.UI.WinForms.GunaButton btn_CapNhat;
         private Guna.UI.WinForms.GunaButton btt_Bxh;
     }

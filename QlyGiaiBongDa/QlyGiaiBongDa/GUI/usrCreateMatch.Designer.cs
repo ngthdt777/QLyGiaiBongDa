@@ -63,7 +63,7 @@
             this.lb_creatematch.OnHoverForeColor = System.Drawing.Color.White;
             this.lb_creatematch.OnHoverImage = null;
             this.lb_creatematch.OnPressedColor = System.Drawing.Color.Black;
-            this.lb_creatematch.Size = new System.Drawing.Size(1248, 144);
+            this.lb_creatematch.Size = new System.Drawing.Size(1248, 87);
             this.lb_creatematch.TabIndex = 2;
             this.lb_creatematch.Text = "Tạo lịch thi đấu";
             this.lb_creatematch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -77,9 +77,9 @@
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(3, 144);
+            this.gb_HSDB.Location = new System.Drawing.Point(3, 96);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 123);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 171);
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Chọn vòng thi đấu";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);

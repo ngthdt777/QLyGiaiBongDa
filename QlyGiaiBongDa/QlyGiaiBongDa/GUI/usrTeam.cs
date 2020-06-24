@@ -29,11 +29,17 @@ namespace QlyGiaiBongDa.GUI
         public usrTeam()
         {
             InitializeComponent();
+            
         }
 
        private void usrTeam_Load(object sender, EventArgs e)
         {
-           // dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            // dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_team_name.DisplayMember = "TenDoi";
+            cbb_team_name.ValueMember = "TenDoi";
+            cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
         }
 
         // ham Data Check - Duy Bao Change
@@ -104,11 +110,11 @@ namespace QlyGiaiBongDa.GUI
         private void btt_Team_View_Click(object sender, EventArgs e)
         {
             dgv_HSDB.Visible = true;
-            lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
-            tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
-            lb_team_name.Visible = tb_TenDoi.Visible = false;
+            lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
+            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
+            lb_team_name.Visible = cbb_team_name.Visible = false;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
-            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
+            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible= true;
             btt_Team_View.Text = "Tải lại";
             dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
         }
@@ -174,7 +180,7 @@ namespace QlyGiaiBongDa.GUI
         {
             lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
             tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
-            lb_team_name.Visible = tb_TenDoi.Visible = false;
+            lb_team_name.Visible = cbb_team_name.Visible = false;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
 
@@ -196,6 +202,23 @@ namespace QlyGiaiBongDa.GUI
         private void Btt_sua_Click(object sender, EventArgs e)
         {
             ObjTeamBLL.Instance.UpdatePlayer();
+        }
+
+        private void cbb_team_name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btt_back_Click(object sender, EventArgs e)
+        {
+            btt_back.Visible = false;
+            dgv_HSDB.Visible = false;
+            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = false;
+            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = false;
+            lb_team_name.Visible = cbb_team_name.Visible = true;
+            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = false;
+            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = false;
+            btt_Team_View.Text = "Hiển thị";
         }
     }
 }

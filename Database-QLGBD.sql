@@ -1,5 +1,5 @@
 ﻿Create database QLGBDVDQG
-DROP DATABASE QLGBD
+
 use QLGBDVDQG
 go 
 
@@ -172,22 +172,46 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
  go
 
-
+ ----------------INSERT DOIBONG-------------------------------
  insert into DOIBONG(MaDoi, TenDoi, SanNha, SoCauThu) values ( 1, 'Long An', ' Tan An ', 5)
  insert into DOIBONG values ( 2, ' HoChiMinh', ' Thong Nhat', 5)
  insert into DOIBONG values ( 3, ' Binh Duong', ' Go Dau ', 6)
-
+ insert into DOIBONG values (7,' Hoang Anh Gia Lai','Gia Lai', '10')
+ insert into DOIBONG values (6,' Ha Noi' ,'My Dinh', '10')
  go
 
  insert into LOAICAUTHU values ( ' 001TN ' , ' Trong nước ')
  insert into LOAICAUTHU values ( ' 001NN'  , ' Nước Ngoài' )
 
-
+ ------------------INSERT CAUTHU-----------------------------
  insert into CAUTHU values ( 1003, ' Tran Thanh Lam', '18-07-2000', ' TrongNuoc' , ' Thi Dau 3 nam ' , '1')
  insert into CAUTHU values ( 1004, ' Tran Quoc Thang', '01-01-2000', ' NgoaiNuoc' , ' Thi Dau 6 nam ' , '1')
  insert into CAUTHU values ( 1001, ' Luong Duy Bao', '2000-01-01', 'TrongNuoc ' , ' Thi Dau 10 nam ' , '2')
  insert into CAUTHU values ( 1002, ' Luong Duy Bao', '2000-01-02', ' NgoaiNuoc' , ' Thi Dau 2 nam ' , '3')
-  insert into CAUTHU values ( 1005, ' Nguyen Thanh Det', '2000-01-02', ' TrongNuoC' , ' Thi Dau 10000 nam ' , '1')
+ insert into CAUTHU values ( 1005, ' Nguyen Thanh Det', '2000-01-02', ' TrongNuoC' , ' Thi Dau 10000 nam ' , '1')
+
+ insert into CAUTHU values ( 7001, ' Tran Buu Ngoc', '26-02-1991', ' TrongNuoC' , ' Thi Dau 5 nam ' , '7')
+ insert into CAUTHU values ( 7002, ' Nguyen Canh Anh', '11-01-2000', ' TrongNuoC' , ' Thi Dau 2 nam ' , '7')
+ insert into CAUTHU values ( 7003, ' Nguyen Huu Anh Tai', '27-02-1996', ' TrongNuoC' , ' Thi Dau 2 nam ' , '7')
+ insert into CAUTHU values ( 7004, ' Au Duong Quan', '30-04-1998', ' TrongNuoC' , ' Thi Dau 3 nam ' , '7')
+ insert into CAUTHU values ( 7005, ' Luong Xuan Truong', '13-06-1995', ' TrongNuoC' , ' Thi Dau 4 nam ' , '7')
+ insert into CAUTHU values ( 7006, ' Nguyen Phong Hong Duy', '18-02-1998', ' TrongNuoC' , ' Thi Dau 1 nam ' , '7')
+ insert into CAUTHU values ( 7007, ' Tran Minh Vuong', '19-08-1999', ' TrongNuoC' , ' Thi Dau 2 nam ' , '7')
+ insert into CAUTHU values ( 7008, ' Nguyen Van Toan', '12-04-1996', ' TrongNuoC' , ' Thi Dau 2 nam ' , '7')
+ insert into CAUTHU values ( 7009, ' Nguyen Huu Canh', '01-01-1998', ' TrongNuoC' , ' Thi Dau 3 nam ' , '7')
+ insert into CAUTHU values ( 7010, ' Nguyen Thanh Dat', '10-07-2000', ' TrongNuoC' , ' Thi Dau 3 nam ' , '7') 
+
+ insert into CAUTHU values ( 6001, ' Bui Tan Truong', '19-02-1986', ' TrongNuoc' , ' Thi Dau 5 nam ' , '6')
+ insert into CAUTHU values ( 6002, ' Nguyen Van Dung', '1-04-1994', ' TrongNuoc' , ' Thi Dau 2 nam ' , '6')
+ insert into CAUTHU values ( 6003, ' Dau Van Toan', '2-4-1984', ' TrongNuoc' , ' Thi Dau 2 nam ' , '6')
+ insert into CAUTHU values ( 6004, ' Manh Ngoc Ha', '23-04-1998', ' TrongNuoc' , ' Thi Dau 3 nam ' , '6')
+ insert into CAUTHU values ( 6005, ' Nguyen Van Quyet', '13-06-1995', ' TrongNuoc' , ' Thi Dau 4 nam ' , '6')
+ insert into CAUTHU values ( 6006, ' Moses Oloya', '8-03-1998', ' NgoaiNuoc' , ' Thi Dau 1 nam ' , '6')
+ insert into CAUTHU values ( 6007, ' Lebron James', '19-03-1995', ' NgoaiNuoc' , ' Thi Dau 2 nam ' , '6')
+ insert into CAUTHU values ( 6008, ' Giannis Harden', '12-12-1999', ' NgoaiNuoc' , ' Thi Dau 2 nam ' , '6')
+ insert into CAUTHU values ( 6009, ' Pham Duc Huy', '23-11-2000', ' TrongNuoc' , ' Thi Dau 3 nam ' , '6')
+ insert into CAUTHU values ( 6010, ' Nguyen Thanh Cong', '10-08-2000', ' TrongNuoc' , ' Thi Dau 3 nam ' , '6') 
+ 
 
   go
 
@@ -206,3 +230,4 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
   INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)
                         VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')
 
+SELECT * FROM CAUTHU

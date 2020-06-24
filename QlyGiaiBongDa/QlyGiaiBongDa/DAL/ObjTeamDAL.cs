@@ -56,22 +56,27 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListTeam()
         {
-
             DataTable dt = new DataTable();
             string LoadQuery = "SELECT * FROM DOIBONG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         } 
 
-        
+        public DataTable LoadNameTeam()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenDoi FROM DOIBONG";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
 
 
 
         public DataTable LoadListPlayer()
         {
-            string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
+            string TenDoi = usrTeam.Instance.cbb_team_name.Text;
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT * FROM CAUTHU WHERE MaDoi='" + id + "'";
+            string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,CAUTHU.MaDoi FROM CAUTHU,DOIBONG WHERE CAUTHU.MaDoi=DOIBONG.MaDoi AND TenDoi='" + TenDoi + "'";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
@@ -157,7 +162,7 @@ namespace QlyGiaiBongDa.DAL
         public DataTable PlayerView()
         {
             string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
-            string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
+        //    string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
 
             string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,GhiChu " +
                 "FROM CAUTHU , DOIBONG,LOAICAUTHU " +
@@ -280,9 +285,9 @@ namespace QlyGiaiBongDa.DAL
           //  System.Windows.Forms.UserControl u = new usrTeam();
 
             usrTeam.Instance.tb_MaDoi.DataBindings.Clear();
-            usrTeam.Instance.tb_TenDoi.DataBindings.Clear();
+      //      usrTeam.Instance.tb_TenDoi.DataBindings.Clear();
             usrTeam.Instance.tb_MaDoi.DataBindings.Add(new Binding("Text", usrTeam.Instance.dgv_HSDB.DataSource, "MaDoi"));
-            usrTeam.Instance.tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
+        //    usrTeam.Instance.tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
 
             // Ban thay doi cua Duy Bao
             usrTeam.Instance.DataBindings.Clear();

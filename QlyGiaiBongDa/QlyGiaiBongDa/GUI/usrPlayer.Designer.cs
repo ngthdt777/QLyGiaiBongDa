@@ -93,7 +93,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
+            this.gunaButton1.Size = new System.Drawing.Size(1248, 74);
             this.gunaButton1.TabIndex = 1;
             this.gunaButton1.Text = "Tra cứu cầu thủ";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -125,10 +125,10 @@
             this.gb_HSDB.Controls.Add(lb_player_id);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(1, 153);
+            this.gb_HSDB.Location = new System.Drawing.Point(1, 80);
             this.gb_HSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 254);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 327);
             this.gb_HSDB.TabIndex = 2;
             this.gb_HSDB.Text = "Thông tin tìm kiếm";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -145,7 +145,7 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton2.Location = new System.Drawing.Point(963, 46);
+            this.gunaButton2.Location = new System.Drawing.Point(1066, 258);
             this.gunaButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -320,7 +320,7 @@
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
             this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_TimKiem.Location = new System.Drawing.Point(707, 46);
+            this.btn_TimKiem.Location = new System.Drawing.Point(861, 258);
             this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));

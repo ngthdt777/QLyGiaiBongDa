@@ -39,12 +39,12 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.dtp_CauThuGiBan1 = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dgv_BXH_playergoal = new Guna.UI.WinForms.GunaDataGridView();
-            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
-            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuongLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
+            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH_playergoal)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 144);
+            this.gunaButton1.Size = new System.Drawing.Size(1248, 72);
             this.gunaButton1.TabIndex = 3;
             this.gunaButton1.Text = "Danh sách cầu thủ ghi bàn";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -85,9 +85,9 @@
             this.gb_HSDB.Controls.Add(this.dtp_CauThuGiBan1);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(3, 150);
+            this.gb_HSDB.Location = new System.Drawing.Point(3, 104);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 148);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 194);
             this.gb_HSDB.TabIndex = 4;
             this.gb_HSDB.Text = "Danh sách cầu thủ ghi bàn";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -161,9 +161,9 @@
             // dgv_BXH_playergoal
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgv_BXH_playergoal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_BXH_playergoal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -174,7 +174,7 @@
             this.dgv_BXH_playergoal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_BXH_playergoal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -227,6 +227,30 @@
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // TenCauThu
+            // 
+            this.TenCauThu.FillWeight = 10.15228F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.FillWeight = 10.15228F;
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // MaLoaiCauThu
+            // 
+            this.MaLoaiCauThu.FillWeight = 5F;
+            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
+            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
+            // 
+            // SoLuongLoaiBanThang
+            // 
+            this.SoLuongLoaiBanThang.FillWeight = 5F;
+            this.SoLuongLoaiBanThang.HeaderText = "Số Bàn Thắng";
+            this.SoLuongLoaiBanThang.Name = "SoLuongLoaiBanThang";
+            // 
             // btn_XuatBaocao
             // 
             this.btn_XuatBaocao.AnimationHoverSpeed = 0.07F;
@@ -277,30 +301,6 @@
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
-            // TenCauThu
-            // 
-            this.TenCauThu.FillWeight = 10.15228F;
-            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
-            this.TenCauThu.Name = "TenCauThu";
-            // 
-            // TenDoi
-            // 
-            this.TenDoi.FillWeight = 10.15228F;
-            this.TenDoi.HeaderText = "Tên Đội";
-            this.TenDoi.Name = "TenDoi";
-            // 
-            // MaLoaiCauThu
-            // 
-            this.MaLoaiCauThu.FillWeight = 5F;
-            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
-            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
-            // 
-            // SoLuongLoaiBanThang
-            // 
-            this.SoLuongLoaiBanThang.FillWeight = 5F;
-            this.SoLuongLoaiBanThang.HeaderText = "Số Bàn Thắng";
-            this.SoLuongLoaiBanThang.Name = "SoLuongLoaiBanThang";
             // 
             // usrPlayerGoal
             // 
