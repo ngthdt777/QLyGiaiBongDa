@@ -36,7 +36,10 @@ namespace QlyGiaiBongDa.BLL
         {
             return ObjPlayerDAL.Instance.LoadListFindPlayer();
         }
-
+        public DataTable LoadListPlayer()
+        {
+            return ObjPlayerDAL.Instance.LoadListFindPlayer();
+        }
 
 
     }

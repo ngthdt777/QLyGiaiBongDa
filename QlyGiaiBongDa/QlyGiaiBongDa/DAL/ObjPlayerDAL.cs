@@ -53,15 +53,12 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListFindPlayer()
         {
+            string id = usrPlayer.Instance.tb_MaCT.Text;
             DataTable dt = new DataTable();
-
-
-            string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
-                " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
-                "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
-
-
-
+            string LoadQuery = "SELECT CAUTHU.MaCauThu, TenCauThu, TenDoi, TenLoaiCauThu" +
+  "FROM CAUTHU, DOIBONG, LOAICAUTHU, BANTHANG" +
+  "WHERE CAUTHU.MaDoi = DOIBONG.MaDoi AND CAUTHU.MaLoaiCauThu = LOAICAUTHU.MaLoaiCauThu AND CAUTHU.MaCauThu = BANTHANG.MaCauThu AND CAUTHU.MaCauThu = '" + id + "'" +
+  "GROUP BY CAUTHU.MaCauThu, TenCauThu, TenDoi, TenLoaiCauThu";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }

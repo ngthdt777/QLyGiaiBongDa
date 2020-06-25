@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using QlyGiaiBongDa.BLL;
 using QlyGiaiBongDa.DAL;
 using System.Data.SqlClient;
-
+using QlyGiaiBongDa.GUI;
 namespace QlyGiaiBongDa.GUI
 {
     public partial class usrTeam : UserControl
@@ -41,15 +41,22 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.ValueMember = "TenDoi";
             cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
         }
-
         // ham Data Check - Duy Bao Change
         public bool CheckData()
         {
+            System.Windows.Forms.UserControl usr = new usrRulesChange();
+            int yearofbirth = dtp_cauthu_ngsinh.Value.Year;
+            int year = DateTime.Now.Year;
+            int tuoi = year - yearofbirth;
             if (string.IsNullOrEmpty(tb_MaDoi.Text))
             {
                 MessageBox.Show("Bạn chưa nhập mã đội bóng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tb_MaDoi.Focus();
                 return false;
+            }
+            if(tuoi<usrRulesChange.Instance.nm_tuoimin.Value || tuoi>usrRulesChange.Instance.nm_tuoimax.Value)
+            {
+                MessageBox.Show("Tuổi cầu thủ không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (string.IsNullOrEmpty(tb_hsdb_mact.Text))
             {

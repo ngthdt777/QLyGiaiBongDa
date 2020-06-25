@@ -32,6 +32,7 @@
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
@@ -60,7 +61,6 @@
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.ImageSize = new System.Drawing.Size(60, 60);
             this.gunaButton1.Location = new System.Drawing.Point(2, 0);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -115,7 +115,7 @@
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
             this.gb_HSDB.Location = new System.Drawing.Point(2, 65);
-            this.gb_HSDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_HSDB.Margin = new System.Windows.Forms.Padding(2);
             this.gb_HSDB.Name = "gb_HSDB";
             this.gb_HSDB.Size = new System.Drawing.Size(936, 266);
             this.gb_HSDB.TabIndex = 3;
@@ -129,11 +129,15 @@
             this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(542, 69);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(201, 128);
             this.listView1.TabIndex = 33;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Trong nước ";
             // 
             // gunaButton3
             // 
@@ -148,7 +152,7 @@
             this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
             this.gunaButton3.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaButton3.Location = new System.Drawing.Point(790, 123);
-            this.gunaButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaButton3.Margin = new System.Windows.Forms.Padding(2);
             this.gunaButton3.Name = "gunaButton3";
             this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -221,7 +225,7 @@
             this.nm_foreignmax.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_foreignmax.ForeColor = System.Drawing.Color.Black;
             this.nm_foreignmax.Location = new System.Drawing.Point(407, 132);
-            this.nm_foreignmax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_foreignmax.Margin = new System.Windows.Forms.Padding(2);
             this.nm_foreignmax.Maximum = ((long)(9999999));
             this.nm_foreignmax.Minimum = ((long)(0));
             this.nm_foreignmax.Name = "nm_foreignmax";
@@ -239,7 +243,7 @@
             this.nm_slgmax.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_slgmax.ForeColor = System.Drawing.Color.Black;
             this.nm_slgmax.Location = new System.Drawing.Point(407, 86);
-            this.nm_slgmax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_slgmax.Margin = new System.Windows.Forms.Padding(2);
             this.nm_slgmax.Maximum = ((long)(9999999));
             this.nm_slgmax.Minimum = ((long)(0));
             this.nm_slgmax.Name = "nm_slgmax";
@@ -257,7 +261,7 @@
             this.nm_slngmin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_slngmin.ForeColor = System.Drawing.Color.Black;
             this.nm_slngmin.Location = new System.Drawing.Point(302, 88);
-            this.nm_slngmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_slngmin.Margin = new System.Windows.Forms.Padding(2);
             this.nm_slngmin.Maximum = ((long)(9999999));
             this.nm_slngmin.Minimum = ((long)(0));
             this.nm_slngmin.Name = "nm_slngmin";
@@ -275,7 +279,7 @@
             this.nm_tuoimax.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_tuoimax.ForeColor = System.Drawing.Color.Black;
             this.nm_tuoimax.Location = new System.Drawing.Point(407, 41);
-            this.nm_tuoimax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_tuoimax.Margin = new System.Windows.Forms.Padding(2);
             this.nm_tuoimax.Maximum = ((long)(9999999));
             this.nm_tuoimax.Minimum = ((long)(0));
             this.nm_tuoimax.Name = "nm_tuoimax";
@@ -293,7 +297,7 @@
             this.nm_tuoimin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_tuoimin.ForeColor = System.Drawing.Color.Black;
             this.nm_tuoimin.Location = new System.Drawing.Point(302, 41);
-            this.nm_tuoimin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_tuoimin.Margin = new System.Windows.Forms.Padding(2);
             this.nm_tuoimin.Maximum = ((long)(9999999));
             this.nm_tuoimin.Minimum = ((long)(0));
             this.nm_tuoimin.Name = "nm_tuoimin";
@@ -341,7 +345,7 @@
             this.btn_Done.Image = ((System.Drawing.Image)(resources.GetObject("btn_Done.Image")));
             this.btn_Done.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_Done.Location = new System.Drawing.Point(790, 170);
-            this.btn_Done.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Done.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Done.Name = "btn_Done";
             this.btn_Done.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Done.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -398,7 +402,7 @@
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Location = new System.Drawing.Point(2, 292);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(936, 272);
             this.gunaGroupBox1.TabIndex = 4;
@@ -410,7 +414,7 @@
             this.listView3.BackColor = System.Drawing.Color.Silver;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(616, 60);
-            this.listView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView3.Margin = new System.Windows.Forms.Padding(2);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(171, 166);
             this.listView3.TabIndex = 35;
@@ -421,7 +425,7 @@
             this.listView2.BackColor = System.Drawing.Color.Silver;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(117, 115);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView2.Margin = new System.Windows.Forms.Padding(2);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(218, 97);
             this.listView2.TabIndex = 34;
@@ -440,7 +444,7 @@
             this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
             this.gunaButton4.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaButton4.Location = new System.Drawing.Point(790, 133);
-            this.gunaButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaButton4.Margin = new System.Windows.Forms.Padding(2);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -461,7 +465,7 @@
             this.nm_lose.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_lose.ForeColor = System.Drawing.Color.Black;
             this.nm_lose.Location = new System.Drawing.Point(555, 178);
-            this.nm_lose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_lose.Margin = new System.Windows.Forms.Padding(2);
             this.nm_lose.Maximum = ((long)(9999999));
             this.nm_lose.Minimum = ((long)(0));
             this.nm_lose.Name = "nm_lose";
@@ -479,7 +483,7 @@
             this.nm_eqaul.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_eqaul.ForeColor = System.Drawing.Color.Black;
             this.nm_eqaul.Location = new System.Drawing.Point(555, 135);
-            this.nm_eqaul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_eqaul.Margin = new System.Windows.Forms.Padding(2);
             this.nm_eqaul.Maximum = ((long)(9999999));
             this.nm_eqaul.Minimum = ((long)(0));
             this.nm_eqaul.Name = "nm_eqaul";
@@ -497,7 +501,7 @@
             this.nm_win.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_win.ForeColor = System.Drawing.Color.Black;
             this.nm_win.Location = new System.Drawing.Point(555, 97);
-            this.nm_win.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nm_win.Margin = new System.Windows.Forms.Padding(2);
             this.nm_win.Maximum = ((long)(9999999));
             this.nm_win.Minimum = ((long)(0));
             this.nm_win.Name = "nm_win";
@@ -558,7 +562,7 @@
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
             this.gunaButton2.Location = new System.Drawing.Point(790, 178);
-            this.gunaButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(2);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -595,10 +599,6 @@
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Trong nước ";
-            // 
             // usrRulesChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,7 +606,7 @@
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gb_HSDB);
             this.Controls.Add(this.gunaButton1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "usrRulesChange";
             this.Size = new System.Drawing.Size(940, 566);
             this.gb_HSDB.ResumeLayout(false);
@@ -635,15 +635,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
-        private Guna.UI.WinForms.GunaNumeric nm_foreignmax;
-        private Guna.UI.WinForms.GunaNumeric nm_slgmax;
-        private Guna.UI.WinForms.GunaNumeric nm_slngmin;
-        private Guna.UI.WinForms.GunaNumeric nm_tuoimax;
-        private Guna.UI.WinForms.GunaNumeric nm_tuoimin;
         private Guna.UI.WinForms.GunaButton gunaButton4;
-        private Guna.UI.WinForms.GunaNumeric nm_lose;
-        private Guna.UI.WinForms.GunaNumeric nm_eqaul;
-        private Guna.UI.WinForms.GunaNumeric nm_win;
         private Guna.UI.WinForms.GunaLabel gunaLabel13;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
@@ -651,5 +643,13 @@
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        public Guna.UI.WinForms.GunaNumeric nm_foreignmax;
+        public Guna.UI.WinForms.GunaNumeric nm_slgmax;
+        public Guna.UI.WinForms.GunaNumeric nm_slngmin;
+        public Guna.UI.WinForms.GunaNumeric nm_tuoimax;
+        public Guna.UI.WinForms.GunaNumeric nm_tuoimin;
+        public Guna.UI.WinForms.GunaNumeric nm_lose;
+        public Guna.UI.WinForms.GunaNumeric nm_eqaul;
+        public Guna.UI.WinForms.GunaNumeric nm_win;
     }
 }

@@ -46,14 +46,6 @@ namespace QlyGiaiBongDa.DAL
 
     //    public DoiBong Team = new DoiBong();
       System.Windows.Forms.UserControl u = new usrTeam();
-
-
-
-
-
-
-
-
         public DataTable LoadListTeam()
         {
             DataTable dt = new DataTable();
