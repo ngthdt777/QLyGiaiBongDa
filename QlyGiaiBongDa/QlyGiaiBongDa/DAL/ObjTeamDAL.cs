@@ -109,7 +109,7 @@ namespace QlyGiaiBongDa.DAL
   // khởi tạo giá trị text box
             string id = usrTeam.Instance.tb_hsdb_mact.Text;
             string tenct = usrTeam.Instance.tb_hsdb_tenct.Text;
-            string ngsinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
+            string ngsinh = usrTeam.Instance.dtp_cauthu_ngsinh.Text;
             string loaict = usrTeam.Instance.tb_hsdb_loaict.Text.ToString();        
             string madoi = usrTeam.Instance.tb_MaDoi.Text;
             string ghichu = usrTeam.Instance.tb_hsdb_ghichu.Text;
@@ -229,7 +229,7 @@ namespace QlyGiaiBongDa.DAL
             System.Windows.Forms.UserControl usr = new usrTeam();
             string id = usrTeam.Instance.tb_hsdb_mact.Text;
             string tencauthu = usrTeam.Instance.tb_hsdb_tenct.Text;
-            string ngaysinh = usrTeam.Instance.tb_hsdb_ngsinh.Text;
+            string ngaysinh = usrTeam.Instance.dtp_cauthu_ngsinh.Text;
             string loaiCT = usrTeam.Instance.tb_hsdb_loaict.Text;
             string GhiChu = usrTeam.Instance.tb_hsdb_ghichu.Text;
             // MessageBox.Show(id);

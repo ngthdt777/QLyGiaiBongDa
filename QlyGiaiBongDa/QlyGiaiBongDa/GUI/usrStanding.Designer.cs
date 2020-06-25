@@ -64,7 +64,7 @@
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 86);
+            this.gunaButton1.Size = new System.Drawing.Size(1248, 70);
             this.gunaButton1.TabIndex = 2;
             this.gunaButton1.Text = "Bảng xếp hạng";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -79,9 +79,9 @@
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.ForeColor = System.Drawing.Color.Black;
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(3, 92);
+            this.gb_HSDB.Location = new System.Drawing.Point(3, 76);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 180);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 196);
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Thông tin bản xếp hạng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);

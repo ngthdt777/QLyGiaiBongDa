@@ -63,10 +63,10 @@ namespace QlyGiaiBongDa.GUI
                 tb_hsdb_tenct.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_hsdb_ngsinh.Text))
+            if (string.IsNullOrEmpty(dtp_cauthu_ngsinh.Text))
             {
                 MessageBox.Show("Bạn chưa nhập ngày sinh cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_hsdb_ngsinh.Focus();
+                dtp_cauthu_ngsinh.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(tb_hsdb_loaict.Text))
@@ -111,7 +111,7 @@ namespace QlyGiaiBongDa.GUI
         {
             dgv_HSDB.Visible = true;
             lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
-            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
+            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = true;
             lb_team_name.Visible = cbb_team_name.Visible = false;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible= true;
@@ -134,7 +134,7 @@ namespace QlyGiaiBongDa.GUI
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
                 tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
                 tb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
-                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+                dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
                 tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
             }
@@ -152,7 +152,7 @@ namespace QlyGiaiBongDa.GUI
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
                 tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
                 tb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
-                tb_hsdb_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+                dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
                 tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
             }
@@ -179,7 +179,7 @@ namespace QlyGiaiBongDa.GUI
         private void btt_hsdb_capnhat_Click(object sender, EventArgs e)
         {
             lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
-            tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = true;
+            tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = true;
             lb_team_name.Visible = cbb_team_name.Visible = false;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
@@ -214,7 +214,7 @@ namespace QlyGiaiBongDa.GUI
             btt_back.Visible = false;
             dgv_HSDB.Visible = false;
             lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = false;
-            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = tb_hsdb_ngsinh.Visible = false;
+            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = tb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = false;
             lb_team_name.Visible = cbb_team_name.Visible = true;
             lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = false;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = false;

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrTeam));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_hsdb = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.btt_back = new Guna.UI.WinForms.GunaButton();
             this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
             this.tb_hsdb_ghichu = new Guna.UI.WinForms.GunaTextBox();
             this.lb_hsdb_ghichu = new Guna.UI.WinForms.GunaLabel();
             this.tb_hsdb_loaict = new Guna.UI.WinForms.GunaTextBox();
-            this.tb_hsdb_ngsinh = new Guna.UI.WinForms.GunaTextBox();
             this.tb_hsdb_tenct = new Guna.UI.WinForms.GunaTextBox();
             this.tb_hsdb_mact = new Guna.UI.WinForms.GunaTextBox();
             this.lb_hsdb_loaict = new Guna.UI.WinForms.GunaLabel();
@@ -50,16 +50,16 @@
             this.lb_team_name = new Guna.UI.WinForms.GunaLabel();
             this.lb_team_id = new Guna.UI.WinForms.GunaLabel();
             this.dgv_HSDB = new Guna.UI.WinForms.GunaDataGridView();
-            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
-            this.btt_Them = new Guna.UI.WinForms.GunaButton();
-            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
-            this.btt_back = new Guna.UI.WinForms.GunaButton();
             this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
+            this.btt_Them = new Guna.UI.WinForms.GunaButton();
+            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
+            this.dtp_cauthu_ngsinh = new System.Windows.Forms.DateTimePicker();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HSDB)).BeginInit();
             this.SuspendLayout();
@@ -94,12 +94,12 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.dtp_cauthu_ngsinh);
             this.gb_HSDB.Controls.Add(this.btt_back);
             this.gb_HSDB.Controls.Add(this.cbb_team_name);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_ghichu);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_ghichu);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_loaict);
-            this.gb_HSDB.Controls.Add(this.tb_hsdb_ngsinh);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_tenct);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_mact);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_loaict);
@@ -118,6 +118,33 @@
             this.gb_HSDB.TabIndex = 1;
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // btt_back
+            // 
+            this.btt_back.AnimationHoverSpeed = 0.07F;
+            this.btt_back.AnimationSpeed = 0.03F;
+            this.btt_back.BaseColor = System.Drawing.Color.Teal;
+            this.btt_back.BorderColor = System.Drawing.Color.Black;
+            this.btt_back.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btt_back.FocusedColor = System.Drawing.Color.Empty;
+            this.btt_back.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_back.ForeColor = System.Drawing.Color.Black;
+            this.btt_back.Image = ((System.Drawing.Image)(resources.GetObject("btt_back.Image")));
+            this.btt_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_back.ImageSize = new System.Drawing.Size(25, 25);
+            this.btt_back.Location = new System.Drawing.Point(1064, 138);
+            this.btt_back.Name = "btt_back";
+            this.btt_back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btt_back.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btt_back.OnHoverForeColor = System.Drawing.Color.White;
+            this.btt_back.OnHoverImage = null;
+            this.btt_back.OnPressedColor = System.Drawing.Color.Black;
+            this.btt_back.Size = new System.Drawing.Size(169, 52);
+            this.btt_back.TabIndex = 19;
+            this.btt_back.Text = "Quay lại ";
+            this.btt_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_back.Visible = false;
+            this.btt_back.Click += new System.EventHandler(this.btt_back_Click);
             // 
             // cbb_team_name
             // 
@@ -186,24 +213,6 @@
             this.tb_hsdb_loaict.Size = new System.Drawing.Size(160, 32);
             this.tb_hsdb_loaict.TabIndex = 15;
             this.tb_hsdb_loaict.Visible = false;
-            // 
-            // tb_hsdb_ngsinh
-            // 
-            this.tb_hsdb_ngsinh.BaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_ngsinh.BorderColor = System.Drawing.Color.Silver;
-            this.tb_hsdb_ngsinh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_hsdb_ngsinh.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_ngsinh.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_hsdb_ngsinh.FocusedForeColor = System.Drawing.Color.Black;
-            this.tb_hsdb_ngsinh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_hsdb_ngsinh.ForeColor = System.Drawing.Color.Black;
-            this.tb_hsdb_ngsinh.Location = new System.Drawing.Point(782, 111);
-            this.tb_hsdb_ngsinh.Name = "tb_hsdb_ngsinh";
-            this.tb_hsdb_ngsinh.PasswordChar = '\0';
-            this.tb_hsdb_ngsinh.SelectedText = "";
-            this.tb_hsdb_ngsinh.Size = new System.Drawing.Size(160, 32);
-            this.tb_hsdb_ngsinh.TabIndex = 14;
-            this.tb_hsdb_ngsinh.Visible = false;
             // 
             // tb_hsdb_tenct
             // 
@@ -364,8 +373,8 @@
             // 
             // dgv_HSDB
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_HSDB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -373,14 +382,14 @@
             this.dgv_HSDB.BackgroundColor = System.Drawing.Color.White;
             this.dgv_HSDB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_HSDB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_HSDB.ColumnHeadersHeight = 30;
             this.dgv_HSDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
@@ -389,14 +398,14 @@
             this.MaLoaiCauThu,
             this.GhiChu,
             this.MaDoi});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_HSDB.EnableHeadersVisualStyles = false;
             this.dgv_HSDB.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_HSDB.Location = new System.Drawing.Point(0, 364);
@@ -432,6 +441,49 @@
             this.dgv_HSDB.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_HSDB.Visible = false;
             this.dgv_HSDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HSDB_CellContentClick);
+            // 
+            // MaCauThu
+            // 
+            this.MaCauThu.DataPropertyName = "MaCauThu";
+            this.MaCauThu.FillWeight = 40F;
+            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
+            this.MaCauThu.Name = "MaCauThu";
+            this.MaCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // TenCauThu
+            // 
+            this.TenCauThu.DataPropertyName = "TenCauThu";
+            this.TenCauThu.FillWeight = 60F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.FillWeight = 40F;
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            // 
+            // MaLoaiCauThu
+            // 
+            this.MaLoaiCauThu.DataPropertyName = "MaLoaiCauThu";
+            this.MaLoaiCauThu.FillWeight = 60F;
+            this.MaLoaiCauThu.HeaderText = "Tên Loại Cầu Thủ";
+            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.FillWeight = 60F;
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
+            // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.FillWeight = 20F;
+            this.MaDoi.HeaderText = "Mã Đội";
+            this.MaDoi.Name = "MaDoi";
             // 
             // Btt_xoa
             // 
@@ -514,75 +566,13 @@
             this.Btt_sua.Visible = false;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
-            // btt_back
+            // dtp_cauthu_ngsinh
             // 
-            this.btt_back.AnimationHoverSpeed = 0.07F;
-            this.btt_back.AnimationSpeed = 0.03F;
-            this.btt_back.BaseColor = System.Drawing.Color.Teal;
-            this.btt_back.BorderColor = System.Drawing.Color.Black;
-            this.btt_back.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btt_back.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_back.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_back.ForeColor = System.Drawing.Color.Black;
-            this.btt_back.Image = ((System.Drawing.Image)(resources.GetObject("btt_back.Image")));
-            this.btt_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_back.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_back.Location = new System.Drawing.Point(1064, 138);
-            this.btt_back.Name = "btt_back";
-            this.btt_back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btt_back.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btt_back.OnHoverForeColor = System.Drawing.Color.White;
-            this.btt_back.OnHoverImage = null;
-            this.btt_back.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_back.Size = new System.Drawing.Size(169, 52);
-            this.btt_back.TabIndex = 19;
-            this.btt_back.Text = "Quay lại ";
-            this.btt_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_back.Visible = false;
-            this.btt_back.Click += new System.EventHandler(this.btt_back_Click);
-            // 
-            // MaCauThu
-            // 
-            this.MaCauThu.DataPropertyName = "MaCauThu";
-            this.MaCauThu.FillWeight = 40F;
-            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
-            this.MaCauThu.Name = "MaCauThu";
-            this.MaCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // TenCauThu
-            // 
-            this.TenCauThu.DataPropertyName = "TenCauThu";
-            this.TenCauThu.FillWeight = 60F;
-            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
-            this.TenCauThu.Name = "TenCauThu";
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.FillWeight = 40F;
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            // 
-            // MaLoaiCauThu
-            // 
-            this.MaLoaiCauThu.DataPropertyName = "MaLoaiCauThu";
-            this.MaLoaiCauThu.FillWeight = 60F;
-            this.MaLoaiCauThu.HeaderText = "Tên Loại Cầu Thủ";
-            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.FillWeight = 60F;
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.Name = "GhiChu";
-            // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.FillWeight = 20F;
-            this.MaDoi.HeaderText = "Mã Đội";
-            this.MaDoi.Name = "MaDoi";
+            this.dtp_cauthu_ngsinh.Location = new System.Drawing.Point(782, 113);
+            this.dtp_cauthu_ngsinh.Name = "dtp_cauthu_ngsinh";
+            this.dtp_cauthu_ngsinh.Size = new System.Drawing.Size(160, 28);
+            this.dtp_cauthu_ngsinh.TabIndex = 20;
+            this.dtp_cauthu_ngsinh.Visible = false;
             // 
             // usrTeam
             // 
@@ -621,7 +611,6 @@
         private Guna.UI.WinForms.GunaLabel lb_hsdb_Tenct;
         private Guna.UI.WinForms.GunaLabel lb_hsdb_mact;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_loaict;
-        public Guna.UI.WinForms.GunaTextBox tb_hsdb_ngsinh;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_tenct;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_mact;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_ghichu;
@@ -634,5 +623,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiCauThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoi;
+        public System.Windows.Forms.DateTimePicker dtp_cauthu_ngsinh;
     }
 }
