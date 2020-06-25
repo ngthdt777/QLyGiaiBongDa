@@ -3,7 +3,7 @@
 use QLGBDVDQG
 go 
 
-go
+
 
 create table Dangnhap
 ( 
@@ -32,25 +32,24 @@ MaLoaiCauThu varchar(45),
 GhiChu varchar(45),
 MaDoi varchar(45),
 )
-alter table CAUTHU add constraint fk_MaDoi foreign key (MaDoi) references DOIBONG(MaDoi)
+
 
 -- Xoa khoa ngoai cau thu
 
-alter table CAUTHU drop constraint fk_MaDoi  
+
 go 
 
 
 drop table LOAICAUTHU
 -- tạo bảng loại cầu thủ
+
+
 Create table LOAICAUTHU
 (
 MaLoaiCauThu varchar(45), 
 TenLoaiCauThu varchar(45),
 )
-alter table CAUTHU add constraint fk_MaLoaiCauThu foreign key (MaLoaiCauThu) references LOAICAUTHU(MaLoaiCauThu)
 
-Alter table CAUTHU drop constraint fk_MaLoaiCauThu
-go
 
 -- tạo bảng bàn thắng
 create table BANTHANG
@@ -64,19 +63,7 @@ MaTranDau varchar(45),
 
 go
 
--- tạo bảng loại bàn thắng
-create table LOAIBANTHANG
-(
-MaLoaiBanThang varchar(45) primary key not null ,
-TenLoaiBanThang varchar(45),
-)
 
-InSERT into LOAIBANTHANG values ( 'A','Penalty')
-InSERT into LOAIBANTHANG values ( 'B','DaPhat')
-InSERT into LOAIBANTHANG values ( 'C','TrongTran')
-
-
-go
 
 -- tạo bảng trận đấu
 create table TRANDAU
@@ -100,10 +87,6 @@ insert BANTHANG values ('00A' , ' 1001' , 'A' , ' 69p' , 'Vong1LD')
 insert BANTHANG values ('00A' , ' 1001' , 'C' , ' 72p' , 'Vong1LD')
 insert BANTHANG values ('00A' , ' 1001' , 'B' , ' 90p' , 'Vong1LD')
 
-select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG from DOIBONG, CAUTHU, BANTHANG 
-where  DOIBONG.MaDoi= CAUTHU.MaDoi 
-and CAUTHU.MaCauThu = '1001'
-group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang
 
 go
 
@@ -246,27 +229,30 @@ insert into TRANDAU values ('VB006' , ' Tp.Ho Chi Minh' , ' Hoang Anh Gia Lai ' 
 
 ----------------------------------INSERT BANTHANG-----------------------------------------
 
-insert into BANTHANG values ('0001' , ' 7004' , 'B' , ' 4:05' , 'VB001')
-insert into BANTHANG values ('0002' , ' 7004' , 'C' , ' 4:32' , 'VB001')
-insert into BANTHANG values ('0003' , ' 7001' , 'C' , ' 4:78' , 'VB001')
+insert into BANTHANG values ('0001' , '7004' , 'B' , ' 4:05' , 'VB001')
+insert into BANTHANG values ('0002' , '7004' , 'C' , ' 4:32' , 'VB001')
+insert into BANTHANG values ('0003' , '7001' , 'C' , ' 4:78' , 'VB001')
 
-insert into BANTHANG values ('0004' , ' 7004' , 'C' , ' 5:30 ' , 'VB002')
-insert into BANTHANG values ('0005' , ' 8008' , 'C' , ' 5:35 ' , 'VB002')
-insert into BANTHANG values ('0006' , ' 8008' , 'C' , ' 6:10 ' , 'VB002')
+insert into BANTHANG values ('0004' , '7004' , 'C' , ' 5:30 ' , 'VB002')
+insert into BANTHANG values ('0005' , '8008' , 'C' , ' 5:35 ' , 'VB002')
+insert into BANTHANG values ('0006' , '8008' , 'C' , ' 6:10 ' , 'VB002')
 
-insert into BANTHANG values ('0007' , ' 7004' , 'C' , ' 7:21' , 'VB003')
-insert into BANTHANG values ('0008' , ' 6005' , 'B' , ' 8:26' , 'VB003')
+insert into BANTHANG values ('0007' , '7004' , 'C' , ' 7:21' , 'VB003')
+insert into BANTHANG values ('0008' , '6005' , 'B' , ' 8:26' , 'VB003')
 
-insert into BANTHANG values ('0009' , ' 7004' , 'C' , ' 3:30' , 'VB004')
-insert into BANTHANG values ('0010' , ' 7003' , 'A' , ' 3:50' , 'VB004')
-insert into BANTHANG values ('0011' , ' 8001' , 'C' , ' 4:18' , 'VB004')
+insert into BANTHANG values ('0009' , '7004' , 'C' , ' 3:30' , 'VB004')
+insert into BANTHANG values ('0010' , '7003' , 'A' , ' 3:50' , 'VB004')
+insert into BANTHANG values ('0011' , '8001' , 'C' , ' 4:18' , 'VB004')
 
-insert into BANTHANG values ('0012' , ' 8001' , 'C' , ' 7:07' , 'VB006')
-insert into BANTHANG values ('0013' , ' 8008' , 'C' , ' 7:49' , 'VB006')
-insert into BANTHANG values ('0014' , ' 7004' , 'C' , ' 8:30' , 'VB006')
+insert into BANTHANG values ('0012' , '8001' , 'C' , ' 7:07' , 'VB006')
+insert into BANTHANG values ('0013' , '8008' , 'C' , ' 7:49' , 'VB006')
+insert into BANTHANG values ('0014' , '7004' , 'C' , ' 8:30' , 'VB006')
 
 
 ----------------------------------------------------------------------------------
+select Count(MaBanThang)  from BANTHANG
+where BANTHANG.MaCauThu = ' 7004'
+
 
 
   go
