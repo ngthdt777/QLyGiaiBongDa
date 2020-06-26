@@ -211,11 +211,6 @@ namespace QlyGiaiBongDa.GUI
             ObjTeamBLL.Instance.UpdatePlayer();
         }
 
-        private void cbb_team_name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btt_back_Click(object sender, EventArgs e)
         {
             btt_back.Visible = false;

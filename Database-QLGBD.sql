@@ -272,4 +272,12 @@ where BANTHANG.MaCauThu = ' 7004'
   INSERT INTO DOIBONG(MaDoi,TenDoi,SanNha,SoCauThu)
                         VALUES('" + Team.id + "', '" + Team.ten + "', '" + Team.ten_sannha + "', '" + Team.slgct + "')
 
-SELECT * FROM CAUTHU
+SELECT MaCauThu,TenCauThu,DATEDIFF(YY,NgaySinh,GETDATE()) AS [AGE],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG where MaCauThu is not null and TenCauThu is not null and MaLoaiCauThu is not null 
+	and DOIBONG.TenDoi=' Ha Noi' and GhiChu is not null
+	and DATEDIFF(YY,NgaySinh,GETDATE()) >18 and DATEDIFF(YY,NgaySinh,GETDATE()) <30
+
+SELECT TenCauThu, DATEDIFF(YY,NgaySinh,GETDATE()) AS [AGE]
+From CAUTHU
+
+select CAST(DATEDIFF(YY,NgaySinh,GETDATE()) AS INT) from CAUTHU
+

@@ -64,11 +64,21 @@ namespace QlyGiaiBongDa.DAL
 
 
 
+        public DataTable LoadNameTeam_usrPlayer()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenDoi FROM DOIBONG";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
+
         public DataTable LoadListPlayer()
         {
             string TenDoi = usrTeam.Instance.cbb_team_name.Text;
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,CAUTHU.MaDoi FROM CAUTHU,DOIBONG WHERE CAUTHU.MaDoi=DOIBONG.MaDoi AND TenDoi='" + TenDoi + "'";
+            string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,CAUTHU.MaDoi FROM CAUTHU,DOIBONG " +
+                "WHERE CAUTHU.MaDoi=DOIBONG.MaDoi AND TenDoi='" + TenDoi + "'";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }

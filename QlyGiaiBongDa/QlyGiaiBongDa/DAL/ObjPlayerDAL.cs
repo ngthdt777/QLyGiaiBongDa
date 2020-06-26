@@ -47,18 +47,61 @@ namespace QlyGiaiBongDa.DAL
             }
             set { instance = value; }
         }
-        private ObjPlayerDAL() { }
+        public ObjPlayerDAL() { }
+
+
+
+        public DataTable LoadNameTeam_usrPlayer()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenDoi FROM DOIBONG";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
 
 
 
         public DataTable LoadListFindPlayer()
         {
-            string id = usrPlayer.Instance.tb_MaCT.Text;
+            string id, ten, loaict, doibong, tuoi_min, tuoi_max, ghichu;
+
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_MaCT.Text))
+                id = "='"+usrPlayer.Instance.tb_MaCT.Text+"'";
+            else id = "is not null";
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_HoTen.Text))
+                ten = "='" + usrPlayer.Instance.tb_HoTen.Text + "'";
+            else ten = "is not null";
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.cb_LoaiCT.Text))
+                loaict = "='" + usrPlayer.Instance.cb_LoaiCT.Text + "'";
+            else loaict = "is not null";
+
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.cbb_team_name.Text))
+                doibong = "='" + usrPlayer.Instance.cbb_team_name.Text + "'";
+            else doibong = "is not null";
+
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tuoimin.Text))
+                tuoi_min =">"+ "(SELECT CAST('" + usrPlayer.Instance.tb_tuoimin.Text + "' as int))";
+            else tuoi_min = "is not null";
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tuoimax.Text))
+                tuoi_max = "<"+ "(SELECT CAST('" + usrPlayer.Instance.tb_tuoimax.Text + "' as int))";
+            else tuoi_max = "is not null";
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_GhiChu.Text))
+                ghichu = "='" + usrPlayer.Instance.tb_GhiChu.Text + "'";
+            else ghichu = "is not null";
+
+
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT CAUTHU.MaCauThu, TenCauThu, TenDoi, TenLoaiCauThu" +
-  "FROM CAUTHU, DOIBONG, LOAICAUTHU, BANTHANG" +
-  "WHERE CAUTHU.MaDoi = DOIBONG.MaDoi AND CAUTHU.MaLoaiCauThu = LOAICAUTHU.MaLoaiCauThu AND CAUTHU.MaCauThu = BANTHANG.MaCauThu AND CAUTHU.MaCauThu = '" + id + "'" +
-  "GROUP BY CAUTHU.MaCauThu, TenCauThu, TenDoi, TenLoaiCauThu";
+            string LoadQuery = "SELECT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[AGE],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG" +
+                                " where MaCauThu "+ id + " and TenCauThu " + ten + " and MaLoaiCauThu " + loaict + "" +
+                                 " and DOIBONG.TenDoi " + doibong + "  and GhiChu " + ghichu + " " +
+                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max ;
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }

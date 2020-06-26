@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QlyGiaiBongDa.BLL;
+using QlyGiaiBongDa.DAL;
+using QlyGiaiBongDa.GUI;
+using System.Data.SqlClient;
 
 namespace QlyGiaiBongDa.GUI
 {
     public partial class usrPlayer : UserControl
     {
-        public ObjTeamBLL ObjTeamBLL;
-
 
         public ObjPlayerBLL ObjPlayerBLL;
 
@@ -34,16 +35,11 @@ namespace QlyGiaiBongDa.GUI
         }
         private void usrPlayer_Load(object sender, EventArgs e)
         {
-            cb_DoiBong.AutoCompleteSource = AutoCompleteSource.ListItems;
-            cb_DoiBong.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_DoiBong.DisplayMember = "TenDoi";
-            cb_DoiBong.ValueMember = "TenDoi";
-            cb_DoiBong.DataSource = ObjTeamBLL.Instance.GetNameTeam();
-        }
-
-        private void cb_DoiBong_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
+            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_team_name.DisplayMember = "TenDoi";
+            cbb_team_name.ValueMember = "TenDoi";
+            cbb_team_name.DataSource = ObjPlayerBLL.Instance.GetNameTeam_usrPlayer();
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)

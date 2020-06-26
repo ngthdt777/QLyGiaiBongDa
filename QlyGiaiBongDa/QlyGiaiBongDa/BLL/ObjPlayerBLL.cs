@@ -41,6 +41,12 @@ namespace QlyGiaiBongDa.BLL
             return ObjPlayerDAL.Instance.LoadListFindPlayer();
         }
 
+        public DataTable GetNameTeam_usrPlayer()
+        {
+            return ObjPlayerDAL.Instance.LoadNameTeam_usrPlayer();
+        }
+
+
 
     }
 }

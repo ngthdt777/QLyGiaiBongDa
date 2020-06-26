@@ -159,7 +159,6 @@ C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\Q
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
-E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources
@@ -183,3 +182,4 @@ E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\D
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
+E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
