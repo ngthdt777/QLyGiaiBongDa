@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="BLL\ObjGoalBLL.cs" />
     <Compile Include="BLL\ObjResultMatchBLL.cs" />
-    <Compile Include="BLL\ObjRoundMatchBLL.cs" />
+    <Compile Include="BLL\ObjRoundBLL.cs" />
     <Compile Include="BLL\ObjStandingBLL.cs" />
     <Compile Include="BLL\ObjTeamBLL.cs" />
     <Compile Include="BLL\ObjPlayerBLL.cs" />
@@ -82,6 +82,12 @@
     <Compile Include="GUI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMatch.Designer.cs">
+      <DependentUpon>frmMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmQLGBD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +105,6 @@
     </Compile>
     <Compile Include="GUI\usrHomepage.Designer.cs">
       <DependentUpon>usrHomepage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\usrNewTour.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\usrNewTour.Designer.cs">
-      <DependentUpon>usrNewTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\usrPlayer.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +149,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLGBDVDQGDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLGBDVDQGDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGBDVDQGDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMatch.resx">
+      <DependentUpon>frmMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQLGBD.resx">
       <DependentUpon>frmQLGBD.cs</DependentUpon>
@@ -160,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrHomepage.resx">
       <DependentUpon>usrHomepage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\usrNewTour.resx">
-      <DependentUpon>usrNewTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrPlayer.resx">
       <DependentUpon>usrPlayer.cs</DependentUpon>
@@ -211,6 +216,17 @@
     </None>
     <None Include="QLGBDVDQGDataSet.xss">
       <DependentUpon>QLGBDVDQGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLGBDVDQGDataSet1.xsc">
+      <DependentUpon>QLGBDVDQGDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLGBDVDQGDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLGBDVDQGDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLGBDVDQGDataSet1.xss">
+      <DependentUpon>QLGBDVDQGDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

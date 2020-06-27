@@ -13,18 +13,18 @@ using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.BLL
 {
-   public  class ObjRoundMatchBLL
+   public  class ObjRoundBLL
     {
 
-        private static ObjRoundMatchBLL instance;
+        private static ObjRoundBLL instance;
 
-        public static ObjRoundMatchBLL Instance
+        public static ObjRoundBLL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ObjRoundMatchBLL();
+                    instance = new ObjRoundBLL();
                 }
                 return instance;
             }
@@ -37,5 +37,21 @@ namespace QlyGiaiBongDa.BLL
         {
             return ObjRoundDAL.Instance.LoadListRoundMatch();
         }
+
+
+
+        public DataTable Add()
+        {
+            return ObjRoundDAL.Instance.AddMatch();
+        }
+
+
+
+        public DataTable Delete()
+        {
+            return ObjRoundDAL.Instance.DeleteMatch();
+        }
+
+
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayerGoal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.dtp_CauThuGhiBan2 = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -39,12 +39,11 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.dtp_CauThuGiBan1 = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dgv_BXH_playergoal = new Guna.UI.WinForms.GunaDataGridView();
+            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
+            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
-            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH_playergoal)).BeginInit();
             this.SuspendLayout();
@@ -160,41 +159,36 @@
             // 
             // dgv_BXH_playergoal
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_BXH_playergoal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_BXH_playergoal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_BXH_playergoal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_BXH_playergoal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_BXH_playergoal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_BXH_playergoal.BackgroundColor = System.Drawing.Color.White;
             this.dgv_BXH_playergoal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_BXH_playergoal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_BXH_playergoal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_BXH_playergoal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_BXH_playergoal.ColumnHeadersHeight = 35;
             this.dgv_BXH_playergoal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenCauThu,
             this.TenDoi,
-            this.MaLoaiCauThu,
-            this.SoLuongLoaiBanThang});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_BXH_playergoal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaLoaiCauThu});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_BXH_playergoal.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_BXH_playergoal.EnableHeadersVisualStyles = false;
             this.dgv_BXH_playergoal.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH_playergoal.Location = new System.Drawing.Point(0, 304);
@@ -226,30 +220,6 @@
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // TenCauThu
-            // 
-            this.TenCauThu.FillWeight = 10.15228F;
-            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
-            this.TenCauThu.Name = "TenCauThu";
-            // 
-            // TenDoi
-            // 
-            this.TenDoi.FillWeight = 10.15228F;
-            this.TenDoi.HeaderText = "Tên Đội";
-            this.TenDoi.Name = "TenDoi";
-            // 
-            // MaLoaiCauThu
-            // 
-            this.MaLoaiCauThu.FillWeight = 5F;
-            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
-            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
-            // 
-            // SoLuongLoaiBanThang
-            // 
-            this.SoLuongLoaiBanThang.FillWeight = 5F;
-            this.SoLuongLoaiBanThang.HeaderText = "Số Bàn Thắng";
-            this.SoLuongLoaiBanThang.Name = "SoLuongLoaiBanThang";
             // 
             // btn_XuatBaocao
             // 
@@ -302,6 +272,27 @@
             this.btn_TimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
+            // TenCauThu
+            // 
+            this.TenCauThu.DataPropertyName = "TenCauThu";
+            this.TenCauThu.FillWeight = 40F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.DataPropertyName = "TenDoi";
+            this.TenDoi.FillWeight = 50F;
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // MaLoaiCauThu
+            // 
+            this.MaLoaiCauThu.DataPropertyName = "MaLoaiCauThu";
+            this.MaLoaiCauThu.FillWeight = 40F;
+            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
+            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
+            // 
             // usrPlayerGoal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,16 +314,15 @@
 
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
-        private Guna.UI.WinForms.GunaDateTimePicker dtp_CauThuGhiBan2;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaDateTimePicker dtp_CauThuGiBan1;
         private Guna.UI.WinForms.GunaButton btn_XuatBaocao;
         private Guna.UI.WinForms.GunaButton btn_TimKiem;
+        public Guna.UI.WinForms.GunaDataGridView dgv_BXH_playergoal;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongLoaiBanThang;
-        public Guna.UI.WinForms.GunaDataGridView dgv_BXH_playergoal;
+        public Guna.UI.WinForms.GunaDateTimePicker dtp_CauThuGhiBan2;
+        public Guna.UI.WinForms.GunaDateTimePicker dtp_CauThuGiBan1;
     }
 }

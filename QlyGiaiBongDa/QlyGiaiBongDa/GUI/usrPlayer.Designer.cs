@@ -30,11 +30,13 @@
         {
             Guna.UI.WinForms.GunaLabel lb_player_id;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_tuoimax = new Guna.UI.WinForms.GunaTextBox();
+            this.tb_tuoimin = new Guna.UI.WinForms.GunaTextBox();
             this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
             this.tb_GhiChu = new Guna.UI.WinForms.GunaTextBox();
             this.cb_LoaiSoSanh = new Guna.UI.WinForms.GunaComboBox();
@@ -52,8 +54,6 @@
             this.lb_player_type = new Guna.UI.WinForms.GunaLabel();
             this.lb_player_team = new Guna.UI.WinForms.GunaLabel();
             this.dgv_TCCT = new Guna.UI.WinForms.GunaDataGridView();
-            this.tb_tuoimin = new Guna.UI.WinForms.GunaTextBox();
-            this.tb_tuoimax = new Guna.UI.WinForms.GunaTextBox();
             lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
@@ -131,6 +131,42 @@
             this.gb_HSDB.Text = "Thông tin tìm kiếm";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // tb_tuoimax
+            // 
+            this.tb_tuoimax.BaseColor = System.Drawing.Color.White;
+            this.tb_tuoimax.BorderColor = System.Drawing.Color.Silver;
+            this.tb_tuoimax.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_tuoimax.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_tuoimax.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_tuoimax.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_tuoimax.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_tuoimax.ForeColor = System.Drawing.Color.Black;
+            this.tb_tuoimax.Location = new System.Drawing.Point(1035, 46);
+            this.tb_tuoimax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_tuoimax.Name = "tb_tuoimax";
+            this.tb_tuoimax.PasswordChar = '\0';
+            this.tb_tuoimax.SelectedText = "";
+            this.tb_tuoimax.Size = new System.Drawing.Size(49, 37);
+            this.tb_tuoimax.TabIndex = 21;
+            // 
+            // tb_tuoimin
+            // 
+            this.tb_tuoimin.BaseColor = System.Drawing.Color.White;
+            this.tb_tuoimin.BorderColor = System.Drawing.Color.Silver;
+            this.tb_tuoimin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_tuoimin.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_tuoimin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_tuoimin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_tuoimin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_tuoimin.ForeColor = System.Drawing.Color.Black;
+            this.tb_tuoimin.Location = new System.Drawing.Point(879, 46);
+            this.tb_tuoimin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_tuoimin.Name = "tb_tuoimin";
+            this.tb_tuoimin.PasswordChar = '\0';
+            this.tb_tuoimin.SelectedText = "";
+            this.tb_tuoimin.Size = new System.Drawing.Size(49, 37);
+            this.tb_tuoimin.TabIndex = 20;
+            // 
             // cbb_team_name
             // 
             this.cbb_team_name.BackColor = System.Drawing.Color.Transparent;
@@ -144,9 +180,9 @@
             this.cbb_team_name.FormattingEnabled = true;
             this.cbb_team_name.Items.AddRange(new object[] {
             " ",
-            " Ha Noi",
-            " Hoang Anh Gia Lai",
-            " Tp.Ho Chi Minh"});
+            "Ha Noi",
+            "Hoang Anh Gia Lai",
+            "Tp.Ho Chi Minh"});
             this.cbb_team_name.Location = new System.Drawing.Point(349, 208);
             this.cbb_team_name.Name = "cbb_team_name";
             this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -306,8 +342,8 @@
             this.cb_LoaiCT.ForeColor = System.Drawing.Color.Black;
             this.cb_LoaiCT.FormattingEnabled = true;
             this.cb_LoaiCT.Items.AddRange(new object[] {
-            " TrongNuoc",
-            " NgoaiNuoc"});
+            "TrongNuoc",
+            "NgoaiNuoc"});
             this.cb_LoaiCT.Location = new System.Drawing.Point(349, 153);
             this.cb_LoaiCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_LoaiCT.Name = "cb_LoaiCT";
@@ -388,8 +424,8 @@
             // 
             // dgv_TCCT
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_TCCT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -398,23 +434,23 @@
             this.dgv_TCCT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TCCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_TCCT.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TCCT.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_TCCT.EnableHeadersVisualStyles = false;
             this.dgv_TCCT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.Location = new System.Drawing.Point(3, 355);
@@ -447,42 +483,6 @@
             this.dgv_TCCT.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // tb_tuoimin
-            // 
-            this.tb_tuoimin.BaseColor = System.Drawing.Color.White;
-            this.tb_tuoimin.BorderColor = System.Drawing.Color.Silver;
-            this.tb_tuoimin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_tuoimin.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_tuoimin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_tuoimin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_tuoimin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_tuoimin.ForeColor = System.Drawing.Color.Black;
-            this.tb_tuoimin.Location = new System.Drawing.Point(879, 46);
-            this.tb_tuoimin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_tuoimin.Name = "tb_tuoimin";
-            this.tb_tuoimin.PasswordChar = '\0';
-            this.tb_tuoimin.SelectedText = "";
-            this.tb_tuoimin.Size = new System.Drawing.Size(49, 37);
-            this.tb_tuoimin.TabIndex = 20;
-            // 
-            // tb_tuoimax
-            // 
-            this.tb_tuoimax.BaseColor = System.Drawing.Color.White;
-            this.tb_tuoimax.BorderColor = System.Drawing.Color.Silver;
-            this.tb_tuoimax.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_tuoimax.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_tuoimax.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_tuoimax.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_tuoimax.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_tuoimax.ForeColor = System.Drawing.Color.Black;
-            this.tb_tuoimax.Location = new System.Drawing.Point(1035, 46);
-            this.tb_tuoimax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_tuoimax.Name = "tb_tuoimax";
-            this.tb_tuoimax.PasswordChar = '\0';
-            this.tb_tuoimax.SelectedText = "";
-            this.tb_tuoimax.Size = new System.Drawing.Size(49, 37);
-            this.tb_tuoimax.TabIndex = 21;
             // 
             // usrPlayer
             // 

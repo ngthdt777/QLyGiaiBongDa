@@ -183,3 +183,4 @@ E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\D
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
 E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
+E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources

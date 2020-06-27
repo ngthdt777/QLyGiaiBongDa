@@ -82,7 +82,7 @@ MaVongDau varchar(45),
 
 insert TRANDAU values ('Vong1LD' , 'BinhDuong' , 'LongAn' , '01-01-2020 ' , '4:00' , 'Tan An' , '30', 'Vong1' )
 insert TRANDAU values ('Vong2LD' , 'KhanhHoa' , 'HaNoi' , '02-01-2020 ' , '4:20' , 'Hang Day' , '2-1', 'Vong2' )
-
+insert TRANDAU values ('Vong3LD','Lam','Bao','18-11-2020','4:20','UIT','2-3','Vong4')
 insert BANTHANG values ('00A' , '1001' , 'A' , '69p' , 'Vong1LD')
 insert BANTHANG values ('00A' , '1001' , 'C' , '72p' , 'Vong1LD')
 insert BANTHANG values ('00A' , '1001' , 'B' , '90p' , 'Vong1LD')
@@ -97,7 +97,10 @@ MaVongDau varchar(45) primary key not null ,
 TenVongDau varchar(45),
 )
  INSERT into VONGDAU values ('VB','VB')
-
+ INSERT into VONGDAU values ('VMS','Vong16')
+ INSERT into VONGDAU values ('TK','TuKet')
+ INSERT into VONGDAU values ('BK','BanKet')
+ INSERT into VONGDAU values ('CK','ChungKet')
 go
 
 -- tạo bản tham số
@@ -160,12 +163,12 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
  go
 
  ----------------INSERT DOIBONG-------------------------------
- insert into DOIBONG(MaDoi, TenDoi, SanNha, SoCauThu) values ( 1, 'Long An', ' Tan An ', 5)
- insert into DOIBONG values ( 2, 'HoChiMinh', ' Thong Nhat', 5)
- insert into DOIBONG values ( 3, 'Binh Duong', ' Go Dau ', 6)
+ insert into DOIBONG(MaDoi, TenDoi, SanNha, SoCauThu) values ( 1, 'Long An', 'Tan An ', 5)
+ insert into DOIBONG values ( 2, 'HoChiMinh', 'Thong Nhat', 5)
+ insert into DOIBONG values ( 3, 'Binh Duong', 'Go Dau ', 6)
  insert into DOIBONG values (7,'Hoang Anh Gia Lai','Gia Lai', '10')
  insert into DOIBONG values (6,'Ha Noi' ,'My Dinh', '10')
- INSERT into DOIBONG values (8, 'Tp.Ho Chi Minh' , ' SVD Thong Nhat', '10')
+ INSERT into DOIBONG values (8, 'Tp.Ho Chi Minh' , 'SVD Thong Nhat', '10')
 
  go
 
@@ -176,18 +179,18 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
  insert into CAUTHU values ( '1004', 'Tran Quoc Thang', '01-01-2000', 'NgoaiNuoc' , 'Thi Dau 6 nam' , '1')
  insert into CAUTHU values ( '1001', 'Luong Duy Bao', '2000-01-01', 'TrongNuoc ' , 'Thi Dau 10 nam' , '2')
  insert into CAUTHU values ( '1002', 'Luong Duy Bao', '2000-01-02', 'NgoaiNuoc' , 'Thi Dau 2 nam' , '3')
- insert into CAUTHU values ( '1005', 'Nguyen Thanh Det', '2000-01-02', 'TrongNuoC' , 'Thi Dau 10000 nam' , '1')
+ insert into CAUTHU values ( '1005', 'Nguyen Thanh Det', '2000-01-02', 'TrongNuoc' , 'Thi Dau 10000 nam' , '1')
 
- insert into CAUTHU values ( '7001', 'Tran Buu Ngoc', '26-02-1991', 'TrongNuoC' , 'Thi Dau 5 nam' , '7')
- insert into CAUTHU values ( '7002', 'Nguyen Canh Anh', '11-01-2000', 'TrongNuoC' , 'Thi Dau 2 nam' , '7')
- insert into CAUTHU values ( '7003', 'Nguyen Huu Anh Tai', '27-02-1996', 'TrongNuoC' , 'Thi Dau 2 nam' , '7')
- insert into CAUTHU values ( '7004', 'Au Duong Quan', '30-04-1998', 'TrongNuoC' , 'Thi Dau 3 nam' , '7')
- insert into CAUTHU values ( '7005', 'Luong Xuan Truong', '13-06-1995', 'TrongNuoC' , 'Thi Dau 4 nam' , '7')
- insert into CAUTHU values ( '7006', 'Nguyen Phong Hong Duy', '18-02-1998', 'TrongNuoC' , 'Thi Dau 1 nam' , '7')     --------HOANG ANH GIA LAI-----------
- insert into CAUTHU values ( '7007', 'Tran Minh Vuong', '19-08-1999', 'TrongNuoC' , 'Thi Dau 2 nam' , '7')
- insert into CAUTHU values ( '7008', 'Nguyen Van Toan', '12-04-1996', 'TrongNuoC' , 'Thi Dau 2 nam' , '7')
- insert into CAUTHU values ( '7009', 'Nguyen Huu Canh', '01-01-1998', 'TrongNuoC' , 'Thi Dau 3 nam' , '7')
- insert into CAUTHU values ( '7010', 'Nguyen Thanh Dat', '10-07-2000', 'TrongNuoC' , 'Thi Dau 3 nam' , '7') 
+ insert into CAUTHU values ( '7001', 'Tran Buu Ngoc', '26-02-1991', 'TrongNuoc' , 'Thi Dau 5 nam' , '7')
+ insert into CAUTHU values ( '7002', 'Nguyen Canh Anh', '11-01-2000', 'TrongNuoc' , 'Thi Dau 2 nam' , '7')
+ insert into CAUTHU values ( '7003', 'Nguyen Huu Anh Tai', '27-02-1996', 'TrongNuoc' , 'Thi Dau 2 nam' , '7')
+ insert into CAUTHU values ( '7004', 'Au Duong Quan', '30-04-1998', 'TrongNuoc' , 'Thi Dau 3 nam' , '7')
+ insert into CAUTHU values ( '7005', 'Luong Xuan Truong', '13-06-1995', 'TrongNuoc' , 'Thi Dau 4 nam' , '7')
+ insert into CAUTHU values ( '7006', 'Nguyen Phong Hong Duy', '18-02-1998', 'TrongNuoc' , 'Thi Dau 1 nam' , '7')     --------HOANG ANH GIA LAI-----------
+ insert into CAUTHU values ( '7007', 'Tran Minh Vuong', '19-08-1999', 'TrongNuoc' , 'Thi Dau 2 nam' , '7')
+ insert into CAUTHU values ( '7008', 'Nguyen Van Toan', '12-04-1996', 'TrongNuoc' , 'Thi Dau 2 nam' , '7')
+ insert into CAUTHU values ( '7009', 'Nguyen Huu Canh', '01-01-1998', 'TrongNuoc' , 'Thi Dau 3 nam' , '7')
+ insert into CAUTHU values ( '7010', 'Nguyen Thanh Dat', '10-07-2000', 'TrongNuoc' , 'Thi Dau 3 nam' , '7') 
 
  insert into CAUTHU values ( '6001', 'Bui Tan Truong', '19-02-1986', 'TrongNuoc' , 'Thi Dau 5 nam' , '6')
  insert into CAUTHU values ( '6002', 'Nguyen Van Dung', '1-04-1994', 'TrongNuoc' , 'Thi Dau 2 nam' , '6')
@@ -218,12 +221,12 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
  -------------------------------INSERT TRANDAU-----------------------------------------
 
-insert into TRANDAU values ('VB001' , 'Hoang Anh Gia Lai' , 'Ha Noi ' , '01-01-2020 ' , '4:00' , 'Gia Lai' , '30', 'VB' )
-insert into TRANDAU values ('VB002' , 'Hoang Anh Gia Lai' , 'Tp.Ho Chi Minh ' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '12', 'VB' )
+insert into TRANDAU values ('VB001' , 'Hoang Anh Gia Lai' , 'Ha Noi' , '01-01-2020 ' , '4:00' , 'Gia Lai' , '30', 'VB' )
+insert into TRANDAU values ('VB002' , 'Hoang Anh Gia Lai' , 'Tp.Ho Chi Minh' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '12', 'VB' )
 insert into TRANDAU values ('VB003' , 'Ha Noi' , 'Hoang Anh Gia Lai' , '05-01-2020 ' , '7:00' , 'My Dinh' , '11', 'VB' )
-insert into TRANDAU values ('VB004' , 'Ha Noi' , 'Tp.Ho Chi Minh ' , '06-01-2020 ' , '3:00' , 'My Dinh ' , '21', 'VB' )
-insert into TRANDAU values ('VB005' , 'Tp.Ho Chi Minh' , 'Ha Noi ' , '10-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '00', 'VB' )
-insert into TRANDAU values ('VB006' , 'Tp.Ho Chi Minh' , 'Hoang Anh Gia Lai ' , '11-01-2020 ' , '7:00' , 'SVD Thong Nhat' , '2-1', 'VB' )
+insert into TRANDAU values ('VB004' , 'Ha Noi' , 'Tp.Ho Chi Minh' , '06-01-2020 ' , '3:00' , 'My Dinh ' , '21', 'VB' )
+insert into TRANDAU values ('VB005' , 'Tp.Ho Chi Minh' , 'Ha Noi' , '10-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '00', 'VB' )
+insert into TRANDAU values ('VB006' , 'Tp.Ho Chi Minh' , 'Hoang Anh Gia Lai' , '11-01-2020 ' , '7:00' , 'SVD Thong Nhat' , '2-1', 'VB' )
 
 
 ----------------------------------INSERT BANTHANG-----------------------------------------
@@ -252,14 +255,18 @@ insert into BANTHANG values ('0014' , '7004' , 'C' , '8:30' , 'VB006')
 
 --Hiển thị cầu thủ ghi bàn
 
-select Count(DISTINCT MaBanThang) as 'Số Bàn Thắng'  from BANTHANG
-where BANTHANG.MaCauThu = '7004' 
+select Count(DISTINCT MaBanThang) as 'Số Bàn Thắng'  from BANTHANG,CAUTHU
+where BANTHANG.MaCauThu = '7004' group by MaBanThang,TenCauThu
  
 
-select Count(DISTINCT MaBanThang) as 'Số Bàn Thắng' ,TenCauThu  from BANTHANG, CAUTHU
+select TenCauThu ,Count( MaBanThang) as 'Số Bàn Thắng' from BANTHANG, CAUTHU
 where  BANTHANG.MaCauThu=CAUTHU.MaCauThu and    BANTHANG.MaCauThu = '7004' 
-
 group by MaBanThang, TenCauThu
+
+
+
+
+
 -- Hiển thị Vòng đấu 
 
 select MaTranDau, DoiChuNha, DoiKhach, NgayThiDau, GioThiDau, SanThiDau, MaVongDau from TRANDAU
@@ -278,7 +285,11 @@ select * from TRANDAU
  delete from CAUTHU
  go 
  SELECT * FROM CAUTHU WHERE MaDoi='1'
+
+
  set dateformat dmy
+
+
 
  go
 
@@ -303,3 +314,14 @@ From CAUTHU
 
 select CAST(DATEDIFF(YY,NgaySinh,GETDATE()) AS INT) from CAUTHU
 
+select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TenVongDau from TRANDAU,VONGDAU
+where von='VB' and TRANDAU.MaVongDau = VONGDAU.MaVongDau
+
+
+INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,MaVongDau)
+   VALUES('VB007','Ha Noi', 'Hoang Anh Gia Lai','01-01-2020',CONVERT(TIME, '4:00'),'My Dinh','VB')
+
+  select  convert(time,'4:20')
+  SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as SOBANTHANG FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU
+          where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.NgayThiDau between '01-01-2020' and '07-01-2020'
+         GROUP BY TenCauThu,TenDoi,MaLoaiCauThu

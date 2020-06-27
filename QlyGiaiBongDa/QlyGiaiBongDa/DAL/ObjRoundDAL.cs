@@ -40,18 +40,68 @@ namespace QlyGiaiBongDa.BLL
 
         public DataTable LoadListRoundMatch()
         {
+            string vdau = usrCreateMatch.Instance.cb_VongDau.Text;
+            MessageBox.Show(vdau);
+            DataTable dt = new DataTable();
+
+            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TenVongDau from VONGDAU,TRANDAU" +
+            " where VONGDAU.TenVongDau = '"+vdau+ "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
+               
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+
+            return dt;
+        }
+
+        public DataTable AddMatch()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
             DataTable dt = new DataTable();
 
 
-            string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
-                " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
-                "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
+
+            string id = ((frmMatch)f).tb_match_id.Text;
+            string doichunha = ((frmMatch)f).tb_match_home.Text;
+            string doikhach = ((frmMatch)f).tb_match_guest.Text;
+            string ngaythidau = ((frmMatch)f).dtp_match.Value.ToString();
+            string santhidau = ((frmMatch)f).tb_match_court.Text;
+            string vongdau = ((frmMatch)f).cb_VongDau.Text;
+            string Gio = ((frmMatch)f).tb_GioThiDau.Text;
+        
 
 
+            string AddQuery = "INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,MaVongDau)" +
+                        "VALUES('" + id + "', '" + doichunha + "', '" + doikhach + "', '" + ngaythidau + "'," 
+                        + " CONVERT(TIME, '"+ Gio +"')"  + " ,'" + santhidau + "', '" +vongdau  + "')";
 
-            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+            if (result > 0)
+            {
+                MessageBox.Show("OKE da add ");
+            }
             return dt;
         }
+        public void delete()
+        {
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
+            string id = ((frmMatch)f).tb_match_id.Text;
+            string deletequery= "DELETE FROM TRANDAU WHERE MaTranDau = '" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(deletequery);
+            if (result > 0)
+            {
+                MessageBox.Show("Trận đấu đã bị xoá,bấm xem để xem dữ liệu mới", "Thông báo", MessageBoxButtons.OK);
+            }
+
+        }
+
+        public DataTable DeleteMatch()
+        {
+            DataTable dt = new DataTable();
+            return dt;
+        }
+
+
+
     }
 }
 

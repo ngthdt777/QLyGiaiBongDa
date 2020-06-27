@@ -45,13 +45,15 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListPlayerGoal()
         {
+            System.Windows.Forms.UserControl u = new usrPlayerGoal();
             DataTable dt = new DataTable();
+            string ngayden = usrPlayerGoal.Instance.dtp_CauThuGiBan1.Value.ToString();
+            string ngaydi = usrPlayerGoal.Instance.dtp_CauThuGhiBan2.Value.ToString();
 
+            string LoadQuery = "SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as 'Số Bàn Thắng' FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU"+
+          " where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.NgayThiDau between '"+ngayden+"' and '"+ngaydi+"' "+
+          "GROUP BY TenCauThu,TenDoi,MaLoaiCauThu";
 
-            string LoadQuery = "select TenCauThu, TenDoi, MaLoaiCauThu, COUNT(MaLoaiBanThang) as SOBANTHANG" +
-                " from DOIBONG, CAUTHU, BANTHANG where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = '1001' " +
-                "group by TenCauThu, TenDoi, MaLoaiCauThu, MaLoaiBanThang";
-            
 
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
