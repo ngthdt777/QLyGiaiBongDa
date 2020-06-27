@@ -8,6 +8,10 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+
+
+
+
 namespace QlyGiaiBongDa.DAL
 {
     class banthang
@@ -45,13 +49,12 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListPlayerGoal()
         {
-            System.Windows.Forms.UserControl u = new usrPlayerGoal();
             DataTable dt = new DataTable();
-            string ngayden = usrPlayerGoal.Instance.dtp_CauThuGiBan1.Value.ToString();
-            string ngaydi = usrPlayerGoal.Instance.dtp_CauThuGhiBan2.Value.ToString();
+
+            string vongdau = usrPlayerGoal.Instance.cb_VongDau.Text;
 
             string LoadQuery = "SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as 'Số Bàn Thắng' FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU"+
-          " where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.NgayThiDau between '"+ngayden+"' and '"+ngaydi+"' "+
+          " where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.MaVongDau = '"+vongdau+"' " +
           "GROUP BY TenCauThu,TenDoi,MaLoaiCauThu";
 
 

@@ -32,7 +32,7 @@
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.cb_VongDau = new System.Windows.Forms.ComboBox();
             this.tb_GioThiDau = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lb_match_giotd = new Guna.UI.WinForms.GunaLabel();
             this.btt_exit = new Guna.UI.WinForms.GunaControlBox();
             this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.lb_match_vongdau = new Guna.UI.WinForms.GunaLabel();
@@ -46,6 +46,8 @@
             this.lb_team_san = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_guest = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_id = new Guna.UI.WinForms.GunaLabel();
+            this.lb_match_tiso = new Guna.UI.WinForms.GunaLabel();
+            this.tb_match_tiso = new Guna.UI.WinForms.GunaTextBox();
             this.gb_HSDB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,11 +56,12 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.tb_match_tiso);
+            this.gb_HSDB.Controls.Add(this.lb_match_tiso);
             this.gb_HSDB.Controls.Add(this.cb_VongDau);
             this.gb_HSDB.Controls.Add(this.tb_GioThiDau);
-            this.gb_HSDB.Controls.Add(this.gunaLabel1);
+            this.gb_HSDB.Controls.Add(this.lb_match_giotd);
             this.gb_HSDB.Controls.Add(this.btt_exit);
-            this.gb_HSDB.Controls.Add(this.btt_team_add);
             this.gb_HSDB.Controls.Add(this.lb_match_vongdau);
             this.gb_HSDB.Controls.Add(this.dtp_match);
             this.gb_HSDB.Controls.Add(this.lb_match_date);
@@ -113,18 +116,17 @@
             this.tb_GioThiDau.Size = new System.Drawing.Size(160, 32);
             this.tb_GioThiDau.TabIndex = 23;
             // 
-            // gunaLabel1
+            // lb_match_giotd
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(454, 66);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(138, 32);
-            this.gunaLabel1.TabIndex = 22;
-            this.gunaLabel1.Text = "Giờ thi đấu:";
-            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
+            this.lb_match_giotd.AutoSize = true;
+            this.lb_match_giotd.BackColor = System.Drawing.Color.Transparent;
+            this.lb_match_giotd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_giotd.ForeColor = System.Drawing.Color.Black;
+            this.lb_match_giotd.Location = new System.Drawing.Point(454, 66);
+            this.lb_match_giotd.Name = "lb_match_giotd";
+            this.lb_match_giotd.Size = new System.Drawing.Size(138, 32);
+            this.lb_match_giotd.TabIndex = 22;
+            this.lb_match_giotd.Text = "Giờ thi đấu:";
             // 
             // btt_exit
             // 
@@ -156,7 +158,7 @@
             this.btt_team_add.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_add.Image")));
             this.btt_team_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_add.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_add.Location = new System.Drawing.Point(738, 266);
+            this.btt_team_add.Location = new System.Drawing.Point(738, 321);
             this.btt_team_add.Name = "btt_team_add";
             this.btt_team_add.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_add.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -314,12 +316,41 @@
             this.lb_match_id.TabIndex = 0;
             this.lb_match_id.Text = "Mã trận đấu:";
             // 
+            // lb_match_tiso
+            // 
+            this.lb_match_tiso.AutoSize = true;
+            this.lb_match_tiso.BackColor = System.Drawing.Color.Transparent;
+            this.lb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_tiso.ForeColor = System.Drawing.Color.Black;
+            this.lb_match_tiso.Location = new System.Drawing.Point(454, 242);
+            this.lb_match_tiso.Name = "lb_match_tiso";
+            this.lb_match_tiso.Size = new System.Drawing.Size(76, 32);
+            this.lb_match_tiso.TabIndex = 25;
+            this.lb_match_tiso.Text = "Tỷ số:";
+            // 
+            // tb_match_tiso
+            // 
+            this.tb_match_tiso.BaseColor = System.Drawing.Color.White;
+            this.tb_match_tiso.BorderColor = System.Drawing.Color.Silver;
+            this.tb_match_tiso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_match_tiso.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_match_tiso.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_match_tiso.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_match_tiso.Location = new System.Drawing.Point(618, 243);
+            this.tb_match_tiso.Name = "tb_match_tiso";
+            this.tb_match_tiso.PasswordChar = '\0';
+            this.tb_match_tiso.SelectedText = "";
+            this.tb_match_tiso.Size = new System.Drawing.Size(160, 32);
+            this.tb_match_tiso.TabIndex = 26;
+            // 
             // frmMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 330);
+            this.ClientSize = new System.Drawing.Size(930, 393);
             this.Controls.Add(this.gb_HSDB);
+            this.Controls.Add(this.btt_team_add);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMatch";
@@ -348,7 +379,9 @@
         public Guna.UI.WinForms.GunaLabel lb_match_vongdau;
         private Guna.UI.WinForms.GunaControlBox btt_exit;
         public Guna.UI.WinForms.GunaTextBox tb_GioThiDau;
-        public Guna.UI.WinForms.GunaLabel gunaLabel1;
+        public Guna.UI.WinForms.GunaLabel lb_match_giotd;
         public System.Windows.Forms.ComboBox cb_VongDau;
+        public Guna.UI.WinForms.GunaTextBox tb_match_tiso;
+        public Guna.UI.WinForms.GunaLabel lb_match_tiso;
     }
 }

@@ -32,5 +32,15 @@ namespace QlyGiaiBongDa.GUI
         {
             dgv_BXH_playergoal.DataSource = ObjGoalBLL.Instance.GetListPlayerGoal();
         }
+
+        private void gunaLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gb_HSDB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,6 +14,20 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class frmMatch : Form
     {
+        private static frmMatch instance;
+
+        public static frmMatch Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new frmMatch();
+                }
+                return instance;
+            }
+            set { instance = value; }
+        }
         public frmMatch()
         {
             InitializeComponent();
@@ -24,14 +38,6 @@ namespace QlyGiaiBongDa.GUI
             ObjRoundBLL.Instance.Add();
         }
 
-        private void btt_team_era_Click(object sender, EventArgs e)
-        {
-            ObjRoundBLL.Instance.Delete();
-        }
 
-        private void gunaLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

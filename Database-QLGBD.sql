@@ -322,6 +322,14 @@ INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,
    VALUES('VB007','Ha Noi', 'Hoang Anh Gia Lai','01-01-2020',CONVERT(TIME, '4:00'),'My Dinh','VB')
 
   select  convert(time,'4:20')
+
   SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as SOBANTHANG FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU
-          where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.NgayThiDau between '01-01-2020' and '07-01-2020'
-         GROUP BY TenCauThu,TenDoi,MaLoaiCauThu
+  where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.MaVongDau= 'VB'
+  GROUP BY TenCauThu,TenDoi,MaLoaiCauThu
+
+
+ UPDATE TRANDAU  SET TySo ='11'where MaTranDau='1'
+
+  SELECT MaTranDau from TRANDAU where  NgayThiDau >'01-01-2020' and NgayThiDau <'03-01-2020'
+
+UPDATE TRANDAU SET TySo = '33' where MaTranDau='VB004'

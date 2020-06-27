@@ -47,9 +47,14 @@ namespace QlyGiaiBongDa.BLL
 
 
 
-        public DataTable Delete()
+        public DataTable DeleteMatch()
         {
             return ObjRoundDAL.Instance.DeleteMatch();
+        }
+
+       public void UpdateMatch()
+        {
+            ObjRoundDAL.Instance.UpdateMatch();
         }
 
 

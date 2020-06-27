@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ObjGoalBLL.cs" />
-    <Compile Include="BLL\ObjResultMatchBLL.cs" />
     <Compile Include="BLL\ObjRoundBLL.cs" />
     <Compile Include="BLL\ObjStandingBLL.cs" />
     <Compile Include="BLL\ObjTeamBLL.cs" />

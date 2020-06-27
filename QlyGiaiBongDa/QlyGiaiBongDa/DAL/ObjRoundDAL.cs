@@ -44,7 +44,7 @@ namespace QlyGiaiBongDa.BLL
             MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
-            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TenVongDau from VONGDAU,TRANDAU" +
+            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo from VONGDAU,TRANDAU" +
             " where VONGDAU.TenVongDau = '"+vdau+ "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
                
 
@@ -81,22 +81,61 @@ namespace QlyGiaiBongDa.BLL
             }
             return dt;
         }
-        public void delete()
+
+
+        public void UpdateMatch()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
-            string id = ((frmMatch)f).tb_match_id.Text;
-            string deletequery= "DELETE FROM TRANDAU WHERE MaTranDau = '" + id + "'";
+
+            string id = frmMatch.Instance.tb_match_id.Text;
+            string doinha = frmMatch.Instance.tb_match_home.Text;
+            string doikhach = frmMatch.Instance.tb_match_guest.Text;
+            string ngaytd = frmMatch.Instance.dtp_match.Text;
+            string giotd = frmMatch.Instance.tb_GioThiDau.Text;
+            string san = frmMatch.Instance.tb_match_court.Text;
+            string tyso = frmMatch.Instance.tb_match_tiso.Text;
+
+            MessageBox.Show(tyso);
+
+
+            string UpdateQuery = "UPDATE TRANDAU " +
+                 "SET DoiKhach = '" + doikhach + "',DoiChuNha = '" + doikhach + "' " +
+                 " ,NgayThiDau = '" + ngaytd + "',GioThiDau = '" + giotd + "',SanThiDau='" + san + "',TySo='" + tyso +
+                 "' Where MaTranDau='" + id + "'";
+            int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
+            if (result > 0)
+            {
+                MessageBox.Show("Đội bóng đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+
+        }
+
+
+
+
+
+
+        public DataTable DeleteMatch()
+        {
+            DataTable dt = new DataTable();
+
+
+            string id = frmMatch.Instance.tb_match_id.Text;
+            string doinha = frmMatch.Instance.tb_match_home.Text;
+            string doikhach = frmMatch.Instance.tb_match_guest.Text;
+            string ngaytd = frmMatch.Instance.dtp_match.Text;
+            string giotd = frmMatch.Instance.tb_GioThiDau.Text;
+            string san = frmMatch.Instance.tb_match_court.Text;
+            string tyso = frmMatch.Instance.tb_match_tiso.Text;
+
+
+            string deletequery = "DELETE FROM TRANDAU WHERE MaTranDau = '" + id + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(deletequery);
             if (result > 0)
             {
                 MessageBox.Show("Trận đấu đã bị xoá,bấm xem để xem dữ liệu mới", "Thông báo", MessageBoxButtons.OK);
             }
-
-        }
-
-        public DataTable DeleteMatch()
-        {
-            DataTable dt = new DataTable();
             return dt;
         }
 

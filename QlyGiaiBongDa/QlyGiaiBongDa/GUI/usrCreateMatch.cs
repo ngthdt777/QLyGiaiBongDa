@@ -71,29 +71,78 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_team_era_Click(object sender, EventArgs e)
         {
-            ObjRoundBLL.Instance.Delete();
+            ObjRoundBLL.Instance.DeleteMatch();
         }
+  //-------------------------------------------------------------------------------------------------------------------
+
+
+        private void dgv_TLTD_CellStyleContentChanged(object sender, DataGridViewCellStyleContentChangedEventArgs e)
+        {
+
+        }
+
+        private void btt_match_update_Click(object sender, EventArgs e)
+        {
+            ObjRoundBLL.Instance.UpdateMatch();
+        }
+
+ 
+        //-------------------------------------------------------------------------------------------------------------------
+
+
+
 
         private void dgv_TLTD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             int index = e.RowIndex;
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
+          //  System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
             if (index >= 0)
             {
-              
-                ((frmMatch)f).tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
-
+                frmMatch f = new frmMatch();
+                frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
+                frmMatch.Instance.tb_match_home.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
+                frmMatch.Instance.tb_match_guest.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
+                frmMatch.Instance.dtp_match.Text = dgv_TLTD.Rows[e.RowIndex].Cells["NgayThiDau"].Value.ToString();
+                frmMatch.Instance.tb_GioThiDau.Text = dgv_TLTD.Rows[e.RowIndex].Cells["GioThiDau"].Value.ToString();
+                frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();
+                frmMatch.Instance.tb_match_tiso.Text = dgv_TLTD.Rows[e.RowIndex].Cells["TySo"].Value.ToString();
+                MessageBox.Show(frmMatch.Instance.tb_match_tiso.Text);
+                f.ShowDialog();
             }
+
+
+
+
+
         }
+
+
 
         private void dgv_TLTD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+                                  
             int index = e.RowIndex;
-            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
+           // System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
             if (index >= 0)
             {
-                ((frmMatch)f).tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
+                frmMatch f = new frmMatch();
+
+                frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
+                frmMatch.Instance.tb_match_home.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
+                frmMatch.Instance.tb_match_guest.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
+                frmMatch.Instance.dtp_match.Text = dgv_TLTD.Rows[e.RowIndex].Cells["NgayThiDau"].Value.ToString();
+                frmMatch.Instance.tb_GioThiDau.Text = dgv_TLTD.Rows[e.RowIndex].Cells["GioThiDau"].Value.ToString();
+                frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();
+                frmMatch.Instance.tb_match_tiso.Text = dgv_TLTD.Rows[e.RowIndex].Cells["TySo"].Value.ToString();
+                MessageBox.Show(frmMatch.Instance.tb_match_tiso.Text);
+                f.ShowDialog();
             }
+
+
+
         }
     }
 }
