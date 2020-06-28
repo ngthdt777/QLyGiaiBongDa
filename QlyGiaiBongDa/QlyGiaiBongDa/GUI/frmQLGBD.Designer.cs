@@ -34,7 +34,7 @@
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.btt_dieule = new Guna.UI.WinForms.GunaButton();
             this.btt_baocao = new Guna.UI.WinForms.GunaButton();
-            this.btt_kqvd = new Guna.UI.WinForms.GunaButton();
+            this.btt_stading = new Guna.UI.WinForms.GunaButton();
             this.btt_lichtd = new Guna.UI.WinForms.GunaButton();
             this.btt_cauthu = new Guna.UI.WinForms.GunaButton();
             this.btt_doibong = new Guna.UI.WinForms.GunaButton();
@@ -58,7 +58,7 @@
             this.pnl_menu.Controls.Add(this.gunaGradientPanel1);
             this.pnl_menu.Controls.Add(this.btt_dieule);
             this.pnl_menu.Controls.Add(this.btt_baocao);
-            this.pnl_menu.Controls.Add(this.btt_kqvd);
+            this.pnl_menu.Controls.Add(this.btt_stading);
             this.pnl_menu.Controls.Add(this.btt_lichtd);
             this.pnl_menu.Controls.Add(this.btt_cauthu);
             this.pnl_menu.Controls.Add(this.btt_doibong);
@@ -165,34 +165,34 @@
             this.btt_baocao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_baocao.Click += new System.EventHandler(this.btt_baocao_Click);
             // 
-            // btt_kqvd
+            // btt_stading
             // 
-            this.btt_kqvd.AnimationHoverSpeed = 0.07F;
-            this.btt_kqvd.AnimationSpeed = 0.03F;
-            this.btt_kqvd.BackColor = System.Drawing.Color.Transparent;
-            this.btt_kqvd.BaseColor = System.Drawing.Color.Transparent;
-            this.btt_kqvd.BorderColor = System.Drawing.Color.Black;
-            this.btt_kqvd.BorderSize = 2;
-            this.btt_kqvd.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btt_kqvd.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_kqvd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btt_kqvd.ForeColor = System.Drawing.Color.Black;
-            this.btt_kqvd.Image = ((System.Drawing.Image)(resources.GetObject("btt_kqvd.Image")));
-            this.btt_kqvd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_kqvd.ImageSize = new System.Drawing.Size(22, 22);
-            this.btt_kqvd.Location = new System.Drawing.Point(3, 507);
-            this.btt_kqvd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btt_kqvd.Name = "btt_kqvd";
-            this.btt_kqvd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btt_kqvd.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btt_kqvd.OnHoverForeColor = System.Drawing.Color.White;
-            this.btt_kqvd.OnHoverImage = null;
-            this.btt_kqvd.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_kqvd.Size = new System.Drawing.Size(208, 85);
-            this.btt_kqvd.TabIndex = 12;
-            this.btt_kqvd.Text = "Kết quả vòng đấu";
-            this.btt_kqvd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_kqvd.Click += new System.EventHandler(this.btt_kqvd_Click);
+            this.btt_stading.AnimationHoverSpeed = 0.07F;
+            this.btt_stading.AnimationSpeed = 0.03F;
+            this.btt_stading.BackColor = System.Drawing.Color.Transparent;
+            this.btt_stading.BaseColor = System.Drawing.Color.Transparent;
+            this.btt_stading.BorderColor = System.Drawing.Color.Black;
+            this.btt_stading.BorderSize = 2;
+            this.btt_stading.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btt_stading.FocusedColor = System.Drawing.Color.Empty;
+            this.btt_stading.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btt_stading.ForeColor = System.Drawing.Color.Black;
+            this.btt_stading.Image = ((System.Drawing.Image)(resources.GetObject("btt_stading.Image")));
+            this.btt_stading.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_stading.ImageSize = new System.Drawing.Size(22, 22);
+            this.btt_stading.Location = new System.Drawing.Point(3, 507);
+            this.btt_stading.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btt_stading.Name = "btt_stading";
+            this.btt_stading.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btt_stading.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btt_stading.OnHoverForeColor = System.Drawing.Color.White;
+            this.btt_stading.OnHoverImage = null;
+            this.btt_stading.OnPressedColor = System.Drawing.Color.Black;
+            this.btt_stading.Size = new System.Drawing.Size(208, 85);
+            this.btt_stading.TabIndex = 12;
+            this.btt_stading.Text = "Bảng xếp hạng";
+            this.btt_stading.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_stading.Click += new System.EventHandler(this.btt_kqvd_Click);
             // 
             // btt_lichtd
             // 
@@ -434,7 +434,7 @@
         private Guna.UI.WinForms.GunaButton btt_doibong;
         private Guna.UI.WinForms.GunaButton btt_dieule;
         private Guna.UI.WinForms.GunaButton btt_baocao;
-        private Guna.UI.WinForms.GunaButton btt_kqvd;
+        private Guna.UI.WinForms.GunaButton btt_stading;
         private Guna.UI.WinForms.GunaButton btt_lichtd;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel2;

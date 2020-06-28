@@ -12,8 +12,8 @@ using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.BLL
 {
-        public class ObjStandingBLL
-        {
+    public class ObjStandingBLL
+    {
 
         private static ObjStandingBLL instance;
 
@@ -32,10 +32,18 @@ namespace QlyGiaiBongDa.BLL
             set { instance = value; }
         }
 
-        public DataTable GetListStanding()
+        public DataTable GetlistStanding()
         {
             return ObjStandingDAL.Instance.LoadListStanding();
         }
 
+        public void LoadInfo()
+        {
+            ObjStandingDAL.Instance.LoadInfo();
+        }
+
+
     }
+
+
 }

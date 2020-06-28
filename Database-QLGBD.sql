@@ -12,13 +12,7 @@ create table Dangnhap
 )
 
 
-create table DOIBONG
-(
-MaDoi varchar(45) primary key not null,
-TenDoi varchar(45),
-SanNha varchar(45),
-SoCauThu int,
-)
+
 
 go
 
@@ -65,6 +59,15 @@ go
 
 
 
+create table DOIBONG
+(
+MaDoi varchar(45) primary key not null,
+TenDoi varchar(45),
+SanNha varchar(45),
+SoCauThu int,
+)
+
+
 -- tạo bảng trận đấu
 create table TRANDAU
 (
@@ -79,13 +82,16 @@ MaVongDau varchar(45),
 
 )
 
-
-insert TRANDAU values ('Vong1LD' , 'BinhDuong' , 'LongAn' , '01-01-2020 ' , '4:00' , 'Tan An' , '30', 'Vong1' )
-insert TRANDAU values ('Vong2LD' , 'KhanhHoa' , 'HaNoi' , '02-01-2020 ' , '4:20' , 'Hang Day' , '2-1', 'Vong2' )
-insert TRANDAU values ('Vong3LD','Lam','Bao','18-11-2020','4:20','UIT','2-3','Vong4')
-insert BANTHANG values ('00A' , '1001' , 'A' , '69p' , 'Vong1LD')
-insert BANTHANG values ('00A' , '1001' , 'C' , '72p' , 'Vong1LD')
-insert BANTHANG values ('00A' , '1001' , 'B' , '90p' , 'Vong1LD')
+CREATE TABLE BANGXEPHANG
+(
+MaDoi varchar(45),
+DiemSo int,
+TranThang int,
+TranHoa int,
+TranThua int,
+BanThang int,
+BanThua int,
+)
 
 
 go
@@ -228,6 +234,12 @@ insert into TRANDAU values ('VB004' , 'Ha Noi' , 'Tp.Ho Chi Minh' , '06-01-2020 
 insert into TRANDAU values ('VB005' , 'Tp.Ho Chi Minh' , 'Ha Noi' , '10-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '00', 'VB' )
 insert into TRANDAU values ('VB006' , 'Tp.Ho Chi Minh' , 'Hoang Anh Gia Lai' , '11-01-2020 ' , '7:00' , 'SVD Thong Nhat' , '2-1', 'VB' )
 
+SELECT   MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB001'
+DELETE TRANDAU where MaTranDau=null
+UPDATE TRANDAU SET DoiChuNha='Ha Noi' where MaTranDau=null
+
+update BANGXEPHANG set TranThang=+1 
+
 
 ----------------------------------INSERT BANTHANG-----------------------------------------
 
@@ -332,4 +344,4 @@ INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,
 
   SELECT MaTranDau from TRANDAU where  NgayThiDau >'01-01-2020' and NgayThiDau <'03-01-2020'
 
-UPDATE TRANDAU SET TySo = '33' where MaTranDau='VB004'
+UPDATE TRANDAU SET TySo = '33' where MaTranDau='VB001'

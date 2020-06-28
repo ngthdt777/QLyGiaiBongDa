@@ -78,14 +78,14 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_kqvd_Click(object sender, EventArgs e)
         {
-            if (!pnlMain.Controls.Contains(usrResultMatch.Instance))
+            if (!pnlMain.Controls.Contains(usrStanding.Instance))
             {
-                pnlMain.Controls.Add(usrResultMatch.Instance);
-                usrResultMatch.Instance.Dock = DockStyle.Fill;
-                usrResultMatch.Instance.BringToFront();
+                pnlMain.Controls.Add(usrStanding.Instance);
+                usrStanding.Instance.Dock = DockStyle.Fill;
+                usrStanding.Instance.BringToFront();
             }
             else
-                usrResultMatch.Instance.BringToFront();
+                usrStanding.Instance.BringToFront();
         }
 
         private void btt_lichtd_Click(object sender, EventArgs e)

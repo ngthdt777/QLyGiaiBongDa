@@ -30,7 +30,18 @@ namespace QlyGiaiBongDa.GUI
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            dgv_BXH.DataSource = ObjStandingBLL.Instance.GetListStanding();
+            // dgv_BXH.DataSource = ObjStandingBLL.Instance.GetListStanding();
+            ObjStandingBLL.Instance.LoadInfo();
+        }
+
+        private void usrStanding_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_mtd_TextChanged(object sender, EventArgs e)
+        {
+         
         }
     }
 }

@@ -117,12 +117,6 @@
     <Compile Include="GUI\usrPlayerGoal.Designer.cs">
       <DependentUpon>usrPlayerGoal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\usrResultMatch.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\usrResultMatch.Designer.cs">
-      <DependentUpon>usrResultMatch.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\usrRulesChange.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrPlayerGoal.resx">
       <DependentUpon>usrPlayerGoal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\usrResultMatch.resx">
-      <DependentUpon>usrResultMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrRulesChange.resx">
       <DependentUpon>usrRulesChange.cs</DependentUpon>
