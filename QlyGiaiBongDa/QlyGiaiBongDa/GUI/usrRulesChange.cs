@@ -12,6 +12,10 @@ namespace QlyGiaiBongDa.GUI
 {
     public partial class usrRulesChange : UserControl
     {
+        
+
+
+
         private static usrRulesChange _instance;
         public static usrRulesChange Instance
         {
@@ -27,20 +31,41 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
-        private void gunaButton3_Click(object sender, EventArgs e)
+        public int TuoiMin, TuoiMax, SoLgMin, SoLgMax, ForeignMax, DiemSoThang, DiemSoHoa, DiemSoThua, MaxTimeScore;
+        private void btt_RC_Default_Click(object sender, EventArgs e)
         {
             nm_tuoimin.Value = 16;
             nm_tuoimax.Value = 40;
-            nm_slngmin.Value = 5;
-            nm_slgmax.Value=22;
-            nm_foreignmax.Value=3;
+            nm_slgmin.Value = 5;
+            nm_slgmax.Value = 22;
+            nm_formax.Value = 5;
         }
 
-        private void gunaButton4_Click(object sender, EventArgs e)
+        private void btt_RC_Default_2_Click(object sender, EventArgs e)
         {
-            nm_win.Value = 3;
-            nm_eqaul.Value = 1;
-            nm_eqaul.Value = 0;
+            nm_diemthang.Value = 3;
+            nm_diemhoa.Value = 1;
+            nm_diemthua.Value = 0;
+            nm_maxtimescore.Value = 90;
         }
+
+
+        private void btt_RC_Done_1_Click(object sender, EventArgs e)
+        {
+            TuoiMin = Int32.Parse(nm_tuoimin.ToString());
+            TuoiMax = Int32.Parse(nm_tuoimax.ToString());
+            SoLgMin = Int32.Parse(nm_slgmin.ToString());
+            SoLgMax = Int32.Parse(nm_slgmax.ToString());
+            ForeignMax = Int32.Parse(nm_formax.ToString());
+        }
+
+        private void btt_RC_Done_2_Click(object sender, EventArgs e)
+        {
+            DiemSoThang = Int32.Parse(nm_diemthang.ToString());
+            DiemSoHoa = Int32.Parse(nm_diemhoa.ToString());
+            DiemSoThua = Int32.Parse(nm_diemthua.ToString());
+            MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
+        }
+
     }
 }

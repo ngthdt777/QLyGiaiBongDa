@@ -103,13 +103,9 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.AddPlayer();
-               // ObjTeamBLL.Instance.GetListPlayer();
+
             }
         }
-
-
-
-
 
 
 

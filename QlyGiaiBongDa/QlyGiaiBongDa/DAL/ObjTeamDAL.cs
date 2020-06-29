@@ -90,19 +90,12 @@ namespace QlyGiaiBongDa.DAL
 
         bool CheckMaDoi(string id)
         {
-            /*string query = "SELECT MaDoi FROM DOIBONG WHERE MaDoi = '" + id + "' ";
+            string query = "SELECT MaDoi FROM DOIBONG WHERE MaDoi = '" + id + "' ";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             if (dt.Rows.Count > 0)
                 return false;
-            else return true;*/
-            return true;
+            else return true;
         }
-
-
-
-
-
-
 
 
 
@@ -117,6 +110,7 @@ namespace QlyGiaiBongDa.DAL
             string ghichu = usrTeam.Instance.tb_hsdb_ghichu.Text;
 
                 if (CheckMaDoi(id) == true)
+                if (ObjRulesChangeBLL.Instance.CheckTuoiMax == true() && (ObjRulesChangeBLL.Instance.CheckTuoiMin() == true))
                 {
                     string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)"+
                         "VALUES('" + id + "', '" + tenct + "', '" +ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi +"')";
@@ -153,7 +147,7 @@ namespace QlyGiaiBongDa.DAL
                     MessageBox.Show("OKE da add ");
                 }
             }
-            else MessageBox.Show("Doi bong da ton toi");
+            else MessageBox.Show("Doi bong da ton tai");
         }
 
 
