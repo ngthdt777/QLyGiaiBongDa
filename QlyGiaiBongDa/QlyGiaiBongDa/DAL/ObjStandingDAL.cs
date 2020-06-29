@@ -8,7 +8,7 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
- 
+
 
 
 
@@ -29,10 +29,12 @@ namespace QlyGiaiBongDa.DAL
     }
 
 
-
+    
 
     public class ObjStandingDAL
     {
+        int TranThang_CN, TranHoa_CN, TranThua_CN, Diem_CN, tyso, BanThang_CN, BanThang_Khach, HieuSo;
+        int TranThang_Khach, TranHoa_Khach, TranThua_Khach, Diem_Khach;
         private static ObjStandingDAL instance;
 
         public static ObjStandingDAL Instance
@@ -48,18 +50,21 @@ namespace QlyGiaiBongDa.DAL
             set { instance = value; }
         }
         public ObjStandingDAL() { }
+
         public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
 
-        
+
+
         public void LoadInfo()
         {
+            
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
-                
-                for (int count_tran = 1; count_tran < 100; count_tran++)
+
+                for (int count_tran = 1; count_tran <7; count_tran++)
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB00"+count_tran+"'", connection);
+                    SqlCommand cmd = new SqlCommand("SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB00" + count_tran + "'", connection);
 
                     SqlDataReader da = cmd.ExecuteReader();
                     while (da.Read())
@@ -68,60 +73,69 @@ namespace QlyGiaiBongDa.DAL
                         usrStanding.Instance.tb_doikhach.Text = da.GetValue(2).ToString();
                         usrStanding.Instance.tb_tyso.Text = da.GetValue(3).ToString();
                     }
+                    CalPoint();
 
-                    int tyso = Int32.Parse(usrStanding.Instance.tb_tyso.Text);
-                    int x = tyso / 10;
-                    int y = tyso % 10;
-                    MessageBox.Show(x.ToString());
+                    string UpdateQuery_CN = " UPDATE BANGXEPHANG,DOIBONG " +
+                    "SET DiemSo = '" + Diem_CN + "' ,  TranThang = '" + TranThang_CN + "' , TranHoa ='" + TranHoa_CN + "' ,  TranThua ='" + TranThua_CN + "' " +
+                    " where TenDoi = '" + usrStanding.Instance.tb_doichunha.Text+ "' AND BANGXEPHANG.MaDoi= DOIBONG.MaDoi ";
+
+                    string UpdateQuery_Khach = " UPDATE BANGXEPHANG,DOIBONG " +
+                    "SET DiemSo = '" + Diem_Khach + "' ,  TranThang = '" + TranThang_Khach + "' , TranHoa ='" + TranHoa_Khach + "' ,  TranThua ='" + TranThua_Khach + "' " +
+                    " where TenDoi = '" + usrStanding.Instance.tb_doikhach.Text + "'AND BANGXEPHANG.MaDoi= DOIBONG.MaDoi ";
+
+
+                    int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery_CN);
+                    result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery_Khach);
+
+
+
                     connection.Close();
                 }
                 
             }
+
+
         }
+        
 
-
-        public void CalPoint()
+        public void  CalPoint()
 
         {
-            int tyso = Int32.Parse(usrStanding.Instance.tb_tyso.Text);
+            tyso = Int32.Parse(usrStanding.Instance.tb_tyso.Text);
 
             // Thong tin doi chu nha
 
-            int BanThang_CN = tyso / 10;
-            int BanThang_Khach = tyso % 10;
-
-            int HieuSo = BanThang_CN - BanThang_Khach;
-
-
-            int TranThang = 0;
-            int TranHoa = 0;
-            int TranThua = 0;
-            int Diem = 0;
+             BanThang_CN = tyso / 10;
+             BanThang_Khach = tyso % 10;
+             HieuSo = BanThang_CN - BanThang_Khach;
 
 
-            // So sacnh
+           // So sanh
 
             if (BanThang_CN > BanThang_Khach)
 
             {
-
-                TranThang = TranThang + 1;
-                TranHoa = TranHoa + 0;
-                TranThua = TranThua + 0;
-
-                Diem = Diem + 3;
-
-                DataTable dt = new DataTable();
-
-                string LoadQuery = "UPDATE BANGXEPHANG" +
-                    "SET DiemSo ='"+Diem+ "' ,  TranThang ='" + TranThang + "' , TranHoa ='" + TranHoa + "' ,  TranThua ='" + TranThua + "' , TranThua ='" + TranThua + "',     " +
-
-            " where MaDoi = '7' ";
+                    TranThang_CN += 1;
+                    Diem_CN += 3;
+                    TranThua_Khach += 1;
 
             }
 
+            else if (BanThang_CN == BanThang_Khach)
+            {
+                    TranHoa_CN += 1; Diem_CN += 1;
+                    TranHoa_Khach += 1; Diem_Khach += 1;
+            }
+            
+            else
+            {
+                    TranThua_CN += 1;
+                    Diem_Khach += 3;
+                    TranThang_Khach += 1;
+            }
 
         }
+
 
 
 
@@ -129,20 +143,19 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadListStanding()
         {
             string vdau = usrCreateMatch.Instance.cb_VongDau.Text;
-            MessageBox.Show(vdau);
+            //  MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
-            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo from VONGDAU,TRANDAU" +
-            " where VONGDAU.TenVongDau = '" + vdau + "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
+            string LoadQuery = " SELECT * FROM BANGXEPHANG Where MaDoi = '7'";
 
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
             return dt;
         }
-
-
     }
+
+    
 
 }
 

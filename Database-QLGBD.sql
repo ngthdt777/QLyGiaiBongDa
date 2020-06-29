@@ -234,11 +234,15 @@ insert into TRANDAU values ('VB004' , 'Ha Noi' , 'Tp.Ho Chi Minh' , '06-01-2020 
 insert into TRANDAU values ('VB005' , 'Tp.Ho Chi Minh' , 'Ha Noi' , '10-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '00', 'VB' )
 insert into TRANDAU values ('VB006' , 'Tp.Ho Chi Minh' , 'Hoang Anh Gia Lai' , '11-01-2020 ' , '7:00' , 'SVD Thong Nhat' , '2-1', 'VB' )
 
+
 SELECT   MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB001'
-DELETE TRANDAU where MaTranDau=null
-UPDATE TRANDAU SET DoiChuNha='Ha Noi' where MaTranDau=null
+DELETE TRANDAU where NgayThiDau='2020-06-27 17:29:15.000'
+UPDATE TRANDAU SET TySo='40' where MaTranDau= 'VB006'
 
 update BANGXEPHANG set TranThang=+1 
+
+
+
 
 
 ----------------------------------INSERT BANTHANG-----------------------------------------
@@ -345,3 +349,8 @@ INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,
   SELECT MaTranDau from TRANDAU where  NgayThiDau >'01-01-2020' and NgayThiDau <'03-01-2020'
 
 UPDATE TRANDAU SET TySo = '33' where MaTranDau='VB001'
+
+
+insert into BANGXEPHANG(MaDoi) values (7)
+insert into BANGXEPHANG(MaDoi) values (6)
+insert into BANGXEPHANG(MaDoi) values (8)
