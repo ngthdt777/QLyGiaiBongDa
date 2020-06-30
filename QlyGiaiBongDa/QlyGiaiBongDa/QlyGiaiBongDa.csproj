@@ -130,11 +130,11 @@
     <Compile Include="GUI\usrStanding.Designer.cs">
       <DependentUpon>usrStanding.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\usrTeam.cs">
+    <Compile Include="GUI\usrTeamList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\usrTeam.Designer.cs">
-      <DependentUpon>usrTeam.cs</DependentUpon>
+    <Compile Include="GUI\usrTeamList.Designer.cs">
+      <DependentUpon>usrTeamList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,8 +175,8 @@
     <EmbeddedResource Include="GUI\usrStanding.resx">
       <DependentUpon>usrStanding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\usrTeam.resx">
-      <DependentUpon>usrTeam.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\usrTeamList.resx">
+      <DependentUpon>usrTeamList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

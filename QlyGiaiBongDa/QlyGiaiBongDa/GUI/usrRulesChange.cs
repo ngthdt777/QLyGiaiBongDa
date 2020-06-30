@@ -31,7 +31,15 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
-        public int TuoiMin, TuoiMax, SoLgMin, SoLgMax, ForeignMax, DiemSoThang, DiemSoHoa, DiemSoThua, MaxTimeScore;
+        public int TuoiMin = 16;
+        public int TuoiMax = 40;
+        public int SoLgMin = 5;
+        public int SoLgMax = 22;
+        public int ForeignMax = 5;
+        public int DiemSoThang = 3;
+        public int DiemSoHoa = 1;
+        public int DiemSoThua = 0;
+        public int MaxTimeScore = 90;
         private void btt_RC_Default_Click(object sender, EventArgs e)
         {
             nm_tuoimin.Value = 16;

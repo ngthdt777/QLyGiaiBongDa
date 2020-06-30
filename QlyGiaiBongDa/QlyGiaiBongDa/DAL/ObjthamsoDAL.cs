@@ -45,12 +45,12 @@ namespace QlyGiaiBongDa.DAL
             }
             public ObjthamsoDAL() { }
         
-        public int myage = DateTime.Today.Year - usrTeam.Instance.dtp_cauthu_ngsinh.Value.Year;
+        public int myage = DateTime.Today.Year - usrTeamList.Instance.dtp_cauthu_ngsinh.Value.Year;
 
         public Boolean CheckTuoiMin()
         {
             int tuoimin = usrRulesChange.Instance.TuoiMin;
-            if (myage < tuoimin)
+            if (myage > tuoimin)
                 return true;
             else
             {
@@ -64,11 +64,11 @@ namespace QlyGiaiBongDa.DAL
         public Boolean CheckTuoiMax()
         {
             int tuoimax = usrRulesChange.Instance.TuoiMax;
-            if (myage > tuoimax)
+            if (myage < tuoimax)
                 return true;
             else
             {
-                MessageBox.Show("Độ tuổi tối thiểu là: " + tuoimax);
+                MessageBox.Show("Độ tuổi tối đa là: " + tuoimax);
                 return false;
             }
         }
@@ -86,21 +86,24 @@ namespace QlyGiaiBongDa.DAL
             }
         }
 
+        public int soluongct = Int32.Parse(usrHomepage.Instance.cb_Team_slgct.Text); 
+
 
         public Boolean CheckSoLgMax()
         {
-            return true;
-            MessageBox.Show("Số lượng cầu thủ tối thiểu là: " + usrRulesChange.Instance.SoLgMax);
+            int soluongmax = usrRulesChange.Instance.SoLgMax;
+            if (soluongct < soluongmax)
+                return true;
+            else
+            {
+                MessageBox.Show("số lượng cầu thủ tối đa là: " + soluongmax);
+                return false;
+            }
         }
 
 
-        public Boolean CheckForMax()
-        {
-            return true;
-            MessageBox.Show("Số lượng cầu thủ ngoại quốc tối đa là: " + usrRulesChange.Instance.ForeignMax);
-        }
 
-
+        
         public Boolean CheckDiemSoThang()
         {
             return true;
@@ -121,6 +124,22 @@ namespace QlyGiaiBongDa.DAL
         {
             return true;
             MessageBox.Show("Thời điểm ghi bàn tối đa là: " + usrRulesChange.Instance.MaxTimeScore);
+        }
+
+
+
+        public Boolean CheckNoForeignPlayer()
+        {
+
+            
+            int slg = Int32.Parse(usrTeamList.Instance.lb_hsdb_sctnq.Text);
+            if (slg < usrRulesChange.Instance.ForeignMax)
+                return true;
+            else
+            {
+                MessageBox.Show("Số lượng cầu thủ ngoại quốc vượt quá quy định");
+                return false;
+            }
         }
 
 

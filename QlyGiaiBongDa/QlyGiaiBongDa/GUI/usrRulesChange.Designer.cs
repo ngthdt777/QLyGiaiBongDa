@@ -58,6 +58,7 @@
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.tb_RC_countForeign = new MetroFramework.Controls.MetroTextBox();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +94,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.tb_RC_countForeign);
             this.gb_HSDB.Controls.Add(this.nm_formax);
             this.gb_HSDB.Controls.Add(this.nm_slgmax);
             this.gb_HSDB.Controls.Add(this.nm_slgmin);
@@ -552,6 +554,15 @@
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
             // 
+            // tb_RC_countForeign
+            // 
+            this.tb_RC_countForeign.Location = new System.Drawing.Point(3, 252);
+            this.tb_RC_countForeign.Name = "tb_RC_countForeign";
+            this.tb_RC_countForeign.Size = new System.Drawing.Size(10, 23);
+            this.tb_RC_countForeign.TabIndex = 44;
+            this.tb_RC_countForeign.Text = "metroTextBox1";
+            this.tb_RC_countForeign.Visible = false;
+            // 
             // usrRulesChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -601,5 +612,6 @@
         public Guna.UI.WinForms.GunaNumeric nm_diemthang;
         public Guna.UI.WinForms.GunaNumeric nm_diemhoa;
         public Guna.UI.WinForms.GunaNumeric nm_maxtimescore;
+        public MetroFramework.Controls.MetroTextBox tb_RC_countForeign;
     }
 }

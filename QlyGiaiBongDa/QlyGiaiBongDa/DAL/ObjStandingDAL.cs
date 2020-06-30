@@ -35,6 +35,12 @@ namespace QlyGiaiBongDa.DAL
     {
         int TranThang_CN, TranHoa_CN, TranThua_CN, Diem_CN, tyso, BanThang_CN, BanThang_Khach, HieuSo;
         int TranThang_Khach, TranHoa_Khach, TranThua_Khach, Diem_Khach;
+        int WinPt = usrRulesChange.Instance.DiemSoThang;
+        int EvePt = usrRulesChange.Instance.DiemSoHoa;
+        int LosePt = usrRulesChange.Instance.DiemSoThua;
+
+
+
         private static ObjStandingDAL instance;
 
         public static ObjStandingDAL Instance

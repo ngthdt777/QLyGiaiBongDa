@@ -30,14 +30,14 @@ namespace QlyGiaiBongDa.GUI
         }
         private void btt_doibong_Click(object sender, EventArgs e)
         {
-            if (!pnlMain.Controls.Contains(usrTeam.Instance))
+            if (!pnlMain.Controls.Contains(usrTeamList.Instance))
             {
-                pnlMain.Controls.Add(usrTeam.Instance);
-                usrTeam.Instance.Dock = DockStyle.Fill;
-                usrTeam.Instance.BringToFront();
+                pnlMain.Controls.Add(usrTeamList.Instance);
+                usrTeamList.Instance.Dock = DockStyle.Fill;
+                usrTeamList.Instance.BringToFront();
             }
             else
-                usrTeam.Instance.BringToFront();
+                usrTeamList.Instance.BringToFront();
         }
 
         private void btt_cauthu_Click(object sender, EventArgs e)

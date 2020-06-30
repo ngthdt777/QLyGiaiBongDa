@@ -58,7 +58,7 @@ namespace QlyGiaiBongDa.BLL
 
         public Boolean CheckForMax()
         {
-            return ObjthamsoDAL.Instance.CheckForMax();
+            return ObjthamsoDAL.Instance.CheckNoForeignPlayer();
         }
 
 

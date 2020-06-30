@@ -45,7 +45,7 @@ namespace QlyGiaiBongDa.DAL
         private ObjTeamDAL() { }
 
     //    public DoiBong Team = new DoiBong();
-      System.Windows.Forms.UserControl u = new usrTeam();
+      System.Windows.Forms.UserControl u = new usrTeamList();
         public DataTable LoadListTeam()
         {
             DataTable dt = new DataTable();
@@ -75,7 +75,7 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListPlayer()
         {
-            string TenDoi = usrTeam.Instance.cbb_team_name.Text;
+            string TenDoi = usrTeamList.Instance.cbb_team_name.Text;
             DataTable dt = new DataTable();
             string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,CAUTHU.MaDoi FROM CAUTHU,DOIBONG " +
                 "WHERE CAUTHU.MaDoi=DOIBONG.MaDoi AND TenDoi='" + TenDoi + "'";
@@ -102,25 +102,26 @@ namespace QlyGiaiBongDa.DAL
        public void AddPlayer()
         {
   // khởi tạo giá trị text box
-            string id = usrTeam.Instance.tb_hsdb_mact.Text;
-            string tenct = usrTeam.Instance.tb_hsdb_tenct.Text;
-            string ngsinh = usrTeam.Instance.dtp_cauthu_ngsinh.Text;
-            string loaict = usrTeam.Instance.tb_hsdb_loaict.Text.ToString();        
-            string madoi = usrTeam.Instance.tb_MaDoi.Text;
-            string ghichu = usrTeam.Instance.tb_hsdb_ghichu.Text;
+            string id = usrTeamList.Instance.tb_hsdb_mact.Text;
+            string tenct = usrTeamList.Instance.tb_hsdb_tenct.Text;
+            string ngsinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
+            string loaict = usrTeamList.Instance.cb_hsdb_loaict.Text.ToString();        
+            string madoi = usrTeamList.Instance.tb_MaDoi.Text;
+            string ghichu = usrTeamList.Instance.tb_hsdb_ghichu.Text;
 
-                if (CheckMaDoi(id) == true)
-                if (ObjRulesChangeBLL.Instance.CheckTuoiMax == true() && (ObjRulesChangeBLL.Instance.CheckTuoiMin() == true))
-                {
-                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)"+
-                        "VALUES('" + id + "', '" + tenct + "', '" +ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi +"')";
-                int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+            if (CheckMaDoi(id) == true)
+            {
+                
+                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)" +
+                        "VALUES('" + id + "', '" + tenct + "', '" + ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi + "')";
+                    int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
                         MessageBox.Show("OKE đã thêm ");
                     }
-                }
-                else MessageBox.Show("Cầu thủ tồn tại");
+
+            }
+            else MessageBox.Show("Cầu thủ tồn tại");
 
         }
 
@@ -133,7 +134,7 @@ namespace QlyGiaiBongDa.DAL
         {
             string id = usrHomepage.Instance.tb_MaDoi.Text;
             string tendoi = usrHomepage.Instance.tb_TenDoi.Text;
-            string slgct = usrHomepage.Instance.tb_SCT.Text;
+            string slgct = usrHomepage.Instance.cb_Team_slgct.Text;
             string sannha = usrHomepage.Instance.tb_SanNha.Text;
 
 
@@ -157,7 +158,7 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable PlayerView()
         {
-            string id = usrTeam.Instance.tb_MaDoi.Text.ToString();
+            string id = usrTeamList.Instance.tb_MaDoi.Text.ToString();
         //    string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
 
             string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,GhiChu " +
@@ -204,7 +205,7 @@ namespace QlyGiaiBongDa.DAL
             System.Windows.Forms.UserControl usr = new usrHomepage();
             string id = usrHomepage.Instance.tb_MaDoi.Text;
             string tendoi = usrHomepage.Instance.tb_TenDoi.Text;
-            string slgct = usrHomepage.Instance.tb_SCT.Text;
+            string slgct = usrHomepage.Instance.cb_Team_slgct.Text;
             string sannha = usrHomepage.Instance.tb_SanNha.Text;
             // MessageBox.Show(id);
             string UpdateQuery = "UPDATE DOIBONG " +
@@ -222,12 +223,12 @@ namespace QlyGiaiBongDa.DAL
 
         public void UpdatePlayer()
         {
-            System.Windows.Forms.UserControl usr = new usrTeam();
-            string id = usrTeam.Instance.tb_hsdb_mact.Text;
-            string tencauthu = usrTeam.Instance.tb_hsdb_tenct.Text;
-            string ngaysinh = usrTeam.Instance.dtp_cauthu_ngsinh.Text;
-            string loaiCT = usrTeam.Instance.tb_hsdb_loaict.Text;
-            string GhiChu = usrTeam.Instance.tb_hsdb_ghichu.Text;
+            System.Windows.Forms.UserControl usr = new usrTeamList();
+            string id = usrTeamList.Instance.tb_hsdb_mact.Text;
+            string tencauthu = usrTeamList.Instance.tb_hsdb_tenct.Text;
+            string ngaysinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
+            string loaiCT = usrTeamList.Instance.cb_hsdb_loaict.Text;
+            string GhiChu = usrTeamList.Instance.tb_hsdb_ghichu.Text;
             // MessageBox.Show(id);
 
 
@@ -249,15 +250,15 @@ namespace QlyGiaiBongDa.DAL
 
         public void DeletePlayer()
         {
-            System.Windows.Forms.UserControl usr = new usrTeam();
-            string id = usrTeam.Instance.tb_hsdb_mact.Text;
+            System.Windows.Forms.UserControl usr = new usrTeamList();
+            string id = usrTeamList.Instance.tb_hsdb_mact.Text;
 
            // string CheckQuery = "SELECT * " +
              //"FROM CAUTHU WHERE MaDoi = '" + id + "' ";
 
            // DataTable dt = DataProvider.Instance.ExecuteQuery(CheckQuery);
 
-            if (usrTeam.Instance.tb_hsdb_mact.Text != "")
+            if (usrTeamList.Instance.tb_hsdb_mact.Text != "")
             {
                 MessageBox.Show("ok chua");
 
@@ -280,13 +281,13 @@ namespace QlyGiaiBongDa.DAL
         {
           //  System.Windows.Forms.UserControl u = new usrTeam();
 
-            usrTeam.Instance.tb_MaDoi.DataBindings.Clear();
+            usrTeamList.Instance.tb_MaDoi.DataBindings.Clear();
       //      usrTeam.Instance.tb_TenDoi.DataBindings.Clear();
-            usrTeam.Instance.tb_MaDoi.DataBindings.Add(new Binding("Text", usrTeam.Instance.dgv_HSDB.DataSource, "MaDoi"));
+            usrTeamList.Instance.tb_MaDoi.DataBindings.Add(new Binding("Text", usrTeamList.Instance.dgv_HSDB.DataSource, "MaDoi"));
         //    usrTeam.Instance.tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
 
             // Ban thay doi cua Duy Bao
-            usrTeam.Instance.DataBindings.Clear();
+            usrTeamList.Instance.DataBindings.Clear();
         }
     }
 }

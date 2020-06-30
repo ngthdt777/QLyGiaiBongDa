@@ -40,7 +40,7 @@ namespace QlyGiaiBongDa.GUI
             lb_team_id.Visible = true; tb_MaDoi.Visible = true;
             lb_team_name.Visible = true; tb_TenDoi.Visible = true;
             lb_team_san.Visible = true; tb_SanNha.Visible = true;
-            lb_team_slg.Visible = true; tb_SCT.Visible = true;
+            lb_team_slg.Visible = true; cb_Team_slgct.Visible = true;
             btt_team_view.Text = "Tải lại";
             dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam(); 
         }
@@ -59,10 +59,15 @@ namespace QlyGiaiBongDa.GUI
                 tb_TenDoi.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_SCT.Text))
+            if (string.IsNullOrEmpty(cb_Team_slgct.Text))
             {
                 MessageBox.Show("Bạn chưa nhập số cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_SCT.Focus();
+                cb_Team_slgct.Focus();
+                if ((ObjRulesChangeBLL.Instance.CheckSoLgMax() == false) && (ObjRulesChangeBLL.Instance.CheckSoLgMin() == false))
+                {
+                    return false;
+                }
+
                 return false;
             }
             if (string.IsNullOrEmpty(tb_SanNha.Text))
@@ -103,7 +108,7 @@ namespace QlyGiaiBongDa.GUI
             {
                 tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
                 tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells["TenDoi"].Value.ToString();
-                tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells["SoCauThu"].Value.ToString();
+                cb_Team_slgct.Text = dgv_Home.Rows[e.RowIndex].Cells["SoCauThu"].Value.ToString();
                 tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells["SanNha"].Value.ToString();
             }
         }

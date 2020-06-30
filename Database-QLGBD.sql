@@ -354,3 +354,9 @@ UPDATE TRANDAU SET TySo = '33' where MaTranDau='VB001'
 insert into BANGXEPHANG(MaDoi) values (7)
 insert into BANGXEPHANG(MaDoi) values (6)
 insert into BANGXEPHANG(MaDoi) values (8)
+
+
+Select Count(MaLoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG
+where CAUTHU.MaDoi = DOIBONG.MaDoi AND MaLoaiCauThu='NgoaiNuoc' AND DOIBONG.TenDoi='Tp.Ho Chi Minh'
+
+SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB008'
