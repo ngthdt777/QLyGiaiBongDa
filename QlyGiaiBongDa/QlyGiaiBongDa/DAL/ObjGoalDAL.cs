@@ -41,6 +41,10 @@ namespace QlyGiaiBongDa.DAL
             }
             set { instance = value; }
         }
+
+
+       
+
         private ObjGoalDAL() { }
 
 
@@ -63,6 +67,8 @@ namespace QlyGiaiBongDa.DAL
             return dt;
         }
 
+       
+     
 
     }
 }

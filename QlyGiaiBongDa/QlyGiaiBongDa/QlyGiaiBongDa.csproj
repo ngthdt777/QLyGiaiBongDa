@@ -62,12 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ObjGoalBLL.cs" />
+    <Compile Include="BLL\ObjGoalDetailBLL.cs" />
     <Compile Include="BLL\ObjRoundBLL.cs" />
     <Compile Include="BLL\ObjRulesChangeBLL.cs" />
     <Compile Include="BLL\ObjStandingBLL.cs" />
     <Compile Include="BLL\ObjTeamBLL.cs" />
     <Compile Include="BLL\ObjPlayerBLL.cs" />
     <Compile Include="DAL\ObjGoalDAL.cs" />
+    <Compile Include="DAL\ObjGoalDetailDAL.cs" />
     <Compile Include="DAL\ObjPlayerDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\ObjStandingDAL.cs" />
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="GUI\usrCreateMatch.Designer.cs">
       <DependentUpon>usrCreateMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\usrGoalDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\usrGoalDetail.Designer.cs">
+      <DependentUpon>usrGoalDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\usrHomepage.cs">
       <SubType>UserControl</SubType>
@@ -159,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrCreateMatch.resx">
       <DependentUpon>usrCreateMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\usrGoalDetail.resx">
+      <DependentUpon>usrGoalDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\usrHomepage.resx">
       <DependentUpon>usrHomepage.cs</DependentUpon>

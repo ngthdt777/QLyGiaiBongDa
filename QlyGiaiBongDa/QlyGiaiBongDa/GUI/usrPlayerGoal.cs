@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QlyGiaiBongDa.BLL;
+using QlyGiaiBongDa.DAL;
+using System.Data.SqlClient;
+using QlyGiaiBongDa.GUI;
+
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -42,5 +46,18 @@ namespace QlyGiaiBongDa.GUI
         {
 
         }
+
+
+        // hiện usr Goaldetail
+        private void btn_XuatBaocao_Click(object sender, EventArgs e)
+        {
+            
+         
+        }
+
+
+
+
+        
     }
 }

@@ -256,7 +256,7 @@ insert into BANTHANG values ('0005' , '8008' , 'C' , '5:35 ' , 'VB002')
 insert into BANTHANG values ('0006' , '8008' , 'C' , '6:10 ' , 'VB002')
 
 insert into BANTHANG values ('0007' , '7004' , 'C' , '7:21' , 'VB003')
-insert into BANTHANG values ('0008' , '6005' , 'B' , '8:26' , 'VB003')
+insert into BANTHANG values ('0008' , '6005' , 'B' , '8:	26' , 'VB003')
 
 insert into BANTHANG values ('0009' , '7004' , 'C' , '3:30' , 'VB004')
 insert into BANTHANG values ('0010' , '7003' , 'A' , '3:50' , 'VB004')

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrRulesChange));
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_RC_countForeign = new MetroFramework.Controls.MetroTextBox();
             this.nm_formax = new Guna.UI.WinForms.GunaNumeric();
             this.nm_slgmax = new Guna.UI.WinForms.GunaNumeric();
             this.nm_slgmin = new Guna.UI.WinForms.GunaNumeric();
@@ -50,7 +51,6 @@
             this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
             this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
             this.nm_maxtimescore = new Guna.UI.WinForms.GunaNumeric();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.btt_RC_Default_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
@@ -58,7 +58,6 @@
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.tb_RC_countForeign = new MetroFramework.Controls.MetroTextBox();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +117,15 @@
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Quy định tiếp nhận hồ sơ đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // tb_RC_countForeign
+            // 
+            this.tb_RC_countForeign.Location = new System.Drawing.Point(3, 252);
+            this.tb_RC_countForeign.Name = "tb_RC_countForeign";
+            this.tb_RC_countForeign.Size = new System.Drawing.Size(10, 23);
+            this.tb_RC_countForeign.TabIndex = 44;
+            this.tb_RC_countForeign.Text = "metroTextBox1";
+            this.tb_RC_countForeign.Visible = false;
             // 
             // nm_formax
             // 
@@ -332,7 +340,7 @@
             this.gunaLabel1.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(377, 52);
+            this.gunaLabel1.Location = new System.Drawing.Point(360, 52);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(193, 32);
             this.gunaLabel1.TabIndex = 0;
@@ -347,7 +355,6 @@
             this.gunaGroupBox1.Controls.Add(this.nm_diemthang);
             this.gunaGroupBox1.Controls.Add(this.nm_diemhoa);
             this.gunaGroupBox1.Controls.Add(this.nm_maxtimescore);
-            this.gunaGroupBox1.Controls.Add(this.listView2);
             this.gunaGroupBox1.Controls.Add(this.btt_RC_Default_2);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel13);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel12);
@@ -373,7 +380,7 @@
             this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthua.Location = new System.Drawing.Point(913, 142);
+            this.nm_diemthua.Location = new System.Drawing.Point(924, 167);
             this.nm_diemthua.Maximum = ((long)(9999999));
             this.nm_diemthua.Minimum = ((long)(0));
             this.nm_diemthua.Name = "nm_diemthua";
@@ -390,7 +397,7 @@
             this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthang.Location = new System.Drawing.Point(913, 52);
+            this.nm_diemthang.Location = new System.Drawing.Point(924, 77);
             this.nm_diemthang.Maximum = ((long)(9999999));
             this.nm_diemthang.Minimum = ((long)(3));
             this.nm_diemthang.Name = "nm_diemthang";
@@ -407,7 +414,7 @@
             this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemhoa.Location = new System.Drawing.Point(913, 99);
+            this.nm_diemhoa.Location = new System.Drawing.Point(924, 124);
             this.nm_diemhoa.Maximum = ((long)(9999999));
             this.nm_diemhoa.Minimum = ((long)(1));
             this.nm_diemhoa.Name = "nm_diemhoa";
@@ -424,7 +431,7 @@
             this.nm_maxtimescore.ButtonForeColor = System.Drawing.Color.White;
             this.nm_maxtimescore.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_maxtimescore.ForeColor = System.Drawing.Color.Black;
-            this.nm_maxtimescore.Location = new System.Drawing.Point(642, 54);
+            this.nm_maxtimescore.Location = new System.Drawing.Point(603, 79);
             this.nm_maxtimescore.Maximum = ((long)(9999999));
             this.nm_maxtimescore.Minimum = ((long)(90));
             this.nm_maxtimescore.Name = "nm_maxtimescore";
@@ -432,17 +439,6 @@
             this.nm_maxtimescore.TabIndex = 41;
             this.nm_maxtimescore.Text = "gunaNumeric6";
             this.nm_maxtimescore.Value = ((long)(90));
-            // 
-            // listView2
-            // 
-            this.listView2.BackColor = System.Drawing.Color.Silver;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(338, 142);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(289, 118);
-            this.listView2.TabIndex = 34;
-            this.listView2.UseCompatibleStateImageBehavior = false;
             // 
             // btt_RC_Default_2
             // 
@@ -475,7 +471,7 @@
             this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel13.Location = new System.Drawing.Point(747, 142);
+            this.gunaLabel13.Location = new System.Drawing.Point(758, 167);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
             this.gunaLabel13.TabIndex = 23;
@@ -487,7 +483,7 @@
             this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel12.Location = new System.Drawing.Point(747, 99);
+            this.gunaLabel12.Location = new System.Drawing.Point(758, 124);
             this.gunaLabel12.Name = "gunaLabel12";
             this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
             this.gunaLabel12.TabIndex = 22;
@@ -499,7 +495,7 @@
             this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(747, 52);
+            this.gunaLabel11.Location = new System.Drawing.Point(758, 77);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
             this.gunaLabel11.TabIndex = 21;
@@ -536,7 +532,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(332, 99);
+            this.gunaLabel2.Location = new System.Drawing.Point(293, 124);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(304, 32);
             this.gunaLabel2.TabIndex = 3;
@@ -548,20 +544,11 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(332, 52);
+            this.gunaLabel3.Location = new System.Drawing.Point(293, 77);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(295, 32);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
-            // 
-            // tb_RC_countForeign
-            // 
-            this.tb_RC_countForeign.Location = new System.Drawing.Point(3, 252);
-            this.tb_RC_countForeign.Name = "tb_RC_countForeign";
-            this.tb_RC_countForeign.Size = new System.Drawing.Size(10, 23);
-            this.tb_RC_countForeign.TabIndex = 44;
-            this.tb_RC_countForeign.Text = "metroTextBox1";
-            this.tb_RC_countForeign.Visible = false;
             // 
             // usrRulesChange
             // 
@@ -602,7 +589,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel13;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
-        private System.Windows.Forms.ListView listView2;
         public Guna.UI.WinForms.GunaNumeric nm_formax;
         public Guna.UI.WinForms.GunaNumeric nm_slgmax;
         public Guna.UI.WinForms.GunaNumeric nm_slgmin;

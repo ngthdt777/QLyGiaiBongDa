@@ -74,6 +74,5 @@ namespace QlyGiaiBongDa.GUI
             DiemSoThua = Int32.Parse(nm_diemthua.ToString());
             MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
         }
-
     }
 }

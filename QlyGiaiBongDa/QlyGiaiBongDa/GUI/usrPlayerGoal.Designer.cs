@@ -178,8 +178,9 @@
             this.btn_XuatBaocao.OnPressedColor = System.Drawing.Color.Black;
             this.btn_XuatBaocao.Size = new System.Drawing.Size(208, 42);
             this.btn_XuatBaocao.TabIndex = 22;
-            this.btn_XuatBaocao.Text = "Xuất báo cáo";
+            this.btn_XuatBaocao.Text = "Chi tiết ";
             this.btn_XuatBaocao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_XuatBaocao.Click += new System.EventHandler(this.btn_XuatBaocao_Click);
             // 
             // btn_TimKiem
             // 

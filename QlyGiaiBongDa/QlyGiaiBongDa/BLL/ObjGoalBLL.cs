@@ -32,12 +32,13 @@ namespace QlyGiaiBongDa.BLL
         }
 
 
-
+        // hiển thị cầu thủ ghi bàn 
         public DataTable GetListPlayerGoal()
         {
             return ObjGoalDAL.Instance.LoadListPlayerGoal();
         }
 
 
+        
     }
 }

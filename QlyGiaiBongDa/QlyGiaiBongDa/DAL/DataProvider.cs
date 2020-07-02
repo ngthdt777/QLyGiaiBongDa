@@ -23,9 +23,9 @@ namespace QlyGiaiBongDa.BLL
             private set => instance = value;
         }
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
+       // private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True"; -- MayDat
 
-
+        private string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG;Integrated Security=True";
         public DataTable ExecuteQuery(string query)
         {
             DataTable data = new DataTable();
