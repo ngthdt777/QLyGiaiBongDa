@@ -51,8 +51,16 @@ namespace QlyGiaiBongDa.GUI
         // hiện usr Goaldetail
         private void btn_XuatBaocao_Click(object sender, EventArgs e)
         {
-            
-         
+            System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmQLGBD"];
+            if (!((frmQLGBD)f).pnlMain.Controls.Contains(usrGoalDetail.Instance))
+            {
+                ((frmQLGBD)f).pnlMain.Controls.Add(usrGoalDetail.Instance);
+                usrGoalDetail.Instance.Dock = DockStyle.Fill;
+                usrGoalDetail.Instance.BringToFront();
+            }
+            else
+                usrGoalDetail.Instance.BringToFront();
+
         }
 
 

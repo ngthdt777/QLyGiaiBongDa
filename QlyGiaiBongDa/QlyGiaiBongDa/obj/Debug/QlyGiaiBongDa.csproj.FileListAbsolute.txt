@@ -116,13 +116,10 @@ C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGia
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources
-C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrNewTour.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayer.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayerGoal.resources
-C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrResultMatch.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrRulesChange.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrStanding.resources
-C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeam.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
@@ -182,3 +179,6 @@ E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\ob
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
+C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
+C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
+C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources

@@ -69,18 +69,18 @@ namespace QlyGiaiBongDa.DAL
             string LoaiBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
             string ThoiDiem = usrGoalDetail.Instance.tb_MaBanThang.Text;
             string MaTran = usrGoalDetail.Instance.tb_MaBanThang.Text;
-       
-           
-                string AddQuery = "INSERT INTO BANTHANG" +
-                    "VALUES('" + MaBan+ "', '" + MaCauThu + "', '" + LoaiBan + "', '" + ThoiDiem + "', '" + MaTran + "')";
-                int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
-                if (result > 0)
-                {
-                    MessageBox.Show(" Đã thêm bàn thắng ");
-                }
 
-           
-        
+
+            string AddQuery = "INSERT INTO BANTHANG" +
+                "VALUES('" + MaBan + "', '" + MaCauThu + "', '" + LoaiBan + "', '" + ThoiDiem + "', '" + MaTran + "')";
+            int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+            if (result > 0)
+            {
+                MessageBox.Show(" Đã thêm bàn thắng ");
+            }
+
+
+
         }
 
 
@@ -97,7 +97,7 @@ namespace QlyGiaiBongDa.DAL
 
             string UpdateQuery = "UPDATE BANTHANG " +
                  "SET MaBanThang = '" + MaBan + "', MaCauThu = '" + MaCauThu + "', MaLoaiBanThang = '" + LoaiBan + "', ThoiDiem = '" + ThoiDiem + "',MaTran = '" + MaTran + "' ";
-                
+
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)
             {
@@ -111,7 +111,7 @@ namespace QlyGiaiBongDa.DAL
 
             string MaBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
 
-         
+
 
             if (usrGoalDetail.Instance.tb_MaBanThang.Text != "")
             {
@@ -126,4 +126,6 @@ namespace QlyGiaiBongDa.DAL
             }
 
         }
+    }
 }
+
