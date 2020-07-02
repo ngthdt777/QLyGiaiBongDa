@@ -33,15 +33,15 @@ namespace QlyGiaiBongDa.BLL
 
 
 
-        public Boolean  CheckTuoiMin()
+        public Boolean CheckTuoiMin()
         {
-           return  ObjthamsoDAL.Instance.CheckTuoiMin();
+            return ObjthamsoDAL.Instance.CheckTuoiMin();
         }
 
 
         public Boolean CheckTuoiMax()
         {
-           return ObjthamsoDAL.Instance.CheckTuoiMax();
+            return ObjthamsoDAL.Instance.CheckTuoiMax();
         }
 
         public Boolean CheckSoLgMin()
@@ -85,5 +85,21 @@ namespace QlyGiaiBongDa.BLL
             return ObjthamsoDAL.Instance.CheckMaxTimeScore();
         }
 
+
+        public DataTable GetGoalType()
+        {
+             return ObjthamsoDAL.Instance.LoadGoalType();
+
+        }
+
+        public void AddGoalType()
+        {
+             ObjthamsoDAL.Instance.AddGoalType();
+        }
+
+        public void DeleteGoalType()
+        {
+            ObjthamsoDAL.Instance.DeleteGoalType();
+        }
     }
 }

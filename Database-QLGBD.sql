@@ -55,6 +55,24 @@ ThoiDiem varchar(45),
 MaTranDau varchar(45),
 )
 
+
+
+go 
+
+
+
+create table LOAIBANTHANG
+(
+   MaLoaiBanThang varchar(45),
+   TenLoaiBanThang varchar(45),
+
+
+)
+
+INSERT into LOAIBANTHANG values ('A','Danh Dau')
+INSERT into LOAIBANTHANG values ('B','Penalty')
+INSERT into LOAIBANTHANG values ('C','Sut Phat')
+
 go
 
 
@@ -360,3 +378,5 @@ Select Count(MaLoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG
 where CAUTHU.MaDoi = DOIBONG.MaDoi AND MaLoaiCauThu='NgoaiNuoc' AND DOIBONG.TenDoi='Tp.Ho Chi Minh'
 
 SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB008'
+
+Select MaLoaiBanThang from BANTHANG

@@ -29,22 +29,22 @@ namespace QlyGiaiBongDa.DAL
     }
     public class ObjthamsoDAL
     {
-            private static ObjthamsoDAL instance;
+        private static ObjthamsoDAL instance;
 
-            public static ObjthamsoDAL Instance
+        public static ObjthamsoDAL Instance
+        {
+            get
             {
-                get
+                if (instance == null)
                 {
-                    if (instance == null)
-                    {
-                        instance = new ObjthamsoDAL();
-                    }
-                    return instance;
+                    instance = new ObjthamsoDAL();
                 }
-                set { instance = value; }
+                return instance;
             }
-            public ObjthamsoDAL() { }
-        
+            set { instance = value; }
+        }
+        public ObjthamsoDAL() { }
+
         public int myage = DateTime.Today.Year - usrTeamList.Instance.dtp_cauthu_ngsinh.Value.Year;
 
         public Boolean CheckTuoiMin()
@@ -57,7 +57,7 @@ namespace QlyGiaiBongDa.DAL
                 MessageBox.Show("Độ tuổi tối thiểu là: " + tuoimin);
                 return false;
             }
-            
+
         }
 
 
@@ -86,7 +86,7 @@ namespace QlyGiaiBongDa.DAL
             }
         }
 
-        public int soluongct = Int32.Parse(usrHomepage.Instance.cb_Team_slgct.Text); 
+        public int soluongct = Int32.Parse(usrHomepage.Instance.cb_Team_slgct.Text.ToString());
 
 
         public Boolean CheckSoLgMax()
@@ -103,7 +103,7 @@ namespace QlyGiaiBongDa.DAL
 
 
 
-        
+
         public Boolean CheckDiemSoThang()
         {
             return true;
@@ -123,7 +123,7 @@ namespace QlyGiaiBongDa.DAL
         public Boolean CheckMaxTimeScore()
         {
             return true;
-            MessageBox.Show("Thời điểm ghi bàn tối đa là: " + usrRulesChange.Instance.MaxTimeScore);
+                MessageBox.Show("Thời điểm ghi bàn tối đa là: " + usrRulesChange.Instance.MaxTimeScore);
         }
 
 
@@ -131,7 +131,7 @@ namespace QlyGiaiBongDa.DAL
         public Boolean CheckNoForeignPlayer()
         {
 
-            
+
             int slg = Int32.Parse(usrTeamList.Instance.lb_hsdb_sctnq.Text);
             if (slg < usrRulesChange.Instance.ForeignMax)
                 return true;
@@ -142,14 +142,60 @@ namespace QlyGiaiBongDa.DAL
             }
         }
 
+        public DataTable LoadGoalType()
+        {
+            DataTable dt = new DataTable();
+
+
+            string LoadQuery = "Select TenLoaiBanThang from LOAIBANTHANG";
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+
+            return dt;
+        }
+        public void AddGoalType()
+
+        {
+            string TenLoaiBan = usrRulesChange.Instance.tb_LoaiBan.Text;
+
+
+
+            string AddQuery = "INSERT INTO LOAIBANTHANG(TenLoaiBanThang)" +
+                "VALUES('" + TenLoaiBan + "')";
+            int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
+
+            if (result > 0)
+            {
+                MessageBox.Show(" Đã thêm loại bàn thắng ");
+            }
+
+        }
+        public void DeleteGoalType()
+        {
+            System.Windows.Forms.UserControl usr = new usrTeamList();
+
+            string TenLoaiBan = usrRulesChange.Instance.tb_LoaiBan.Text;
+
+
+
+            if (usrRulesChange.Instance.tb_LoaiBan.Text != "")
+            {
+                MessageBox.Show("Ok chưa");
+
+                string DeleteQuery = "DELETE FROM LOAIBANTHANG WHERE TenLoaiBanThang= '" + TenLoaiBan + "'";
+                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                if (result > 0)
+                {
+                    MessageBox.Show(" Loại bàn thắng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+        }
+
+
+
+
 
 
     }
-
-
-
-
-
-
-
 }

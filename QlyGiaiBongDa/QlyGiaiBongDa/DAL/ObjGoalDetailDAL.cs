@@ -60,6 +60,17 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+
+
+        public DataTable LoadGoalType()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenLoaiBanThang";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
+
         // Hàm thêm bàn thắng
         public void AddGoal()
 
@@ -71,8 +82,8 @@ namespace QlyGiaiBongDa.DAL
             string MaTran = usrGoalDetail.Instance.tb_MaBanThang.Text;
 
 
-            string AddQuery = "INSERT INTO BANTHANG" +
-                "VALUES('" + MaBan + "', '" + MaCauThu + "', '" + LoaiBan + "', '" + ThoiDiem + "', '" + MaTran + "')";
+            string AddQuery = "INSERT INTO BANTHANG(MaBanThang,MaCauThu,MaLoaiBanThang,ThoiDiem,MaTranDau)" +
+                "VALUES ( '" + MaBan + "', '" + MaCauThu + "', '" + LoaiBan + "', '" + ThoiDiem + "', '" + MaTran + "')";
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
             if (result > 0)
             {

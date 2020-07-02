@@ -42,7 +42,8 @@ namespace QlyGiaiBongDa.GUI
             lb_team_san.Visible = true; tb_SanNha.Visible = true;
             lb_team_slg.Visible = true; cb_Team_slgct.Visible = true;
             btt_team_view.Text = "Tải lại";
-            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam(); 
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            cb_Team_slgct.Text = "0";
         }
 
         public bool CheckData()
@@ -117,5 +118,7 @@ namespace QlyGiaiBongDa.GUI
         {
             ObjTeamBLL.Instance.UpdateTeam();
         }
+
+        
     }
 }

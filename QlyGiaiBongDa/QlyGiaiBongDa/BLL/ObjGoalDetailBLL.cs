@@ -51,5 +51,9 @@ namespace QlyGiaiBongDa.BLL
         {
             ObjGoalDetailDAL.Instance.UpdateGoal();
         }
+        public DataTable GetGoalType()
+        {
+          return  ObjGoalDetailDAL.Instance.LoadGoalType();
+        }
     }
 }

@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrHomepage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btt_team_view = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_era = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_fix = new Guna.UI.WinForms.GunaGradientButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.cb_Team_slgct = new Guna.UI.WinForms.GunaComboBox();
             this.tb_SanNha = new Guna.UI.WinForms.GunaTextBox();
             this.tb_TenDoi = new Guna.UI.WinForms.GunaTextBox();
             this.tb_MaDoi = new Guna.UI.WinForms.GunaTextBox();
@@ -50,7 +51,6 @@
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SanNha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cb_Team_slgct = new Guna.UI.WinForms.GunaComboBox();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Home)).BeginInit();
             this.SuspendLayout();
@@ -198,6 +198,69 @@
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // cb_Team_slgct
+            // 
+            this.cb_Team_slgct.BackColor = System.Drawing.Color.Transparent;
+            this.cb_Team_slgct.BaseColor = System.Drawing.Color.White;
+            this.cb_Team_slgct.BorderColor = System.Drawing.Color.Silver;
+            this.cb_Team_slgct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Team_slgct.DropDownHeight = 200;
+            this.cb_Team_slgct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Team_slgct.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_Team_slgct.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_Team_slgct.ForeColor = System.Drawing.Color.Black;
+            this.cb_Team_slgct.FormattingEnabled = true;
+            this.cb_Team_slgct.IntegralHeight = false;
+            this.cb_Team_slgct.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40"});
+            this.cb_Team_slgct.Location = new System.Drawing.Point(327, 125);
+            this.cb_Team_slgct.Name = "cb_Team_slgct";
+            this.cb_Team_slgct.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cb_Team_slgct.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cb_Team_slgct.Size = new System.Drawing.Size(78, 31);
+            this.cb_Team_slgct.TabIndex = 11;
+            this.cb_Team_slgct.Visible = false;
+            // 
             // tb_SanNha
             // 
             this.tb_SanNha.BaseColor = System.Drawing.Color.White;
@@ -304,8 +367,8 @@
             // 
             // dgv_Home
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.dgv_Home.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dgv_Home.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,28 +376,28 @@
             this.dgv_Home.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Home.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Home.ColumnHeadersHeight = 22;
             this.dgv_Home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
             this.TenDoi,
             this.SoCauThu,
             this.SanNha});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Home.EnableHeadersVisualStyles = false;
             this.dgv_Home.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Home.Location = new System.Drawing.Point(3, 288);
@@ -342,8 +405,8 @@
             this.dgv_Home.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_Home.RowHeadersVisible = false;
             this.dgv_Home.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Home.RowTemplate.Height = 24;
             this.dgv_Home.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Home.Size = new System.Drawing.Size(1248, 406);
@@ -407,69 +470,6 @@
             this.SanNha.HeaderText = "Sân Nhà";
             this.SanNha.Name = "SanNha";
             this.SanNha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // cb_Team_slgct
-            // 
-            this.cb_Team_slgct.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Team_slgct.BaseColor = System.Drawing.Color.White;
-            this.cb_Team_slgct.BorderColor = System.Drawing.Color.Silver;
-            this.cb_Team_slgct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_Team_slgct.DropDownHeight = 200;
-            this.cb_Team_slgct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Team_slgct.FocusedColor = System.Drawing.Color.Empty;
-            this.cb_Team_slgct.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cb_Team_slgct.ForeColor = System.Drawing.Color.Black;
-            this.cb_Team_slgct.FormattingEnabled = true;
-            this.cb_Team_slgct.IntegralHeight = false;
-            this.cb_Team_slgct.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40"});
-            this.cb_Team_slgct.Location = new System.Drawing.Point(327, 125);
-            this.cb_Team_slgct.Name = "cb_Team_slgct";
-            this.cb_Team_slgct.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cb_Team_slgct.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cb_Team_slgct.Size = new System.Drawing.Size(78, 31);
-            this.cb_Team_slgct.TabIndex = 11;
-            this.cb_Team_slgct.Visible = false;
             // 
             // usrHomepage
             // 

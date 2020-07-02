@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrRulesChange));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.tb_RC_countForeign = new MetroFramework.Controls.MetroTextBox();
@@ -47,6 +50,11 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_LoaiBan = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_XoaBan = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThemBan = new Guna.UI.WinForms.GunaButton();
+            this.dgv_LoaiBanThang = new Guna.UI.WinForms.GunaDataGridView();
+            this.TenLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
             this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
             this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
@@ -60,6 +68,7 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaButton1
@@ -113,7 +122,7 @@
             this.gb_HSDB.Location = new System.Drawing.Point(3, 80);
             this.gb_HSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 275);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 236);
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Quy định tiếp nhận hồ sơ đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -224,7 +233,7 @@
             this.btt_RC_Default.ForeColor = System.Drawing.Color.Black;
             this.btt_RC_Default.Image = ((System.Drawing.Image)(resources.GetObject("btt_RC_Default.Image")));
             this.btt_RC_Default.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_RC_Default.Location = new System.Drawing.Point(1045, 167);
+            this.btt_RC_Default.Location = new System.Drawing.Point(1045, 125);
             this.btt_RC_Default.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_RC_Default.Name = "btt_RC_Default";
             this.btt_RC_Default.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -309,7 +318,7 @@
             this.btt_RC_Done_1.ForeColor = System.Drawing.Color.Black;
             this.btt_RC_Done_1.Image = ((System.Drawing.Image)(resources.GetObject("btt_RC_Done_1.Image")));
             this.btt_RC_Done_1.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_RC_Done_1.Location = new System.Drawing.Point(1045, 222);
+            this.btt_RC_Done_1.Location = new System.Drawing.Point(1045, 180);
             this.btt_RC_Done_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_RC_Done_1.Name = "btt_RC_Done_1";
             this.btt_RC_Done_1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -351,6 +360,10 @@
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.tb_LoaiBan);
+            this.gunaGroupBox1.Controls.Add(this.btn_XoaBan);
+            this.gunaGroupBox1.Controls.Add(this.btn_ThemBan);
+            this.gunaGroupBox1.Controls.Add(this.dgv_LoaiBanThang);
             this.gunaGroupBox1.Controls.Add(this.nm_diemthua);
             this.gunaGroupBox1.Controls.Add(this.nm_diemthang);
             this.gunaGroupBox1.Controls.Add(this.nm_diemhoa);
@@ -364,13 +377,157 @@
             this.gunaGroupBox1.Controls.Add(this.gunaLabel3);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(3, 359);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(3, 320);
             this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1248, 335);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1248, 357);
             this.gunaGroupBox1.TabIndex = 4;
             this.gunaGroupBox1.Text = "Quy định bàn thắng-Xếp hạng";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // tb_LoaiBan
+            // 
+            this.tb_LoaiBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_LoaiBan.BaseColor = System.Drawing.Color.White;
+            this.tb_LoaiBan.BorderColor = System.Drawing.Color.Silver;
+            this.tb_LoaiBan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_LoaiBan.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_LoaiBan.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_LoaiBan.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_LoaiBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_LoaiBan.ForeColor = System.Drawing.Color.Black;
+            this.tb_LoaiBan.Location = new System.Drawing.Point(88, 110);
+            this.tb_LoaiBan.Name = "tb_LoaiBan";
+            this.tb_LoaiBan.PasswordChar = '\0';
+            this.tb_LoaiBan.SelectedText = "";
+            this.tb_LoaiBan.Size = new System.Drawing.Size(170, 48);
+            this.tb_LoaiBan.TabIndex = 48;
+            this.tb_LoaiBan.Text = "Loại bàn thắng";
+            // 
+            // btn_XoaBan
+            // 
+            this.btn_XoaBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_XoaBan.AnimationHoverSpeed = 0.07F;
+            this.btn_XoaBan.AnimationSpeed = 0.03F;
+            this.btn_XoaBan.BaseColor = System.Drawing.Color.Teal;
+            this.btn_XoaBan.BorderColor = System.Drawing.Color.Black;
+            this.btn_XoaBan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_XoaBan.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_XoaBan.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaBan.ForeColor = System.Drawing.Color.Black;
+            this.btn_XoaBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaBan.Image")));
+            this.btn_XoaBan.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_XoaBan.Location = new System.Drawing.Point(373, 257);
+            this.btn_XoaBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_XoaBan.Name = "btn_XoaBan";
+            this.btn_XoaBan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_XoaBan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_XoaBan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_XoaBan.OnHoverImage = null;
+            this.btn_XoaBan.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_XoaBan.Size = new System.Drawing.Size(51, 43);
+            this.btn_XoaBan.TabIndex = 47;
+            this.btn_XoaBan.Click += new System.EventHandler(this.btn_XoaBan_Click);
+            // 
+            // btn_ThemBan
+            // 
+            this.btn_ThemBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ThemBan.AnimationHoverSpeed = 0.07F;
+            this.btn_ThemBan.AnimationSpeed = 0.03F;
+            this.btn_ThemBan.BaseColor = System.Drawing.Color.Teal;
+            this.btn_ThemBan.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThemBan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThemBan.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThemBan.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemBan.ForeColor = System.Drawing.Color.Black;
+            this.btn_ThemBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemBan.Image")));
+            this.btn_ThemBan.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_ThemBan.Location = new System.Drawing.Point(373, 205);
+            this.btn_ThemBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThemBan.Name = "btn_ThemBan";
+            this.btn_ThemBan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThemBan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThemBan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThemBan.OnHoverImage = null;
+            this.btn_ThemBan.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThemBan.Size = new System.Drawing.Size(51, 39);
+            this.btn_ThemBan.TabIndex = 46;
+            this.btn_ThemBan.Click += new System.EventHandler(this.btn_ThemBan_Click);
+            // 
+            // dgv_LoaiBanThang
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_LoaiBanThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_LoaiBanThang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_LoaiBanThang.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_LoaiBanThang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LoaiBanThang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_LoaiBanThang.ColumnHeadersHeight = 26;
+            this.dgv_LoaiBanThang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenLoaiBanThang});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_LoaiBanThang.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_LoaiBanThang.EnableHeadersVisualStyles = false;
+            this.dgv_LoaiBanThang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_LoaiBanThang.Location = new System.Drawing.Point(30, 204);
+            this.dgv_LoaiBanThang.Name = "dgv_LoaiBanThang";
+            this.dgv_LoaiBanThang.RowHeadersVisible = false;
+            this.dgv_LoaiBanThang.RowTemplate.Height = 24;
+            this.dgv_LoaiBanThang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_LoaiBanThang.Size = new System.Drawing.Size(323, 132);
+            this.dgv_LoaiBanThang.TabIndex = 45;
+            this.dgv_LoaiBanThang.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dgv_LoaiBanThang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_LoaiBanThang.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_LoaiBanThang.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_LoaiBanThang.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_LoaiBanThang.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_LoaiBanThang.ThemeStyle.HeaderStyle.Height = 26;
+            this.dgv_LoaiBanThang.ThemeStyle.ReadOnly = false;
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.Height = 24;
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_LoaiBanThang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LoaiBanThang_CellContentClick);
+            // 
+            // TenLoaiBanThang
+            // 
+            this.TenLoaiBanThang.DataPropertyName = "TenLoaiBanThang";
+            this.TenLoaiBanThang.HeaderText = "Loại Bàn Thắng";
+            this.TenLoaiBanThang.Name = "TenLoaiBanThang";
             // 
             // nm_diemthua
             // 
@@ -380,7 +537,7 @@
             this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthua.Location = new System.Drawing.Point(924, 167);
+            this.nm_diemthua.Location = new System.Drawing.Point(1146, 145);
             this.nm_diemthua.Maximum = ((long)(9999999));
             this.nm_diemthua.Minimum = ((long)(0));
             this.nm_diemthua.Name = "nm_diemthua";
@@ -397,7 +554,7 @@
             this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthang.Location = new System.Drawing.Point(924, 77);
+            this.nm_diemthang.Location = new System.Drawing.Point(1146, 55);
             this.nm_diemthang.Maximum = ((long)(9999999));
             this.nm_diemthang.Minimum = ((long)(3));
             this.nm_diemthang.Name = "nm_diemthang";
@@ -414,7 +571,7 @@
             this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemhoa.Location = new System.Drawing.Point(924, 124);
+            this.nm_diemhoa.Location = new System.Drawing.Point(1146, 102);
             this.nm_diemhoa.Maximum = ((long)(9999999));
             this.nm_diemhoa.Minimum = ((long)(1));
             this.nm_diemhoa.Name = "nm_diemhoa";
@@ -431,7 +588,7 @@
             this.nm_maxtimescore.ButtonForeColor = System.Drawing.Color.White;
             this.nm_maxtimescore.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_maxtimescore.ForeColor = System.Drawing.Color.Black;
-            this.nm_maxtimescore.Location = new System.Drawing.Point(603, 79);
+            this.nm_maxtimescore.Location = new System.Drawing.Point(373, 43);
             this.nm_maxtimescore.Maximum = ((long)(9999999));
             this.nm_maxtimescore.Minimum = ((long)(90));
             this.nm_maxtimescore.Name = "nm_maxtimescore";
@@ -452,7 +609,7 @@
             this.btt_RC_Default_2.ForeColor = System.Drawing.Color.Black;
             this.btt_RC_Default_2.Image = ((System.Drawing.Image)(resources.GetObject("btt_RC_Default_2.Image")));
             this.btt_RC_Default_2.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_RC_Default_2.Location = new System.Drawing.Point(1045, 201);
+            this.btt_RC_Default_2.Location = new System.Drawing.Point(1045, 257);
             this.btt_RC_Default_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_RC_Default_2.Name = "btt_RC_Default_2";
             this.btt_RC_Default_2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -471,7 +628,7 @@
             this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel13.Location = new System.Drawing.Point(758, 167);
+            this.gunaLabel13.Location = new System.Drawing.Point(980, 145);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
             this.gunaLabel13.TabIndex = 23;
@@ -483,7 +640,7 @@
             this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel12.Location = new System.Drawing.Point(758, 124);
+            this.gunaLabel12.Location = new System.Drawing.Point(980, 102);
             this.gunaLabel12.Name = "gunaLabel12";
             this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
             this.gunaLabel12.TabIndex = 22;
@@ -495,7 +652,7 @@
             this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(758, 77);
+            this.gunaLabel11.Location = new System.Drawing.Point(980, 55);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
             this.gunaLabel11.TabIndex = 21;
@@ -513,7 +670,7 @@
             this.btt_RC_Done_2.ForeColor = System.Drawing.Color.Black;
             this.btt_RC_Done_2.Image = ((System.Drawing.Image)(resources.GetObject("btt_RC_Done_2.Image")));
             this.btt_RC_Done_2.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_RC_Done_2.Location = new System.Drawing.Point(1045, 259);
+            this.btt_RC_Done_2.Location = new System.Drawing.Point(1045, 304);
             this.btt_RC_Done_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_RC_Done_2.Name = "btt_RC_Done_2";
             this.btt_RC_Done_2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -532,7 +689,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(293, 124);
+            this.gunaLabel2.Location = new System.Drawing.Point(33, 169);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(304, 32);
             this.gunaLabel2.TabIndex = 3;
@@ -544,7 +701,7 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(293, 77);
+            this.gunaLabel3.Location = new System.Drawing.Point(33, 43);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(295, 32);
             this.gunaLabel3.TabIndex = 0;
@@ -560,10 +717,12 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "usrRulesChange";
             this.Size = new System.Drawing.Size(1254, 679);
+            this.Load += new System.EventHandler(this.usrRulesChange_Load_1);
             this.gb_HSDB.ResumeLayout(false);
             this.gb_HSDB.PerformLayout();
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -599,5 +758,10 @@
         public Guna.UI.WinForms.GunaNumeric nm_diemhoa;
         public Guna.UI.WinForms.GunaNumeric nm_maxtimescore;
         public MetroFramework.Controls.MetroTextBox tb_RC_countForeign;
+        private Guna.UI.WinForms.GunaButton btn_XoaBan;
+        private Guna.UI.WinForms.GunaButton btn_ThemBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanThang;
+        public Guna.UI.WinForms.GunaDataGridView dgv_LoaiBanThang;
+        public Guna.UI.WinForms.GunaTextBox tb_LoaiBan;
     }
 }

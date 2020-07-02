@@ -70,8 +70,15 @@ namespace QlyGiaiBongDa.GUI
             return true;
         }
 
-        public void usrGoalDetail_load(object sender, EventArgs e)
+   
+
+        private void usrGoalDetail_Load_1(object sender, EventArgs e)
         {
+           /* cb_LoaiBan.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_LoaiBan.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_LoaiBan.DisplayMember = "TenLoaiBanThang";
+            cb_LoaiBan.ValueMember = "TenLoaiBanThang";
+            cb_LoaiBan.DataSource = ObjGoalDetailBLL.Instance.GetGoalType(); */
             dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
         }
 
@@ -109,5 +116,7 @@ namespace QlyGiaiBongDa.GUI
         {
             ObjGoalDetailBLL.Instance.DeleteGoal();
         }
+
+      
     }
 }

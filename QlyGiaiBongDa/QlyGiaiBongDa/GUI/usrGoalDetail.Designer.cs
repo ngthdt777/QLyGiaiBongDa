@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrGoalDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.tb_MaTranDau = new Guna.UI.WinForms.GunaTextBox();
@@ -49,6 +49,7 @@
             this.btt_Them = new Guna.UI.WinForms.GunaButton();
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
+            this.cb_LoaiBan = new Guna.UI.WinForms.GunaComboBox();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.cb_LoaiBan);
             this.gb_HSDB.Controls.Add(this.tb_MaTranDau);
             this.gb_HSDB.Controls.Add(this.tb_ThoiDiem);
             this.gb_HSDB.Controls.Add(this.tb_MaLoaiBanThang);
@@ -99,13 +101,15 @@
             // 
             // tb_MaTranDau
             // 
+            this.tb_MaTranDau.BackColor = System.Drawing.Color.Black;
             this.tb_MaTranDau.BaseColor = System.Drawing.Color.White;
             this.tb_MaTranDau.BorderColor = System.Drawing.Color.Silver;
             this.tb_MaTranDau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MaTranDau.FocusedBaseColor = System.Drawing.Color.White;
             this.tb_MaTranDau.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_MaTranDau.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_MaTranDau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_MaTranDau.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_MaTranDau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MaTranDau.ForeColor = System.Drawing.Color.Black;
             this.tb_MaTranDau.Location = new System.Drawing.Point(997, 74);
             this.tb_MaTranDau.Name = "tb_MaTranDau";
             this.tb_MaTranDau.PasswordChar = '\0';
@@ -116,13 +120,15 @@
             // 
             // tb_ThoiDiem
             // 
+            this.tb_ThoiDiem.BackColor = System.Drawing.Color.Black;
             this.tb_ThoiDiem.BaseColor = System.Drawing.Color.White;
             this.tb_ThoiDiem.BorderColor = System.Drawing.Color.Silver;
             this.tb_ThoiDiem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_ThoiDiem.FocusedBaseColor = System.Drawing.Color.White;
             this.tb_ThoiDiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_ThoiDiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_ThoiDiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_ThoiDiem.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_ThoiDiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_ThoiDiem.ForeColor = System.Drawing.Color.Black;
             this.tb_ThoiDiem.Location = new System.Drawing.Point(761, 74);
             this.tb_ThoiDiem.Name = "tb_ThoiDiem";
             this.tb_ThoiDiem.PasswordChar = '\0';
@@ -133,13 +139,15 @@
             // 
             // tb_MaLoaiBanThang
             // 
+            this.tb_MaLoaiBanThang.BackColor = System.Drawing.Color.Black;
             this.tb_MaLoaiBanThang.BaseColor = System.Drawing.Color.White;
             this.tb_MaLoaiBanThang.BorderColor = System.Drawing.Color.Silver;
             this.tb_MaLoaiBanThang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MaLoaiBanThang.FocusedBaseColor = System.Drawing.Color.White;
             this.tb_MaLoaiBanThang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_MaLoaiBanThang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_MaLoaiBanThang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_MaLoaiBanThang.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_MaLoaiBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MaLoaiBanThang.ForeColor = System.Drawing.Color.Black;
             this.tb_MaLoaiBanThang.Location = new System.Drawing.Point(524, 74);
             this.tb_MaLoaiBanThang.Name = "tb_MaLoaiBanThang";
             this.tb_MaLoaiBanThang.PasswordChar = '\0';
@@ -150,13 +158,15 @@
             // 
             // tb_MaCauThu
             // 
+            this.tb_MaCauThu.BackColor = System.Drawing.Color.Black;
             this.tb_MaCauThu.BaseColor = System.Drawing.Color.White;
             this.tb_MaCauThu.BorderColor = System.Drawing.Color.Silver;
             this.tb_MaCauThu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MaCauThu.FocusedBaseColor = System.Drawing.Color.White;
             this.tb_MaCauThu.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_MaCauThu.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_MaCauThu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_MaCauThu.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_MaCauThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MaCauThu.ForeColor = System.Drawing.Color.Black;
             this.tb_MaCauThu.Location = new System.Drawing.Point(269, 74);
             this.tb_MaCauThu.Name = "tb_MaCauThu";
             this.tb_MaCauThu.PasswordChar = '\0';
@@ -167,13 +177,15 @@
             // 
             // tb_MaBanThang
             // 
+            this.tb_MaBanThang.BackColor = System.Drawing.Color.Black;
             this.tb_MaBanThang.BaseColor = System.Drawing.Color.White;
             this.tb_MaBanThang.BorderColor = System.Drawing.Color.Silver;
             this.tb_MaBanThang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MaBanThang.FocusedBaseColor = System.Drawing.Color.White;
             this.tb_MaBanThang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_MaBanThang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_MaBanThang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_MaBanThang.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_MaBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MaBanThang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tb_MaBanThang.Location = new System.Drawing.Point(26, 74);
             this.tb_MaBanThang.Name = "tb_MaBanThang";
             this.tb_MaBanThang.PasswordChar = '\0';
@@ -199,8 +211,8 @@
             // 
             // dgv_CTBT
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgv_CTBT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_CTBT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_CTBT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -208,14 +220,14 @@
             this.dgv_CTBT.BackgroundColor = System.Drawing.Color.White;
             this.dgv_CTBT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_CTBT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_CTBT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_CTBT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_CTBT.ColumnHeadersHeight = 35;
             this.dgv_CTBT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaBanThang,
@@ -223,14 +235,14 @@
             this.MaLoaiBanThang,
             this.ThoiDiem,
             this.MaTranDau});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_CTBT.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_CTBT.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_CTBT.EnableHeadersVisualStyles = false;
             this.dgv_CTBT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_CTBT.Location = new System.Drawing.Point(-3, 281);
@@ -321,7 +333,6 @@
             this.btt_Them.TabIndex = 12;
             this.btt_Them.Text = "Thêm";
             this.btt_Them.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_Them.Visible = false;
             this.btt_Them.Click += new System.EventHandler(this.btt_Them_Click);
             // 
             // Btt_xoa
@@ -348,7 +359,6 @@
             this.Btt_xoa.TabIndex = 13;
             this.Btt_xoa.Text = "Xoá";
             this.Btt_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Btt_xoa.Visible = false;
             this.Btt_xoa.Click += new System.EventHandler(this.Btt_xoa_Click);
             // 
             // Btt_sua
@@ -375,8 +385,25 @@
             this.Btt_sua.TabIndex = 14;
             this.Btt_sua.Text = "Sửa";
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Btt_sua.Visible = false;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
+            // 
+            // cb_LoaiBan
+            // 
+            this.cb_LoaiBan.BackColor = System.Drawing.Color.Transparent;
+            this.cb_LoaiBan.BaseColor = System.Drawing.Color.White;
+            this.cb_LoaiBan.BorderColor = System.Drawing.Color.Silver;
+            this.cb_LoaiBan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_LoaiBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_LoaiBan.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_LoaiBan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_LoaiBan.ForeColor = System.Drawing.Color.Black;
+            this.cb_LoaiBan.FormattingEnabled = true;
+            this.cb_LoaiBan.Location = new System.Drawing.Point(524, 127);
+            this.cb_LoaiBan.Name = "cb_LoaiBan";
+            this.cb_LoaiBan.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cb_LoaiBan.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cb_LoaiBan.Size = new System.Drawing.Size(180, 31);
+            this.cb_LoaiBan.TabIndex = 5;
             // 
             // usrGoalDetail
             // 
@@ -390,6 +417,7 @@
             this.Controls.Add(this.gunaButton1);
             this.Name = "usrGoalDetail";
             this.Size = new System.Drawing.Size(1254, 697);
+            this.Load += new System.EventHandler(this.usrGoalDetail_Load_1);
             this.gb_HSDB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).EndInit();
             this.ResumeLayout(false);
@@ -399,7 +427,6 @@
         #endregion
 
         private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
         private Guna.UI.WinForms.GunaContextMenuStrip gunaContextMenuStrip1;
         public Guna.UI.WinForms.GunaDataGridView dgv_CTBT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaBanThang;
@@ -407,13 +434,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiBanThang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTranDau;
-        private Guna.UI.WinForms.GunaButton btt_Them;
-        private Guna.UI.WinForms.GunaButton Btt_xoa;
-        private Guna.UI.WinForms.GunaButton Btt_sua;
         public Guna.UI.WinForms.GunaTextBox tb_MaTranDau;
         public Guna.UI.WinForms.GunaTextBox tb_ThoiDiem;
         public Guna.UI.WinForms.GunaTextBox tb_MaLoaiBanThang;
         public Guna.UI.WinForms.GunaTextBox tb_MaCauThu;
         public Guna.UI.WinForms.GunaTextBox tb_MaBanThang;
+        public Guna.UI.WinForms.GunaButton btt_Them;
+        public Guna.UI.WinForms.GunaButton Btt_xoa;
+        public Guna.UI.WinForms.GunaButton Btt_sua;
+        public Guna.UI.WinForms.GunaGroupBox gb_HSDB;
+        public Guna.UI.WinForms.GunaComboBox cb_LoaiBan;
     }
 }

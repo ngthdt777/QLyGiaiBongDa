@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QlyGiaiBongDa.BLL;
+using QlyGiaiBongDa.DAL;
+using System.Data.SqlClient;
+using QlyGiaiBongDa.GUI;
+
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -73,6 +78,37 @@ namespace QlyGiaiBongDa.GUI
             DiemSoHoa = Int32.Parse(nm_diemhoa.ToString());
             DiemSoThua = Int32.Parse(nm_diemthua.ToString());
             MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
+        }
+
+      /* private void usrRulesChange_Load(object sender, EventArgs e)
+        {
+            dgv_LoaiBanThang.DataSource = ObjRulesChangeBLL.Instance.GetGoalType();
+        }
+        */
+        private void usrRulesChange_Load_1(object sender, EventArgs e)
+        {
+            dgv_LoaiBanThang.DataSource = ObjRulesChangeBLL.Instance.GetGoalType();
+        }
+
+        private void btn_ThemBan_Click(object sender, EventArgs e)
+        {
+            ObjRulesChangeBLL.Instance.AddGoalType();
+        }
+
+        private void btn_XoaBan_Click(object sender, EventArgs e)
+        {
+            ObjRulesChangeBLL.Instance.DeleteGoalType();
+        }
+
+        private void dgv_LoaiBanThang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                tb_LoaiBan.Text = dgv_LoaiBanThang.Rows[e.RowIndex].Cells["TenLoaiBanThang"].Value.ToString();
+               
+
+            }
         }
     }
 }
