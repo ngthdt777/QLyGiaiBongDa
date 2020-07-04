@@ -98,7 +98,7 @@ namespace QlyGiaiBongDa.DAL
 
 
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[AGE],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG" +
+            string LoadQuery = "SELECT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[Tuổi Cầu Thủ],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG" +
                                 " where MaCauThu "+ id + " and TenCauThu " + ten + " and MaLoaiCauThu " + loaict + "" +
                                  " and DOIBONG.TenDoi " + doibong + "  and GhiChu " + ghichu + " " +
                                  " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max ;

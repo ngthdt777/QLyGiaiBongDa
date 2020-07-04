@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrGoalDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.cb1 = new System.Windows.Forms.ComboBox();
             this.tb_MaTranDau = new Guna.UI.WinForms.GunaTextBox();
             this.tb_ThoiDiem = new Guna.UI.WinForms.GunaTextBox();
+            this.tb_MaLoaiBanThang = new Guna.UI.WinForms.GunaTextBox();
             this.tb_MaCauThu = new Guna.UI.WinForms.GunaTextBox();
             this.tb_MaBanThang = new Guna.UI.WinForms.GunaTextBox();
             this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
@@ -48,9 +50,7 @@
             this.btt_Them = new Guna.UI.WinForms.GunaButton();
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
-            this.cb1 = new System.Windows.Forms.ComboBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.tb_MaLoaiBanThang = new Guna.UI.WinForms.GunaTextBox();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +100,14 @@
             this.gb_HSDB.Text = "Chi tiết bàn thắng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // cb1
+            // 
+            this.cb1.FormattingEnabled = true;
+            this.cb1.Location = new System.Drawing.Point(743, 59);
+            this.cb1.Name = "cb1";
+            this.cb1.Size = new System.Drawing.Size(216, 30);
+            this.cb1.TabIndex = 5;
+            // 
             // tb_MaTranDau
             // 
             this.tb_MaTranDau.BackColor = System.Drawing.Color.Black;
@@ -111,7 +119,7 @@
             this.tb_MaTranDau.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaTranDau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaTranDau.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaTranDau.Location = new System.Drawing.Point(997, 74);
+            this.tb_MaTranDau.Location = new System.Drawing.Point(743, 125);
             this.tb_MaTranDau.Name = "tb_MaTranDau";
             this.tb_MaTranDau.PasswordChar = '\0';
             this.tb_MaTranDau.SelectedText = "";
@@ -130,13 +138,32 @@
             this.tb_ThoiDiem.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_ThoiDiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ThoiDiem.ForeColor = System.Drawing.Color.Black;
-            this.tb_ThoiDiem.Location = new System.Drawing.Point(761, 74);
+            this.tb_ThoiDiem.Location = new System.Drawing.Point(507, 125);
             this.tb_ThoiDiem.Name = "tb_ThoiDiem";
             this.tb_ThoiDiem.PasswordChar = '\0';
             this.tb_ThoiDiem.SelectedText = "";
             this.tb_ThoiDiem.Size = new System.Drawing.Size(216, 47);
             this.tb_ThoiDiem.TabIndex = 3;
             this.tb_ThoiDiem.Text = "Thời điểm";
+            // 
+            // tb_MaLoaiBanThang
+            // 
+            this.tb_MaLoaiBanThang.BackColor = System.Drawing.Color.Black;
+            this.tb_MaLoaiBanThang.BaseColor = System.Drawing.Color.White;
+            this.tb_MaLoaiBanThang.BorderColor = System.Drawing.Color.Silver;
+            this.tb_MaLoaiBanThang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_MaLoaiBanThang.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_MaLoaiBanThang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_MaLoaiBanThang.FocusedForeColor = System.Drawing.Color.Black;
+            this.tb_MaLoaiBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_MaLoaiBanThang.ForeColor = System.Drawing.Color.Black;
+            this.tb_MaLoaiBanThang.Location = new System.Drawing.Point(507, 59);
+            this.tb_MaLoaiBanThang.Name = "tb_MaLoaiBanThang";
+            this.tb_MaLoaiBanThang.PasswordChar = '\0';
+            this.tb_MaLoaiBanThang.SelectedText = "";
+            this.tb_MaLoaiBanThang.Size = new System.Drawing.Size(216, 47);
+            this.tb_MaLoaiBanThang.TabIndex = 2;
+            this.tb_MaLoaiBanThang.Text = "Loại bàn thắng";
             // 
             // tb_MaCauThu
             // 
@@ -149,7 +176,7 @@
             this.tb_MaCauThu.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaCauThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaCauThu.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaCauThu.Location = new System.Drawing.Point(269, 74);
+            this.tb_MaCauThu.Location = new System.Drawing.Point(206, 125);
             this.tb_MaCauThu.Name = "tb_MaCauThu";
             this.tb_MaCauThu.PasswordChar = '\0';
             this.tb_MaCauThu.SelectedText = "";
@@ -168,7 +195,7 @@
             this.tb_MaBanThang.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaBanThang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tb_MaBanThang.Location = new System.Drawing.Point(26, 74);
+            this.tb_MaBanThang.Location = new System.Drawing.Point(206, 59);
             this.tb_MaBanThang.Name = "tb_MaBanThang";
             this.tb_MaBanThang.PasswordChar = '\0';
             this.tb_MaBanThang.SelectedText = "";
@@ -193,8 +220,8 @@
             // 
             // dgv_CTBT
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_CTBT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgv_CTBT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_CTBT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -202,14 +229,14 @@
             this.dgv_CTBT.BackgroundColor = System.Drawing.Color.White;
             this.dgv_CTBT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_CTBT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_CTBT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_CTBT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_CTBT.ColumnHeadersHeight = 35;
             this.dgv_CTBT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaBanThang,
@@ -217,14 +244,14 @@
             this.MaLoaiBanThang,
             this.ThoiDiem,
             this.MaTranDau});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_CTBT.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_CTBT.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_CTBT.EnableHeadersVisualStyles = false;
             this.dgv_CTBT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_CTBT.Location = new System.Drawing.Point(-3, 281);
@@ -369,33 +396,6 @@
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
-            // cb1
-            // 
-            this.cb1.FormattingEnabled = true;
-            this.cb1.Location = new System.Drawing.Point(524, 127);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(216, 30);
-            this.cb1.TabIndex = 5;
-            // 
-            // tb_MaLoaiBanThang
-            // 
-            this.tb_MaLoaiBanThang.BackColor = System.Drawing.Color.Black;
-            this.tb_MaLoaiBanThang.BaseColor = System.Drawing.Color.White;
-            this.tb_MaLoaiBanThang.BorderColor = System.Drawing.Color.Silver;
-            this.tb_MaLoaiBanThang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_MaLoaiBanThang.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_MaLoaiBanThang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_MaLoaiBanThang.FocusedForeColor = System.Drawing.Color.Black;
-            this.tb_MaLoaiBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_MaLoaiBanThang.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaLoaiBanThang.Location = new System.Drawing.Point(524, 74);
-            this.tb_MaLoaiBanThang.Name = "tb_MaLoaiBanThang";
-            this.tb_MaLoaiBanThang.PasswordChar = '\0';
-            this.tb_MaLoaiBanThang.SelectedText = "";
-            this.tb_MaLoaiBanThang.Size = new System.Drawing.Size(216, 47);
-            this.tb_MaLoaiBanThang.TabIndex = 2;
-            this.tb_MaLoaiBanThang.Text = "Loại bàn thắng";
-            // 
             // usrGoalDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -433,8 +433,8 @@
         public Guna.UI.WinForms.GunaButton Btt_xoa;
         public Guna.UI.WinForms.GunaButton Btt_sua;
         public Guna.UI.WinForms.GunaGroupBox gb_HSDB;
-        private System.Windows.Forms.ComboBox cb1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         public Guna.UI.WinForms.GunaTextBox tb_MaLoaiBanThang;
+        public System.Windows.Forms.ComboBox cb1;
     }
 }

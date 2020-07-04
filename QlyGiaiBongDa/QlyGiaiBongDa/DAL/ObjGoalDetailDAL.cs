@@ -78,10 +78,10 @@ namespace QlyGiaiBongDa.DAL
 
         {
             string MaBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string MaCauThu = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string LoaiBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string ThoiDiem = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string MaTran = usrGoalDetail.Instance.tb_MaBanThang.Text;
+            string MaCauThu = usrGoalDetail.Instance.tb_MaCauThu.Text;
+            string LoaiBan = usrGoalDetail.Instance.cb1.Text;
+            string ThoiDiem = usrGoalDetail.Instance.tb_ThoiDiem.Text;
+            string MaTran = usrGoalDetail.Instance.tb_MaTranDau.Text;
 
 
             string AddQuery = "INSERT INTO BANTHANG(MaBanThang,MaCauThu,MaLoaiBanThang,ThoiDiem,MaTranDau)" +

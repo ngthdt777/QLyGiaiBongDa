@@ -172,7 +172,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_TLTD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_TLTD.BackgroundColor = System.Drawing.Color.Gray;
-            this.dgv_TLTD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_TLTD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TLTD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -316,12 +316,12 @@
             this.btt_team_era.BorderColor = System.Drawing.Color.Black;
             this.btt_team_era.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_team_era.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_era.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_era.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_team_era.ForeColor = System.Drawing.Color.Black;
             this.btt_team_era.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_era.Image")));
             this.btt_team_era.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_era.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_era.Location = new System.Drawing.Point(603, 611);
+            this.btt_team_era.Location = new System.Drawing.Point(614, 611);
             this.btt_team_era.Name = "btt_team_era";
             this.btt_team_era.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_era.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -344,7 +344,7 @@
             this.btt_match_update.BorderColor = System.Drawing.Color.Black;
             this.btt_match_update.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_match_update.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_match_update.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_match_update.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_match_update.ForeColor = System.Drawing.Color.Black;
             this.btt_match_update.Image = ((System.Drawing.Image)(resources.GetObject("btt_match_update.Image")));
             this.btt_match_update.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -390,7 +390,6 @@
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
         private Guna.UI.WinForms.GunaButton btn_CapNhat;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaDataGridView dgv_TLTD;
         private Guna.UI.WinForms.GunaButton btn_PhatSinh;
         public System.Windows.Forms.BindingSource vONGDAUBindingSource;
         public QLGBDVDQGDataSet1 qLGBDVDQGDataSet1;
@@ -405,5 +404,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GioThiDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn SanThiDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn TySo;
+        public Guna.UI.WinForms.GunaDataGridView dgv_TLTD;
     }
 }

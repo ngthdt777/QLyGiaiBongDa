@@ -37,16 +37,10 @@ namespace QlyGiaiBongDa.GUI
             dgv_BXH_playergoal.DataSource = ObjGoalBLL.Instance.GetListPlayerGoal();
         }
 
-        private void gunaLabel1_Click(object sender, EventArgs e)
-        {
+        
+        
 
-        }
-
-        private void gb_HSDB_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
 
         // hiện usr Goaldetail
         private void btn_XuatBaocao_Click(object sender, EventArgs e)
@@ -63,9 +57,11 @@ namespace QlyGiaiBongDa.GUI
 
         }
 
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Chọn chi tiết để biết thêm thông tin bàn thắng. " +
+                            "Chọn tìm kiếm để biết thông tin vua phá lưới. ");
 
-
-
-        
+        }
     }
 }

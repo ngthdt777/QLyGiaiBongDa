@@ -47,6 +47,11 @@ namespace QlyGiaiBongDa.GUI
             //   dgv_TCCT.DataSource = ObjPlayerBLL.Instance.GetListFindPlayer();
             dgv_TCCT.DataSource = ObjPlayerBLL.Instance.LoadListPlayer();
         }
+
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Chọn tìm kiếm để biết thêm thông tin cầu thủ");
+        }
     }
 }
 

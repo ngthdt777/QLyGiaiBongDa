@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrTeamList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_hsdb = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.lb_hsdb_sctnq = new Guna.UI.WinForms.GunaLabel();
@@ -139,11 +139,11 @@
             // 
             this.lb_hsdb_soctngoaiquoc.AutoSize = true;
             this.lb_hsdb_soctngoaiquoc.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_soctngoaiquoc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_soctngoaiquoc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_soctngoaiquoc.ForeColor = System.Drawing.Color.Black;
             this.lb_hsdb_soctngoaiquoc.Location = new System.Drawing.Point(177, 226);
             this.lb_hsdb_soctngoaiquoc.Name = "lb_hsdb_soctngoaiquoc";
-            this.lb_hsdb_soctngoaiquoc.Size = new System.Drawing.Size(261, 32);
+            this.lb_hsdb_soctngoaiquoc.Size = new System.Drawing.Size(278, 32);
             this.lb_hsdb_soctngoaiquoc.TabIndex = 22;
             this.lb_hsdb_soctngoaiquoc.Text = "Số cầu thủ ngoại quốc:";
             this.lb_hsdb_soctngoaiquoc.Visible = false;
@@ -294,11 +294,11 @@
             // 
             this.lb_hsdb_loaict.AutoSize = true;
             this.lb_hsdb_loaict.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_loaict.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_loaict.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_loaict.ForeColor = System.Drawing.Color.Black;
             this.lb_hsdb_loaict.Location = new System.Drawing.Point(619, 170);
             this.lb_hsdb_loaict.Name = "lb_hsdb_loaict";
-            this.lb_hsdb_loaict.Size = new System.Drawing.Size(150, 32);
+            this.lb_hsdb_loaict.Size = new System.Drawing.Size(161, 32);
             this.lb_hsdb_loaict.TabIndex = 11;
             this.lb_hsdb_loaict.Text = "Loại cầu thủ:";
             this.lb_hsdb_loaict.Visible = false;
@@ -307,11 +307,11 @@
             // 
             this.lb_hsdb_ngsinh.AutoSize = true;
             this.lb_hsdb_ngsinh.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_ngsinh.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_ngsinh.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_ngsinh.ForeColor = System.Drawing.Color.Black;
             this.lb_hsdb_ngsinh.Location = new System.Drawing.Point(619, 111);
             this.lb_hsdb_ngsinh.Name = "lb_hsdb_ngsinh";
-            this.lb_hsdb_ngsinh.Size = new System.Drawing.Size(127, 32);
+            this.lb_hsdb_ngsinh.Size = new System.Drawing.Size(136, 32);
             this.lb_hsdb_ngsinh.TabIndex = 10;
             this.lb_hsdb_ngsinh.Text = "Ngày sinh:";
             this.lb_hsdb_ngsinh.Visible = false;
@@ -320,11 +320,11 @@
             // 
             this.lb_hsdb_Tenct.AutoSize = true;
             this.lb_hsdb_Tenct.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_Tenct.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_Tenct.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_Tenct.ForeColor = System.Drawing.Color.Black;
             this.lb_hsdb_Tenct.Location = new System.Drawing.Point(177, 170);
             this.lb_hsdb_Tenct.Name = "lb_hsdb_Tenct";
-            this.lb_hsdb_Tenct.Size = new System.Drawing.Size(145, 32);
+            this.lb_hsdb_Tenct.Size = new System.Drawing.Size(154, 32);
             this.lb_hsdb_Tenct.TabIndex = 9;
             this.lb_hsdb_Tenct.Text = "Tên cầu thủ:";
             this.lb_hsdb_Tenct.Visible = false;
@@ -333,11 +333,11 @@
             // 
             this.lb_hsdb_mact.AutoSize = true;
             this.lb_hsdb_mact.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_mact.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_mact.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_mact.ForeColor = System.Drawing.Color.Black;
             this.lb_hsdb_mact.Location = new System.Drawing.Point(177, 111);
             this.lb_hsdb_mact.Name = "lb_hsdb_mact";
-            this.lb_hsdb_mact.Size = new System.Drawing.Size(141, 32);
+            this.lb_hsdb_mact.Size = new System.Drawing.Size(150, 32);
             this.lb_hsdb_mact.TabIndex = 8;
             this.lb_hsdb_mact.Text = "Mã cầu thủ:";
             this.lb_hsdb_mact.Visible = false;
@@ -390,11 +390,11 @@
             // 
             this.lb_team_name.AutoSize = true;
             this.lb_team_name.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_name.ForeColor = System.Drawing.Color.Black;
             this.lb_team_name.Location = new System.Drawing.Point(446, 52);
             this.lb_team_name.Name = "lb_team_name";
-            this.lb_team_name.Size = new System.Drawing.Size(99, 32);
+            this.lb_team_name.Size = new System.Drawing.Size(106, 32);
             this.lb_team_name.TabIndex = 1;
             this.lb_team_name.Text = "Tên đội:";
             // 
@@ -402,19 +402,19 @@
             // 
             this.lb_team_id.AutoSize = true;
             this.lb_team_id.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_id.ForeColor = System.Drawing.Color.Black;
             this.lb_team_id.Location = new System.Drawing.Point(177, 52);
             this.lb_team_id.Name = "lb_team_id";
-            this.lb_team_id.Size = new System.Drawing.Size(95, 32);
+            this.lb_team_id.Size = new System.Drawing.Size(102, 32);
             this.lb_team_id.TabIndex = 0;
             this.lb_team_id.Text = "Mã đội:";
             this.lb_team_id.Visible = false;
             // 
             // dgv_HSDB
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_HSDB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -422,14 +422,14 @@
             this.dgv_HSDB.BackgroundColor = System.Drawing.Color.White;
             this.dgv_HSDB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_HSDB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_HSDB.ColumnHeadersHeight = 30;
             this.dgv_HSDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
@@ -438,14 +438,14 @@
             this.MaLoaiCauThu,
             this.GhiChu,
             this.MaDoi});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_HSDB.EnableHeadersVisualStyles = false;
             this.dgv_HSDB.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_HSDB.Location = new System.Drawing.Point(0, 364);

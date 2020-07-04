@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrHomepage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btt_team_view = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.btt_team_era = new Guna.UI.WinForms.GunaGradientButton();
@@ -64,7 +64,7 @@
             this.btt_team_view.BorderColor = System.Drawing.Color.Black;
             this.btt_team_view.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_team_view.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_view.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_view.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_team_view.ForeColor = System.Drawing.Color.Black;
             this.btt_team_view.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_view.Image")));
             this.btt_team_view.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -92,7 +92,7 @@
             this.btt_team_add.BorderColor = System.Drawing.Color.Black;
             this.btt_team_add.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_team_add.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_add.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_add.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_team_add.ForeColor = System.Drawing.Color.Black;
             this.btt_team_add.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_add.Image")));
             this.btt_team_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -121,7 +121,7 @@
             this.btt_team_era.BorderColor = System.Drawing.Color.Black;
             this.btt_team_era.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_team_era.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_era.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_era.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_team_era.ForeColor = System.Drawing.Color.Black;
             this.btt_team_era.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_era.Image")));
             this.btt_team_era.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -150,7 +150,7 @@
             this.btt_team_fix.BorderColor = System.Drawing.Color.Black;
             this.btt_team_fix.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btt_team_fix.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_fix.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_fix.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btt_team_fix.ForeColor = System.Drawing.Color.Black;
             this.btt_team_fix.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_fix.Image")));
             this.btt_team_fix.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -253,7 +253,7 @@
             "38",
             "39",
             "40"});
-            this.cb_Team_slgct.Location = new System.Drawing.Point(327, 125);
+            this.cb_Team_slgct.Location = new System.Drawing.Point(329, 163);
             this.cb_Team_slgct.Name = "cb_Team_slgct";
             this.cb_Team_slgct.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cb_Team_slgct.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -270,7 +270,7 @@
             this.tb_SanNha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SanNha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SanNha.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_SanNha.Location = new System.Drawing.Point(754, 121);
+            this.tb_SanNha.Location = new System.Drawing.Point(755, 159);
             this.tb_SanNha.Name = "tb_SanNha";
             this.tb_SanNha.PasswordChar = '\0';
             this.tb_SanNha.SelectedText = "";
@@ -287,7 +287,7 @@
             this.tb_TenDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_TenDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_TenDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_TenDoi.Location = new System.Drawing.Point(754, 66);
+            this.tb_TenDoi.Location = new System.Drawing.Point(755, 104);
             this.tb_TenDoi.Name = "tb_TenDoi";
             this.tb_TenDoi.PasswordChar = '\0';
             this.tb_TenDoi.SelectedText = "";
@@ -305,7 +305,7 @@
             this.tb_MaDoi.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_MaDoi.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaDoi.Location = new System.Drawing.Point(327, 66);
+            this.tb_MaDoi.Location = new System.Drawing.Point(329, 104);
             this.tb_MaDoi.Name = "tb_MaDoi";
             this.tb_MaDoi.PasswordChar = '\0';
             this.tb_MaDoi.SelectedText = "";
@@ -317,11 +317,11 @@
             // 
             this.lb_team_slg.AutoSize = true;
             this.lb_team_slg.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_slg.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_slg.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_slg.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_slg.Location = new System.Drawing.Point(177, 121);
+            this.lb_team_slg.Location = new System.Drawing.Point(179, 159);
             this.lb_team_slg.Name = "lb_team_slg";
-            this.lb_team_slg.Size = new System.Drawing.Size(134, 32);
+            this.lb_team_slg.Size = new System.Drawing.Size(142, 32);
             this.lb_team_slg.TabIndex = 3;
             this.lb_team_slg.Text = "Số cầu thủ:";
             this.lb_team_slg.Visible = false;
@@ -330,11 +330,11 @@
             // 
             this.lb_team_san.AutoSize = true;
             this.lb_team_san.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_san.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_san.Location = new System.Drawing.Point(619, 121);
+            this.lb_team_san.Location = new System.Drawing.Point(620, 159);
             this.lb_team_san.Name = "lb_team_san";
-            this.lb_team_san.Size = new System.Drawing.Size(106, 32);
+            this.lb_team_san.Size = new System.Drawing.Size(112, 32);
             this.lb_team_san.TabIndex = 2;
             this.lb_team_san.Text = "Sân nhà:";
             this.lb_team_san.Visible = false;
@@ -343,11 +343,11 @@
             // 
             this.lb_team_name.AutoSize = true;
             this.lb_team_name.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_name.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_name.Location = new System.Drawing.Point(619, 66);
+            this.lb_team_name.Location = new System.Drawing.Point(620, 104);
             this.lb_team_name.Name = "lb_team_name";
-            this.lb_team_name.Size = new System.Drawing.Size(99, 32);
+            this.lb_team_name.Size = new System.Drawing.Size(106, 32);
             this.lb_team_name.TabIndex = 1;
             this.lb_team_name.Text = "Tên đội:";
             this.lb_team_name.Visible = false;
@@ -356,57 +356,56 @@
             // 
             this.lb_team_id.AutoSize = true;
             this.lb_team_id.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_id.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_id.Location = new System.Drawing.Point(177, 66);
+            this.lb_team_id.Location = new System.Drawing.Point(179, 104);
             this.lb_team_id.Name = "lb_team_id";
-            this.lb_team_id.Size = new System.Drawing.Size(95, 32);
+            this.lb_team_id.Size = new System.Drawing.Size(102, 32);
             this.lb_team_id.TabIndex = 0;
             this.lb_team_id.Text = "Mã đội:";
             this.lb_team_id.Visible = false;
             // 
             // dgv_Home
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.dgv_Home.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Home.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Home.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Home.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Home.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_Home.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Home.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgv_Home.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Home.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Home.ColumnHeadersHeight = 30;
             this.dgv_Home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
             this.TenDoi,
             this.SoCauThu,
             this.SanNha});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Home.EnableHeadersVisualStyles = false;
             this.dgv_Home.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Home.Location = new System.Drawing.Point(3, 288);
             this.dgv_Home.Name = "dgv_Home";
-            this.dgv_Home.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_Home.RowHeadersVisible = false;
             this.dgv_Home.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Home.RowTemplate.Height = 24;
             this.dgv_Home.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Home.Size = new System.Drawing.Size(1248, 406);
@@ -417,14 +416,14 @@
             this.dgv_Home.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_Home.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_Home.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_Home.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Home.ThemeStyle.BackColor = System.Drawing.Color.Gray;
             this.dgv_Home.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Home.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_Home.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             this.dgv_Home.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Home.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_Home.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_Home.ThemeStyle.HeaderStyle.Height = 22;
+            this.dgv_Home.ThemeStyle.HeaderStyle.Height = 30;
             this.dgv_Home.ThemeStyle.ReadOnly = false;
             this.dgv_Home.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_Home.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -441,7 +440,7 @@
             // 
             this.MaDoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.FillWeight = 5F;
+            this.MaDoi.FillWeight = 30F;
             this.MaDoi.HeaderText = "Mã Đội";
             this.MaDoi.Name = "MaDoi";
             this.MaDoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -450,7 +449,7 @@
             // TenDoi
             // 
             this.TenDoi.DataPropertyName = "TenDoi";
-            this.TenDoi.FillWeight = 20F;
+            this.TenDoi.FillWeight = 40F;
             this.TenDoi.HeaderText = "Tên Đội";
             this.TenDoi.Name = "TenDoi";
             this.TenDoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -458,7 +457,7 @@
             // SoCauThu
             // 
             this.SoCauThu.DataPropertyName = "SoCauThu";
-            this.SoCauThu.FillWeight = 10F;
+            this.SoCauThu.FillWeight = 30F;
             this.SoCauThu.HeaderText = "Số Cầu Thủ";
             this.SoCauThu.Name = "SoCauThu";
             this.SoCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -466,7 +465,7 @@
             // SanNha
             // 
             this.SanNha.DataPropertyName = "SanNha";
-            this.SanNha.FillWeight = 20F;
+            this.SanNha.FillWeight = 30F;
             this.SanNha.HeaderText = "Sân Nhà";
             this.SanNha.Name = "SanNha";
             this.SanNha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -500,10 +499,10 @@
         private Guna.UI.WinForms.GunaLabel lb_team_name;
         private Guna.UI.WinForms.GunaLabel lb_team_id;
         public Guna.UI.WinForms.GunaDataGridView dgv_Home;
+        public Guna.UI.WinForms.GunaComboBox cb_Team_slgct;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCauThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn SanNha;
-        public Guna.UI.WinForms.GunaComboBox cb_Team_slgct;
     }
 }

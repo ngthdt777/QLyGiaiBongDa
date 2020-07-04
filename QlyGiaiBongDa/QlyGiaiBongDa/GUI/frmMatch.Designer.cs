@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMatch));
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_match_tiso = new Guna.UI.WinForms.GunaTextBox();
+            this.lb_match_tiso = new Guna.UI.WinForms.GunaLabel();
             this.cb_VongDau = new System.Windows.Forms.ComboBox();
             this.tb_GioThiDau = new Guna.UI.WinForms.GunaTextBox();
             this.lb_match_giotd = new Guna.UI.WinForms.GunaLabel();
             this.btt_exit = new Guna.UI.WinForms.GunaControlBox();
-            this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.lb_match_vongdau = new Guna.UI.WinForms.GunaLabel();
             this.dtp_match = new System.Windows.Forms.DateTimePicker();
             this.lb_match_date = new Guna.UI.WinForms.GunaLabel();
@@ -46,8 +47,7 @@
             this.lb_team_san = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_guest = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_id = new Guna.UI.WinForms.GunaLabel();
-            this.lb_match_tiso = new Guna.UI.WinForms.GunaLabel();
-            this.tb_match_tiso = new Guna.UI.WinForms.GunaTextBox();
+            this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
             this.gb_HSDB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,34 @@
             this.gb_HSDB.TabIndex = 12;
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // tb_match_tiso
+            // 
+            this.tb_match_tiso.BaseColor = System.Drawing.Color.White;
+            this.tb_match_tiso.BorderColor = System.Drawing.Color.Silver;
+            this.tb_match_tiso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_match_tiso.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_match_tiso.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_match_tiso.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_match_tiso.Location = new System.Drawing.Point(618, 243);
+            this.tb_match_tiso.Name = "tb_match_tiso";
+            this.tb_match_tiso.PasswordChar = '\0';
+            this.tb_match_tiso.SelectedText = "";
+            this.tb_match_tiso.Size = new System.Drawing.Size(160, 32);
+            this.tb_match_tiso.TabIndex = 26;
+            // 
+            // lb_match_tiso
+            // 
+            this.lb_match_tiso.AutoSize = true;
+            this.lb_match_tiso.BackColor = System.Drawing.Color.Transparent;
+            this.lb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_tiso.ForeColor = System.Drawing.Color.Black;
+            this.lb_match_tiso.Location = new System.Drawing.Point(454, 242);
+            this.lb_match_tiso.Name = "lb_match_tiso";
+            this.lb_match_tiso.Size = new System.Drawing.Size(82, 32);
+            this.lb_match_tiso.TabIndex = 25;
+            this.lb_match_tiso.Text = "Tỷ số:";
             // 
             // cb_VongDau
             // 
@@ -120,11 +148,11 @@
             // 
             this.lb_match_giotd.AutoSize = true;
             this.lb_match_giotd.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_giotd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_giotd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_giotd.ForeColor = System.Drawing.Color.Black;
             this.lb_match_giotd.Location = new System.Drawing.Point(454, 66);
             this.lb_match_giotd.Name = "lb_match_giotd";
-            this.lb_match_giotd.Size = new System.Drawing.Size(138, 32);
+            this.lb_match_giotd.Size = new System.Drawing.Size(148, 32);
             this.lb_match_giotd.TabIndex = 22;
             this.lb_match_giotd.Text = "Giờ thi đấu:";
             // 
@@ -144,43 +172,15 @@
             this.btt_exit.Size = new System.Drawing.Size(55, 35);
             this.btt_exit.TabIndex = 21;
             // 
-            // btt_team_add
-            // 
-            this.btt_team_add.AnimationHoverSpeed = 0.07F;
-            this.btt_team_add.AnimationSpeed = 0.03F;
-            this.btt_team_add.BaseColor1 = System.Drawing.Color.Teal;
-            this.btt_team_add.BaseColor2 = System.Drawing.Color.Teal;
-            this.btt_team_add.BorderColor = System.Drawing.Color.Black;
-            this.btt_team_add.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btt_team_add.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_team_add.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_team_add.ForeColor = System.Drawing.Color.Black;
-            this.btt_team_add.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_add.Image")));
-            this.btt_team_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_team_add.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_add.Location = new System.Drawing.Point(738, 321);
-            this.btt_team_add.Name = "btt_team_add";
-            this.btt_team_add.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btt_team_add.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btt_team_add.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btt_team_add.OnHoverForeColor = System.Drawing.Color.White;
-            this.btt_team_add.OnHoverImage = null;
-            this.btt_team_add.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_team_add.Size = new System.Drawing.Size(161, 49);
-            this.btt_team_add.TabIndex = 8;
-            this.btt_team_add.Text = "Thêm ";
-            this.btt_team_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_team_add.Click += new System.EventHandler(this.btt_team_add_Click);
-            // 
             // lb_match_vongdau
             // 
             this.lb_match_vongdau.AutoSize = true;
             this.lb_match_vongdau.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_vongdau.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_vongdau.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_vongdau.ForeColor = System.Drawing.Color.Black;
             this.lb_match_vongdau.Location = new System.Drawing.Point(454, 179);
             this.lb_match_vongdau.Name = "lb_match_vongdau";
-            this.lb_match_vongdau.Size = new System.Drawing.Size(122, 32);
+            this.lb_match_vongdau.Size = new System.Drawing.Size(131, 32);
             this.lb_match_vongdau.TabIndex = 10;
             this.lb_match_vongdau.Text = "Vòng đấu:";
             // 
@@ -195,11 +195,11 @@
             // 
             this.lb_match_date.AutoSize = true;
             this.lb_match_date.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_date.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_date.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_date.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_date.Location = new System.Drawing.Point(32, 243);
+            this.lb_match_date.Location = new System.Drawing.Point(22, 242);
             this.lb_match_date.Name = "lb_match_date";
-            this.lb_match_date.Size = new System.Drawing.Size(158, 32);
+            this.lb_match_date.Size = new System.Drawing.Size(169, 32);
             this.lb_match_date.TabIndex = 8;
             this.lb_match_date.Text = "Ngày thi đấu:";
             // 
@@ -272,11 +272,11 @@
             // 
             this.lb_match_home.AutoSize = true;
             this.lb_match_home.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_home.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_home.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_home.Location = new System.Drawing.Point(32, 121);
+            this.lb_match_home.Location = new System.Drawing.Point(25, 121);
             this.lb_match_home.Name = "lb_match_home";
-            this.lb_match_home.Size = new System.Drawing.Size(150, 32);
+            this.lb_match_home.Size = new System.Drawing.Size(159, 32);
             this.lb_match_home.TabIndex = 3;
             this.lb_match_home.Text = "Đội chủ nhà:";
             // 
@@ -284,11 +284,11 @@
             // 
             this.lb_team_san.AutoSize = true;
             this.lb_team_san.BackColor = System.Drawing.Color.Transparent;
-            this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_san.ForeColor = System.Drawing.Color.Black;
             this.lb_team_san.Location = new System.Drawing.Point(454, 121);
             this.lb_team_san.Name = "lb_team_san";
-            this.lb_team_san.Size = new System.Drawing.Size(141, 32);
+            this.lb_team_san.Size = new System.Drawing.Size(150, 32);
             this.lb_team_san.TabIndex = 2;
             this.lb_team_san.Text = "Sân thi đấu:";
             // 
@@ -296,11 +296,11 @@
             // 
             this.lb_match_guest.AutoSize = true;
             this.lb_match_guest.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_guest.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_guest.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_guest.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_guest.Location = new System.Drawing.Point(32, 179);
+            this.lb_match_guest.Location = new System.Drawing.Point(22, 179);
             this.lb_match_guest.Name = "lb_match_guest";
-            this.lb_match_guest.Size = new System.Drawing.Size(127, 32);
+            this.lb_match_guest.Size = new System.Drawing.Size(135, 32);
             this.lb_match_guest.TabIndex = 1;
             this.lb_match_guest.Text = "Đội khách:";
             // 
@@ -308,41 +308,41 @@
             // 
             this.lb_match_id.AutoSize = true;
             this.lb_match_id.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_match_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_id.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_id.Location = new System.Drawing.Point(32, 66);
+            this.lb_match_id.Location = new System.Drawing.Point(22, 66);
             this.lb_match_id.Name = "lb_match_id";
-            this.lb_match_id.Size = new System.Drawing.Size(150, 32);
+            this.lb_match_id.Size = new System.Drawing.Size(162, 32);
             this.lb_match_id.TabIndex = 0;
             this.lb_match_id.Text = "Mã trận đấu:";
             // 
-            // lb_match_tiso
+            // btt_team_add
             // 
-            this.lb_match_tiso.AutoSize = true;
-            this.lb_match_tiso.BackColor = System.Drawing.Color.Transparent;
-            this.lb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_match_tiso.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_tiso.Location = new System.Drawing.Point(454, 242);
-            this.lb_match_tiso.Name = "lb_match_tiso";
-            this.lb_match_tiso.Size = new System.Drawing.Size(76, 32);
-            this.lb_match_tiso.TabIndex = 25;
-            this.lb_match_tiso.Text = "Tỷ số:";
-            // 
-            // tb_match_tiso
-            // 
-            this.tb_match_tiso.BaseColor = System.Drawing.Color.White;
-            this.tb_match_tiso.BorderColor = System.Drawing.Color.Silver;
-            this.tb_match_tiso.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_match_tiso.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_match_tiso.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_match_tiso.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_match_tiso.Location = new System.Drawing.Point(618, 243);
-            this.tb_match_tiso.Name = "tb_match_tiso";
-            this.tb_match_tiso.PasswordChar = '\0';
-            this.tb_match_tiso.SelectedText = "";
-            this.tb_match_tiso.Size = new System.Drawing.Size(160, 32);
-            this.tb_match_tiso.TabIndex = 26;
+            this.btt_team_add.AnimationHoverSpeed = 0.07F;
+            this.btt_team_add.AnimationSpeed = 0.03F;
+            this.btt_team_add.BaseColor1 = System.Drawing.Color.Teal;
+            this.btt_team_add.BaseColor2 = System.Drawing.Color.Teal;
+            this.btt_team_add.BorderColor = System.Drawing.Color.Black;
+            this.btt_team_add.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btt_team_add.FocusedColor = System.Drawing.Color.Empty;
+            this.btt_team_add.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btt_team_add.ForeColor = System.Drawing.Color.Black;
+            this.btt_team_add.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_add.Image")));
+            this.btt_team_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_team_add.ImageSize = new System.Drawing.Size(25, 25);
+            this.btt_team_add.Location = new System.Drawing.Point(738, 321);
+            this.btt_team_add.Name = "btt_team_add";
+            this.btt_team_add.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btt_team_add.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btt_team_add.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btt_team_add.OnHoverForeColor = System.Drawing.Color.White;
+            this.btt_team_add.OnHoverImage = null;
+            this.btt_team_add.OnPressedColor = System.Drawing.Color.Black;
+            this.btt_team_add.Size = new System.Drawing.Size(161, 49);
+            this.btt_team_add.TabIndex = 8;
+            this.btt_team_add.Text = "Thêm ";
+            this.btt_team_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btt_team_add.Click += new System.EventHandler(this.btt_team_add_Click);
             // 
             // frmMatch
             // 
