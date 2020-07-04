@@ -21,6 +21,8 @@ namespace QlyGiaiBongDa.DAL
         public string ma_lbt { get; set; }
         public string thoidiem { get; set; }
         public string id_td { get; set; }
+
+  
         public BANTHANG() { }
     }
 
@@ -65,7 +67,7 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadGoalType()
         {
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT TenLoaiBanThang";
+            string LoadQuery = "SELECT TenLoaiBanThang from LOAIBANTHANG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }

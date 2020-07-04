@@ -74,11 +74,11 @@ namespace QlyGiaiBongDa.GUI
 
         private void usrGoalDetail_Load_1(object sender, EventArgs e)
         {
-           /* cb_LoaiBan.AutoCompleteSource = AutoCompleteSource.ListItems;
-            cb_LoaiBan.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_LoaiBan.DisplayMember = "TenLoaiBanThang";
-            cb_LoaiBan.ValueMember = "TenLoaiBanThang";
-            cb_LoaiBan.DataSource = ObjGoalDetailBLL.Instance.GetGoalType(); */
+           cb1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb1.DisplayMember = "TenLoaiBanThang";
+            cb1.ValueMember = "TenLoaiBanThang";
+            cb1.DataSource = ObjGoalDetailBLL.Instance.GetGoalType(); 
             dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
         }
 

@@ -24,6 +24,7 @@ namespace QlyGiaiBongDa.DAL
         public string ThuTuUuTienXepHang { get; set; }
         public string MaTranDau { get; set; }
         public string MaVongDau { get; set; }
+
         public Standing() { }
 
     }

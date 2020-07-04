@@ -11,6 +11,9 @@ using QlyGiaiBongDa.BLL;
 using QlyGiaiBongDa.DAL;
 using System.Data.SqlClient;
 using QlyGiaiBongDa.GUI;
+
+
+
 namespace QlyGiaiBongDa.GUI
 {
     public partial class usrTeamList : UserControl
@@ -41,6 +44,8 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.ValueMember = "TenDoi";
             cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
         }
+
+
         // ham Data Check - Duy Bao Change
         public bool CheckData()
         {
