@@ -144,5 +144,21 @@ namespace QlyGiaiBongDa.GUI
 
 
         }
+
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Chọn phát sinh trận đấu để tạo trận đấu mới");
+        }
+
+        private void usrCreateMatch_Load(object sender, EventArgs e)
+        {
+            cb_VongDau.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_VongDau.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_VongDau.DisplayMember = "TenVongDau";
+            cb_VongDau.ValueMember = "TenVongDau";
+            cb_VongDau.DataSource = ObjRoundBLL.Instance.GetRound();
+            cb_VongDau.Text = " Chọn vòng đấu ";
+            
+        }
     }
 }

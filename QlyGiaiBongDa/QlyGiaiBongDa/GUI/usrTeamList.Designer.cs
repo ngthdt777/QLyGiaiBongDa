@@ -62,6 +62,7 @@
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.btt_Them = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HSDB)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +97,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_sctnq);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_soctngoaiquoc);
             this.gb_HSDB.Controls.Add(this.cb_hsdb_loaict);
@@ -424,7 +426,7 @@
             this.dgv_HSDB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -606,6 +608,18 @@
             this.Btt_sua.Visible = false;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1118, 37);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
+            this.lb_Guide.TabIndex = 24;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
+            // 
             // usrTeamList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -658,5 +672,6 @@
         public Guna.UI.WinForms.GunaComboBox cb_hsdb_loaict;
         private Guna.UI.WinForms.GunaLabel lb_hsdb_soctngoaiquoc;
         public Guna.UI.WinForms.GunaLabel lb_hsdb_sctnq;
+        private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
     }
 }

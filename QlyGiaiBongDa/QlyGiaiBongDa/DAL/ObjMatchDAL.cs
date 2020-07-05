@@ -56,6 +56,15 @@ namespace QlyGiaiBongDa.BLL
         private ObjMatchDAL() { }
 
 
+
+
+        public DataTable LoadRound()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenVongDau from VONGDAU";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
         public DataTable LoadListResultMatch()
         {
             DataTable dt = new DataTable();

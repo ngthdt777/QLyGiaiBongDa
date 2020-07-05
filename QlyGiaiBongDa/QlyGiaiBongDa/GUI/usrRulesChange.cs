@@ -110,5 +110,12 @@ namespace QlyGiaiBongDa.GUI
 
             }
         }
+
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Tùy chỉnh các thuộc tính về cầu thủ, loại bàn thắng theo mong muốn" +
+                            " Chọn hoàn tất để thực hiện thay đổi, chọn mặc định để quay lại trạng thái ban đầu");
+
+        }
     }
 }

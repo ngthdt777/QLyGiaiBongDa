@@ -252,5 +252,10 @@ namespace QlyGiaiBongDa.GUI
                 }
             }
         }
+
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Chọn hiển thị để xem thông tin cầu thủ");
+        }
     }
 }

@@ -63,5 +63,15 @@ namespace QlyGiaiBongDa.GUI
                             "Chọn tìm kiếm để biết thông tin vua phá lưới. ");
 
         }
+
+        private void usrPlayerGoal_Load(object sender, EventArgs e)
+        {
+            cb2.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb2.DisplayMember = "TenVongDau";
+            cb2.ValueMember = "TenVongDau";
+            cb2.DataSource = ObjGoalBLL.Instance.GetRound();
+            cb2.Text = " Chọn vòng đấu ";
+        }
     }
 }

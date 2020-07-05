@@ -38,7 +38,10 @@ namespace QlyGiaiBongDa.BLL
             return ObjGoalDAL.Instance.LoadListPlayerGoal();
         }
 
-
+        public DataTable GetRound()
+        {
+            return ObjGoalDAL.Instance.LoadRound();
+         }
         
     }
 }

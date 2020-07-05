@@ -77,7 +77,7 @@ namespace QlyGiaiBongDa.BLL
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
             if (result > 0)
             {
-                MessageBox.Show("OKE da add ");
+                MessageBox.Show(" Đã thêm trận đấu mới ");
             }
             return dt;
         }

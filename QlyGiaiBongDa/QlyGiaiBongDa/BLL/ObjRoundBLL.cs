@@ -56,7 +56,11 @@ namespace QlyGiaiBongDa.BLL
         {
             ObjRoundDAL.Instance.UpdateMatch();
         }
-
+    
+        public DataTable GetRound()
+        {
+            return ObjMatchDAL.Instance.LoadRound();
+        }
 
     }
 }

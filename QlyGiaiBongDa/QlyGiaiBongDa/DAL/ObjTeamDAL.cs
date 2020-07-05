@@ -117,7 +117,7 @@ namespace QlyGiaiBongDa.DAL
                     int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
-                        MessageBox.Show("OKE đã thêm ");
+                        MessageBox.Show(" Đã thêm cầu thủ ");
                     }
 
             }
@@ -145,10 +145,10 @@ namespace QlyGiaiBongDa.DAL
                 int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                 if (result > 0)
                 {
-                    MessageBox.Show("OKE da add ");
+                    MessageBox.Show(" Đã thêm đội bóng  ");
                 }
             }
-            else MessageBox.Show("Doi bong da ton tai");
+            else MessageBox.Show("Đội bóng đã tồn tại");
         }
 
 
@@ -183,6 +183,7 @@ namespace QlyGiaiBongDa.DAL
             DataTable dt = DataProvider.Instance.ExecuteQuery(CheckQuery);
             if (dt.Rows.Count != 0)
             {
+                MessageBox.Show("Bạn có chắc sẽ xóa");
                 MessageBox.Show(id);
                 string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
@@ -260,7 +261,7 @@ namespace QlyGiaiBongDa.DAL
 
             if (usrTeamList.Instance.tb_hsdb_mact.Text != "")
             {
-                MessageBox.Show("ok chua");
+                MessageBox.Show("Bạn có chắc sẽ xóa");
 
                 string DeleteQuery = "DELETE FROM CAUTHU WHERE MaCauThu = '" + id + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);

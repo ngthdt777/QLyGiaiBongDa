@@ -180,7 +180,7 @@ namespace QlyGiaiBongDa.DAL
 
             if (usrRulesChange.Instance.tb_LoaiBan.Text != "")
             {
-                MessageBox.Show("Ok chưa");
+                MessageBox.Show("Bạn có chắc sẽ xóa");
 
                 string DeleteQuery = "DELETE FROM LOAIBANTHANG WHERE TenLoaiBanThang= '" + TenLoaiBan + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);

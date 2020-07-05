@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrCreateMatch));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_creatematch = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.cb_VongDau = new System.Windows.Forms.ComboBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btn_CapNhat = new Guna.UI.WinForms.GunaButton();
@@ -88,6 +89,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.cb_VongDau);
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
             this.gb_HSDB.Controls.Add(this.btn_CapNhat);
@@ -99,6 +101,18 @@
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Chọn vòng thi đấu";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1113, 39);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(115, 25);
+            this.lb_Guide.TabIndex = 24;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
             // 
             // cb_VongDau
             // 
@@ -165,8 +179,8 @@
             // 
             // dgv_TLTD
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_TLTD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_TLTD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_TLTD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -174,14 +188,14 @@
             this.dgv_TLTD.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_TLTD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TLTD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TLTD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TLTD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TLTD.ColumnHeadersHeight = 30;
             this.dgv_TLTD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTranDau,
@@ -191,14 +205,14 @@
             this.GioThiDau,
             this.SanThiDau,
             this.TySo});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TLTD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TLTD.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_TLTD.EnableHeadersVisualStyles = false;
             this.dgv_TLTD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TLTD.Location = new System.Drawing.Point(3, 221);
@@ -375,6 +389,7 @@
             this.Controls.Add(this.lb_creatematch);
             this.Name = "usrCreateMatch";
             this.Size = new System.Drawing.Size(1254, 697);
+            this.Load += new System.EventHandler(this.usrCreateMatch_Load);
             this.gb_HSDB.ResumeLayout(false);
             this.gb_HSDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vONGDAUBindingSource)).EndInit();
@@ -405,5 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SanThiDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn TySo;
         public Guna.UI.WinForms.GunaDataGridView dgv_TLTD;
+        private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
     }
 }

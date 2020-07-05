@@ -128,7 +128,7 @@ namespace QlyGiaiBongDa.DAL
 
             if (usrGoalDetail.Instance.tb_MaBanThang.Text != "")
             {
-                MessageBox.Show("Ok chưa");
+                MessageBox.Show("Bạn có chắc sẽ xóa");
 
                 string DeleteQuery = "DELETE FROM BANTHANG WHERE MaBanThang= '" + MaBan + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);

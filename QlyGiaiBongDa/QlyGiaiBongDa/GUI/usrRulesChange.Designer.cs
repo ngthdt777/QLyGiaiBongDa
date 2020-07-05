@@ -66,6 +66,7 @@
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
@@ -102,6 +103,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.tb_RC_countForeign);
             this.gb_HSDB.Controls.Add(this.nm_formax);
             this.gb_HSDB.Controls.Add(this.nm_slgmax);
@@ -707,6 +709,18 @@
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
             // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1099, 37);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
+            this.lb_Guide.TabIndex = 45;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
+            // 
             // usrRulesChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -763,5 +777,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanThang;
         public Guna.UI.WinForms.GunaDataGridView dgv_LoaiBanThang;
         public Guna.UI.WinForms.GunaTextBox tb_LoaiBan;
+        private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
     }
 }

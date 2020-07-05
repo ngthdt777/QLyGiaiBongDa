@@ -117,6 +117,9 @@ namespace QlyGiaiBongDa.GUI
             ObjGoalDetailBLL.Instance.DeleteGoal();
         }
 
-      
+        private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Chọn vào bàn thắng trên bảng ");
+        }
     }
 }

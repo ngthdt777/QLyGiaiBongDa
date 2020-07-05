@@ -51,11 +51,21 @@ namespace QlyGiaiBongDa.DAL
         //    System.Windows.Forms.UserControl u = new usrPlayerGoal(); // Tao usrPlayerGoal moi
 
 
+
+
+        public DataTable LoadRound()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenVongDau from VONGDAU";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
         public DataTable LoadListPlayerGoal()
         {
             DataTable dt = new DataTable();
 
-            string vongdau = usrPlayerGoal.Instance.cb_VongDau.Text;
+            string vongdau = usrPlayerGoal.Instance.cb2.Text;
 
             string LoadQuery = "SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as 'Số Bàn Thắng' FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU"+
           " where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.MaVongDau = '"+vongdau+"' " +
