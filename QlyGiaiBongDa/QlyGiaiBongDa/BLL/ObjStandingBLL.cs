@@ -37,10 +37,7 @@ namespace QlyGiaiBongDa.BLL
             return ObjStandingDAL.Instance.LoadListStanding();
         }
 
-        public void LoadInfo()
-        {
-            ObjStandingDAL.Instance.LoadInfo();
-        }
+        
 
 
     }

@@ -49,7 +49,7 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadListTeam()
         {
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT * FROM DOIBONG";
+            string LoadQuery = "SELECT MaDoi,TenDoi,SanNha,SoCauThu FROM DOIBONG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         } 
@@ -77,7 +77,7 @@ namespace QlyGiaiBongDa.DAL
         {
             string TenDoi = usrTeamList.Instance.cbb_team_name.Text;
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,CAUTHU.MaDoi FROM CAUTHU,DOIBONG " +
+            string LoadQuery = "SELECT MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,TinhTrang,ThoiGianThiDau,CAUTHU.MaDoi FROM CAUTHU,DOIBONG " +
                 "WHERE CAUTHU.MaDoi=DOIBONG.MaDoi AND TenDoi='" + TenDoi + "'";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
@@ -112,7 +112,7 @@ namespace QlyGiaiBongDa.DAL
             if (CheckMaDoi(id) == true)
             {
                 
-                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,MaLoaiCauThu,GhiChu,MaDoi)" +
+                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,ThoiGian,MaDoi)" +
                         "VALUES('" + id + "', '" + tenct + "', '" + ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi + "')";
                     int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
@@ -161,9 +161,9 @@ namespace QlyGiaiBongDa.DAL
             string id = usrTeamList.Instance.tb_MaDoi.Text.ToString();
         //    string tendoi = usrTeam.Instance.tb_TenDoi.Text.ToString();
 
-            string FindQuery = " SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,GhiChu " +
-                "FROM CAUTHU , DOIBONG,LOAICAUTHU " +
-               " Where LOAICAUTHU.MaLoaiCauThu=CAUTHU.MaLoaiCauThu and CAUTHU.MaDoi= DOIBONG.MaDoi and CAUTHU.MaDoi = '" + id + "' ";
+            string FindQuery = " SELECT * " +
+                "FROM CAUTHU ,DOIBONG " +
+               " Where CAUTHU.MaDoi= DOIBONG.MaDoi and CAUTHU.MaDoi = '" + id + "' ";
             DataTable data = DataProvider.Instance.ExecuteQuery(FindQuery);
             return data;
         }

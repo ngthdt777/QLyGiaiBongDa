@@ -25,7 +25,7 @@ namespace QlyGiaiBongDa.BLL
         private DataProvider() { }
        // private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True"; -- MayDat
 
-        private string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query)
@@ -90,7 +90,7 @@ namespace QlyGiaiBongDa.BLL
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmLogin"];
             string acc = ((frmLogin)f).txb_tk.Text;
             string pass = ((frmLogin)f).txb_pass.Text;
-            string query = "SELECT * from Dangnhap WHERE taikhoan = '" + acc + "' AND matkhau = '" + pass + "' ";
+            string query = "SELECT * from DANGNHAP WHERE TaiKhoan = '" + acc + "' AND MatKhau = '" + pass + "' ";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             if (result.Rows.Count > 0)
             {

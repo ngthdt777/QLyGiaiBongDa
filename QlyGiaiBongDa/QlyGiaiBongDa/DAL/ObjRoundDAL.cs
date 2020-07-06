@@ -44,7 +44,7 @@ namespace QlyGiaiBongDa.BLL
             MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
-            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo from VONGDAU,TRANDAU" +
+            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,banthangdn,banthangkh from VONGDAU,TRANDAU" +
             " where VONGDAU.TenVongDau = '"+vdau+ "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
                
 

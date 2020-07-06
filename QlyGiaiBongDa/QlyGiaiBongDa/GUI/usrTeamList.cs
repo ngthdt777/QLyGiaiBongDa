@@ -233,7 +233,7 @@ namespace QlyGiaiBongDa.GUI
             btt_Team_View.Text = "Hiển thị";
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = false;
         }
-        public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
+        public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
 
         private void CountForeign()
         {
@@ -242,8 +242,8 @@ namespace QlyGiaiBongDa.GUI
             {
                 string tendoi = usrTeamList.Instance.cbb_team_name.Text;
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("Select Count(MaLoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG"+
-"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND MaLoaiCauThu = 'NgoaiNuoc' AND DOIBONG.TenDoi = '"+tendoi+ "'", connection);
+                SqlCommand cmd = new SqlCommand("Select Count(LoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG"+
+"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND LoaiCauThu = 'NgoaiNuoc' AND DOIBONG.TenDoi = '"+tendoi+ "'",connection);
 
                 SqlDataReader da = cmd.ExecuteReader();
                 while (da.Read())

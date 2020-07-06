@@ -34,23 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
-            this.tb_mtd = new System.Windows.Forms.TextBox();
-            this.tb_tyso = new System.Windows.Forms.TextBox();
-            this.tb_doikhach = new System.Windows.Forms.TextBox();
-            this.tb_doichunha = new System.Windows.Forms.TextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.dtp_Bangxephang = new Guna.UI.WinForms.GunaDateTimePicker();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.dgv_BXH = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
             this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TranThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TranHoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TranThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BanThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).BeginInit();
             this.SuspendLayout();
@@ -85,10 +76,6 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Controls.Add(this.tb_mtd);
-            this.gb_HSDB.Controls.Add(this.tb_tyso);
-            this.gb_HSDB.Controls.Add(this.tb_doikhach);
-            this.gb_HSDB.Controls.Add(this.tb_doichunha);
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
             this.gb_HSDB.Controls.Add(this.dtp_Bangxephang);
             this.gb_HSDB.Controls.Add(this.btn_TimKiem);
@@ -101,35 +88,6 @@
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Thông tin bản xếp hạng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // tb_mtd
-            // 
-            this.tb_mtd.Location = new System.Drawing.Point(128, 135);
-            this.tb_mtd.Name = "tb_mtd";
-            this.tb_mtd.Size = new System.Drawing.Size(100, 28);
-            this.tb_mtd.TabIndex = 13;
-            this.tb_mtd.TextChanged += new System.EventHandler(this.tb_mtd_TextChanged);
-            // 
-            // tb_tyso
-            // 
-            this.tb_tyso.Location = new System.Drawing.Point(733, 135);
-            this.tb_tyso.Name = "tb_tyso";
-            this.tb_tyso.Size = new System.Drawing.Size(100, 28);
-            this.tb_tyso.TabIndex = 12;
-            // 
-            // tb_doikhach
-            // 
-            this.tb_doikhach.Location = new System.Drawing.Point(532, 135);
-            this.tb_doikhach.Name = "tb_doikhach";
-            this.tb_doikhach.Size = new System.Drawing.Size(100, 28);
-            this.tb_doikhach.TabIndex = 11;
-            // 
-            // tb_doichunha
-            // 
-            this.tb_doichunha.Location = new System.Drawing.Point(319, 135);
-            this.tb_doichunha.Name = "tb_doichunha";
-            this.tb_doichunha.Size = new System.Drawing.Size(100, 28);
-            this.tb_doichunha.TabIndex = 10;
             // 
             // gunaLabel1
             // 
@@ -210,12 +168,7 @@
             this.dgv_BXH.ColumnHeadersHeight = 30;
             this.dgv_BXH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
-            this.DiemSo,
-            this.TranThang,
-            this.TranHoa,
-            this.TranThua,
-            this.BanThang,
-            this.BanThua});
+            this.DiemSo});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -226,12 +179,12 @@
             this.dgv_BXH.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_BXH.EnableHeadersVisualStyles = false;
             this.dgv_BXH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.Location = new System.Drawing.Point(3, 375);
+            this.dgv_BXH.Location = new System.Drawing.Point(3, 252);
             this.dgv_BXH.Name = "dgv_BXH";
             this.dgv_BXH.RowHeadersVisible = false;
             this.dgv_BXH.RowTemplate.Height = 24;
             this.dgv_BXH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_BXH.Size = new System.Drawing.Size(1251, 236);
+            this.dgv_BXH.Size = new System.Drawing.Size(1251, 359);
             this.dgv_BXH.TabIndex = 4;
             this.dgv_BXH.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -255,6 +208,18 @@
             this.dgv_BXH.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.HeaderText = "Mã Đội";
+            this.MaDoi.Name = "MaDoi";
+            // 
+            // DiemSo
+            // 
+            this.DiemSo.DataPropertyName = "DiemSo";
+            this.DiemSo.HeaderText = "Điểm Số";
+            this.DiemSo.Name = "DiemSo";
             // 
             // gunaButton2
             // 
@@ -302,48 +267,6 @@
             this.btn_XuatBaocao.TabIndex = 21;
             this.btn_XuatBaocao.Text = "Xuất báo cáo";
             // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.HeaderText = "Mã Đội";
-            this.MaDoi.Name = "MaDoi";
-            // 
-            // DiemSo
-            // 
-            this.DiemSo.DataPropertyName = "DiemSo";
-            this.DiemSo.HeaderText = "Điểm Số";
-            this.DiemSo.Name = "DiemSo";
-            // 
-            // TranThang
-            // 
-            this.TranThang.DataPropertyName = "TranThang";
-            this.TranThang.HeaderText = "Trận Thắng";
-            this.TranThang.Name = "TranThang";
-            // 
-            // TranHoa
-            // 
-            this.TranHoa.DataPropertyName = "TranHoa";
-            this.TranHoa.HeaderText = "Trận Hòa";
-            this.TranHoa.Name = "TranHoa";
-            // 
-            // TranThua
-            // 
-            this.TranThua.DataPropertyName = "TranThua";
-            this.TranThua.HeaderText = "Trận Thua";
-            this.TranThua.Name = "TranThua";
-            // 
-            // BanThang
-            // 
-            this.BanThang.DataPropertyName = "BanThang";
-            this.BanThang.HeaderText = "Bàn Thắng";
-            this.BanThang.Name = "BanThang";
-            // 
-            // BanThua
-            // 
-            this.BanThua.DataPropertyName = "BanThua";
-            this.BanThua.HeaderText = "Bàn Thua";
-            this.BanThua.Name = "BanThua";
-            // 
             // usrStanding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,9 +278,7 @@
             this.Controls.Add(this.gunaButton1);
             this.Name = "usrStanding";
             this.Size = new System.Drawing.Size(1254, 697);
-            this.Load += new System.EventHandler(this.usrStanding_Load);
             this.gb_HSDB.ResumeLayout(false);
-            this.gb_HSDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).EndInit();
             this.ResumeLayout(false);
 
@@ -373,16 +294,7 @@
         private Guna.UI.WinForms.GunaButton btn_XuatBaocao;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaDateTimePicker dtp_Bangxephang;
-        public System.Windows.Forms.TextBox tb_mtd;
-        public System.Windows.Forms.TextBox tb_doichunha;
-        public System.Windows.Forms.TextBox tb_tyso;
-        public System.Windows.Forms.TextBox tb_doikhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemSo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TranThang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TranHoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TranThua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BanThang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BanThua;
     }
 }

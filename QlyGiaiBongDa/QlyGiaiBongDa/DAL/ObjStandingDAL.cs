@@ -34,11 +34,7 @@ namespace QlyGiaiBongDa.DAL
 
     public class ObjStandingDAL
     {
-        int TranThang_CN, TranHoa_CN, TranThua_CN, Diem_CN, tyso, BanThang_CN, BanThang_Khach, HieuSo;
-        int TranThang_Khach, TranHoa_Khach, TranThua_Khach, Diem_Khach;
-        int WinPt = usrRulesChange.Instance.DiemSoThang;
-        int EvePt = usrRulesChange.Instance.DiemSoHoa;
-        int LosePt = usrRulesChange.Instance.DiemSoThua;
+        
 
 
 
@@ -57,95 +53,12 @@ namespace QlyGiaiBongDa.DAL
             set { instance = value; }
         }
         public ObjStandingDAL() { }
-
-        public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
-
-
-
-        public void LoadInfo()
-        {
-            
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-
-                for (int count_tran = 1; count_tran <7; count_tran++)
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB00" + count_tran + "'", connection);
-
-                    SqlDataReader da = cmd.ExecuteReader();
-                    while (da.Read())
-                    {
-                        usrStanding.Instance.tb_doichunha.Text = da.GetValue(1).ToString();
-                        usrStanding.Instance.tb_doikhach.Text = da.GetValue(2).ToString();
-                        usrStanding.Instance.tb_tyso.Text = da.GetValue(3).ToString();
-                    }
-                    CalPoint();
-
-                    string UpdateQuery_CN = " UPDATE BANGXEPHANG,DOIBONG " +
-                    "SET DiemSo = '" + Diem_CN + "' ,  TranThang = '" + TranThang_CN + "' , TranHoa ='" + TranHoa_CN + "' ,  TranThua ='" + TranThua_CN + "' " +
-                    " where TenDoi = '" + usrStanding.Instance.tb_doichunha.Text+ "' AND BANGXEPHANG.MaDoi= DOIBONG.MaDoi ";
-
-                    string UpdateQuery_Khach = " UPDATE BANGXEPHANG,DOIBONG " +
-                    "SET DiemSo = '" + Diem_Khach + "' ,  TranThang = '" + TranThang_Khach + "' , TranHoa ='" + TranHoa_Khach + "' ,  TranThua ='" + TranThua_Khach + "' " +
-                    " where TenDoi = '" + usrStanding.Instance.tb_doikhach.Text + "'AND BANGXEPHANG.MaDoi= DOIBONG.MaDoi ";
-
-
-                    int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery_CN);
-                    result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery_Khach);
-
-
-
-                    connection.Close();
-                }
-                
-            }
-
-
-        }
         
 
-        public void  CalPoint()
 
-        {
-            tyso = Int32.Parse(usrStanding.Instance.tb_tyso.Text);
+      
 
-            // Thong tin doi chu nha
-
-             BanThang_CN = tyso / 10;
-             BanThang_Khach = tyso % 10;
-             HieuSo = BanThang_CN - BanThang_Khach;
-
-
-           // So sanh
-
-            if (BanThang_CN > BanThang_Khach)
-
-            {
-                    TranThang_CN += 1;
-                    Diem_CN += 3;
-                    TranThua_Khach += 1;
-
-            }
-
-            else if (BanThang_CN == BanThang_Khach)
-            {
-                    TranHoa_CN += 1; Diem_CN += 1;
-                    TranHoa_Khach += 1; Diem_Khach += 1;
-            }
-            
-            else
-            {
-                    TranThua_CN += 1;
-                    Diem_Khach += 3;
-                    TranThang_Khach += 1;
-            }
-
-        }
-
-
-
-
+     
 
         public DataTable LoadListStanding()
         {
@@ -153,7 +66,7 @@ namespace QlyGiaiBongDa.DAL
             //  MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
-            string LoadQuery = " SELECT * FROM BANGXEPHANG Where MaDoi = '7'";
+            string LoadQuery = " SELECT * FROM DOIBONG";
 
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);

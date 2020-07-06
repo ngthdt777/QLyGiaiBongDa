@@ -70,7 +70,6 @@ C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Ql
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources

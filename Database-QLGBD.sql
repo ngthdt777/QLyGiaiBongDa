@@ -79,10 +79,11 @@ go
 
 create table DOIBONG
 (
-MaDoi varchar(45) primary key not null,
+MaDoi  char(4) primary key not null,
 TenDoi varchar(45),
 SanNha varchar(45),
-SoCauThu int,
+SoCauThu int ,
+DiemSo int ,
 )
 
 
@@ -90,25 +91,53 @@ SoCauThu int,
 create table TRANDAU
 (
 MaTranDau varchar(45) primary key not null ,
-DoiChuNha varchar(45),
-DoiKhach varchar(45),
+DoiChuNha char(4),
+DoiKhach  char(4),
 NgayThiDau datetime,
 GioThiDau time,
 SanThiDau varchar(45),
 TySo varchar(10),
 MaVongDau varchar(45),
-
+banthangdn int,
+banthangkh int,
 )
+go
+
+
+create Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
+as 
+BEGIN
+    declare @madk char(4),
+			@madn char(4)
+    select @madk = DoiKhach, @madn=DoiChuNha from inserted  
+	--//doikh win
+	if (SELECT banthangdn from  inserted)
+	 > (SELECT banthangkh from inserted)
+	
+
+	update DOIBONG
+	SET DiemSo=DiemSo+3
+	WHERE MaDoi=@madk 
+
+	PRINT N'1'
+
+END
+insert into TRANDAU values ('VB022' , 'HAGL' , 'SGFC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '31', 'VB','3','1' )
+insert into TRANDAU values ('VB026' , 'HAGL' , 'SGFC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '41', 'VB','4','1' )
+
+
+
+go 
+insert into BANXEPHANG values 
+select * from BANGXEPHANG
+
+insert into BANGXEPHANG values ('Hoang Anh Gia Lai','0',0,0,0,0,0)
+
 
 CREATE TABLE BANGXEPHANG
 (
 MaDoi varchar(45),
-DiemSo int,
-TranThang int,
-TranHoa int,
-TranThua int,
-BanThang int,
-BanThua int,
+
 )
 
 
@@ -187,23 +216,19 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
  go
 
  ----------------INSERT DOIBONG-------------------------------
- insert into DOIBONG(MaDoi, TenDoi, SanNha, SoCauThu) values ( 1, 'Long An', 'Tan An ', 5)
- insert into DOIBONG values ( 2, 'HoChiMinh', 'Thong Nhat', 5)
- insert into DOIBONG values ( 3, 'Binh Duong', 'Go Dau ', 6)
- insert into DOIBONG values (7,'Hoang Anh Gia Lai','Gia Lai', '10')
- insert into DOIBONG values (6,'Ha Noi' ,'My Dinh', '10')
- INSERT into DOIBONG values (8, 'Tp.Ho Chi Minh' , 'SVD Thong Nhat', '10')
+)
+ 
+
+ insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','0','0')
+ insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','0','0')
+ insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '0','0')
 
  go
 
 
 
  ------------------INSERT CAUTHU-----------------------------
- insert into CAUTHU values ( '1003', 'Tran Thanh Lam', '18-07-2000', 'TrongNuoc' , 'Thi Dau 3 nam' , '1')
- insert into CAUTHU values ( '1004', 'Tran Quoc Thang', '01-01-2000', 'NgoaiNuoc' , 'Thi Dau 6 nam' , '1')
- insert into CAUTHU values ( '1001', 'Luong Duy Bao', '2000-01-01', 'TrongNuoc ' , 'Thi Dau 10 nam' , '2')
- insert into CAUTHU values ( '1002', 'Luong Duy Bao', '2000-01-02', 'NgoaiNuoc' , 'Thi Dau 2 nam' , '3')
- insert into CAUTHU values ( '1005', 'Nguyen Thanh Det', '2000-01-02', 'TrongNuoc' , 'Thi Dau 10000 nam' , '1')
+ 
 
  insert into CAUTHU values ( '7001', 'Tran Buu Ngoc', '26-02-1991', 'TrongNuoc' , 'Thi Dau 5 nam' , '7')
  insert into CAUTHU values ( '7002', 'Nguyen Canh Anh', '11-01-2000', 'TrongNuoc' , 'Thi Dau 2 nam' , '7')
@@ -245,8 +270,8 @@ INSERT INTO Dangnhap(taikhoan,matkhau)
 
  -------------------------------INSERT TRANDAU-----------------------------------------
 
-insert into TRANDAU values ('VB001' , 'Hoang Anh Gia Lai' , 'Ha Noi' , '01-01-2020 ' , '4:00' , 'Gia Lai' , '30', 'VB' )
-insert into TRANDAU values ('VB002' , 'Hoang Anh Gia Lai' , 'Tp.Ho Chi Minh' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '12', 'VB' )
+insert into TRANDAU values ('VB001' , 'Hoang Anh Gia Lai' , 'Ha Noi' , '01-01-2020 ' , '4:00' , 'Gia Lai' , '30', 'VB','3','0' )
+insert into TRANDAU values ('VB002' , 'Hoang Anh Gia Lai' , 'Tp.Ho Chi Minh' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '12', 'VB','1','2' )
 insert into TRANDAU values ('VB003' , 'Ha Noi' , 'Hoang Anh Gia Lai' , '05-01-2020 ' , '7:00' , 'My Dinh' , '11', 'VB' )
 insert into TRANDAU values ('VB004' , 'Ha Noi' , 'Tp.Ho Chi Minh' , '06-01-2020 ' , '3:00' , 'My Dinh ' , '21', 'VB' )
 insert into TRANDAU values ('VB005' , 'Tp.Ho Chi Minh' , 'Ha Noi' , '10-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '00', 'VB' )
