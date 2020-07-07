@@ -22,6 +22,7 @@ namespace QlyGiaiBongDa.GUI
             pnlMain.Controls.Add(usrHomepage.Instance);
             usrHomepage.Instance.Dock = DockStyle.Fill;
             usrHomepage.Instance.BringToFront();
+            usrHomepage.Instance.cb_Team_slgct.Text = "13";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

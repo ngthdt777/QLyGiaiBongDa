@@ -74,19 +74,19 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+        public int soluongct = Int32.Parse(usrHomepage.Instance.cb_Team_slgct.Text.ToString());
+
         public Boolean CheckSoLgMin()
         {
-            int tuoimin = usrRulesChange.Instance.TuoiMin;
-            if (myage > tuoimin)
+            int soluongmin = usrRulesChange.Instance.SoLgMin;
+            if (soluongct > soluongmin)
                 return true;
             else
             {
-                MessageBox.Show("Độ tuổi tối thiểu là: " + tuoimin);
+                MessageBox.Show("số lượng cầu thủ tối thiểu là: " + soluongmin);
                 return false;
             }
         }
-
-        public int soluongct = Int32.Parse(usrHomepage.Instance.cb_Team_slgct.Text.ToString());
 
 
         public Boolean CheckSoLgMax()

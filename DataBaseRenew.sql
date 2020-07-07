@@ -40,7 +40,7 @@ go
  insert into CAUTHU values ( 'HN02', 'Nguyen Van Dung', '1-04-1994', 'TrongNuoc' , 'Thi Dau 2 nam','Khoe manh', 'HNFC')
  insert into CAUTHU values ( 'HN03', 'Dau Van Toan', '2-4-1984', 'TrongNuoc' , 'Thi Dau 2 nam' ,'Khoe manh', 'HNFC')
  insert into CAUTHU values ( 'HA05', 'Manh Ngoc Ha', '23-04-1998', 'TrongNuoc' , 'Thi Dau 3 nam' ,'Khoe manh', 'HNFC')
- insert into CAUTHU values ( 'HN05', 'Nguyen Van Quyet', '13-06-1995', 'TrongNuoc' , 'Thi Dau 4 nam' ,'Khoe manh', 'HNFC')           ------------HA NOI-------------------
+ insert into CAUTHU values ( 'HN04', 'Nguyen Van Quyet', '13-06-1995', 'TrongNuoc' , 'Thi Dau 4 nam' ,'Khoe manh', 'HNFC')           ------------HA NOI-------------------
  insert into CAUTHU values ( 'HN06', 'Moses Oloya', '8-03-1998', 'NgoaiNuoc' , 'Thi Dau 1 nam' ,'Khoe manh', 'HNFC')
  insert into CAUTHU values ( 'HN07', 'Lebron James', '19-03-1995', 'NgoaiNuoc' , 'Thi Dau 2 nam' ,'Khoe manh', 'HNFC')
  insert into CAUTHU values ( 'HN08', 'Giannis Harden', '12-12-1999', 'NgoaiNuoc' , 'Thi Dau 2 nam' ,'Khoe manh', 'HNFC')
@@ -226,9 +226,13 @@ SELECT MaCauThu,TenCauThu,NgaySinh,TenLoaiCauThu,TenDoi FROM CAUTHU,DOIBONG,LOAI
 
 go
 
-SELECT MaCauThu,TenCauThu,DATEDIFF(YY,NgaySinh,GETDATE()) AS [AGE],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG where MaCauThu is not null and TenCauThu is not null and MaLoaiCauThu is not null 
-	and DOIBONG.TenDoi=' Ha Noi' and GhiChu is not null
+SELECT MaCauThu,TenCauThu,DATEDIFF(YY,NgaySinh,GETDATE()) AS [AGE],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang FROM CAUTHU,DOIBONG where MaCauThu is not null and TenCauThu is not null and LoaiCauThu is not null 
+	and DOIBONG.TenDoi is not null and ThoiGianThiDau='Thi dau 5 nam' and TinhTrang='Khoe manh'
 	and DATEDIFF(YY,NgaySinh,GETDATE()) >18 and DATEDIFF(YY,NgaySinh,GETDATE()) <30
+GROUP BY MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang
+
+
+
 
 go
 
@@ -263,9 +267,7 @@ insert into BANGXEPHANG(MaDoi) values (6)
 insert into BANGXEPHANG(MaDoi) values (8)
 
 
-Select Count(MaLoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG
-where CAUTHU.MaDoi = DOIBONG.MaDoi AND MaLoaiCauThu='NgoaiNuoc' AND DOIBONG.TenDoi='Tp.Ho Chi Minh'
 
-SELECT MaTranDau, DoiChuNha,DoiKhach,TySo from TRANDAU where MaTranDau='VB008'
 
-Select MaLoaiBanThang from BANTHANG
+
+

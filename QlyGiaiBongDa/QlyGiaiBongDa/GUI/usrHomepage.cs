@@ -44,6 +44,7 @@ namespace QlyGiaiBongDa.GUI
             btt_team_view.Text = "Tải lại";
             dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
             cb_Team_slgct.Text = "0";
+
         }
 
         public bool CheckData()

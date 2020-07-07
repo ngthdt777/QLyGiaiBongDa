@@ -76,12 +76,7 @@ namespace QlyGiaiBongDa.GUI
                 tb_hsdb_tenct.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(dtp_cauthu_ngsinh.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập ngày sinh cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dtp_cauthu_ngsinh.Focus();
-                return false;
-            }
+
             if (string.IsNullOrEmpty(cb_hsdb_loaict.Text))
             {
                 MessageBox.Show("Bạn chưa nhập loại cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,10 +89,16 @@ namespace QlyGiaiBongDa.GUI
 
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_hsdb_ghichu.Text))
+            if (string.IsNullOrEmpty(tb_hsdb_tgiantd.Text))
             {
-                MessageBox.Show("Bạn chưa nhập ghi chú của cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_hsdb_ghichu.Focus();
+                MessageBox.Show("Bạn chưa nhập thời gian thi đấu của cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_tgiantd.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(tb_hsdb_thetrang.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập thể trạng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_hsdb_thetrang.Focus();
                 return false;
             }
 
@@ -127,10 +128,10 @@ namespace QlyGiaiBongDa.GUI
             CountForeign();
             dgv_HSDB.Visible = true;
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = true;
-            lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
-            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = true;
-            lb_team_name.Visible = cbb_team_name.Visible = false;
-            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
+            lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible = true;
+            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = tb_hsdb_thetrang.Visible =  true;
+            lb_team_name.Visible = cbb_team_name.Visible= false;
+            lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible= true;
             btt_Team_View.Text = "Tải lại";
             dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
@@ -153,7 +154,8 @@ namespace QlyGiaiBongDa.GUI
                 cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
-                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
+                tb_hsdb_tgiantd.Text = dgv_HSDB.Rows[e.RowIndex].Cells["ThoiGianThiDau"].Value.ToString();
+                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
             }
         }
 
@@ -171,7 +173,8 @@ namespace QlyGiaiBongDa.GUI
                 cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
-                tb_hsdb_ghichu.Text = dgv_HSDB.Rows[e.RowIndex].Cells["GhiChu"].Value.ToString();
+                tb_hsdb_tgiantd.Text = dgv_HSDB.Rows[e.RowIndex].Cells["ThoiGianThiDau"].Value.ToString();
+                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
             }
         }
 
@@ -198,7 +201,7 @@ namespace QlyGiaiBongDa.GUI
             lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = true;
             tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = true;
             lb_team_name.Visible = cbb_team_name.Visible = false;
-            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = true;
+            lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = true;
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = true;
             ObjTeamBLL.Instance.GetListPlayer();
@@ -225,15 +228,15 @@ namespace QlyGiaiBongDa.GUI
         {
             btt_back.Visible = false;
             dgv_HSDB.Visible = false;
-            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = false;
-            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = false;
+            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible= false;
+            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = tb_hsdb_thetrang.Visible = false;
             lb_team_name.Visible = cbb_team_name.Visible = true;
-            lb_hsdb_ghichu.Visible = tb_hsdb_ghichu.Visible = false;
+            lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = false;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = false;
             btt_Team_View.Text = "Hiển thị";
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = false;
         }
-        public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
+        public string connectionSTR = DataProvider.Instance.connectionSTR;
 
         private void CountForeign()
         {

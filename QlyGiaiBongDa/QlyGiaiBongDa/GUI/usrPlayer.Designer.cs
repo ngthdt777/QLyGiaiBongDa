@@ -36,10 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_thetrang = new Guna.UI.WinForms.GunaTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.tb_tuoimax = new Guna.UI.WinForms.GunaTextBox();
             this.tb_tuoimin = new Guna.UI.WinForms.GunaTextBox();
             this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
-            this.tb_GhiChu = new Guna.UI.WinForms.GunaTextBox();
+            this.tb_tgian = new Guna.UI.WinForms.GunaTextBox();
             this.cb_LoaiSoSanh = new Guna.UI.WinForms.GunaComboBox();
             this.nmc_BanThang = new Guna.UI.WinForms.GunaNumeric();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,13 +58,12 @@
             this.lb_player_type = new Guna.UI.WinForms.GunaLabel();
             this.lb_player_team = new Guna.UI.WinForms.GunaLabel();
             this.dgv_TCCT = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianThiDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
-            this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
@@ -110,11 +112,13 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.tb_thetrang);
+            this.gb_HSDB.Controls.Add(this.label6);
             this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.tb_tuoimax);
             this.gb_HSDB.Controls.Add(this.tb_tuoimin);
             this.gb_HSDB.Controls.Add(this.cbb_team_name);
-            this.gb_HSDB.Controls.Add(this.tb_GhiChu);
+            this.gb_HSDB.Controls.Add(this.tb_tgian);
             this.gb_HSDB.Controls.Add(this.cb_LoaiSoSanh);
             this.gb_HSDB.Controls.Add(this.nmc_BanThang);
             this.gb_HSDB.Controls.Add(this.label5);
@@ -139,6 +143,47 @@
             this.gb_HSDB.TabIndex = 2;
             this.gb_HSDB.Text = "Thông tin tìm kiếm";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // tb_thetrang
+            // 
+            this.tb_thetrang.BaseColor = System.Drawing.Color.White;
+            this.tb_thetrang.BorderColor = System.Drawing.Color.Silver;
+            this.tb_thetrang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_thetrang.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_thetrang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_thetrang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_thetrang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_thetrang.ForeColor = System.Drawing.Color.Black;
+            this.tb_thetrang.Location = new System.Drawing.Point(768, 202);
+            this.tb_thetrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_thetrang.Name = "tb_thetrang";
+            this.tb_thetrang.PasswordChar = '\0';
+            this.tb_thetrang.SelectedText = "";
+            this.tb_thetrang.Size = new System.Drawing.Size(155, 37);
+            this.tb_thetrang.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(596, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 32);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Thể trạng: ";
+            // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1116, 32);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
+            this.lb_Guide.TabIndex = 22;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
             // 
             // tb_tuoimax
             // 
@@ -199,22 +244,23 @@
             this.cbb_team_name.Size = new System.Drawing.Size(183, 31);
             this.cbb_team_name.TabIndex = 19;
             // 
-            // tb_GhiChu
+            // tb_tgian
             // 
-            this.tb_GhiChu.BaseColor = System.Drawing.Color.White;
-            this.tb_GhiChu.BorderColor = System.Drawing.Color.Silver;
-            this.tb_GhiChu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_GhiChu.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_GhiChu.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_GhiChu.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_GhiChu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_GhiChu.Location = new System.Drawing.Point(709, 153);
-            this.tb_GhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_GhiChu.Name = "tb_GhiChu";
-            this.tb_GhiChu.PasswordChar = '\0';
-            this.tb_GhiChu.SelectedText = "";
-            this.tb_GhiChu.Size = new System.Drawing.Size(264, 37);
-            this.tb_GhiChu.TabIndex = 18;
+            this.tb_tgian.BaseColor = System.Drawing.Color.White;
+            this.tb_tgian.BorderColor = System.Drawing.Color.Silver;
+            this.tb_tgian.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_tgian.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_tgian.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_tgian.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_tgian.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_tgian.ForeColor = System.Drawing.Color.Black;
+            this.tb_tgian.Location = new System.Drawing.Point(818, 153);
+            this.tb_tgian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_tgian.Name = "tb_tgian";
+            this.tb_tgian.PasswordChar = '\0';
+            this.tb_tgian.SelectedText = "";
+            this.tb_tgian.Size = new System.Drawing.Size(155, 37);
+            this.tb_tgian.TabIndex = 18;
             // 
             // cb_LoaiSoSanh
             // 
@@ -288,9 +334,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(596, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 32);
+            this.label3.Size = new System.Drawing.Size(216, 32);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ghi chú";
+            this.label3.Text = "Thời gian thi đấu:";
             // 
             // label2
             // 
@@ -454,8 +500,8 @@
             this.dgv_TCCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
             this.TenCauThu,
-            this.MaLoaiCauThu,
-            this.GhiChu,
+            this.LoaiCauThu,
+            this.ThoiGianThiDau,
             this.TenDoi});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -471,6 +517,7 @@
             this.dgv_TCCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_TCCT.Name = "dgv_TCCT";
             this.dgv_TCCT.RowHeadersVisible = false;
+            this.dgv_TCCT.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_TCCT.RowTemplate.Height = 24;
             this.dgv_TCCT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TCCT.Size = new System.Drawing.Size(1248, 340);
@@ -498,6 +545,12 @@
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // gunaImageReplaceColor1
+            // 
+            this.gunaImageReplaceColor1.Image = null;
+            this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
+            this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
+            // 
             // MaCauThu
             // 
             this.MaCauThu.DataPropertyName = "MaCauThu";
@@ -510,41 +563,23 @@
             this.TenCauThu.HeaderText = "Tên Cầu Thủ";
             this.TenCauThu.Name = "TenCauThu";
             // 
-            // MaLoaiCauThu
+            // LoaiCauThu
             // 
-            this.MaLoaiCauThu.DataPropertyName = "MaLoaiCauThu";
-            this.MaLoaiCauThu.HeaderText = "Loại Cầu Thủ";
-            this.MaLoaiCauThu.Name = "MaLoaiCauThu";
+            this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
+            this.LoaiCauThu.HeaderText = "Loại Cầu Thủ";
+            this.LoaiCauThu.Name = "LoaiCauThu";
             // 
-            // GhiChu
+            // ThoiGianThiDau
             // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
+            this.ThoiGianThiDau.DataPropertyName = "ThoiGianThiDau";
+            this.ThoiGianThiDau.HeaderText = "Thời gian thi đấu";
+            this.ThoiGianThiDau.Name = "ThoiGianThiDau";
             // 
             // TenDoi
             // 
             this.TenDoi.DataPropertyName = "TenDoi";
             this.TenDoi.HeaderText = "Tên Đội";
             this.TenDoi.Name = "TenDoi";
-            // 
-            // lb_Guide
-            // 
-            this.lb_Guide.AutoSize = true;
-            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Guide.Location = new System.Drawing.Point(1116, 32);
-            this.lb_Guide.Name = "lb_Guide";
-            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
-            this.lb_Guide.TabIndex = 22;
-            this.lb_Guide.TabStop = true;
-            this.lb_Guide.Text = "Hướng dẫn";
-            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
-            // 
-            // gunaImageReplaceColor1
-            // 
-            this.gunaImageReplaceColor1.Image = null;
-            this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
-            this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
             // 
             // usrPlayer
             // 
@@ -580,18 +615,20 @@
         public Guna.UI.WinForms.GunaComboBox cb_LoaiCT;
         public Guna.UI.WinForms.GunaTextBox tb_HoTen;
         public Guna.UI.WinForms.GunaTextBox tb_MaCT;
-        public Guna.UI.WinForms.GunaTextBox tb_GhiChu;
+        public Guna.UI.WinForms.GunaTextBox tb_tgian;
         public Guna.UI.WinForms.GunaComboBox cb_LoaiSoSanh;
         public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         public Guna.UI.WinForms.GunaTextBox tb_tuoimax;
         public Guna.UI.WinForms.GunaTextBox tb_tuoimin;
         public Guna.UI.WinForms.GunaDataGridView dgv_TCCT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor1;
+        public Guna.UI.WinForms.GunaTextBox tb_thetrang;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianThiDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
     }
 }

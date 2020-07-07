@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrTeamList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_hsdb = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
@@ -41,8 +41,8 @@
             this.dtp_cauthu_ngsinh = new System.Windows.Forms.DateTimePicker();
             this.btt_back = new Guna.UI.WinForms.GunaButton();
             this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
-            this.tb_hsdb_ghichu = new Guna.UI.WinForms.GunaTextBox();
-            this.lb_hsdb_ghichu = new Guna.UI.WinForms.GunaLabel();
+            this.tb_hsdb_tgiantd = new Guna.UI.WinForms.GunaTextBox();
+            this.lb_hsdb_tgiantd = new Guna.UI.WinForms.GunaLabel();
             this.tb_hsdb_tenct = new Guna.UI.WinForms.GunaTextBox();
             this.tb_hsdb_mact = new Guna.UI.WinForms.GunaTextBox();
             this.lb_hsdb_loaict = new Guna.UI.WinForms.GunaLabel();
@@ -54,9 +54,6 @@
             this.lb_team_name = new Guna.UI.WinForms.GunaLabel();
             this.lb_team_id = new Guna.UI.WinForms.GunaLabel();
             this.dgv_HSDB = new Guna.UI.WinForms.GunaDataGridView();
-            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
-            this.btt_Them = new Guna.UI.WinForms.GunaButton();
-            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
             this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +61,11 @@
             this.ThoiGianThiDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
+            this.btt_Them = new Guna.UI.WinForms.GunaButton();
+            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
+            this.lb_hsdb_thetrang = new Guna.UI.WinForms.GunaLabel();
+            this.tb_hsdb_thetrang = new Guna.UI.WinForms.GunaTextBox();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HSDB)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +100,8 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.tb_hsdb_thetrang);
+            this.gb_HSDB.Controls.Add(this.lb_hsdb_thetrang);
             this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_sctnq);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_soctngoaiquoc);
@@ -105,8 +109,8 @@
             this.gb_HSDB.Controls.Add(this.dtp_cauthu_ngsinh);
             this.gb_HSDB.Controls.Add(this.btt_back);
             this.gb_HSDB.Controls.Add(this.cbb_team_name);
-            this.gb_HSDB.Controls.Add(this.tb_hsdb_ghichu);
-            this.gb_HSDB.Controls.Add(this.lb_hsdb_ghichu);
+            this.gb_HSDB.Controls.Add(this.tb_hsdb_tgiantd);
+            this.gb_HSDB.Controls.Add(this.lb_hsdb_tgiantd);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_tenct);
             this.gb_HSDB.Controls.Add(this.tb_hsdb_mact);
             this.gb_HSDB.Controls.Add(this.lb_hsdb_loaict);
@@ -156,7 +160,7 @@
             this.lb_hsdb_soctngoaiquoc.BackColor = System.Drawing.Color.Transparent;
             this.lb_hsdb_soctngoaiquoc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_soctngoaiquoc.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_soctngoaiquoc.Location = new System.Drawing.Point(177, 226);
+            this.lb_hsdb_soctngoaiquoc.Location = new System.Drawing.Point(171, 226);
             this.lb_hsdb_soctngoaiquoc.Name = "lb_hsdb_soctngoaiquoc";
             this.lb_hsdb_soctngoaiquoc.Size = new System.Drawing.Size(278, 32);
             this.lb_hsdb_soctngoaiquoc.TabIndex = 22;
@@ -231,43 +235,43 @@
             this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbb_team_name.ForeColor = System.Drawing.Color.Black;
             this.cbb_team_name.FormattingEnabled = true;
-            this.cbb_team_name.Location = new System.Drawing.Point(573, 55);
+            this.cbb_team_name.Location = new System.Drawing.Point(533, 53);
             this.cbb_team_name.Name = "cbb_team_name";
             this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbb_team_name.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbb_team_name.Size = new System.Drawing.Size(160, 31);
             this.cbb_team_name.TabIndex = 18;
             // 
-            // tb_hsdb_ghichu
+            // tb_hsdb_tgiantd
             // 
-            this.tb_hsdb_ghichu.BaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_ghichu.BorderColor = System.Drawing.Color.Silver;
-            this.tb_hsdb_ghichu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_hsdb_ghichu.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_ghichu.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_hsdb_ghichu.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_hsdb_ghichu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_hsdb_ghichu.ForeColor = System.Drawing.Color.Black;
-            this.tb_hsdb_ghichu.Location = new System.Drawing.Point(782, 55);
-            this.tb_hsdb_ghichu.Name = "tb_hsdb_ghichu";
-            this.tb_hsdb_ghichu.PasswordChar = '\0';
-            this.tb_hsdb_ghichu.SelectedText = "";
-            this.tb_hsdb_ghichu.Size = new System.Drawing.Size(160, 32);
-            this.tb_hsdb_ghichu.TabIndex = 17;
-            this.tb_hsdb_ghichu.Visible = false;
+            this.tb_hsdb_tgiantd.BaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_tgiantd.BorderColor = System.Drawing.Color.Silver;
+            this.tb_hsdb_tgiantd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_hsdb_tgiantd.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_tgiantd.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_hsdb_tgiantd.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_hsdb_tgiantd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_hsdb_tgiantd.ForeColor = System.Drawing.Color.Black;
+            this.tb_hsdb_tgiantd.Location = new System.Drawing.Point(782, 55);
+            this.tb_hsdb_tgiantd.Name = "tb_hsdb_tgiantd";
+            this.tb_hsdb_tgiantd.PasswordChar = '\0';
+            this.tb_hsdb_tgiantd.SelectedText = "";
+            this.tb_hsdb_tgiantd.Size = new System.Drawing.Size(160, 32);
+            this.tb_hsdb_tgiantd.TabIndex = 17;
+            this.tb_hsdb_tgiantd.Visible = false;
             // 
-            // lb_hsdb_ghichu
+            // lb_hsdb_tgiantd
             // 
-            this.lb_hsdb_ghichu.AutoSize = true;
-            this.lb_hsdb_ghichu.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_ghichu.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hsdb_ghichu.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_ghichu.Location = new System.Drawing.Point(619, 55);
-            this.lb_hsdb_ghichu.Name = "lb_hsdb_ghichu";
-            this.lb_hsdb_ghichu.Size = new System.Drawing.Size(102, 32);
-            this.lb_hsdb_ghichu.TabIndex = 16;
-            this.lb_hsdb_ghichu.Text = "Ghi chú:";
-            this.lb_hsdb_ghichu.Visible = false;
+            this.lb_hsdb_tgiantd.AutoSize = true;
+            this.lb_hsdb_tgiantd.BackColor = System.Drawing.Color.Transparent;
+            this.lb_hsdb_tgiantd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_tgiantd.ForeColor = System.Drawing.Color.Black;
+            this.lb_hsdb_tgiantd.Location = new System.Drawing.Point(560, 55);
+            this.lb_hsdb_tgiantd.Name = "lb_hsdb_tgiantd";
+            this.lb_hsdb_tgiantd.Size = new System.Drawing.Size(216, 32);
+            this.lb_hsdb_tgiantd.TabIndex = 16;
+            this.lb_hsdb_tgiantd.Text = "Thời gian thi đấu:";
+            this.lb_hsdb_tgiantd.Visible = false;
             // 
             // tb_hsdb_tenct
             // 
@@ -337,7 +341,7 @@
             this.lb_hsdb_Tenct.BackColor = System.Drawing.Color.Transparent;
             this.lb_hsdb_Tenct.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_Tenct.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_Tenct.Location = new System.Drawing.Point(177, 170);
+            this.lb_hsdb_Tenct.Location = new System.Drawing.Point(167, 170);
             this.lb_hsdb_Tenct.Name = "lb_hsdb_Tenct";
             this.lb_hsdb_Tenct.Size = new System.Drawing.Size(154, 32);
             this.lb_hsdb_Tenct.TabIndex = 9;
@@ -350,7 +354,7 @@
             this.lb_hsdb_mact.BackColor = System.Drawing.Color.Transparent;
             this.lb_hsdb_mact.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_mact.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_mact.Location = new System.Drawing.Point(177, 111);
+            this.lb_hsdb_mact.Location = new System.Drawing.Point(171, 111);
             this.lb_hsdb_mact.Name = "lb_hsdb_mact";
             this.lb_hsdb_mact.Size = new System.Drawing.Size(150, 32);
             this.lb_hsdb_mact.TabIndex = 8;
@@ -407,7 +411,7 @@
             this.lb_team_name.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_name.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_name.Location = new System.Drawing.Point(446, 52);
+            this.lb_team_name.Location = new System.Drawing.Point(421, 53);
             this.lb_team_name.Name = "lb_team_name";
             this.lb_team_name.Size = new System.Drawing.Size(106, 32);
             this.lb_team_name.TabIndex = 1;
@@ -419,7 +423,7 @@
             this.lb_team_id.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_id.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_id.Location = new System.Drawing.Point(177, 52);
+            this.lb_team_id.Location = new System.Drawing.Point(171, 55);
             this.lb_team_id.Name = "lb_team_id";
             this.lb_team_id.Size = new System.Drawing.Size(102, 32);
             this.lb_team_id.TabIndex = 0;
@@ -428,8 +432,8 @@
             // 
             // dgv_HSDB
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_HSDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_HSDB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -437,14 +441,14 @@
             this.dgv_HSDB.BackgroundColor = System.Drawing.Color.White;
             this.dgv_HSDB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_HSDB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HSDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_HSDB.ColumnHeadersHeight = 30;
             this.dgv_HSDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
@@ -454,14 +458,14 @@
             this.ThoiGianThiDau,
             this.TinhTrang,
             this.MaDoi});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_HSDB.EnableHeadersVisualStyles = false;
             this.dgv_HSDB.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_HSDB.Location = new System.Drawing.Point(0, 364);
@@ -497,6 +501,56 @@
             this.dgv_HSDB.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_HSDB.Visible = false;
             this.dgv_HSDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HSDB_CellContentClick);
+            // 
+            // MaCauThu
+            // 
+            this.MaCauThu.DataPropertyName = "MaCauThu";
+            this.MaCauThu.FillWeight = 40F;
+            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
+            this.MaCauThu.Name = "MaCauThu";
+            this.MaCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // TenCauThu
+            // 
+            this.TenCauThu.DataPropertyName = "TenCauThu";
+            this.TenCauThu.FillWeight = 60F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.FillWeight = 40F;
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            // 
+            // LoaiCauThu
+            // 
+            this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
+            this.LoaiCauThu.FillWeight = 40F;
+            this.LoaiCauThu.HeaderText = "Tên Loại Cầu Thủ";
+            this.LoaiCauThu.Name = "LoaiCauThu";
+            // 
+            // ThoiGianThiDau
+            // 
+            this.ThoiGianThiDau.DataPropertyName = "ThoiGianThiDau";
+            this.ThoiGianThiDau.FillWeight = 40F;
+            this.ThoiGianThiDau.HeaderText = "Thời Gian Thi Đấu";
+            this.ThoiGianThiDau.Name = "ThoiGianThiDau";
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            this.TinhTrang.FillWeight = 40F;
+            this.TinhTrang.HeaderText = "Tình Trạng";
+            this.TinhTrang.Name = "TinhTrang";
+            // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.FillWeight = 20F;
+            this.MaDoi.HeaderText = "Mã Đội";
+            this.MaDoi.Name = "MaDoi";
             // 
             // Btt_xoa
             // 
@@ -579,55 +633,36 @@
             this.Btt_sua.Visible = false;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
-            // MaCauThu
+            // lb_hsdb_thetrang
             // 
-            this.MaCauThu.DataPropertyName = "MaCauThu";
-            this.MaCauThu.FillWeight = 40F;
-            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
-            this.MaCauThu.Name = "MaCauThu";
-            this.MaCauThu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.lb_hsdb_thetrang.AutoSize = true;
+            this.lb_hsdb_thetrang.BackColor = System.Drawing.Color.Transparent;
+            this.lb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
+            this.lb_hsdb_thetrang.Location = new System.Drawing.Point(619, 226);
+            this.lb_hsdb_thetrang.Name = "lb_hsdb_thetrang";
+            this.lb_hsdb_thetrang.Size = new System.Drawing.Size(132, 32);
+            this.lb_hsdb_thetrang.TabIndex = 25;
+            this.lb_hsdb_thetrang.Text = "Thể trạng:";
+            this.lb_hsdb_thetrang.Visible = false;
             // 
-            // TenCauThu
+            // tb_hsdb_thetrang
             // 
-            this.TenCauThu.DataPropertyName = "TenCauThu";
-            this.TenCauThu.FillWeight = 60F;
-            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
-            this.TenCauThu.Name = "TenCauThu";
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.FillWeight = 40F;
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            // 
-            // LoaiCauThu
-            // 
-            this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
-            this.LoaiCauThu.FillWeight = 40F;
-            this.LoaiCauThu.HeaderText = "Tên Loại Cầu Thủ";
-            this.LoaiCauThu.Name = "LoaiCauThu";
-            // 
-            // ThoiGianThiDau
-            // 
-            this.ThoiGianThiDau.DataPropertyName = "ThoiGianThiDau";
-            this.ThoiGianThiDau.FillWeight = 40F;
-            this.ThoiGianThiDau.HeaderText = "Thời Gian Thi Đấu";
-            this.ThoiGianThiDau.Name = "ThoiGianThiDau";
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.FillWeight = 40F;
-            this.TinhTrang.HeaderText = "Tình Trạng";
-            this.TinhTrang.Name = "TinhTrang";
-            // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.FillWeight = 20F;
-            this.MaDoi.HeaderText = "Mã Đội";
-            this.MaDoi.Name = "MaDoi";
+            this.tb_hsdb_thetrang.BaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_thetrang.BorderColor = System.Drawing.Color.Silver;
+            this.tb_hsdb_thetrang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_hsdb_thetrang.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_thetrang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_hsdb_thetrang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
+            this.tb_hsdb_thetrang.Location = new System.Drawing.Point(782, 226);
+            this.tb_hsdb_thetrang.Name = "tb_hsdb_thetrang";
+            this.tb_hsdb_thetrang.PasswordChar = '\0';
+            this.tb_hsdb_thetrang.SelectedText = "";
+            this.tb_hsdb_thetrang.Size = new System.Drawing.Size(160, 32);
+            this.tb_hsdb_thetrang.TabIndex = 26;
+            this.tb_hsdb_thetrang.Visible = false;
             // 
             // usrTeamList
             // 
@@ -667,8 +702,7 @@
         private Guna.UI.WinForms.GunaLabel lb_hsdb_mact;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_tenct;
         public Guna.UI.WinForms.GunaTextBox tb_hsdb_mact;
-        public Guna.UI.WinForms.GunaTextBox tb_hsdb_ghichu;
-        private Guna.UI.WinForms.GunaLabel lb_hsdb_ghichu;
+        public Guna.UI.WinForms.GunaTextBox tb_hsdb_tgiantd;
         public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         private Guna.UI.WinForms.GunaButton btt_back;
         public System.Windows.Forms.DateTimePicker dtp_cauthu_ngsinh;
@@ -683,5 +717,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianThiDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoi;
+        public Guna.UI.WinForms.GunaTextBox tb_hsdb_thetrang;
+        private Guna.UI.WinForms.GunaLabel lb_hsdb_thetrang;
+        public Guna.UI.WinForms.GunaLabel lb_hsdb_tgiantd;
     }
 }

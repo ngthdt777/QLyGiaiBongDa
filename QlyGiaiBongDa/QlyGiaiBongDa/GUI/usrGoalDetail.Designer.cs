@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.cb1 = new System.Windows.Forms.ComboBox();
             this.tb_MaTranDau = new Guna.UI.WinForms.GunaTextBox();
             this.tb_ThoiDiem = new Guna.UI.WinForms.GunaTextBox();
@@ -51,7 +52,6 @@
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +102,18 @@
             this.gb_HSDB.Text = "Chi tiết bàn thắng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1121, 37);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(115, 25);
+            this.lb_Guide.TabIndex = 24;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
+            // 
             // cb1
             // 
             this.cb1.FormattingEnabled = true;
@@ -140,7 +152,7 @@
             this.tb_ThoiDiem.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_ThoiDiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ThoiDiem.ForeColor = System.Drawing.Color.Black;
-            this.tb_ThoiDiem.Location = new System.Drawing.Point(507, 125);
+            this.tb_ThoiDiem.Location = new System.Drawing.Point(480, 125);
             this.tb_ThoiDiem.Name = "tb_ThoiDiem";
             this.tb_ThoiDiem.PasswordChar = '\0';
             this.tb_ThoiDiem.SelectedText = "";
@@ -159,7 +171,7 @@
             this.tb_MaLoaiBanThang.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaLoaiBanThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaLoaiBanThang.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaLoaiBanThang.Location = new System.Drawing.Point(507, 59);
+            this.tb_MaLoaiBanThang.Location = new System.Drawing.Point(480, 59);
             this.tb_MaLoaiBanThang.Name = "tb_MaLoaiBanThang";
             this.tb_MaLoaiBanThang.PasswordChar = '\0';
             this.tb_MaLoaiBanThang.SelectedText = "";
@@ -397,18 +409,6 @@
             this.Btt_sua.Text = "Sửa";
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
-            // 
-            // lb_Guide
-            // 
-            this.lb_Guide.AutoSize = true;
-            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Guide.Location = new System.Drawing.Point(1121, 37);
-            this.lb_Guide.Name = "lb_Guide";
-            this.lb_Guide.Size = new System.Drawing.Size(115, 25);
-            this.lb_Guide.TabIndex = 24;
-            this.lb_Guide.TabStop = true;
-            this.lb_Guide.Text = "Hướng dẫn";
-            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
             // 
             // usrGoalDetail
             // 

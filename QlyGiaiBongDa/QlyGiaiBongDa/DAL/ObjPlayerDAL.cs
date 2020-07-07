@@ -63,7 +63,7 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListFindPlayer()
         {
-            string id, ten, loaict, doibong, tuoi_min, tuoi_max, ghichu;
+            string id, ten, loaict, doibong, tuoi_min, tuoi_max, tgian,thetrang;
 
 
             if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_MaCT.Text))
@@ -92,16 +92,22 @@ namespace QlyGiaiBongDa.DAL
                 tuoi_max = "<"+ "(SELECT CAST('" + usrPlayer.Instance.tb_tuoimax.Text + "' as int))";
             else tuoi_max = "is not null";
 
-            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_GhiChu.Text))
-                ghichu = "='" + usrPlayer.Instance.tb_GhiChu.Text + "'";
-            else ghichu = "is not null";
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tgian.Text))
+                tgian = "='" + usrPlayer.Instance.tb_tgian.Text + "'";
+            else tgian= "is not null";
+
+
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_thetrang.Text))
+                thetrang = "='" + usrPlayer.Instance.tb_thetrang.Text + "'";
+            else thetrang = "is not null";
+
 
 
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[Tuổi Cầu Thủ],MaLoaiCauThu,TenDoi,GhiChu FROM CAUTHU,DOIBONG" +
-                                " where MaCauThu "+ id + " and TenCauThu " + ten + " and MaLoaiCauThu " + loaict + "" +
-                                 " and DOIBONG.TenDoi " + doibong + "  and GhiChu " + ghichu + " " +
-                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max ;
+            string LoadQuery = "SELECT DISTINCT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[Tuổi Cầu Thủ],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang FROM CAUTHU,DOIBONG" +
+                                " where MaCauThu "+ id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
+                                 " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +
+                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }

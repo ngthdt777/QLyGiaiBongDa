@@ -107,7 +107,7 @@ namespace QlyGiaiBongDa.DAL
             string ngsinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
             string loaict = usrTeamList.Instance.cb_hsdb_loaict.Text.ToString();        
             string madoi = usrTeamList.Instance.tb_MaDoi.Text;
-            string ghichu = usrTeamList.Instance.tb_hsdb_ghichu.Text;
+            string ghichu = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
 
             if (CheckMaDoi(id) == true)
             {
@@ -229,12 +229,13 @@ namespace QlyGiaiBongDa.DAL
             string tencauthu = usrTeamList.Instance.tb_hsdb_tenct.Text;
             string ngaysinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
             string loaiCT = usrTeamList.Instance.cb_hsdb_loaict.Text;
-            string GhiChu = usrTeamList.Instance.tb_hsdb_ghichu.Text;
+            string tgian = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
+            string thetrang = usrTeamList.Instance.tb_hsdb_thetrang.Text;
             // MessageBox.Show(id);
 
 
             string UpdateQuery = "UPDATE CAUTHU " +
-                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', GhiChu = '" + GhiChu + "' " +
+                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', ThoiGianThiDau = '" + tgian + "',TheTrang ='"+thetrang+"'"+
                  " WHERE MaCauThu = '" + id + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)
