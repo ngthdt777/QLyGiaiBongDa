@@ -43,15 +43,15 @@
             this.tb_MaBanThang = new Guna.UI.WinForms.GunaTextBox();
             this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.dgv_CTBT = new Guna.UI.WinForms.GunaDataGridView();
-            this.MaBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTranDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btt_Them = new Guna.UI.WinForms.GunaButton();
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.MaBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTranDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).BeginInit();
             this.SuspendLayout();
@@ -255,7 +255,7 @@
             this.dgv_CTBT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaBanThang,
             this.MaCauThu,
-            this.MaLoaiBanThang,
+            this.LoaiBanThang,
             this.ThoiDiem,
             this.MaTranDau});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -298,39 +298,6 @@
             this.dgv_CTBT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_CTBT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_CTBT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CTBT_CellContentClick);
-            // 
-            // MaBanThang
-            // 
-            this.MaBanThang.DataPropertyName = "MaBanThang";
-            this.MaBanThang.FillWeight = 40F;
-            this.MaBanThang.HeaderText = "Mã Bàn Thắng";
-            this.MaBanThang.Name = "MaBanThang";
-            // 
-            // MaCauThu
-            // 
-            this.MaCauThu.DataPropertyName = "MaCauThu";
-            this.MaCauThu.FillWeight = 50F;
-            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
-            this.MaCauThu.Name = "MaCauThu";
-            // 
-            // MaLoaiBanThang
-            // 
-            this.MaLoaiBanThang.DataPropertyName = "MaLoaiBanThang";
-            this.MaLoaiBanThang.FillWeight = 40F;
-            this.MaLoaiBanThang.HeaderText = "Loại Bàn Thắng";
-            this.MaLoaiBanThang.Name = "MaLoaiBanThang";
-            // 
-            // ThoiDiem
-            // 
-            this.ThoiDiem.DataPropertyName = "ThoiDiem";
-            this.ThoiDiem.HeaderText = "Thời Điểm";
-            this.ThoiDiem.Name = "ThoiDiem";
-            // 
-            // MaTranDau
-            // 
-            this.MaTranDau.DataPropertyName = "MaTranDau";
-            this.MaTranDau.HeaderText = "Mã Trận Đấu";
-            this.MaTranDau.Name = "MaTranDau";
             // 
             // btt_Them
             // 
@@ -410,6 +377,39 @@
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
+            // MaBanThang
+            // 
+            this.MaBanThang.DataPropertyName = "MaBanThang";
+            this.MaBanThang.FillWeight = 40F;
+            this.MaBanThang.HeaderText = "Mã Bàn Thắng";
+            this.MaBanThang.Name = "MaBanThang";
+            // 
+            // MaCauThu
+            // 
+            this.MaCauThu.DataPropertyName = "MaCauThu";
+            this.MaCauThu.FillWeight = 50F;
+            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
+            this.MaCauThu.Name = "MaCauThu";
+            // 
+            // LoaiBanThang
+            // 
+            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
+            this.LoaiBanThang.FillWeight = 40F;
+            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
+            this.LoaiBanThang.Name = "LoaiBanThang";
+            // 
+            // ThoiDiem
+            // 
+            this.ThoiDiem.DataPropertyName = "ThoiDiem";
+            this.ThoiDiem.HeaderText = "Thời Điểm";
+            this.ThoiDiem.Name = "ThoiDiem";
+            // 
+            // MaTranDau
+            // 
+            this.MaTranDau.DataPropertyName = "MaTranDau";
+            this.MaTranDau.HeaderText = "Mã Trận Đấu";
+            this.MaTranDau.Name = "MaTranDau";
+            // 
             // usrGoalDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,11 +435,6 @@
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaContextMenuStrip gunaContextMenuStrip1;
         public Guna.UI.WinForms.GunaDataGridView dgv_CTBT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanThang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiBanThang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiDiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTranDau;
         public Guna.UI.WinForms.GunaTextBox tb_MaTranDau;
         public Guna.UI.WinForms.GunaTextBox tb_ThoiDiem;
         public Guna.UI.WinForms.GunaTextBox tb_MaCauThu;
@@ -452,5 +447,10 @@
         public Guna.UI.WinForms.GunaTextBox tb_MaLoaiBanThang;
         public System.Windows.Forms.ComboBox cb1;
         private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanThang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanThang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiDiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTranDau;
     }
 }

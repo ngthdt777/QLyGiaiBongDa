@@ -80,14 +80,10 @@ namespace QlyGiaiBongDa.GUI
             MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
         }
 
-      /* private void usrRulesChange_Load(object sender, EventArgs e)
-        {
-            dgv_LoaiBanThang.DataSource = ObjRulesChangeBLL.Instance.GetGoalType();
-        }
-        */
+     
         private void usrRulesChange_Load_1(object sender, EventArgs e)
         {
-           // dgv_LoaiBanThang.DataSource = ObjRulesChangeBLL.Instance.GetGoalType();
+            dgv_LoaiBanThang.DataSource = ObjRulesChangeBLL.Instance.GetGoalType();
         }
 
         private void btn_ThemBan_Click(object sender, EventArgs e)
@@ -102,11 +98,11 @@ namespace QlyGiaiBongDa.GUI
 
         private void dgv_LoaiBanThang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          /*  int index = e.RowIndex;
+            int index = e.RowIndex;
             if (index >= 0)
             {
-                tb_LoaiBan.Text = dgv_LoaiBanThang.Rows[e.RowIndex].Cells["TenLoaiBanThang"].Value.ToString();
-            }*/
+                tb_LoaiBan.Text = dgv_LoaiBanThang.Rows[e.RowIndex].Cells["LoaiBanThang"].Value.ToString();
+            }
         }
 
         private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

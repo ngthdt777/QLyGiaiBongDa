@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.tb_RC_countForeign = new MetroFramework.Controls.MetroTextBox();
             this.nm_formax = new Guna.UI.WinForms.GunaNumeric();
             this.nm_slgmax = new Guna.UI.WinForms.GunaNumeric();
@@ -54,7 +55,6 @@
             this.btn_XoaBan = new Guna.UI.WinForms.GunaButton();
             this.btn_ThemBan = new Guna.UI.WinForms.GunaButton();
             this.dgv_LoaiBanThang = new Guna.UI.WinForms.GunaDataGridView();
-            this.TenLoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
             this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
             this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
@@ -66,7 +66,7 @@
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
+            this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
@@ -128,6 +128,18 @@
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Quy định tiếp nhận hồ sơ đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // lb_Guide
+            // 
+            this.lb_Guide.AutoSize = true;
+            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Guide.Location = new System.Drawing.Point(1099, 37);
+            this.lb_Guide.Name = "lb_Guide";
+            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
+            this.lb_Guide.TabIndex = 45;
+            this.lb_Guide.TabStop = true;
+            this.lb_Guide.Text = "Hướng dẫn";
+            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
             // 
             // tb_RC_countForeign
             // 
@@ -483,7 +495,7 @@
             this.dgv_LoaiBanThang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_LoaiBanThang.ColumnHeadersHeight = 26;
             this.dgv_LoaiBanThang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenLoaiBanThang});
+            this.LoaiBanThang});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,12 +537,6 @@
             this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_LoaiBanThang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LoaiBanThang_CellContentClick);
             // 
-            // TenLoaiBanThang
-            // 
-            this.TenLoaiBanThang.DataPropertyName = "TenLoaiBanThang";
-            this.TenLoaiBanThang.HeaderText = "Loại Bàn Thắng";
-            this.TenLoaiBanThang.Name = "TenLoaiBanThang";
-            // 
             // nm_diemthua
             // 
             this.nm_diemthua.BaseColor = System.Drawing.Color.White;
@@ -539,7 +545,7 @@
             this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthua.Location = new System.Drawing.Point(1146, 145);
+            this.nm_diemthua.Location = new System.Drawing.Point(1009, 146);
             this.nm_diemthua.Maximum = ((long)(9999999));
             this.nm_diemthua.Minimum = ((long)(0));
             this.nm_diemthua.Name = "nm_diemthua";
@@ -556,7 +562,7 @@
             this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthang.Location = new System.Drawing.Point(1146, 55);
+            this.nm_diemthang.Location = new System.Drawing.Point(1009, 56);
             this.nm_diemthang.Maximum = ((long)(9999999));
             this.nm_diemthang.Minimum = ((long)(3));
             this.nm_diemthang.Name = "nm_diemthang";
@@ -573,7 +579,7 @@
             this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
             this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemhoa.Location = new System.Drawing.Point(1146, 102);
+            this.nm_diemhoa.Location = new System.Drawing.Point(1009, 103);
             this.nm_diemhoa.Maximum = ((long)(9999999));
             this.nm_diemhoa.Minimum = ((long)(1));
             this.nm_diemhoa.Name = "nm_diemhoa";
@@ -630,7 +636,7 @@
             this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel13.Location = new System.Drawing.Point(980, 145);
+            this.gunaLabel13.Location = new System.Drawing.Point(843, 146);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
             this.gunaLabel13.TabIndex = 23;
@@ -642,7 +648,7 @@
             this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel12.Location = new System.Drawing.Point(980, 102);
+            this.gunaLabel12.Location = new System.Drawing.Point(843, 103);
             this.gunaLabel12.Name = "gunaLabel12";
             this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
             this.gunaLabel12.TabIndex = 22;
@@ -654,7 +660,7 @@
             this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(980, 55);
+            this.gunaLabel11.Location = new System.Drawing.Point(843, 56);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
             this.gunaLabel11.TabIndex = 21;
@@ -709,17 +715,11 @@
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
             // 
-            // lb_Guide
+            // LoaiBanThang
             // 
-            this.lb_Guide.AutoSize = true;
-            this.lb_Guide.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Guide.Location = new System.Drawing.Point(1099, 37);
-            this.lb_Guide.Name = "lb_Guide";
-            this.lb_Guide.Size = new System.Drawing.Size(118, 28);
-            this.lb_Guide.TabIndex = 45;
-            this.lb_Guide.TabStop = true;
-            this.lb_Guide.Text = "Hướng dẫn";
-            this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
+            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
+            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
+            this.LoaiBanThang.Name = "LoaiBanThang";
             // 
             // usrRulesChange
             // 
@@ -774,9 +774,9 @@
         public MetroFramework.Controls.MetroTextBox tb_RC_countForeign;
         private Guna.UI.WinForms.GunaButton btn_XoaBan;
         private Guna.UI.WinForms.GunaButton btn_ThemBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanThang;
         public Guna.UI.WinForms.GunaDataGridView dgv_LoaiBanThang;
         public Guna.UI.WinForms.GunaTextBox tb_LoaiBan;
         private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanThang;
     }
 }

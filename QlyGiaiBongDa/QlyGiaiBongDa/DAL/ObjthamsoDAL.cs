@@ -146,9 +146,8 @@ namespace QlyGiaiBongDa.DAL
         {
             DataTable dt = new DataTable();
 
-
-            string LoadQuery = "Select TenLoaiBanThang from LOAIBANTHANG";
-
+            string LoadQuery = "SELECT LoaiBanThang from BANTHANG " +
+                           "  group by LoaiBanThang";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
             return dt;

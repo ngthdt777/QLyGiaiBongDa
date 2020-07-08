@@ -67,7 +67,8 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadGoalType()
         {
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT TenLoaiBanThang from LOAIBANTHANG";
+            string LoadQuery = "SELECT LoaiBanThang from BANTHANG " +
+                "  group by LoaiBanThang";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
@@ -84,7 +85,7 @@ namespace QlyGiaiBongDa.DAL
             string MaTran = usrGoalDetail.Instance.tb_MaTranDau.Text;
 
 
-            string AddQuery = "INSERT INTO BANTHANG(MaBanThang,MaCauThu,MaLoaiBanThang,ThoiDiem,MaTranDau)" +
+            string AddQuery = "INSERT INTO BANTHANG(MaBanThang,MaCauThu,LoaiBanThang,ThoiDiem,MaTranDau)" +
                 "VALUES ( '" + MaBan + "', '" + MaCauThu + "', '" + LoaiBan + "', '" + ThoiDiem + "', '" + MaTran + "')";
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
             if (result > 0)
@@ -99,17 +100,18 @@ namespace QlyGiaiBongDa.DAL
 
         public void UpdateGoal()
         {
-            System.Windows.Forms.UserControl usr = new usrGoalDetail();
+            //System.Windows.Forms.UserControl usr = new usrGoalDetail();
+
             string MaBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string MaCauThu = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string LoaiBan = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string ThoiDiem = usrGoalDetail.Instance.tb_MaBanThang.Text;
-            string MaTran = usrGoalDetail.Instance.tb_MaBanThang.Text;
+            string MaCauThu = usrGoalDetail.Instance.tb_MaCauThu.Text;
+            string LoaiBan = usrGoalDetail.Instance.tb_MaLoaiBanThang.Text;
+            string ThoiDiem = usrGoalDetail.Instance.tb_ThoiDiem.Text;
+            string MaTran = usrGoalDetail.Instance.tb_MaTranDau.Text;
             // MessageBox.Show(id);
 
 
             string UpdateQuery = "UPDATE BANTHANG " +
-                 "SET MaBanThang = '" + MaBan + "', MaCauThu = '" + MaCauThu + "', MaLoaiBanThang = '" + LoaiBan + "', ThoiDiem = '" + ThoiDiem + "',MaTran = '" + MaTran + "' ";
+                 "SET MaBanThang = '" + MaBan + "', MaCauThu = '" + MaCauThu + "', LoaiBanThang = '" + LoaiBan + "', ThoiDiem = '" + ThoiDiem + "',MaTranDau = '" + MaTran + "' ";
 
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)

@@ -76,8 +76,8 @@ namespace QlyGiaiBongDa.GUI
         {
            cb1.AutoCompleteSource = AutoCompleteSource.ListItems;
             cb1.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb1.DisplayMember = "TenLoaiBanThang";
-            cb1.ValueMember = "TenLoaiBanThang";
+            cb1.DisplayMember = "LoaiBanThang";
+            cb1.ValueMember = "LoaiBanThang";
             cb1.DataSource = ObjGoalDetailBLL.Instance.GetGoalType(); 
             dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
         }
@@ -100,7 +100,7 @@ namespace QlyGiaiBongDa.GUI
             {  
                 tb_MaBanThang.Text = dgv_CTBT.Rows[e.RowIndex].Cells["MaBanThang"].Value.ToString();
                 tb_MaCauThu.Text = dgv_CTBT.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
-                tb_MaLoaiBanThang.Text = dgv_CTBT.Rows[e.RowIndex].Cells["MaLoaiBanThang"].Value.ToString();
+                tb_MaLoaiBanThang.Text = dgv_CTBT.Rows[e.RowIndex].Cells["LoaiBanThang"].Value.ToString();
                 tb_ThoiDiem.Text = dgv_CTBT.Rows[e.RowIndex].Cells["ThoiDiem"].Value.ToString();
                 tb_MaTranDau.Text = dgv_CTBT.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
 
@@ -114,7 +114,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void Btt_sua_Click(object sender, EventArgs e)
         {
-            ObjGoalDetailBLL.Instance.DeleteGoal();
+            ObjGoalDetailBLL.Instance.UpdateGoal();
         }
 
         private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

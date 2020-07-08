@@ -182,3 +182,4 @@ C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGia
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache

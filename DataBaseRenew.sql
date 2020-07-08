@@ -82,6 +82,10 @@ LoaiBanThang varchar(45),
 ThoiDiem varchar(45),
 MaTranDau varchar(45),
 )
+
+select LoaiBanThang from BANTHANG
+group by LoaiBanThang
+
 go
 insert into BANTHANG values ('0001' , 'HA05' , 'TrucTiep' , '4:05' , 'VB001')
 insert into BANTHANG values ('0002' , 'HA05' , 'Penalty' , '4:32' , 'VB001')

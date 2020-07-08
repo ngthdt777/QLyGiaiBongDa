@@ -67,9 +67,9 @@ namespace QlyGiaiBongDa.DAL
 
             string vongdau = usrPlayerGoal.Instance.cb2.Text;
 
-            string LoadQuery = "SELECT TenCauThu, TenDoi, MaLoaiCauThu, COUNT(BANTHANG.MaCauThu) as 'Số Bàn Thắng' FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU"+
+            string LoadQuery = "SELECT TenCauThu, TenDoi, LoaiCauThu, COUNT(BANTHANG.MaCauThu) as 'Số Bàn Thắng' FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU"+
           " where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.MaVongDau = '"+vongdau+"' " +
-          "GROUP BY TenCauThu,TenDoi,MaLoaiCauThu";
+          "GROUP BY TenCauThu,TenDoi,LoaiCauThu";
 
 
 

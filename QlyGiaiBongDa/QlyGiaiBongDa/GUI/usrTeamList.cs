@@ -236,7 +236,7 @@ namespace QlyGiaiBongDa.GUI
             btt_Team_View.Text = "Hiển thị";
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = false;
         }
-        public string connectionSTR = DataProvider.Instance.connectionSTR;
+       public string connectionSTR = DataProvider.Instance.connectionSTR;
 
         private void CountForeign()
         {
