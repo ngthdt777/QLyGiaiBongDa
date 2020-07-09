@@ -55,20 +55,40 @@ namespace QlyGiaiBongDa.DAL
         public ObjStandingDAL() { }
         
 
+        public DataTable LoadTeam()
+        {
+            DataTable dt = new DataTable();      
+            string LoadQuery = "SELECT TenDoi FROM DOIBONG ";
+                    
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
+            return dt;
+        }
+
+
+        public DataTable FindTeam()
+
+        {
+            DataTable dt = new DataTable();
+            string tendoi = usrStanding.Instance.cbb_team_name.Text;
+            string LoadQuery = "SELECT MaDoi,DiemSo,BanThang,BanThua FROM DOIBONG" +
+                " where Tendoi = '"+tendoi+"' ";
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+
+            return dt;
+        }
       
 
      
 
         public DataTable LoadListStanding()
         {
-            string vdau = usrCreateMatch.Instance.cb_VongDau.Text;
-            //  MessageBox.Show(vdau);
+       
             DataTable dt = new DataTable();
 
-            string LoadQuery = " SELECT * FROM DOIBONG";
-
-
+            string LoadQuery = "SELECT MaDoi,TenDoi,DiemSo,BanThang,BanThua FROM DOIBONG";
+              
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
             return dt;

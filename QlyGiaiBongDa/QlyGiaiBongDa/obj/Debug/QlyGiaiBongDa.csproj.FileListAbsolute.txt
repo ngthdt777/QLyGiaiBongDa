@@ -64,26 +64,6 @@ C:\Users\COMPUTER\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBon
 C:\Users\COMPUTER\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
 C:\Users\COMPUTER\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
 C:\Users\COMPUTER\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayer.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayerGoal.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrRulesChange.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrStanding.resources
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
@@ -175,11 +155,31 @@ E:\Docu\This sem\Tài liệu MHH\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\D
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
 C:\Users\ACER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
 E:\Docu\This sem\Tài liệu nmcnpm\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe.config
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.exe
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\QlyGiaiBongDa.pdb
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\Guna.UI.dll
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.dll
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmLogin.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmQLGBD.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrCreateMatch.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrHomepage.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayer.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrPlayerGoal.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrRulesChange.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrStanding.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.Properties.Resources.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.GenerateResource.cache
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache

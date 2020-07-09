@@ -67,12 +67,19 @@ TenDoi varchar(45),
 SanNha varchar(45),
 SoCauThu int ,
 DiemSo int ,
+BanThang int,
+BanThua int,
+
 )
 
+select * from DOIBONG
+delete from DOIBONG
+drop table DOIBONG
 go
- insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','0','0')
- insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','0','0')
- insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '0','0')
+ insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','5','0','0','0')
+ insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','5','0','0','0')
+ insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '5','0','0','0')
+
 go
 create table BANTHANG
 (
@@ -83,8 +90,14 @@ ThoiDiem varchar(45),
 MaTranDau varchar(45),
 )
 
+select *from BANTHANG
+
 select LoaiBanThang from BANTHANG
 group by LoaiBanThang
+
+
+
+update BANTHANG set ThoiDiem ='6:36' where MaBanThang= '0006'
 
 go
 insert into BANTHANG values ('0001' , 'HA05' , 'TrucTiep' , '4:05' , 'VB001')
@@ -121,9 +134,13 @@ BANTHANGDN int,
 BANTHANGKH int,
 )
 
-insert into TRANDAU values ('VB001' , 'HAGL' , 'SGFC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '31', 'VB','3','1' )
-insert into TRANDAU values ('VB002' , 'HAGL' , 'SGFC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '41', 'VB','4','1' )
+insert into TRANDAU values ('VB001' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '31', 'VB','3','1' )
+insert into TRANDAU values ('VB002' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '14', 'VB','1','4' )
+insert into TRANDAU values ('VB003' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '11', 'VB','1','1' )
+insert into TRANDAU values ('VB004' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '33', 'VB','3','3' )
 
+delete from TRANDAU
+select* from TRANDAU
 
 create table VONGDAU 
 (
@@ -136,7 +153,14 @@ TenVongDau varchar(45),
  INSERT into VONGDAU values ('BK','BanKet')
  INSERT into VONGDAU values ('CK','ChungKet')
 
+create Table LOAIBANTHANG
+(
+LOAIBANTHANG varchar(45)
+)
 
+INSERT into LOAIBANTHANG values ('TrucTiep')
+INSERT into LOAIBANTHANG values ('Penalty')
+INSERT into LOAIBANTHANG values ('DaPhat')
 
 create table THAMSO 
 (
@@ -156,21 +180,47 @@ SoLuongLoaiBanThang int,
 
 go 
 
-create Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
+alter Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
 as 
 BEGIN
     declare @madk char(4),
-			@madn char(4)
-    select @madk = DoiKhach, @madn=DoiChuNha from inserted  
-	--//doikh win
-	if (SELECT BANTHANGDN from  inserted)
-	 > (SELECT BANTHANGKH from inserted)
+			@madn char(4),
+			@BTDN int,
+			@BTDK int
+    select @madk = DoiKhach, @madn = DoiChuNha, @BTDN = BANTHANGDN, @BTDK = BANTHANGKH from inserted 
+    update DOIBONG  
+	SET BanThang= @BTDN+ BanThang
+	where MaDoi=@madn 
+	update DOIBONG  
+	SET BanThua= @BTDK + BanThua
+	where MaDoi=@madn 
 	
 
+--bbb
+	update DOIBONG  
+	SET BanThang=@BTDK +BanThang
+	where MaDoi=@madk
+	 update DOIBONG  
+	SET BanThua =@BTDN +BanThua
+	where MaDoi=@madk
+	--//doinha win
+	if (SELECT BANTHANGDN from  inserted)
+	 > (SELECT BANTHANGKH from inserted)
 	update DOIBONG
 	SET DiemSo=DiemSo+3
 	WHERE MaDoi=@madn 
 
+	-- doikhach win
+	else if (SELECT BANTHANGDN from  inserted)
+	 < (SELECT BANTHANGKH from inserted)
+	update DOIBONG
+	SET DiemSo=DiemSo+3
+	WHERE MaDoi=@madk 
+	-- hoa
+    else 
+	update DOIBONG
+	SET DiemSo=DiemSo+1
+	WHERE (MaDoi=@madn OR MaDoi=@madk)
 	PRINT N'1'
 
 END

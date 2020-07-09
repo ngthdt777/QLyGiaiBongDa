@@ -55,18 +55,18 @@
             this.btn_XoaBan = new Guna.UI.WinForms.GunaButton();
             this.btn_ThemBan = new Guna.UI.WinForms.GunaButton();
             this.dgv_LoaiBanThang = new Guna.UI.WinForms.GunaDataGridView();
-            this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
-            this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
-            this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
+            this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nm_maxtimescore = new Guna.UI.WinForms.GunaNumeric();
             this.btt_RC_Default_2 = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
+            this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
+            this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
+            this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
@@ -412,7 +412,7 @@
             this.tb_LoaiBan.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_LoaiBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_LoaiBan.ForeColor = System.Drawing.Color.Black;
-            this.tb_LoaiBan.Location = new System.Drawing.Point(88, 110);
+            this.tb_LoaiBan.Location = new System.Drawing.Point(239, 112);
             this.tb_LoaiBan.Name = "tb_LoaiBan";
             this.tb_LoaiBan.PasswordChar = '\0';
             this.tb_LoaiBan.SelectedText = "";
@@ -435,7 +435,7 @@
             this.btn_XoaBan.ForeColor = System.Drawing.Color.Black;
             this.btn_XoaBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaBan.Image")));
             this.btn_XoaBan.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_XoaBan.Location = new System.Drawing.Point(373, 257);
+            this.btn_XoaBan.Location = new System.Drawing.Point(524, 259);
             this.btn_XoaBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_XoaBan.Name = "btn_XoaBan";
             this.btn_XoaBan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -462,7 +462,7 @@
             this.btn_ThemBan.ForeColor = System.Drawing.Color.Black;
             this.btn_ThemBan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemBan.Image")));
             this.btn_ThemBan.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_ThemBan.Location = new System.Drawing.Point(373, 205);
+            this.btn_ThemBan.Location = new System.Drawing.Point(524, 207);
             this.btn_ThemBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ThemBan.Name = "btn_ThemBan";
             this.btn_ThemBan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -506,7 +506,7 @@
             this.dgv_LoaiBanThang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_LoaiBanThang.EnableHeadersVisualStyles = false;
             this.dgv_LoaiBanThang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_LoaiBanThang.Location = new System.Drawing.Point(30, 204);
+            this.dgv_LoaiBanThang.Location = new System.Drawing.Point(181, 206);
             this.dgv_LoaiBanThang.Name = "dgv_LoaiBanThang";
             this.dgv_LoaiBanThang.RowHeadersVisible = false;
             this.dgv_LoaiBanThang.RowTemplate.Height = 24;
@@ -537,56 +537,11 @@
             this.dgv_LoaiBanThang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_LoaiBanThang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LoaiBanThang_CellContentClick);
             // 
-            // nm_diemthua
+            // LoaiBanThang
             // 
-            this.nm_diemthua.BaseColor = System.Drawing.Color.White;
-            this.nm_diemthua.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemthua.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthua.Location = new System.Drawing.Point(1009, 146);
-            this.nm_diemthua.Maximum = ((long)(9999999));
-            this.nm_diemthua.Minimum = ((long)(0));
-            this.nm_diemthua.Name = "nm_diemthua";
-            this.nm_diemthua.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemthua.TabIndex = 43;
-            this.nm_diemthua.Text = "gunaNumeric9";
-            this.nm_diemthua.Value = ((long)(0));
-            // 
-            // nm_diemthang
-            // 
-            this.nm_diemthang.BaseColor = System.Drawing.Color.White;
-            this.nm_diemthang.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemthang.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthang.Location = new System.Drawing.Point(1009, 56);
-            this.nm_diemthang.Maximum = ((long)(9999999));
-            this.nm_diemthang.Minimum = ((long)(3));
-            this.nm_diemthang.Name = "nm_diemthang";
-            this.nm_diemthang.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemthang.TabIndex = 42;
-            this.nm_diemthang.Text = "gunaNumeric7";
-            this.nm_diemthang.Value = ((long)(3));
-            // 
-            // nm_diemhoa
-            // 
-            this.nm_diemhoa.BaseColor = System.Drawing.Color.White;
-            this.nm_diemhoa.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemhoa.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemhoa.Location = new System.Drawing.Point(1009, 103);
-            this.nm_diemhoa.Maximum = ((long)(9999999));
-            this.nm_diemhoa.Minimum = ((long)(1));
-            this.nm_diemhoa.Name = "nm_diemhoa";
-            this.nm_diemhoa.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemhoa.TabIndex = 42;
-            this.nm_diemhoa.Text = "gunaNumeric7";
-            this.nm_diemhoa.Value = ((long)(1));
+            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
+            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
+            this.LoaiBanThang.Name = "LoaiBanThang";
             // 
             // nm_maxtimescore
             // 
@@ -596,7 +551,7 @@
             this.nm_maxtimescore.ButtonForeColor = System.Drawing.Color.White;
             this.nm_maxtimescore.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nm_maxtimescore.ForeColor = System.Drawing.Color.Black;
-            this.nm_maxtimescore.Location = new System.Drawing.Point(373, 43);
+            this.nm_maxtimescore.Location = new System.Drawing.Point(524, 45);
             this.nm_maxtimescore.Maximum = ((long)(9999999));
             this.nm_maxtimescore.Minimum = ((long)(90));
             this.nm_maxtimescore.Name = "nm_maxtimescore";
@@ -630,42 +585,6 @@
             this.btt_RC_Default_2.Text = "Mặc định";
             this.btt_RC_Default_2.Click += new System.EventHandler(this.btt_RC_Default_2_Click);
             // 
-            // gunaLabel13
-            // 
-            this.gunaLabel13.AutoSize = true;
-            this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel13.Location = new System.Drawing.Point(843, 146);
-            this.gunaLabel13.Name = "gunaLabel13";
-            this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
-            this.gunaLabel13.TabIndex = 23;
-            this.gunaLabel13.Text = "Điểm thua";
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel12.Location = new System.Drawing.Point(843, 103);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
-            this.gunaLabel12.TabIndex = 22;
-            this.gunaLabel12.Text = "Điểm hòa";
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(843, 56);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
-            this.gunaLabel11.TabIndex = 21;
-            this.gunaLabel11.Text = "Điểm thắng";
-            // 
             // btt_RC_Done_2
             // 
             this.btt_RC_Done_2.AnimationHoverSpeed = 0.07F;
@@ -697,7 +616,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(33, 169);
+            this.gunaLabel2.Location = new System.Drawing.Point(184, 171);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(304, 32);
             this.gunaLabel2.TabIndex = 3;
@@ -709,17 +628,98 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.MintCream;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(33, 43);
+            this.gunaLabel3.Location = new System.Drawing.Point(184, 45);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(295, 32);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
             // 
-            // LoaiBanThang
+            // gunaLabel11
             // 
-            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
-            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
-            this.LoaiBanThang.Name = "LoaiBanThang";
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel11.Location = new System.Drawing.Point(773, 110);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
+            this.gunaLabel11.TabIndex = 21;
+            this.gunaLabel11.Text = "Điểm thắng";
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel12.Location = new System.Drawing.Point(773, 157);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
+            this.gunaLabel12.TabIndex = 22;
+            this.gunaLabel12.Text = "Điểm hòa";
+            // 
+            // gunaLabel13
+            // 
+            this.gunaLabel13.AutoSize = true;
+            this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel13.Location = new System.Drawing.Point(773, 200);
+            this.gunaLabel13.Name = "gunaLabel13";
+            this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
+            this.gunaLabel13.TabIndex = 23;
+            this.gunaLabel13.Text = "Điểm thua";
+            // 
+            // nm_diemhoa
+            // 
+            this.nm_diemhoa.BaseColor = System.Drawing.Color.White;
+            this.nm_diemhoa.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemhoa.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemhoa.Location = new System.Drawing.Point(939, 157);
+            this.nm_diemhoa.Maximum = ((long)(9999999));
+            this.nm_diemhoa.Minimum = ((long)(1));
+            this.nm_diemhoa.Name = "nm_diemhoa";
+            this.nm_diemhoa.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemhoa.TabIndex = 42;
+            this.nm_diemhoa.Text = "gunaNumeric7";
+            this.nm_diemhoa.Value = ((long)(1));
+            // 
+            // nm_diemthang
+            // 
+            this.nm_diemthang.BaseColor = System.Drawing.Color.White;
+            this.nm_diemthang.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemthang.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemthang.Location = new System.Drawing.Point(939, 110);
+            this.nm_diemthang.Maximum = ((long)(9999999));
+            this.nm_diemthang.Minimum = ((long)(3));
+            this.nm_diemthang.Name = "nm_diemthang";
+            this.nm_diemthang.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemthang.TabIndex = 42;
+            this.nm_diemthang.Text = "gunaNumeric7";
+            this.nm_diemthang.Value = ((long)(3));
+            // 
+            // nm_diemthua
+            // 
+            this.nm_diemthua.BaseColor = System.Drawing.Color.White;
+            this.nm_diemthua.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemthua.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemthua.Location = new System.Drawing.Point(939, 200);
+            this.nm_diemthua.Maximum = ((long)(9999999));
+            this.nm_diemthua.Minimum = ((long)(0));
+            this.nm_diemthua.Name = "nm_diemthua";
+            this.nm_diemthua.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemthua.TabIndex = 43;
+            this.nm_diemthua.Text = "gunaNumeric9";
+            this.nm_diemthua.Value = ((long)(0));
             // 
             // usrRulesChange
             // 
@@ -759,17 +759,11 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaButton btt_RC_Default_2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel13;
-        private Guna.UI.WinForms.GunaLabel gunaLabel12;
-        private Guna.UI.WinForms.GunaLabel gunaLabel11;
         public Guna.UI.WinForms.GunaNumeric nm_formax;
         public Guna.UI.WinForms.GunaNumeric nm_slgmax;
         public Guna.UI.WinForms.GunaNumeric nm_slgmin;
         public Guna.UI.WinForms.GunaNumeric nm_tuoimin;
         public Guna.UI.WinForms.GunaNumeric nm_tuoimax;
-        public Guna.UI.WinForms.GunaNumeric nm_diemthua;
-        public Guna.UI.WinForms.GunaNumeric nm_diemthang;
-        public Guna.UI.WinForms.GunaNumeric nm_diemhoa;
         public Guna.UI.WinForms.GunaNumeric nm_maxtimescore;
         public MetroFramework.Controls.MetroTextBox tb_RC_countForeign;
         private Guna.UI.WinForms.GunaButton btn_XoaBan;
@@ -778,5 +772,11 @@
         public Guna.UI.WinForms.GunaTextBox tb_LoaiBan;
         private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanThang;
+        public Guna.UI.WinForms.GunaNumeric nm_diemthua;
+        public Guna.UI.WinForms.GunaNumeric nm_diemthang;
+        public Guna.UI.WinForms.GunaNumeric nm_diemhoa;
+        private Guna.UI.WinForms.GunaLabel gunaLabel13;
+        private Guna.UI.WinForms.GunaLabel gunaLabel12;
+        private Guna.UI.WinForms.GunaLabel gunaLabel11;
     }
 }

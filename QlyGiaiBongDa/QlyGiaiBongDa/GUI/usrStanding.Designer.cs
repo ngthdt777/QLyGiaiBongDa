@@ -34,14 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.dtp_Bangxephang = new Guna.UI.WinForms.GunaDateTimePicker();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.dgv_BXH = new Guna.UI.WinForms.GunaDataGridView();
-            this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
+            this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BanThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).BeginInit();
             this.SuspendLayout();
@@ -76,8 +81,10 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.cbb_team_name);
+            this.gb_HSDB.Controls.Add(this.gunaButton3);
+            this.gb_HSDB.Controls.Add(this.gunaLabel2);
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
-            this.gb_HSDB.Controls.Add(this.dtp_Bangxephang);
             this.gb_HSDB.Controls.Add(this.btn_TimKiem);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.ForeColor = System.Drawing.Color.Black;
@@ -89,38 +96,69 @@
             this.gb_HSDB.Text = "Thông tin bản xếp hạng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // cbb_team_name
+            // 
+            this.cbb_team_name.BackColor = System.Drawing.Color.Transparent;
+            this.cbb_team_name.BaseColor = System.Drawing.Color.White;
+            this.cbb_team_name.BorderColor = System.Drawing.Color.Silver;
+            this.cbb_team_name.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbb_team_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_team_name.FocusedColor = System.Drawing.Color.Empty;
+            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_team_name.ForeColor = System.Drawing.Color.Black;
+            this.cbb_team_name.FormattingEnabled = true;
+            this.cbb_team_name.Location = new System.Drawing.Point(577, 120);
+            this.cbb_team_name.Name = "cbb_team_name";
+            this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbb_team_name.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbb_team_name.Size = new System.Drawing.Size(223, 31);
+            this.cbb_team_name.TabIndex = 19;
+            // 
+            // gunaButton3
+            // 
+            this.gunaButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaButton3.AnimationSpeed = 0.03F;
+            this.gunaButton3.BaseColor = System.Drawing.Color.White;
+            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton3.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
+            this.gunaButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton3.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton3.Location = new System.Drawing.Point(821, 111);
+            this.gunaButton3.Name = "gunaButton3";
+            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton3.OnHoverImage = null;
+            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton3.Size = new System.Drawing.Size(60, 42);
+            this.gunaButton3.TabIndex = 11;
+            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel2.Location = new System.Drawing.Point(368, 111);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(339, 50);
+            this.gunaLabel2.TabIndex = 10;
+            this.gunaLabel2.Text = "Thông tin đội";
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(331, 58);
+            this.gunaLabel1.Location = new System.Drawing.Point(368, 51);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(219, 50);
+            this.gunaLabel1.Size = new System.Drawing.Size(339, 50);
             this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Ngày xếp hạng";
-            // 
-            // dtp_Bangxephang
-            // 
-            this.dtp_Bangxephang.BaseColor = System.Drawing.Color.White;
-            this.dtp_Bangxephang.BorderColor = System.Drawing.Color.Silver;
-            this.dtp_Bangxephang.CustomFormat = null;
-            this.dtp_Bangxephang.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtp_Bangxephang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_Bangxephang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Bangxephang.ForeColor = System.Drawing.Color.Black;
-            this.dtp_Bangxephang.Location = new System.Drawing.Point(600, 67);
-            this.dtp_Bangxephang.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_Bangxephang.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_Bangxephang.Name = "dtp_Bangxephang";
-            this.dtp_Bangxephang.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtp_Bangxephang.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_Bangxephang.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_Bangxephang.OnPressedColor = System.Drawing.Color.Black;
-            this.dtp_Bangxephang.Size = new System.Drawing.Size(290, 30);
-            this.dtp_Bangxephang.TabIndex = 0;
-            this.dtp_Bangxephang.Text = "Tuesday, June 9, 2020";
-            this.dtp_Bangxephang.Value = new System.DateTime(2020, 6, 9, 0, 5, 1, 781);
+            this.gunaLabel1.Text = "Hiển thị bảng xếp hạng";
             // 
             // btn_TimKiem
             // 
@@ -135,14 +173,14 @@
             this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
             this.btn_TimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_TimKiem.Location = new System.Drawing.Point(896, 58);
+            this.btn_TimKiem.Location = new System.Drawing.Point(695, 51);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.OnHoverImage = null;
             this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Size = new System.Drawing.Size(60, 42);
+            this.btn_TimKiem.Size = new System.Drawing.Size(70, 46);
             this.btn_TimKiem.TabIndex = 9;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
@@ -168,6 +206,9 @@
             this.dgv_BXH.ColumnHeadersHeight = 30;
             this.dgv_BXH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDoi,
+            this.TenDoi,
+            this.BanThang,
+            this.BanThua,
             this.DiemSo});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -208,18 +249,6 @@
             this.dgv_BXH.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // MaDoi
-            // 
-            this.MaDoi.DataPropertyName = "MaDoi";
-            this.MaDoi.HeaderText = "Mã Đội";
-            this.MaDoi.Name = "MaDoi";
-            // 
-            // DiemSo
-            // 
-            this.DiemSo.DataPropertyName = "DiemSo";
-            this.DiemSo.HeaderText = "Điểm Số";
-            this.DiemSo.Name = "DiemSo";
             // 
             // gunaButton2
             // 
@@ -267,6 +296,36 @@
             this.btn_XuatBaocao.TabIndex = 21;
             this.btn_XuatBaocao.Text = "Xuất báo cáo";
             // 
+            // MaDoi
+            // 
+            this.MaDoi.DataPropertyName = "MaDoi";
+            this.MaDoi.HeaderText = "Mã Đội";
+            this.MaDoi.Name = "MaDoi";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.DataPropertyName = "TenDoi";
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // BanThang
+            // 
+            this.BanThang.DataPropertyName = "BanThang";
+            this.BanThang.HeaderText = "Bàn thắng ghi được";
+            this.BanThang.Name = "BanThang";
+            // 
+            // BanThua
+            // 
+            this.BanThua.DataPropertyName = "BanThua";
+            this.BanThua.HeaderText = "Bàn thua nhận";
+            this.BanThua.Name = "BanThua";
+            // 
+            // DiemSo
+            // 
+            this.DiemSo.DataPropertyName = "DiemSo";
+            this.DiemSo.HeaderText = "Điểm Số";
+            this.DiemSo.Name = "DiemSo";
+            // 
             // usrStanding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,6 +337,7 @@
             this.Controls.Add(this.gunaButton1);
             this.Name = "usrStanding";
             this.Size = new System.Drawing.Size(1254, 697);
+            this.Load += new System.EventHandler(this.usrStanding_Load);
             this.gb_HSDB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).EndInit();
             this.ResumeLayout(false);
@@ -293,8 +353,13 @@
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaButton btn_XuatBaocao;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaDateTimePicker dtp_Bangxephang;
+        private Guna.UI.WinForms.GunaButton gunaButton3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BanThang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BanThua;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemSo;
     }
 }

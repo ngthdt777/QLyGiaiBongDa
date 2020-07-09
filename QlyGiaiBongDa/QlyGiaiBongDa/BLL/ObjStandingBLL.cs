@@ -37,8 +37,15 @@ namespace QlyGiaiBongDa.BLL
             return ObjStandingDAL.Instance.LoadListStanding();
         }
 
-        
+        public DataTable GetTeam()
+        {
+            return ObjStandingDAL.Instance.LoadTeam();
+        }
 
+        public DataTable FindTeam()
+        {
+           return ObjStandingDAL.Instance.FindTeam();
+        }
 
     }
 

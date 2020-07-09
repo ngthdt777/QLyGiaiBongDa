@@ -146,8 +146,8 @@ namespace QlyGiaiBongDa.DAL
         {
             DataTable dt = new DataTable();
 
-            string LoadQuery = "SELECT LoaiBanThang from BANTHANG " +
-                           "  group by LoaiBanThang";
+            string LoadQuery = "SELECT LOAIBANTHANG from LOAIBANTHANG "; // Bảng thêm chỉ dùng cho chức năng Thêm Loại bàn thắng
+                           
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
             return dt;
@@ -159,7 +159,7 @@ namespace QlyGiaiBongDa.DAL
 
 
 
-            string AddQuery = "INSERT INTO LOAIBANTHANG(TenLoaiBanThang)" +
+            string AddQuery = "INSERT INTO LOAIBANTHANG(LOAIBANTHANG)" +
                 "VALUES('" + TenLoaiBan + "')";
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
 
@@ -181,7 +181,7 @@ namespace QlyGiaiBongDa.DAL
             {
                 MessageBox.Show("Bạn có chắc sẽ xóa");
 
-                string DeleteQuery = "DELETE FROM LOAIBANTHANG WHERE TenLoaiBanThang= '" + TenLoaiBan + "'";
+                string DeleteQuery = "DELETE FROM LOAIBANTHANG WHERE LOAIBANTHANG= '" + TenLoaiBan + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
                 if (result > 0)
                 {

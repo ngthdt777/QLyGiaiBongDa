@@ -67,8 +67,8 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadGoalType()
         {
             DataTable dt = new DataTable();
-            string LoadQuery = "SELECT LoaiBanThang from BANTHANG " +
-                "  group by LoaiBanThang";
+            string LoadQuery = "SELECT LOAIBANTHANG from LOAIBANTHANG ";
+              
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
@@ -111,7 +111,8 @@ namespace QlyGiaiBongDa.DAL
 
 
             string UpdateQuery = "UPDATE BANTHANG " +
-                 "SET MaBanThang = '" + MaBan + "', MaCauThu = '" + MaCauThu + "', LoaiBanThang = '" + LoaiBan + "', ThoiDiem = '" + ThoiDiem + "',MaTranDau = '" + MaTran + "' ";
+                 "SET MaTranDau = '" + MaTran + "', MaCauThu = '" + MaCauThu + "', LoaiBanThang = '" + LoaiBan + "', ThoiDiem = '" + ThoiDiem + "' " +
+                 " WHERE MaBanThang = '"+MaBan+"' ";
 
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)
