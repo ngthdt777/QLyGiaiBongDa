@@ -61,7 +61,8 @@ namespace QlyGiaiBongDa.DAL
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
-
+       
+        
 
 
         public DataTable LoadNameTeam_usrPlayer()

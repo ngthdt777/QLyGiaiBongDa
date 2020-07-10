@@ -116,6 +116,7 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.AddTeam();
+              
             }
         }
 

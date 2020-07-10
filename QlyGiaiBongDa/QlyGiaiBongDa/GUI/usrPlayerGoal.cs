@@ -73,5 +73,10 @@ namespace QlyGiaiBongDa.GUI
             cb2.DataSource = ObjGoalBLL.Instance.GetRound();
             cb2.Text = " Chọn vòng đấu ";
         }
+
+        private void btn_TaiLai_Click(object sender, EventArgs e)
+        {
+            dgv_BXH_playergoal.DataSource = ObjGoalBLL.Instance.GetListPlayerGoal();
+        }
     }
 }

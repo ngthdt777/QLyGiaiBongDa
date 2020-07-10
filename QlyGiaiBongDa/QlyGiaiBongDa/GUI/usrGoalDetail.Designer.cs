@@ -43,15 +43,16 @@
             this.tb_MaBanThang = new Guna.UI.WinForms.GunaTextBox();
             this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.dgv_CTBT = new Guna.UI.WinForms.GunaDataGridView();
-            this.btt_Them = new Guna.UI.WinForms.GunaButton();
-            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
-            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.MaBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTranDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btt_Them = new Guna.UI.WinForms.GunaButton();
+            this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
+            this.Btt_sua = new Guna.UI.WinForms.GunaButton();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btn_TaiLai = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CTBT)).BeginInit();
             this.SuspendLayout();
@@ -299,6 +300,39 @@
             this.dgv_CTBT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_CTBT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CTBT_CellContentClick);
             // 
+            // MaBanThang
+            // 
+            this.MaBanThang.DataPropertyName = "MaBanThang";
+            this.MaBanThang.FillWeight = 40F;
+            this.MaBanThang.HeaderText = "Mã Bàn Thắng";
+            this.MaBanThang.Name = "MaBanThang";
+            // 
+            // MaCauThu
+            // 
+            this.MaCauThu.DataPropertyName = "MaCauThu";
+            this.MaCauThu.FillWeight = 50F;
+            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
+            this.MaCauThu.Name = "MaCauThu";
+            // 
+            // LoaiBanThang
+            // 
+            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
+            this.LoaiBanThang.FillWeight = 40F;
+            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
+            this.LoaiBanThang.Name = "LoaiBanThang";
+            // 
+            // ThoiDiem
+            // 
+            this.ThoiDiem.DataPropertyName = "ThoiDiem";
+            this.ThoiDiem.HeaderText = "Thời Điểm";
+            this.ThoiDiem.Name = "ThoiDiem";
+            // 
+            // MaTranDau
+            // 
+            this.MaTranDau.DataPropertyName = "MaTranDau";
+            this.MaTranDau.HeaderText = "Mã Trận Đấu";
+            this.MaTranDau.Name = "MaTranDau";
+            // 
             // btt_Them
             // 
             this.btt_Them.AnimationHoverSpeed = 0.07F;
@@ -377,43 +411,37 @@
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
             // 
-            // MaBanThang
+            // btn_TaiLai
             // 
-            this.MaBanThang.DataPropertyName = "MaBanThang";
-            this.MaBanThang.FillWeight = 40F;
-            this.MaBanThang.HeaderText = "Mã Bàn Thắng";
-            this.MaBanThang.Name = "MaBanThang";
-            // 
-            // MaCauThu
-            // 
-            this.MaCauThu.DataPropertyName = "MaCauThu";
-            this.MaCauThu.FillWeight = 50F;
-            this.MaCauThu.HeaderText = "Mã Cầu Thủ";
-            this.MaCauThu.Name = "MaCauThu";
-            // 
-            // LoaiBanThang
-            // 
-            this.LoaiBanThang.DataPropertyName = "LoaiBanThang";
-            this.LoaiBanThang.FillWeight = 40F;
-            this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
-            this.LoaiBanThang.Name = "LoaiBanThang";
-            // 
-            // ThoiDiem
-            // 
-            this.ThoiDiem.DataPropertyName = "ThoiDiem";
-            this.ThoiDiem.HeaderText = "Thời Điểm";
-            this.ThoiDiem.Name = "ThoiDiem";
-            // 
-            // MaTranDau
-            // 
-            this.MaTranDau.DataPropertyName = "MaTranDau";
-            this.MaTranDau.HeaderText = "Mã Trận Đấu";
-            this.MaTranDau.Name = "MaTranDau";
+            this.btn_TaiLai.AnimationHoverSpeed = 0.07F;
+            this.btn_TaiLai.AnimationSpeed = 0.03F;
+            this.btn_TaiLai.BaseColor = System.Drawing.Color.Teal;
+            this.btn_TaiLai.BorderColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_TaiLai.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_TaiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TaiLai.ForeColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiLai.Image")));
+            this.btn_TaiLai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_TaiLai.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_TaiLai.Location = new System.Drawing.Point(505, 609);
+            this.btn_TaiLai.Name = "btn_TaiLai";
+            this.btn_TaiLai.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_TaiLai.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_TaiLai.OnHoverImage = null;
+            this.btn_TaiLai.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.Size = new System.Drawing.Size(169, 52);
+            this.btn_TaiLai.TabIndex = 15;
+            this.btn_TaiLai.Text = "Tải Lại";
+            this.btn_TaiLai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_TaiLai.Click += new System.EventHandler(this.btn_TaiLai_Click);
             // 
             // usrGoalDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_TaiLai);
             this.Controls.Add(this.Btt_sua);
             this.Controls.Add(this.Btt_xoa);
             this.Controls.Add(this.btt_Them);
@@ -452,5 +480,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanThang;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTranDau;
+        public Guna.UI.WinForms.GunaButton btn_TaiLai;
     }
 }

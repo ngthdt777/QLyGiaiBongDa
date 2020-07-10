@@ -38,6 +38,19 @@ namespace QlyGiaiBongDa.GUI
             ObjRoundBLL.Instance.Add();
         }
 
+        private void frmMatch_Load(object sender, EventArgs e)
+        {
+            cb_doinha.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_doinha.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_doinha.DisplayMember = "TenDoi";
+            cb_doinha.ValueMember = "TenDoi";
+            cb_doinha.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
 
+            cb_doikhach.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_doikhach.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_doikhach.DisplayMember = "TenDoi";
+            cb_doikhach.ValueMember = "TenDoi";
+            cb_doikhach.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+        }
     }
 }

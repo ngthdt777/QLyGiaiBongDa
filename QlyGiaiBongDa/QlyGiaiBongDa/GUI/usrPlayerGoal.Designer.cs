@@ -34,15 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.dgv_BXH_playergoal = new Guna.UI.WinForms.GunaDataGridView();
+            this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.cb2 = new Guna.UI.WinForms.GunaComboBox();
             this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
-            this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_TaiLai = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH_playergoal)).BeginInit();
             this.gb_HSDB.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +137,27 @@
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH_playergoal.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // TenCauThu
+            // 
+            this.TenCauThu.DataPropertyName = "TenCauThu";
+            this.TenCauThu.FillWeight = 40F;
+            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
+            this.TenCauThu.Name = "TenCauThu";
+            // 
+            // TenDoi
+            // 
+            this.TenDoi.DataPropertyName = "TenDoi";
+            this.TenDoi.FillWeight = 50F;
+            this.TenDoi.HeaderText = "Tên Đội";
+            this.TenDoi.Name = "TenDoi";
+            // 
+            // LoaiCauThu
+            // 
+            this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
+            this.LoaiCauThu.FillWeight = 40F;
+            this.LoaiCauThu.HeaderText = "Loại Cầu Thủ";
+            this.LoaiCauThu.Name = "LoaiCauThu";
+            // 
             // btn_XuatBaocao
             // 
             this.btn_XuatBaocao.AnimationHoverSpeed = 0.07F;
@@ -175,7 +197,7 @@
             this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
             this.btn_TimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_TimKiem.Location = new System.Drawing.Point(822, 634);
+            this.btn_TimKiem.Location = new System.Drawing.Point(573, 634);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -249,31 +271,37 @@
             this.lb_Guide.Text = "Hướng dẫn";
             this.lb_Guide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_Guide_LinkClicked);
             // 
-            // TenCauThu
+            // btn_TaiLai
             // 
-            this.TenCauThu.DataPropertyName = "TenCauThu";
-            this.TenCauThu.FillWeight = 40F;
-            this.TenCauThu.HeaderText = "Tên Cầu Thủ";
-            this.TenCauThu.Name = "TenCauThu";
-            // 
-            // TenDoi
-            // 
-            this.TenDoi.DataPropertyName = "TenDoi";
-            this.TenDoi.FillWeight = 50F;
-            this.TenDoi.HeaderText = "Tên Đội";
-            this.TenDoi.Name = "TenDoi";
-            // 
-            // LoaiCauThu
-            // 
-            this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
-            this.LoaiCauThu.FillWeight = 40F;
-            this.LoaiCauThu.HeaderText = "Loại Cầu Thủ";
-            this.LoaiCauThu.Name = "LoaiCauThu";
+            this.btn_TaiLai.AnimationHoverSpeed = 0.07F;
+            this.btn_TaiLai.AnimationSpeed = 0.03F;
+            this.btn_TaiLai.BaseColor = System.Drawing.Color.Teal;
+            this.btn_TaiLai.BorderColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_TaiLai.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_TaiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TaiLai.ForeColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiLai.Image")));
+            this.btn_TaiLai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_TaiLai.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_TaiLai.Location = new System.Drawing.Point(805, 634);
+            this.btn_TaiLai.Name = "btn_TaiLai";
+            this.btn_TaiLai.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_TaiLai.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_TaiLai.OnHoverImage = null;
+            this.btn_TaiLai.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.Size = new System.Drawing.Size(169, 42);
+            this.btn_TaiLai.TabIndex = 23;
+            this.btn_TaiLai.Text = "Tải Lại";
+            this.btn_TaiLai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_TaiLai.Click += new System.EventHandler(this.btn_TaiLai_Click);
             // 
             // usrPlayerGoal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_TaiLai);
             this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.btn_XuatBaocao);
             this.Controls.Add(this.dgv_BXH_playergoal);
@@ -302,5 +330,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauThu;
+        public Guna.UI.WinForms.GunaButton btn_TaiLai;
     }
 }

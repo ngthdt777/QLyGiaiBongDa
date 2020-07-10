@@ -121,5 +121,10 @@ namespace QlyGiaiBongDa.GUI
         {
             MessageBox.Show("Chọn vào bàn thắng trên bảng ");
         }
+
+        private void btn_TaiLai_Click(object sender, EventArgs e)
+        {
+            dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
+        }
     }
 }

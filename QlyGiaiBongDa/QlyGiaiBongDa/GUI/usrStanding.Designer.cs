@@ -40,13 +40,12 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.dgv_BXH = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.btn_XuatBaocao = new Guna.UI.WinForms.GunaButton();
             this.MaDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BanThua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).BeginInit();
             this.SuspendLayout();
@@ -104,14 +103,14 @@
             this.cbb_team_name.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbb_team_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_team_name.FocusedColor = System.Drawing.Color.Empty;
-            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_team_name.ForeColor = System.Drawing.Color.Black;
             this.cbb_team_name.FormattingEnabled = true;
             this.cbb_team_name.Location = new System.Drawing.Point(577, 120);
             this.cbb_team_name.Name = "cbb_team_name";
             this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbb_team_name.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbb_team_name.Size = new System.Drawing.Size(223, 31);
+            this.cbb_team_name.Size = new System.Drawing.Size(223, 32);
             this.cbb_team_name.TabIndex = 19;
             // 
             // gunaButton3
@@ -250,52 +249,6 @@
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_BXH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gunaButton2
-            // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.Teal;
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
-            this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton2.Location = new System.Drawing.Point(824, 629);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(179, 42);
-            this.gunaButton2.TabIndex = 20;
-            this.gunaButton2.Text = "Hoàn tất";
-            // 
-            // btn_XuatBaocao
-            // 
-            this.btn_XuatBaocao.AnimationHoverSpeed = 0.07F;
-            this.btn_XuatBaocao.AnimationSpeed = 0.03F;
-            this.btn_XuatBaocao.BaseColor = System.Drawing.Color.Teal;
-            this.btn_XuatBaocao.BorderColor = System.Drawing.Color.Black;
-            this.btn_XuatBaocao.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_XuatBaocao.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_XuatBaocao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XuatBaocao.ForeColor = System.Drawing.Color.Black;
-            this.btn_XuatBaocao.Image = ((System.Drawing.Image)(resources.GetObject("btn_XuatBaocao.Image")));
-            this.btn_XuatBaocao.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_XuatBaocao.Location = new System.Drawing.Point(1033, 629);
-            this.btn_XuatBaocao.Name = "btn_XuatBaocao";
-            this.btn_XuatBaocao.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_XuatBaocao.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_XuatBaocao.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_XuatBaocao.OnHoverImage = null;
-            this.btn_XuatBaocao.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_XuatBaocao.Size = new System.Drawing.Size(208, 42);
-            this.btn_XuatBaocao.TabIndex = 21;
-            this.btn_XuatBaocao.Text = "Xuất báo cáo";
-            // 
             // MaDoi
             // 
             this.MaDoi.DataPropertyName = "MaDoi";
@@ -326,11 +279,33 @@
             this.DiemSo.HeaderText = "Điểm Số";
             this.DiemSo.Name = "DiemSo";
             // 
+            // gunaButton2
+            // 
+            this.gunaButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaButton2.AnimationSpeed = 0.03F;
+            this.gunaButton2.BaseColor = System.Drawing.Color.Teal;
+            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
+            this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
+            this.gunaButton2.Location = new System.Drawing.Point(1051, 632);
+            this.gunaButton2.Name = "gunaButton2";
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton2.OnHoverImage = null;
+            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton2.Size = new System.Drawing.Size(179, 42);
+            this.gunaButton2.TabIndex = 20;
+            this.gunaButton2.Text = "Hoàn tất";
+            // 
             // usrStanding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_XuatBaocao);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.dgv_BXH);
             this.Controls.Add(this.gb_HSDB);
@@ -351,7 +326,6 @@
         private Guna.UI.WinForms.GunaDataGridView dgv_BXH;
         private Guna.UI.WinForms.GunaButton btn_TimKiem;
         private Guna.UI.WinForms.GunaButton gunaButton2;
-        private Guna.UI.WinForms.GunaButton btn_XuatBaocao;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaButton gunaButton3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;

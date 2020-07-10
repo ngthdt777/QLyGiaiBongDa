@@ -1,7 +1,4 @@
-﻿using QlyGiaiBongDa.BLL;
-using QlyGiaiBongDa.DAL;
-using QlyGiaiBongDa.GUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using QlyGiaiBongDa.GUI;
+using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.DAL
 {
@@ -53,14 +52,24 @@ namespace QlyGiaiBongDa.DAL
 
 
 
-        public DataTable LoadNameTeam_usrPlayer()
+        public DataTable LoadNameTeam()
         {
             DataTable dt = new DataTable();
             string LoadQuery = "SELECT TenDoi FROM DOIBONG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
+        public DataTable LoadPlayerType()
+        {
+            DataTable dt = new DataTable();
 
+            string LoadQuery = "SELECT LoaiCauThu from CauThu" +
+                " group by LoaiCauThu "; // Bảng thêm chỉ dùng cho chức năng Thêm Loại bàn thắng
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+
+            return dt;
+        }
 
 
         public DataTable LoadListFindPlayer()

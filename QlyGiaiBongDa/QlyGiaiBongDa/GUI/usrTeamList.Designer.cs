@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_hsdb = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.tb_hsdb_thetrang = new Guna.UI.WinForms.GunaTextBox();
+            this.lb_hsdb_thetrang = new Guna.UI.WinForms.GunaLabel();
             this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.lb_hsdb_sctnq = new Guna.UI.WinForms.GunaLabel();
             this.lb_hsdb_soctngoaiquoc = new Guna.UI.WinForms.GunaLabel();
@@ -64,8 +66,6 @@
             this.Btt_xoa = new Guna.UI.WinForms.GunaButton();
             this.btt_Them = new Guna.UI.WinForms.GunaButton();
             this.Btt_sua = new Guna.UI.WinForms.GunaButton();
-            this.lb_hsdb_thetrang = new Guna.UI.WinForms.GunaLabel();
-            this.tb_hsdb_thetrang = new Guna.UI.WinForms.GunaTextBox();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HSDB)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +130,37 @@
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // tb_hsdb_thetrang
+            // 
+            this.tb_hsdb_thetrang.BaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_thetrang.BorderColor = System.Drawing.Color.Silver;
+            this.tb_hsdb_thetrang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_hsdb_thetrang.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_hsdb_thetrang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_hsdb_thetrang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
+            this.tb_hsdb_thetrang.Location = new System.Drawing.Point(782, 226);
+            this.tb_hsdb_thetrang.Name = "tb_hsdb_thetrang";
+            this.tb_hsdb_thetrang.PasswordChar = '\0';
+            this.tb_hsdb_thetrang.SelectedText = "";
+            this.tb_hsdb_thetrang.Size = new System.Drawing.Size(160, 32);
+            this.tb_hsdb_thetrang.TabIndex = 26;
+            this.tb_hsdb_thetrang.Visible = false;
+            // 
+            // lb_hsdb_thetrang
+            // 
+            this.lb_hsdb_thetrang.AutoSize = true;
+            this.lb_hsdb_thetrang.BackColor = System.Drawing.Color.Transparent;
+            this.lb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
+            this.lb_hsdb_thetrang.Location = new System.Drawing.Point(619, 226);
+            this.lb_hsdb_thetrang.Name = "lb_hsdb_thetrang";
+            this.lb_hsdb_thetrang.Size = new System.Drawing.Size(132, 32);
+            this.lb_hsdb_thetrang.TabIndex = 25;
+            this.lb_hsdb_thetrang.Text = "Thể trạng:";
+            this.lb_hsdb_thetrang.Visible = false;
+            // 
             // lb_Guide
             // 
             this.lb_Guide.AutoSize = true;
@@ -175,7 +206,7 @@
             this.cb_hsdb_loaict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_hsdb_loaict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_hsdb_loaict.FocusedColor = System.Drawing.Color.Empty;
-            this.cb_hsdb_loaict.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_hsdb_loaict.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hsdb_loaict.ForeColor = System.Drawing.Color.Black;
             this.cb_hsdb_loaict.FormattingEnabled = true;
             this.cb_hsdb_loaict.Items.AddRange(new object[] {
@@ -232,14 +263,14 @@
             this.cbb_team_name.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbb_team_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_team_name.FocusedColor = System.Drawing.Color.Empty;
-            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_team_name.ForeColor = System.Drawing.Color.Black;
             this.cbb_team_name.FormattingEnabled = true;
             this.cbb_team_name.Location = new System.Drawing.Point(533, 53);
             this.cbb_team_name.Name = "cbb_team_name";
             this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbb_team_name.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbb_team_name.Size = new System.Drawing.Size(160, 31);
+            this.cbb_team_name.Size = new System.Drawing.Size(218, 31);
             this.cbb_team_name.TabIndex = 18;
             // 
             // tb_hsdb_tgiantd
@@ -632,37 +663,6 @@
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.Visible = false;
             this.Btt_sua.Click += new System.EventHandler(this.Btt_sua_Click);
-            // 
-            // lb_hsdb_thetrang
-            // 
-            this.lb_hsdb_thetrang.AutoSize = true;
-            this.lb_hsdb_thetrang.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_thetrang.Location = new System.Drawing.Point(619, 226);
-            this.lb_hsdb_thetrang.Name = "lb_hsdb_thetrang";
-            this.lb_hsdb_thetrang.Size = new System.Drawing.Size(132, 32);
-            this.lb_hsdb_thetrang.TabIndex = 25;
-            this.lb_hsdb_thetrang.Text = "Thể trạng:";
-            this.lb_hsdb_thetrang.Visible = false;
-            // 
-            // tb_hsdb_thetrang
-            // 
-            this.tb_hsdb_thetrang.BaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_thetrang.BorderColor = System.Drawing.Color.Silver;
-            this.tb_hsdb_thetrang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_hsdb_thetrang.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_hsdb_thetrang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_hsdb_thetrang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_hsdb_thetrang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_hsdb_thetrang.ForeColor = System.Drawing.Color.Black;
-            this.tb_hsdb_thetrang.Location = new System.Drawing.Point(782, 226);
-            this.tb_hsdb_thetrang.Name = "tb_hsdb_thetrang";
-            this.tb_hsdb_thetrang.PasswordChar = '\0';
-            this.tb_hsdb_thetrang.SelectedText = "";
-            this.tb_hsdb_thetrang.Size = new System.Drawing.Size(160, 32);
-            this.tb_hsdb_thetrang.TabIndex = 26;
-            this.tb_hsdb_thetrang.Visible = false;
             // 
             // usrTeamList
             // 

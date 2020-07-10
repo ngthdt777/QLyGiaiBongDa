@@ -83,7 +83,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_match_update_Click(object sender, EventArgs e)
         {
-            ObjRoundBLL.Instance.UpdateMatch();
+            ObjRoundBLL.Instance.GetListRoundMatch();
         }
 
  
@@ -102,8 +102,8 @@ namespace QlyGiaiBongDa.GUI
             {
                 frmMatch f = new frmMatch();
                 frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
-                frmMatch.Instance.tb_match_home.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
-                frmMatch.Instance.tb_match_guest.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
+                frmMatch.Instance.cb_doinha.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
+                frmMatch.Instance.cb_doikhach.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
                 frmMatch.Instance.dtp_match.Text = dgv_TLTD.Rows[e.RowIndex].Cells["NgayThiDau"].Value.ToString();
                 frmMatch.Instance.tb_GioThiDau.Text = dgv_TLTD.Rows[e.RowIndex].Cells["GioThiDau"].Value.ToString();
                 frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();
@@ -131,8 +131,8 @@ namespace QlyGiaiBongDa.GUI
                 frmMatch f = new frmMatch();
 
                 frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
-                frmMatch.Instance.tb_match_home.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
-                frmMatch.Instance.tb_match_guest.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
+                frmMatch.Instance.cb_doinha.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
+                frmMatch.Instance.cb_doikhach.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
                 frmMatch.Instance.dtp_match.Text = dgv_TLTD.Rows[e.RowIndex].Cells["NgayThiDau"].Value.ToString();
                 frmMatch.Instance.tb_GioThiDau.Text = dgv_TLTD.Rows[e.RowIndex].Cells["GioThiDau"].Value.ToString();
                 frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();

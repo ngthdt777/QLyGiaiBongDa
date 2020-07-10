@@ -56,17 +56,17 @@
             this.btn_ThemBan = new Guna.UI.WinForms.GunaButton();
             this.dgv_LoaiBanThang = new Guna.UI.WinForms.GunaDataGridView();
             this.LoaiBanThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
+            this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
+            this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
             this.nm_maxtimescore = new Guna.UI.WinForms.GunaNumeric();
             this.btt_RC_Default_2 = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.nm_diemhoa = new Guna.UI.WinForms.GunaNumeric();
-            this.nm_diemthang = new Guna.UI.WinForms.GunaNumeric();
-            this.nm_diemthua = new Guna.UI.WinForms.GunaNumeric();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
@@ -543,6 +543,57 @@
             this.LoaiBanThang.HeaderText = "Loại Bàn Thắng";
             this.LoaiBanThang.Name = "LoaiBanThang";
             // 
+            // nm_diemthua
+            // 
+            this.nm_diemthua.BaseColor = System.Drawing.Color.White;
+            this.nm_diemthua.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemthua.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemthua.Location = new System.Drawing.Point(890, 202);
+            this.nm_diemthua.Maximum = ((long)(9999999));
+            this.nm_diemthua.Minimum = ((long)(0));
+            this.nm_diemthua.Name = "nm_diemthua";
+            this.nm_diemthua.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemthua.TabIndex = 43;
+            this.nm_diemthua.Text = "gunaNumeric9";
+            this.nm_diemthua.Value = ((long)(0));
+            // 
+            // nm_diemthang
+            // 
+            this.nm_diemthang.BaseColor = System.Drawing.Color.White;
+            this.nm_diemthang.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemthang.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemthang.Location = new System.Drawing.Point(890, 112);
+            this.nm_diemthang.Maximum = ((long)(9999999));
+            this.nm_diemthang.Minimum = ((long)(3));
+            this.nm_diemthang.Name = "nm_diemthang";
+            this.nm_diemthang.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemthang.TabIndex = 42;
+            this.nm_diemthang.Text = "gunaNumeric7";
+            this.nm_diemthang.Value = ((long)(3));
+            // 
+            // nm_diemhoa
+            // 
+            this.nm_diemhoa.BaseColor = System.Drawing.Color.White;
+            this.nm_diemhoa.BorderColor = System.Drawing.Color.Silver;
+            this.nm_diemhoa.ButtonColor = System.Drawing.Color.Teal;
+            this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
+            this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
+            this.nm_diemhoa.Location = new System.Drawing.Point(890, 159);
+            this.nm_diemhoa.Maximum = ((long)(9999999));
+            this.nm_diemhoa.Minimum = ((long)(1));
+            this.nm_diemhoa.Name = "nm_diemhoa";
+            this.nm_diemhoa.Size = new System.Drawing.Size(71, 30);
+            this.nm_diemhoa.TabIndex = 42;
+            this.nm_diemhoa.Text = "gunaNumeric7";
+            this.nm_diemhoa.Value = ((long)(1));
+            // 
             // nm_maxtimescore
             // 
             this.nm_maxtimescore.BaseColor = System.Drawing.Color.White;
@@ -584,6 +635,42 @@
             this.btt_RC_Default_2.TabIndex = 31;
             this.btt_RC_Default_2.Text = "Mặc định";
             this.btt_RC_Default_2.Click += new System.EventHandler(this.btt_RC_Default_2_Click);
+            // 
+            // gunaLabel13
+            // 
+            this.gunaLabel13.AutoSize = true;
+            this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel13.Location = new System.Drawing.Point(724, 202);
+            this.gunaLabel13.Name = "gunaLabel13";
+            this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
+            this.gunaLabel13.TabIndex = 23;
+            this.gunaLabel13.Text = "Điểm thua";
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel12.Location = new System.Drawing.Point(724, 159);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
+            this.gunaLabel12.TabIndex = 22;
+            this.gunaLabel12.Text = "Điểm hòa";
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel11.Location = new System.Drawing.Point(724, 112);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
+            this.gunaLabel11.TabIndex = 21;
+            this.gunaLabel11.Text = "Điểm thắng";
             // 
             // btt_RC_Done_2
             // 
@@ -633,93 +720,6 @@
             this.gunaLabel3.Size = new System.Drawing.Size(295, 32);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(773, 110);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(148, 32);
-            this.gunaLabel11.TabIndex = 21;
-            this.gunaLabel11.Text = "Điểm thắng";
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel12.Location = new System.Drawing.Point(773, 157);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(124, 32);
-            this.gunaLabel12.TabIndex = 22;
-            this.gunaLabel12.Text = "Điểm hòa";
-            // 
-            // gunaLabel13
-            // 
-            this.gunaLabel13.AutoSize = true;
-            this.gunaLabel13.BackColor = System.Drawing.Color.MintCream;
-            this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel13.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel13.Location = new System.Drawing.Point(773, 200);
-            this.gunaLabel13.Name = "gunaLabel13";
-            this.gunaLabel13.Size = new System.Drawing.Size(133, 32);
-            this.gunaLabel13.TabIndex = 23;
-            this.gunaLabel13.Text = "Điểm thua";
-            // 
-            // nm_diemhoa
-            // 
-            this.nm_diemhoa.BaseColor = System.Drawing.Color.White;
-            this.nm_diemhoa.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemhoa.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemhoa.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemhoa.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemhoa.Location = new System.Drawing.Point(939, 157);
-            this.nm_diemhoa.Maximum = ((long)(9999999));
-            this.nm_diemhoa.Minimum = ((long)(1));
-            this.nm_diemhoa.Name = "nm_diemhoa";
-            this.nm_diemhoa.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemhoa.TabIndex = 42;
-            this.nm_diemhoa.Text = "gunaNumeric7";
-            this.nm_diemhoa.Value = ((long)(1));
-            // 
-            // nm_diemthang
-            // 
-            this.nm_diemthang.BaseColor = System.Drawing.Color.White;
-            this.nm_diemthang.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemthang.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemthang.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemthang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemthang.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthang.Location = new System.Drawing.Point(939, 110);
-            this.nm_diemthang.Maximum = ((long)(9999999));
-            this.nm_diemthang.Minimum = ((long)(3));
-            this.nm_diemthang.Name = "nm_diemthang";
-            this.nm_diemthang.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemthang.TabIndex = 42;
-            this.nm_diemthang.Text = "gunaNumeric7";
-            this.nm_diemthang.Value = ((long)(3));
-            // 
-            // nm_diemthua
-            // 
-            this.nm_diemthua.BaseColor = System.Drawing.Color.White;
-            this.nm_diemthua.BorderColor = System.Drawing.Color.Silver;
-            this.nm_diemthua.ButtonColor = System.Drawing.Color.Teal;
-            this.nm_diemthua.ButtonForeColor = System.Drawing.Color.White;
-            this.nm_diemthua.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nm_diemthua.ForeColor = System.Drawing.Color.Black;
-            this.nm_diemthua.Location = new System.Drawing.Point(939, 200);
-            this.nm_diemthua.Maximum = ((long)(9999999));
-            this.nm_diemthua.Minimum = ((long)(0));
-            this.nm_diemthua.Name = "nm_diemthua";
-            this.nm_diemthua.Size = new System.Drawing.Size(71, 30);
-            this.nm_diemthua.TabIndex = 43;
-            this.nm_diemthua.Text = "gunaNumeric9";
-            this.nm_diemthua.Value = ((long)(0));
             // 
             // usrRulesChange
             // 

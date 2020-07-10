@@ -40,14 +40,16 @@
             this.dtp_match = new System.Windows.Forms.DateTimePicker();
             this.lb_match_date = new Guna.UI.WinForms.GunaLabel();
             this.tb_match_court = new Guna.UI.WinForms.GunaTextBox();
-            this.tb_match_guest = new Guna.UI.WinForms.GunaTextBox();
-            this.tb_match_home = new Guna.UI.WinForms.GunaTextBox();
             this.tb_match_id = new Guna.UI.WinForms.GunaTextBox();
             this.lb_match_home = new Guna.UI.WinForms.GunaLabel();
             this.lb_team_san = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_guest = new Guna.UI.WinForms.GunaLabel();
             this.lb_match_id = new Guna.UI.WinForms.GunaLabel();
             this.btt_team_add = new Guna.UI.WinForms.GunaGradientButton();
+            this.tb_BanthangNha = new Guna.UI.WinForms.GunaTextBox();
+            this.Tb_BanThangKh = new Guna.UI.WinForms.GunaTextBox();
+            this.cb_doinha = new Guna.UI.WinForms.GunaComboBox();
+            this.cb_doikhach = new Guna.UI.WinForms.GunaComboBox();
             this.gb_HSDB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +58,10 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.cb_doikhach);
+            this.gb_HSDB.Controls.Add(this.cb_doinha);
+            this.gb_HSDB.Controls.Add(this.Tb_BanThangKh);
+            this.gb_HSDB.Controls.Add(this.tb_BanthangNha);
             this.gb_HSDB.Controls.Add(this.tb_match_tiso);
             this.gb_HSDB.Controls.Add(this.lb_match_tiso);
             this.gb_HSDB.Controls.Add(this.cb_VongDau);
@@ -66,8 +72,6 @@
             this.gb_HSDB.Controls.Add(this.dtp_match);
             this.gb_HSDB.Controls.Add(this.lb_match_date);
             this.gb_HSDB.Controls.Add(this.tb_match_court);
-            this.gb_HSDB.Controls.Add(this.tb_match_guest);
-            this.gb_HSDB.Controls.Add(this.tb_match_home);
             this.gb_HSDB.Controls.Add(this.tb_match_id);
             this.gb_HSDB.Controls.Add(this.lb_match_home);
             this.gb_HSDB.Controls.Add(this.lb_team_san);
@@ -93,7 +97,7 @@
             this.tb_match_tiso.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_match_tiso.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_match_tiso.Location = new System.Drawing.Point(618, 243);
+            this.tb_match_tiso.Location = new System.Drawing.Point(475, 242);
             this.tb_match_tiso.Name = "tb_match_tiso";
             this.tb_match_tiso.PasswordChar = '\0';
             this.tb_match_tiso.SelectedText = "";
@@ -106,7 +110,7 @@
             this.lb_match_tiso.BackColor = System.Drawing.Color.Transparent;
             this.lb_match_tiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_match_tiso.ForeColor = System.Drawing.Color.Black;
-            this.lb_match_tiso.Location = new System.Drawing.Point(454, 242);
+            this.lb_match_tiso.Location = new System.Drawing.Point(378, 242);
             this.lb_match_tiso.Name = "lb_match_tiso";
             this.lb_match_tiso.Size = new System.Drawing.Size(82, 32);
             this.lb_match_tiso.TabIndex = 25;
@@ -219,38 +223,6 @@
             this.tb_match_court.Size = new System.Drawing.Size(160, 32);
             this.tb_match_court.TabIndex = 7;
             // 
-            // tb_match_guest
-            // 
-            this.tb_match_guest.BaseColor = System.Drawing.Color.White;
-            this.tb_match_guest.BorderColor = System.Drawing.Color.Silver;
-            this.tb_match_guest.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_match_guest.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_match_guest.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_match_guest.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_match_guest.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_match_guest.Location = new System.Drawing.Point(190, 179);
-            this.tb_match_guest.Name = "tb_match_guest";
-            this.tb_match_guest.PasswordChar = '\0';
-            this.tb_match_guest.SelectedText = "";
-            this.tb_match_guest.Size = new System.Drawing.Size(160, 32);
-            this.tb_match_guest.TabIndex = 6;
-            // 
-            // tb_match_home
-            // 
-            this.tb_match_home.BaseColor = System.Drawing.Color.White;
-            this.tb_match_home.BorderColor = System.Drawing.Color.Silver;
-            this.tb_match_home.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_match_home.FocusedBaseColor = System.Drawing.Color.White;
-            this.tb_match_home.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tb_match_home.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tb_match_home.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_match_home.Location = new System.Drawing.Point(190, 121);
-            this.tb_match_home.Name = "tb_match_home";
-            this.tb_match_home.PasswordChar = '\0';
-            this.tb_match_home.SelectedText = "";
-            this.tb_match_home.Size = new System.Drawing.Size(160, 32);
-            this.tb_match_home.TabIndex = 5;
-            // 
             // tb_match_id
             // 
             this.tb_match_id.BaseColor = System.Drawing.Color.White;
@@ -344,6 +316,74 @@
             this.btt_team_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_add.Click += new System.EventHandler(this.btt_team_add_Click);
             // 
+            // tb_BanthangNha
+            // 
+            this.tb_BanthangNha.BaseColor = System.Drawing.Color.White;
+            this.tb_BanthangNha.BorderColor = System.Drawing.Color.Silver;
+            this.tb_BanthangNha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_BanthangNha.FocusedBaseColor = System.Drawing.Color.White;
+            this.tb_BanthangNha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tb_BanthangNha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_BanthangNha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_BanthangNha.Location = new System.Drawing.Point(651, 242);
+            this.tb_BanthangNha.Name = "tb_BanthangNha";
+            this.tb_BanthangNha.PasswordChar = '\0';
+            this.tb_BanthangNha.SelectedText = "";
+            this.tb_BanthangNha.Size = new System.Drawing.Size(51, 32);
+            this.tb_BanthangNha.TabIndex = 27;
+            // 
+            // Tb_BanThangKh
+            // 
+            this.Tb_BanThangKh.BaseColor = System.Drawing.Color.White;
+            this.Tb_BanThangKh.BorderColor = System.Drawing.Color.Silver;
+            this.Tb_BanThangKh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Tb_BanThangKh.FocusedBaseColor = System.Drawing.Color.White;
+            this.Tb_BanThangKh.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Tb_BanThangKh.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.Tb_BanThangKh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Tb_BanThangKh.Location = new System.Drawing.Point(727, 243);
+            this.Tb_BanThangKh.Name = "Tb_BanThangKh";
+            this.Tb_BanThangKh.PasswordChar = '\0';
+            this.Tb_BanThangKh.SelectedText = "";
+            this.Tb_BanThangKh.Size = new System.Drawing.Size(51, 32);
+            this.Tb_BanThangKh.TabIndex = 28;
+            // 
+            // cb_doinha
+            // 
+            this.cb_doinha.BackColor = System.Drawing.Color.Transparent;
+            this.cb_doinha.BaseColor = System.Drawing.Color.White;
+            this.cb_doinha.BorderColor = System.Drawing.Color.Silver;
+            this.cb_doinha.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_doinha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_doinha.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_doinha.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_doinha.ForeColor = System.Drawing.Color.Black;
+            this.cb_doinha.FormattingEnabled = true;
+            this.cb_doinha.Location = new System.Drawing.Point(190, 123);
+            this.cb_doinha.Name = "cb_doinha";
+            this.cb_doinha.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cb_doinha.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cb_doinha.Size = new System.Drawing.Size(217, 32);
+            this.cb_doinha.TabIndex = 29;
+            // 
+            // cb_doikhach
+            // 
+            this.cb_doikhach.BackColor = System.Drawing.Color.Transparent;
+            this.cb_doikhach.BaseColor = System.Drawing.Color.White;
+            this.cb_doikhach.BorderColor = System.Drawing.Color.Silver;
+            this.cb_doikhach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_doikhach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_doikhach.FocusedColor = System.Drawing.Color.Empty;
+            this.cb_doikhach.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_doikhach.ForeColor = System.Drawing.Color.Black;
+            this.cb_doikhach.FormattingEnabled = true;
+            this.cb_doikhach.Location = new System.Drawing.Point(190, 182);
+            this.cb_doikhach.Name = "cb_doikhach";
+            this.cb_doikhach.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cb_doikhach.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cb_doikhach.Size = new System.Drawing.Size(217, 32);
+            this.cb_doikhach.TabIndex = 30;
+            // 
             // frmMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,6 +396,7 @@
             this.Name = "frmMatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMatch";
+            this.Load += new System.EventHandler(this.frmMatch_Load);
             this.gb_HSDB.ResumeLayout(false);
             this.gb_HSDB.PerformLayout();
             this.ResumeLayout(false);
@@ -366,8 +407,6 @@
 
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
         public Guna.UI.WinForms.GunaTextBox tb_match_court;
-        public Guna.UI.WinForms.GunaTextBox tb_match_guest;
-        public Guna.UI.WinForms.GunaTextBox tb_match_home;
         private Guna.UI.WinForms.GunaGradientButton btt_team_add;
         public Guna.UI.WinForms.GunaTextBox tb_match_id;
         private Guna.UI.WinForms.GunaLabel lb_match_home;
@@ -383,5 +422,9 @@
         public System.Windows.Forms.ComboBox cb_VongDau;
         public Guna.UI.WinForms.GunaTextBox tb_match_tiso;
         public Guna.UI.WinForms.GunaLabel lb_match_tiso;
+        public Guna.UI.WinForms.GunaTextBox Tb_BanThangKh;
+        public Guna.UI.WinForms.GunaTextBox tb_BanthangNha;
+        public Guna.UI.WinForms.GunaComboBox cb_doikhach;
+        public Guna.UI.WinForms.GunaComboBox cb_doinha;
     }
 }

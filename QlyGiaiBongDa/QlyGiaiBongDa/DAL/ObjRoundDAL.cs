@@ -44,7 +44,7 @@ namespace QlyGiaiBongDa.BLL
             MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
-            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,banthangdn,banthangkh from VONGDAU,TRANDAU" +
+            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,BANTHANGDN, BANTHANGKH from VONGDAU,TRANDAU" +
             " where VONGDAU.TenVongDau = '"+vdau+ "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
                
 
@@ -61,18 +61,21 @@ namespace QlyGiaiBongDa.BLL
 
 
             string id = ((frmMatch)f).tb_match_id.Text;
-            string doichunha = ((frmMatch)f).tb_match_home.Text;
-            string doikhach = ((frmMatch)f).tb_match_guest.Text;
+            string doichunha = ((frmMatch)f).cb_doinha.Text;
+            string doikhach = ((frmMatch)f).cb_doikhach.Text;
             string ngaythidau = ((frmMatch)f).dtp_match.Value.ToString();
             string santhidau = ((frmMatch)f).tb_match_court.Text;
             string vongdau = ((frmMatch)f).cb_VongDau.Text;
+            string Tiso = ((frmMatch)f).tb_match_tiso.Text;
+            string BanThang = ((frmMatch)f).tb_BanthangNha.Text;
+            string BanThua = ((frmMatch)f).Tb_BanThangKh.Text;
             string Gio = ((frmMatch)f).tb_GioThiDau.Text;
         
 
 
-            string AddQuery = "INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,MaVongDau)" +
+            string AddQuery = "INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,MaVongDau,BANTHANGDN,BANTHANGKH )" +
                         "VALUES('" + id + "', '" + doichunha + "', '" + doikhach + "', '" + ngaythidau + "'," 
-                        + " CONVERT(TIME, '"+ Gio +"')"  + " ,'" + santhidau + "', '" +vongdau  + "')";
+                        + " CONVERT(TIME, '"+ Gio +"')"  + " ,'" + santhidau + "','" + Tiso + "', '" + vongdau  + "','" + BanThang + "','" + BanThua + "',)";
 
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
             if (result > 0)
@@ -88,8 +91,8 @@ namespace QlyGiaiBongDa.BLL
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
 
             string id = frmMatch.Instance.tb_match_id.Text;
-            string doinha = frmMatch.Instance.tb_match_home.Text;
-            string doikhach = frmMatch.Instance.tb_match_guest.Text;
+            string doinha = frmMatch.Instance.cb_doinha.Text;
+            string doikhach = frmMatch.Instance.cb_doikhach.Text;
             string ngaytd = frmMatch.Instance.dtp_match.Text;
             string giotd = frmMatch.Instance.tb_GioThiDau.Text;
             string san = frmMatch.Instance.tb_match_court.Text;
@@ -122,8 +125,8 @@ namespace QlyGiaiBongDa.BLL
 
 
             string id = frmMatch.Instance.tb_match_id.Text;
-            string doinha = frmMatch.Instance.tb_match_home.Text;
-            string doikhach = frmMatch.Instance.tb_match_guest.Text;
+            string doinha = frmMatch.Instance.cb_doinha.Text;
+            string doikhach = frmMatch.Instance.cb_doikhach.Text;
             string ngaytd = frmMatch.Instance.dtp_match.Text;
             string giotd = frmMatch.Instance.tb_GioThiDau.Text;
             string san = frmMatch.Instance.tb_match_court.Text;

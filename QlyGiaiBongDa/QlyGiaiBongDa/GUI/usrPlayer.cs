@@ -33,14 +33,7 @@ namespace QlyGiaiBongDa.GUI
         {
             InitializeComponent();
         }
-        private void usrPlayer_Load(object sender, EventArgs e)
-        {
-            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
-            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbb_team_name.DisplayMember = "TenDoi";
-            cbb_team_name.ValueMember = "TenDoi";
-            cbb_team_name.DataSource = ObjPlayerBLL.Instance.GetNameTeam_usrPlayer();
-        }
+      
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
@@ -64,6 +57,22 @@ namespace QlyGiaiBongDa.GUI
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void usrPlayer_Load_1(object sender, EventArgs e)
+        {
+            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_team_name.DisplayMember = "TenDoi";
+            cbb_team_name.ValueMember = "TenDoi";
+            cbb_team_name.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+
+
+            cb_LoaiCT.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_LoaiCT.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_LoaiCT.DisplayMember = "LoaiCauThu";
+            cb_LoaiCT.ValueMember = "LoaiCauThu";
+            cb_LoaiCT.DataSource = ObjPlayerBLL.Instance.GetPlayerType();
         }
     }
 }
