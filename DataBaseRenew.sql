@@ -180,7 +180,7 @@ SoLuongLoaiBanThang int,
 
 go 
 
-alter Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
+create Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
 as 
 BEGIN
     declare @madk char(4),

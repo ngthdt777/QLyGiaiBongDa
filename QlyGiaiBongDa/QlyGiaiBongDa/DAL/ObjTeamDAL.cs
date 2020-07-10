@@ -107,13 +107,14 @@ namespace QlyGiaiBongDa.DAL
             string ngsinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
             string loaict = usrTeamList.Instance.cb_hsdb_loaict.Text.ToString();        
             string madoi = usrTeamList.Instance.tb_MaDoi.Text;
-            string ghichu = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
+            string thoigiantd = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
+            string tinhtrang = usrTeamList.Instance.tb_hsdb_thetrang.Text;
 
             if (CheckMaDoi(id) == true)
             {
                 
-                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,ThoiGian,MaDoi)" +
-                        "VALUES('" + id + "', '" + tenct + "', '" + ngsinh + "', '" + loaict + "', '" + ghichu + "', '" + madoi + "')";
+                    string AddQuery = "INSERT INTO CAUTHU(MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,ThoiGianThiDau,TinhTrang,MaDoi)" +
+                        "VALUES('" + id + "', '" + tenct + "', '" + ngsinh + "', '" + loaict + "', '" + thoigiantd + "','"+ tinhtrang+"', '" + madoi + "')";
                     int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
                     if (result > 0)
                     {
@@ -184,7 +185,6 @@ namespace QlyGiaiBongDa.DAL
             if (dt.Rows.Count != 0)
             {
                 MessageBox.Show("Bạn có chắc sẽ xóa");
-                MessageBox.Show(id);
                 string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
                 if (result > 0)
@@ -235,7 +235,7 @@ namespace QlyGiaiBongDa.DAL
 
 
             string UpdateQuery = "UPDATE CAUTHU " +
-                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', ThoiGianThiDau = '" + tgian + "',TheTrang ='"+thetrang+"'"+
+                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', ThoiGianThiDau = '" + tgian + "',TinhTrang ='"+thetrang+"'"+
                  " WHERE MaCauThu = '" + id + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)

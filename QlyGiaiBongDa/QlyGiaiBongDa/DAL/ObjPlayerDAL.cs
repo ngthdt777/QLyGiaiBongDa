@@ -17,16 +17,18 @@ namespace QlyGiaiBongDa.DAL
         public string ma { get; set; }
         public string ten { get; set; }
         public DateTime ngsinh { get; set; }
-        public string maloaict { get; set; }
-        public string ghichu { get; set; }
+        public string loaict { get; set; }
+        public string thoigiantd { get; set; }
+        public string tinhtrang { get; set; }
         public string ma_doi { get; set; }
-        public cauthu(string ma, string ten, DateTime ngsinh, string maloaict, string ghichu, string ma_doi)
+        public cauthu(string ma, string ten, DateTime ngsinh, string loaict, string thoigiantd,string tinhtrang, string ma_doi)
         {
             this.ma = ma;
             this.ten = ten;
             this.ngsinh = ngsinh;
-            this.maloaict = maloaict;
-            this.ghichu = ghichu;
+            this.loaict = loaict;
+            this.thoigiantd = thoigiantd;
+            this.tinhtrang = tinhtrang;
             this.ma_doi = ma_doi;
         }
         public cauthu() { }
@@ -109,6 +111,11 @@ namespace QlyGiaiBongDa.DAL
                                  " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +
                                  " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            int result = DataProvider.Instance.ExecuteNonQuery(LoadQuery);
+           if(result<=0)
+           {
+              MessageBox.Show("Không tìm thấy cầu thủ phù hợp");
+           }
             return dt;
         }
 

@@ -46,7 +46,18 @@ namespace QlyGiaiBongDa.GUI
             cb_Team_slgct.Text = "0";
 
         }
-
+        public static int demkhoangtrang(string str)
+        {
+            int bien_dem = 0;
+            string str1;
+            for(int i=0;i<str.Length;i++)
+            {
+                str1 = str.Substring(i, 1);
+                if (str1 == " ")
+                    bien_dem++;
+            }
+            return bien_dem;
+        }
         public bool CheckData()
         {
             if (string.IsNullOrEmpty(tb_MaDoi.Text))
@@ -78,7 +89,26 @@ namespace QlyGiaiBongDa.GUI
                 tb_SanNha.Focus();
                 return false;
             }
-
+            if(tb_MaDoi.Text.Length<4 || tb_MaDoi.Text.Length>4)
+            {
+                MessageBox.Show("Mã đội chỉ được nhập 4 kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if(demkhoangtrang(tb_TenDoi.Text)<=2)
+            {
+                MessageBox.Show("Tên đội không được ít hơn 3 từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if(tb_TenDoi.Text.Length>45)
+            {
+                MessageBox.Show("Tên đội quá nhiều kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (tb_SanNha.Text.Length > 45)
+            {
+                MessageBox.Show("Sân nhà quá nhiều kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
             return true;
         }
         private void btt_team_add_Click(object sender, EventArgs e)
@@ -117,7 +147,11 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_team_fix_Click(object sender, EventArgs e)
         {
-            ObjTeamBLL.Instance.UpdateTeam();
+            if (CheckData())
+            {
+                ObjTeamBLL.Instance.UpdateTeam();
+            }
+            
         }
 
         

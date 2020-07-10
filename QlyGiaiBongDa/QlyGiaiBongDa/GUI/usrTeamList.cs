@@ -151,11 +151,11 @@ namespace QlyGiaiBongDa.GUI
             {
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
                 tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
-                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
+                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["LoaiCauThu"].Value.ToString();
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
                 tb_hsdb_tgiantd.Text = dgv_HSDB.Rows[e.RowIndex].Cells["ThoiGianThiDau"].Value.ToString();
-                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
+                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
             }
         }
 
@@ -170,11 +170,11 @@ namespace QlyGiaiBongDa.GUI
             {
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
                 tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
-                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaLoaiCauThu"].Value.ToString();
+                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["LoaiCauThu"].Value.ToString();
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
                 tb_hsdb_tgiantd.Text = dgv_HSDB.Rows[e.RowIndex].Cells["ThoiGianThiDau"].Value.ToString();
-                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
+                tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
             }
         }
 
