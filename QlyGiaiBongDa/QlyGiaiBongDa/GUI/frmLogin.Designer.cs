@@ -48,9 +48,10 @@
             this.lb_Login.BackColor = System.Drawing.Color.Transparent;
             this.lb_Login.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Login.ForeColor = System.Drawing.Color.Teal;
-            this.lb_Login.Location = new System.Drawing.Point(145, 184);
+            this.lb_Login.Location = new System.Drawing.Point(109, 150);
+            this.lb_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Login.Name = "lb_Login";
-            this.lb_Login.Size = new System.Drawing.Size(120, 45);
+            this.lb_Login.Size = new System.Drawing.Size(99, 37);
             this.lb_Login.TabIndex = 0;
             this.lb_Login.Text = "LOGIN";
             // 
@@ -59,18 +60,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(90, 249);
+            this.label1.Location = new System.Drawing.Point(68, 202);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 23);
+            this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tài khoản:";
             // 
             // txb_tk
             // 
-            this.txb_tk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_tk.Location = new System.Drawing.Point(95, 280);
+            this.txb_tk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_tk.Location = new System.Drawing.Point(71, 228);
+            this.txb_tk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txb_tk.Name = "txb_tk";
-            this.txb_tk.Size = new System.Drawing.Size(206, 25);
+            this.txb_tk.Size = new System.Drawing.Size(156, 21);
             this.txb_tk.TabIndex = 3;
             // 
             // lb_pass
@@ -78,18 +81,20 @@
             this.lb_pass.AutoSize = true;
             this.lb_pass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_pass.ForeColor = System.Drawing.Color.Teal;
-            this.lb_pass.Location = new System.Drawing.Point(90, 319);
+            this.lb_pass.Location = new System.Drawing.Point(68, 259);
+            this.lb_pass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_pass.Name = "lb_pass";
-            this.lb_pass.Size = new System.Drawing.Size(92, 23);
+            this.lb_pass.Size = new System.Drawing.Size(76, 19);
             this.lb_pass.TabIndex = 4;
             this.lb_pass.Text = "Mật Khẩu:";
             // 
             // txb_pass
             // 
-            this.txb_pass.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_pass.Location = new System.Drawing.Point(95, 345);
+            this.txb_pass.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_pass.Location = new System.Drawing.Point(71, 280);
+            this.txb_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txb_pass.Name = "txb_pass";
-            this.txb_pass.Size = new System.Drawing.Size(206, 25);
+            this.txb_pass.Size = new System.Drawing.Size(156, 21);
             this.txb_pass.TabIndex = 5;
             this.txb_pass.UseSystemPasswordChar = true;
             this.txb_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_pass_KeyPress);
@@ -101,9 +106,10 @@
             this.Lb_dangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lb_dangnhap.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lb_dangnhap.ForeColor = System.Drawing.Color.Teal;
-            this.Lb_dangnhap.Location = new System.Drawing.Point(123, 401);
+            this.Lb_dangnhap.Location = new System.Drawing.Point(92, 326);
+            this.Lb_dangnhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lb_dangnhap.Name = "Lb_dangnhap";
-            this.Lb_dangnhap.Size = new System.Drawing.Size(142, 34);
+            this.Lb_dangnhap.Size = new System.Drawing.Size(112, 27);
             this.Lb_dangnhap.TabIndex = 6;
             this.Lb_dangnhap.Text = "Đăng nhập";
             this.Lb_dangnhap.Click += new System.EventHandler(this.Lb_Dangnhap_Click);
@@ -121,12 +127,13 @@
             this.btt_exit.BackColor = System.Drawing.Color.LightGray;
             this.btt_exit.IconColor = System.Drawing.Color.Crimson;
             this.btt_exit.IconSize = 25F;
-            this.btt_exit.Location = new System.Drawing.Point(358, 2);
+            this.btt_exit.Location = new System.Drawing.Point(268, 2);
+            this.btt_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btt_exit.Name = "btt_exit";
             this.btt_exit.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.btt_exit.OnHoverIconColor = System.Drawing.Color.White;
             this.btt_exit.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_exit.Size = new System.Drawing.Size(45, 29);
+            this.btt_exit.Size = new System.Drawing.Size(34, 24);
             this.btt_exit.TabIndex = 7;
             this.btt_exit.Click += new System.EventHandler(this.btt_exit_Click);
             // 
@@ -136,9 +143,10 @@
             this.picbox_soccerball.BaseColor = System.Drawing.Color.LightGray;
             this.picbox_soccerball.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picbox_soccerball.Image = ((System.Drawing.Image)(resources.GetObject("picbox_soccerball.Image")));
-            this.picbox_soccerball.Location = new System.Drawing.Point(121, 26);
+            this.picbox_soccerball.Location = new System.Drawing.Point(91, 21);
+            this.picbox_soccerball.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picbox_soccerball.Name = "picbox_soccerball";
-            this.picbox_soccerball.Size = new System.Drawing.Size(163, 155);
+            this.picbox_soccerball.Size = new System.Drawing.Size(123, 126);
             this.picbox_soccerball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbox_soccerball.TabIndex = 8;
             this.picbox_soccerball.TabStop = false;
@@ -146,11 +154,11 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(404, 587);
+            this.ClientSize = new System.Drawing.Size(303, 477);
             this.Controls.Add(this.picbox_soccerball);
             this.Controls.Add(this.btt_exit);
             this.Controls.Add(this.Lb_dangnhap);
@@ -162,6 +170,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Tomato;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

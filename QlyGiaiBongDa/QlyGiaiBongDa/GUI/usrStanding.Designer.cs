@@ -63,14 +63,15 @@
             this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
             this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.ImageSize = new System.Drawing.Size(50, 50);
-            this.gunaButton1.Location = new System.Drawing.Point(3, 0);
+            this.gunaButton1.Location = new System.Drawing.Point(2, 0);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(1248, 70);
+            this.gunaButton1.Size = new System.Drawing.Size(936, 57);
             this.gunaButton1.TabIndex = 2;
             this.gunaButton1.Text = "Bảng xếp hạng";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -88,9 +89,10 @@
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.ForeColor = System.Drawing.Color.Black;
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
-            this.gb_HSDB.Location = new System.Drawing.Point(3, 76);
+            this.gb_HSDB.Location = new System.Drawing.Point(2, 62);
+            this.gb_HSDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 293);
+            this.gb_HSDB.Size = new System.Drawing.Size(936, 238);
             this.gb_HSDB.TabIndex = 3;
             this.gb_HSDB.Text = "Thông tin bản xếp hạng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -103,14 +105,15 @@
             this.cbb_team_name.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbb_team_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_team_name.FocusedColor = System.Drawing.Color.Empty;
-            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_team_name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_team_name.ForeColor = System.Drawing.Color.Black;
             this.cbb_team_name.FormattingEnabled = true;
-            this.cbb_team_name.Location = new System.Drawing.Point(577, 120);
+            this.cbb_team_name.Location = new System.Drawing.Point(433, 98);
+            this.cbb_team_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_team_name.Name = "cbb_team_name";
             this.cbb_team_name.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbb_team_name.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbb_team_name.Size = new System.Drawing.Size(223, 32);
+            this.cbb_team_name.Size = new System.Drawing.Size(168, 28);
             this.cbb_team_name.TabIndex = 19;
             // 
             // gunaButton3
@@ -126,14 +129,15 @@
             this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
             this.gunaButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton3.Location = new System.Drawing.Point(821, 111);
+            this.gunaButton3.Location = new System.Drawing.Point(616, 90);
+            this.gunaButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaButton3.Name = "gunaButton3";
             this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton3.OnHoverImage = null;
             this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Size = new System.Drawing.Size(60, 42);
+            this.gunaButton3.Size = new System.Drawing.Size(45, 34);
             this.gunaButton3.TabIndex = 11;
             this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
@@ -142,9 +146,10 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(368, 111);
+            this.gunaLabel2.Location = new System.Drawing.Point(276, 90);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(339, 50);
+            this.gunaLabel2.Size = new System.Drawing.Size(254, 41);
             this.gunaLabel2.TabIndex = 10;
             this.gunaLabel2.Text = "Thông tin đội";
             // 
@@ -153,9 +158,10 @@
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(368, 51);
+            this.gunaLabel1.Location = new System.Drawing.Point(276, 41);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(339, 50);
+            this.gunaLabel1.Size = new System.Drawing.Size(254, 41);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "Hiển thị bảng xếp hạng";
             // 
@@ -172,14 +178,15 @@
             this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
             this.btn_TimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_TimKiem.Location = new System.Drawing.Point(695, 51);
+            this.btn_TimKiem.Location = new System.Drawing.Point(521, 41);
+            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.OnHoverImage = null;
             this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Size = new System.Drawing.Size(70, 46);
+            this.btn_TimKiem.Size = new System.Drawing.Size(52, 37);
             this.btn_TimKiem.TabIndex = 9;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
@@ -219,12 +226,13 @@
             this.dgv_BXH.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_BXH.EnableHeadersVisualStyles = false;
             this.dgv_BXH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_BXH.Location = new System.Drawing.Point(3, 252);
+            this.dgv_BXH.Location = new System.Drawing.Point(2, 205);
+            this.dgv_BXH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_BXH.Name = "dgv_BXH";
             this.dgv_BXH.RowHeadersVisible = false;
             this.dgv_BXH.RowTemplate.Height = 24;
             this.dgv_BXH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_BXH.Size = new System.Drawing.Size(1251, 359);
+            this.dgv_BXH.Size = new System.Drawing.Size(938, 292);
             this.dgv_BXH.TabIndex = 4;
             this.dgv_BXH.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_BXH.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -291,27 +299,29 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaButton2.Location = new System.Drawing.Point(1051, 632);
+            this.gunaButton2.Location = new System.Drawing.Point(788, 514);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(179, 42);
+            this.gunaButton2.Size = new System.Drawing.Size(134, 34);
             this.gunaButton2.TabIndex = 20;
             this.gunaButton2.Text = "Hoàn tất";
             // 
             // usrStanding
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.dgv_BXH);
             this.Controls.Add(this.gb_HSDB);
             this.Controls.Add(this.gunaButton1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "usrStanding";
-            this.Size = new System.Drawing.Size(1254, 697);
+            this.Size = new System.Drawing.Size(940, 566);
             this.Load += new System.EventHandler(this.usrStanding_Load);
             this.gb_HSDB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BXH)).EndInit();
