@@ -100,7 +100,7 @@ namespace QlyGiaiBongDa.GUI
           //  System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
             if (index >= 0)
             {
-                frmMatch f = new frmMatch();
+             
                 frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
                 frmMatch.Instance.cb_doinha.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
                 frmMatch.Instance.cb_doikhach.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiKhach"].Value.ToString();
@@ -109,7 +109,7 @@ namespace QlyGiaiBongDa.GUI
                 frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();
                 frmMatch.Instance.tb_match_tiso.Text = dgv_TLTD.Rows[e.RowIndex].Cells["TySo"].Value.ToString();
                 MessageBox.Show(frmMatch.Instance.tb_match_tiso.Text);
-                f.ShowDialog();
+           
             }
 
 
@@ -128,7 +128,7 @@ namespace QlyGiaiBongDa.GUI
            // System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
             if (index >= 0)
             {
-                frmMatch f = new frmMatch();
+               
 
                 frmMatch.Instance.tb_match_id.Text = dgv_TLTD.Rows[e.RowIndex].Cells["MaTranDau"].Value.ToString();
                 frmMatch.Instance.cb_doinha.Text = dgv_TLTD.Rows[e.RowIndex].Cells["DoiChuNha"].Value.ToString();
@@ -137,8 +137,8 @@ namespace QlyGiaiBongDa.GUI
                 frmMatch.Instance.tb_GioThiDau.Text = dgv_TLTD.Rows[e.RowIndex].Cells["GioThiDau"].Value.ToString();
                 frmMatch.Instance.tb_match_court.Text = dgv_TLTD.Rows[e.RowIndex].Cells["SanThiDau"].Value.ToString();
                 frmMatch.Instance.tb_match_tiso.Text = dgv_TLTD.Rows[e.RowIndex].Cells["TySo"].Value.ToString();
-                MessageBox.Show(frmMatch.Instance.tb_match_tiso.Text);
-                f.ShowDialog();
+              
+              
             }
 
 

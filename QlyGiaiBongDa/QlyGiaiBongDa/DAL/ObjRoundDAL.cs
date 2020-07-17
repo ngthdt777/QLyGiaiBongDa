@@ -75,7 +75,7 @@ namespace QlyGiaiBongDa.DAL
 
             string AddQuery = "INSERT INTO TRANDAU(MaTranDau,DoiChuNha,DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,MaVongDau,BANTHANGDN,BANTHANGKH )" +
                         "VALUES('" + id + "', '" + doichunha + "', '" + doikhach + "', '" + ngaythidau + "'," 
-                        + " CONVERT(TIME, '"+ Gio +"')"  + " ,'" + santhidau + "','" + Tiso + "', '" + vongdau  + "','" + BanThang + "','" + BanThua + "',)";
+                        + " CONVERT(TIME, '"+ Gio +"')"  + " ,'" + santhidau + "','" + Tiso + "', '" + vongdau  + "','" + BanThang + "','" + BanThua + "')";
 
             int result = DataProvider.Instance.ExecuteNonQuery(AddQuery);
             if (result > 0)

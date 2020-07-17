@@ -43,6 +43,14 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.DisplayMember = "TenDoi";
             cbb_team_name.ValueMember = "TenDoi";
             cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
+
+            cb_hsdb_loaict.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_hsdb_loaict.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_hsdb_loaict.DisplayMember = "LoaiCauThu";
+            cb_hsdb_loaict.ValueMember = "LoaiCauThu";
+            cb_hsdb_loaict.DataSource = ObjTeamBLL.Instance.GetPlayerType();
+
+
         }
 
 
@@ -150,9 +158,9 @@ namespace QlyGiaiBongDa.GUI
             if (index >= 0)
             {
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
-                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
-                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["LoaiCauThu"].Value.ToString();
+                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();            
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
+                cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["LoaiCauThu"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
                 tb_hsdb_tgiantd.Text = dgv_HSDB.Rows[e.RowIndex].Cells["ThoiGianThiDau"].Value.ToString();
                 tb_hsdb_thetrang.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TinhTrang"].Value.ToString();
@@ -246,7 +254,7 @@ namespace QlyGiaiBongDa.GUI
                 string tendoi = usrTeamList.Instance.cbb_team_name.Text;
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("Select Count(LoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG"+
-"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND LoaiCauThu = 'NgoaiNuoc' AND DOIBONG.TenDoi = '"+tendoi+ "'",connection);
+"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND LoaiCauThu = 'Ngoai Nuoc' AND DOIBONG.TenDoi = '"+tendoi+ "'",connection);
 
                 SqlDataReader da = cmd.ExecuteReader();
                 while (da.Read())

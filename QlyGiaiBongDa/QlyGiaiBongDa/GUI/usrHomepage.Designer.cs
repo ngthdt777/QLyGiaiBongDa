@@ -69,8 +69,8 @@
             this.btt_team_view.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_view.Image")));
             this.btt_team_view.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_view.ImageSize = new System.Drawing.Size(20, 20);
-            this.btt_team_view.Location = new System.Drawing.Point(802, 40);
-            this.btt_team_view.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btt_team_view.Location = new System.Drawing.Point(1069, 49);
+            this.btt_team_view.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_team_view.Name = "btt_team_view";
             this.btt_team_view.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_view.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -78,7 +78,7 @@
             this.btt_team_view.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_team_view.OnHoverImage = null;
             this.btt_team_view.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_team_view.Size = new System.Drawing.Size(121, 40);
+            this.btt_team_view.Size = new System.Drawing.Size(161, 49);
             this.btt_team_view.TabIndex = 7;
             this.btt_team_view.Text = "Hiển thị";
             this.btt_team_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -98,8 +98,8 @@
             this.btt_team_add.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_add.Image")));
             this.btt_team_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_add.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_add.Location = new System.Drawing.Point(802, 84);
-            this.btt_team_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btt_team_add.Location = new System.Drawing.Point(1069, 103);
+            this.btt_team_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_team_add.Name = "btt_team_add";
             this.btt_team_add.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_add.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -107,7 +107,7 @@
             this.btt_team_add.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_team_add.OnHoverImage = null;
             this.btt_team_add.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_team_add.Size = new System.Drawing.Size(121, 40);
+            this.btt_team_add.Size = new System.Drawing.Size(161, 49);
             this.btt_team_add.TabIndex = 8;
             this.btt_team_add.Text = "Thêm ";
             this.btt_team_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -128,8 +128,8 @@
             this.btt_team_era.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_era.Image")));
             this.btt_team_era.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_era.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_era.Location = new System.Drawing.Point(802, 129);
-            this.btt_team_era.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btt_team_era.Location = new System.Drawing.Point(1069, 159);
+            this.btt_team_era.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_team_era.Name = "btt_team_era";
             this.btt_team_era.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_era.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -137,7 +137,7 @@
             this.btt_team_era.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_team_era.OnHoverImage = null;
             this.btt_team_era.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_team_era.Size = new System.Drawing.Size(121, 40);
+            this.btt_team_era.Size = new System.Drawing.Size(161, 49);
             this.btt_team_era.TabIndex = 9;
             this.btt_team_era.Text = "Xóa";
             this.btt_team_era.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -158,8 +158,8 @@
             this.btt_team_fix.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_fix.Image")));
             this.btt_team_fix.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_fix.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_fix.Location = new System.Drawing.Point(802, 174);
-            this.btt_team_fix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btt_team_fix.Location = new System.Drawing.Point(1069, 214);
+            this.btt_team_fix.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_team_fix.Name = "btt_team_fix";
             this.btt_team_fix.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_fix.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -167,7 +167,7 @@
             this.btt_team_fix.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_team_fix.OnHoverImage = null;
             this.btt_team_fix.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_team_fix.Size = new System.Drawing.Size(121, 40);
+            this.btt_team_fix.Size = new System.Drawing.Size(161, 49);
             this.btt_team_fix.TabIndex = 10;
             this.btt_team_fix.Text = "Sửa";
             this.btt_team_fix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -195,10 +195,10 @@
             this.gb_HSDB.ForeColor = System.Drawing.Color.Black;
             this.gb_HSDB.LineColor = System.Drawing.Color.Teal;
             this.gb_HSDB.LineTop = 34;
-            this.gb_HSDB.Location = new System.Drawing.Point(2, 2);
-            this.gb_HSDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_HSDB.Location = new System.Drawing.Point(3, 2);
+            this.gb_HSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(936, 227);
+            this.gb_HSDB.Size = new System.Drawing.Size(1248, 279);
             this.gb_HSDB.TabIndex = 11;
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
@@ -258,12 +258,12 @@
             "38",
             "39",
             "40"});
-            this.cb_Team_slgct.Location = new System.Drawing.Point(247, 132);
-            this.cb_Team_slgct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Team_slgct.Location = new System.Drawing.Point(329, 162);
+            this.cb_Team_slgct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Team_slgct.Name = "cb_Team_slgct";
             this.cb_Team_slgct.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cb_Team_slgct.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cb_Team_slgct.Size = new System.Drawing.Size(60, 26);
+            this.cb_Team_slgct.Size = new System.Drawing.Size(79, 30);
             this.cb_Team_slgct.TabIndex = 11;
             this.cb_Team_slgct.Visible = false;
             // 
@@ -276,12 +276,12 @@
             this.tb_SanNha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_SanNha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_SanNha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_SanNha.Location = new System.Drawing.Point(566, 129);
-            this.tb_SanNha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_SanNha.Location = new System.Drawing.Point(755, 159);
+            this.tb_SanNha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_SanNha.Name = "tb_SanNha";
             this.tb_SanNha.PasswordChar = '\0';
             this.tb_SanNha.SelectedText = "";
-            this.tb_SanNha.Size = new System.Drawing.Size(120, 26);
+            this.tb_SanNha.Size = new System.Drawing.Size(177, 37);
             this.tb_SanNha.TabIndex = 7;
             this.tb_SanNha.Visible = false;
             // 
@@ -294,12 +294,12 @@
             this.tb_TenDoi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.tb_TenDoi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.tb_TenDoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TenDoi.Location = new System.Drawing.Point(566, 84);
-            this.tb_TenDoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TenDoi.Location = new System.Drawing.Point(755, 103);
+            this.tb_TenDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_TenDoi.Name = "tb_TenDoi";
             this.tb_TenDoi.PasswordChar = '\0';
             this.tb_TenDoi.SelectedText = "";
-            this.tb_TenDoi.Size = new System.Drawing.Size(120, 26);
+            this.tb_TenDoi.Size = new System.Drawing.Size(177, 37);
             this.tb_TenDoi.TabIndex = 6;
             this.tb_TenDoi.Visible = false;
             // 
@@ -313,12 +313,12 @@
             this.tb_MaDoi.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaDoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaDoi.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaDoi.Location = new System.Drawing.Point(247, 84);
-            this.tb_MaDoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_MaDoi.Location = new System.Drawing.Point(329, 103);
+            this.tb_MaDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_MaDoi.Name = "tb_MaDoi";
             this.tb_MaDoi.PasswordChar = '\0';
             this.tb_MaDoi.SelectedText = "";
-            this.tb_MaDoi.Size = new System.Drawing.Size(120, 26);
+            this.tb_MaDoi.Size = new System.Drawing.Size(181, 37);
             this.tb_MaDoi.TabIndex = 4;
             this.tb_MaDoi.Visible = false;
             // 
@@ -328,10 +328,9 @@
             this.lb_team_slg.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_slg.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_slg.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_slg.Location = new System.Drawing.Point(134, 129);
-            this.lb_team_slg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_team_slg.Location = new System.Drawing.Point(179, 159);
             this.lb_team_slg.Name = "lb_team_slg";
-            this.lb_team_slg.Size = new System.Drawing.Size(111, 25);
+            this.lb_team_slg.Size = new System.Drawing.Size(142, 32);
             this.lb_team_slg.TabIndex = 3;
             this.lb_team_slg.Text = "Số cầu thủ:";
             this.lb_team_slg.Visible = false;
@@ -342,10 +341,9 @@
             this.lb_team_san.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_san.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_san.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_san.Location = new System.Drawing.Point(465, 129);
-            this.lb_team_san.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_team_san.Location = new System.Drawing.Point(620, 159);
             this.lb_team_san.Name = "lb_team_san";
-            this.lb_team_san.Size = new System.Drawing.Size(88, 25);
+            this.lb_team_san.Size = new System.Drawing.Size(112, 32);
             this.lb_team_san.TabIndex = 2;
             this.lb_team_san.Text = "Sân nhà:";
             this.lb_team_san.Visible = false;
@@ -356,10 +354,9 @@
             this.lb_team_name.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_name.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_name.Location = new System.Drawing.Point(465, 84);
-            this.lb_team_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_team_name.Location = new System.Drawing.Point(620, 103);
             this.lb_team_name.Name = "lb_team_name";
-            this.lb_team_name.Size = new System.Drawing.Size(82, 25);
+            this.lb_team_name.Size = new System.Drawing.Size(106, 32);
             this.lb_team_name.TabIndex = 1;
             this.lb_team_name.Text = "Tên đội:";
             this.lb_team_name.Visible = false;
@@ -370,10 +367,9 @@
             this.lb_team_id.BackColor = System.Drawing.Color.Transparent;
             this.lb_team_id.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_team_id.ForeColor = System.Drawing.Color.Black;
-            this.lb_team_id.Location = new System.Drawing.Point(134, 84);
-            this.lb_team_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_team_id.Location = new System.Drawing.Point(179, 103);
             this.lb_team_id.Name = "lb_team_id";
-            this.lb_team_id.Size = new System.Drawing.Size(79, 25);
+            this.lb_team_id.Size = new System.Drawing.Size(102, 32);
             this.lb_team_id.TabIndex = 0;
             this.lb_team_id.Text = "Mã đội:";
             this.lb_team_id.Visible = false;
@@ -413,8 +409,8 @@
             this.dgv_Home.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Home.EnableHeadersVisualStyles = false;
             this.dgv_Home.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_Home.Location = new System.Drawing.Point(2, 234);
-            this.dgv_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Home.Location = new System.Drawing.Point(3, 288);
+            this.dgv_Home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Home.Name = "dgv_Home";
             this.dgv_Home.RowHeadersVisible = false;
             this.dgv_Home.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -422,7 +418,7 @@
             this.dgv_Home.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Home.RowTemplate.Height = 24;
             this.dgv_Home.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Home.Size = new System.Drawing.Size(936, 330);
+            this.dgv_Home.Size = new System.Drawing.Size(1248, 406);
             this.dgv_Home.TabIndex = 12;
             this.dgv_Home.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_Home.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -486,13 +482,13 @@
             // 
             // usrHomepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgv_Home);
             this.Controls.Add(this.gb_HSDB);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "usrHomepage";
-            this.Size = new System.Drawing.Size(940, 566);
+            this.Size = new System.Drawing.Size(1253, 697);
             this.gb_HSDB.ResumeLayout(false);
             this.gb_HSDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Home)).EndInit();

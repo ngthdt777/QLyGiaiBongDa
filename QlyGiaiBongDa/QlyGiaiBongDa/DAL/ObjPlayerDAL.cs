@@ -52,6 +52,13 @@ namespace QlyGiaiBongDa.DAL
 
 
 
+        public DataTable LoadCodeTeam()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT MaDoi FROM DOIBONG";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
         public DataTable LoadNameTeam()
         {
             DataTable dt = new DataTable();
@@ -59,12 +66,12 @@ namespace QlyGiaiBongDa.DAL
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
         }
-        public DataTable LoadPlayerType()
+            public DataTable LoadPlayerType()   
         {
             DataTable dt = new DataTable();
 
             string LoadQuery = "SELECT LoaiCauThu from CauThu" +
-                " group by LoaiCauThu "; // Bảng thêm chỉ dùng cho chức năng Thêm Loại bàn thắng
+                " group by LoaiCauThu ";
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
@@ -121,9 +128,11 @@ namespace QlyGiaiBongDa.DAL
                                  " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             int result = DataProvider.Instance.ExecuteNonQuery(LoadQuery);
-           if(result<=0)
+     
+
+           if(result<0)
            {
-              MessageBox.Show("Không tìm thấy cầu thủ phù hợp");
+              MessageBox.Show("Đã tìm được cầu thủ phù hợp");
            }
             return dt;
         }

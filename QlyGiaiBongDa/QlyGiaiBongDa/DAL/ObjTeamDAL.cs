@@ -52,7 +52,20 @@ namespace QlyGiaiBongDa.DAL
             string LoadQuery = "SELECT MaDoi,TenDoi,SanNha,SoCauThu FROM DOIBONG";
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
             return dt;
-        } 
+        }
+
+        public DataTable LoadPlayerType()
+        {
+            DataTable dt = new DataTable();
+
+            string LoadQuery = "SELECT LoaiCauThu from CauThu" +
+                " group by LoaiCauThu "; 
+
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+
+            return dt;
+        }
+
 
         public DataTable LoadNameTeam()
         {
@@ -102,11 +115,11 @@ namespace QlyGiaiBongDa.DAL
 
        public void AddPlayer()
         {
-  // khởi tạo giá trị text box
+
             string id = usrTeamList.Instance.tb_hsdb_mact.Text;
             string tenct = usrTeamList.Instance.tb_hsdb_tenct.Text;
-            string ngsinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
-            string loaict = usrTeamList.Instance.cb_hsdb_loaict.Text.ToString();        
+            string ngsinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Value.ToString();
+            string loaict = usrTeamList.Instance.cb_hsdb_loaict.Text;        
             string madoi = usrTeamList.Instance.tb_MaDoi.Text;
             string thoigiantd = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
             string tinhtrang = usrTeamList.Instance.tb_hsdb_thetrang.Text;
@@ -187,6 +200,7 @@ namespace QlyGiaiBongDa.DAL
             {
                 MessageBox.Show("Bạn có chắc sẽ xóa");
                 string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                string DeletePlayer = "DELETE FROM CauThu WHERE MaDoi = '" + id + "'";
                 int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
                 if (result > 0)
                 {
@@ -228,7 +242,7 @@ namespace QlyGiaiBongDa.DAL
             System.Windows.Forms.UserControl usr = new usrTeamList();
             string id = usrTeamList.Instance.tb_hsdb_mact.Text;
             string tencauthu = usrTeamList.Instance.tb_hsdb_tenct.Text;
-            string ngaysinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Text;
+            string ngaysinh = usrTeamList.Instance.dtp_cauthu_ngsinh.Value.ToString();
             string loaiCT = usrTeamList.Instance.cb_hsdb_loaict.Text;
             string tgian = usrTeamList.Instance.tb_hsdb_tgiantd.Text;
             string thetrang = usrTeamList.Instance.tb_hsdb_thetrang.Text;
@@ -236,7 +250,7 @@ namespace QlyGiaiBongDa.DAL
 
 
             string UpdateQuery = "UPDATE CAUTHU " +
-                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', MaLoaiCauThu = '" + loaiCT + "', ThoiGianThiDau = '" + tgian + "',TinhTrang ='"+thetrang+"'"+
+                 "SET TenCauThu = '" + tencauthu + "', NgaySinh = '" +ngaysinh  + "', LoaiCauThu = '" + loaiCT + "', ThoiGianThiDau = '" + tgian + "',TinhTrang ='"+thetrang+"'"+
                  " WHERE MaCauThu = '" + id + "'";
             int result = DataProvider.Instance.ExecuteNonQuery(UpdateQuery);
             if (result > 0)

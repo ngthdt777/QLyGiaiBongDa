@@ -29,7 +29,7 @@ namespace QlyGiaiBongDa.DAL
         private DataProvider() { }
         // public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True"; -- MayDat
 
-        public string connectionSTR = @"Data Source=DESKTOP-TRPV0F7\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True";
+        public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query)

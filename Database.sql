@@ -117,7 +117,7 @@ INSERT into LOAIBANTHANG values ('DaPhat')
 
 
 go 
-
+drop trigger CapNhatDiem
 create Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
 as 
 BEGIN
@@ -165,6 +165,8 @@ END
 
 go
 
+drop trigger CAPNHATSCT
+
 CREATE TRIGGER CAPNHATSCT ON CAUTHU FOR DELETE
 AS
 BEGIN
@@ -175,6 +177,8 @@ BEGIN
 	WHERE MaDoi=@MADOI;
 END
 
+
+drop trigger ThemSCT
 
 CREATE TRIGGER ThemSCT ON CAUTHU FOR insert
 AS
@@ -189,12 +193,10 @@ END
 
 DELETE FROM CAUTHU WHERE MaCauThu='HA03'
 
-
-
-
+DELETE FROM CAUTHU WHERE MaDoi = 'HAGL'
 
 ---------------------------------------------------------------------------------
-
+	
 
 
   --------HOANG ANH GIA LAI----------- 
@@ -385,7 +387,7 @@ insert into TRANDAU values ('VB019' , 'HCMC' , 'DTFC' , '25-01-2020' , '6:00' , 
 
 insert into TRANDAU values ('VB020' , 'HCMC' , 'AGFC' , '26-01-2020' , '7:00' , 'Gia Lai' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB021' , 'HCMC' , 'BDFC' , '27-01-2020' , '5:30' , 'Gia Lai' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB022' , 'AGFC' , 'HCMC' , '28-01-2020' , '4:00' , 'SVD An Giang' , '00', 'VB','0','0' )
+insert into TRANDAU values ('VB022' , 'AGFC' , 'HCMC' , '28-01-2020' , '4:00' , 'SVD An Giang' , '00', 'VB','0','0' )	
 insert into TRANDAU values ('VB023' , 'BDFC' , 'HNFC' , '29-01-2020' , '4:30' , 'SVD Quy Nhon' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB024' , 'AGFC' , 'HNFC' , '30-01-2020' , '4:00' , 'SVD An Giang' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB025' , 'DTFC' , 'HCMC' , '02-02-2020' , '5:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )

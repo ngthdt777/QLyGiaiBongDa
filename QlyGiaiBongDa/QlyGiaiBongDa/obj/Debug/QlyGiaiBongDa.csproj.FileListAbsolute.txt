@@ -179,7 +179,7 @@ C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\Ql
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csproj.CopyComplete
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.exe
 C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.pdb
-C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.frmMatch.resources
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrGoalDetail.resources
 C:\Users\B365M AORUS ELite\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.GUI.usrTeamList.resources
+C:\Users\COMPUTER\Desktop\QLyGiaiBongDa\QlyGiaiBongDa\QlyGiaiBongDa\obj\Debug\QlyGiaiBongDa.csprojAssemblyReference.cache

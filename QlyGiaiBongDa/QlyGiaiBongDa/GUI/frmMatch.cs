@@ -42,15 +42,15 @@ namespace QlyGiaiBongDa.GUI
         {
             cb_doinha.AutoCompleteSource = AutoCompleteSource.ListItems;
             cb_doinha.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_doinha.DisplayMember = "TenDoi";
-            cb_doinha.ValueMember = "TenDoi";
-            cb_doinha.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+            cb_doinha.DisplayMember = "MaDoi";
+            cb_doinha.ValueMember = "MaDoi";
+            cb_doinha.DataSource = ObjPlayerBLL.Instance.GetCodeTeam();
 
             cb_doikhach.AutoCompleteSource = AutoCompleteSource.ListItems;
             cb_doikhach.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_doikhach.DisplayMember = "TenDoi";
-            cb_doikhach.ValueMember = "TenDoi";
-            cb_doikhach.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+            cb_doikhach.DisplayMember = "MaDoi";
+            cb_doikhach.ValueMember = "MaDoi";
+            cb_doikhach.DataSource = ObjPlayerBLL.Instance.GetCodeTeam();
         }
     }
 }

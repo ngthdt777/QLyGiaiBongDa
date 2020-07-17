@@ -57,10 +57,10 @@ namespace QlyGiaiBongDa.BLL
 
 
 
-      /*  public DataTable PlayerView()
+       public DataTable GetPlayerType()
         {
-            return ObjTeamDAL.Instance.PlayerView();
-        }*/
+            return ObjTeamDAL.Instance.LoadPlayerType();
+        }
 
 
 

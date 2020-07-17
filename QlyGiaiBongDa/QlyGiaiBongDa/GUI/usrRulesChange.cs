@@ -56,9 +56,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_RC_Default_2_Click(object sender, EventArgs e)
         {
-            nm_diemthang.Value = 3;
-            nm_diemhoa.Value = 1;
-            nm_diemthua.Value = 0;
+           
             nm_maxtimescore.Value = 90;
         }
 
@@ -74,9 +72,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_RC_Done_2_Click(object sender, EventArgs e)
         {
-            DiemSoThang = Int32.Parse(nm_diemthang.ToString());
-            DiemSoHoa = Int32.Parse(nm_diemhoa.ToString());
-            DiemSoThua = Int32.Parse(nm_diemthua.ToString());
+            
             MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
         }
 
@@ -110,6 +106,11 @@ namespace QlyGiaiBongDa.GUI
             MessageBox.Show("Tùy chỉnh các thuộc tính về cầu thủ, loại bàn thắng theo mong muốn" +
                             " Chọn hoàn tất để thực hiện thay đổi, chọn mặc định để quay lại trạng thái ban đầu");
 
+        }
+
+        private void btn_Reload_Click(object sender, EventArgs e)
+        {
+            ObjthamsoDAL.Instance.LoadGoalType();
         }
     }
 }
