@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
-namespace QlyGiaiBongDa.BLL
+namespace QlyGiaiBongDa.DAL
 {
     class vongdau
     {

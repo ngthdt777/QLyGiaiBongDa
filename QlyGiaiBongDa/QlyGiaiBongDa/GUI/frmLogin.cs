@@ -32,7 +32,7 @@ namespace QlyGiaiBongDa.GUI
         }
         bool LoginCheck()
         {
-            return QlyGiaiBongDa.BLL.DataProvider.Instance.LoginCheck();
+            return QlyGiaiBongDa.DAL.DataProvider.Instance.LoginCheck();
         }
 
         private void btt_exit_Click(object sender, EventArgs e)

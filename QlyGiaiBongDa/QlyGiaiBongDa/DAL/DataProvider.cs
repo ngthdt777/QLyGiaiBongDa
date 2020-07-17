@@ -17,7 +17,7 @@ namespace QlyGiaiBongDa.DAL
     public class DataProvider
     {
         private static readonly Lazy<DataProvider> instance = new Lazy<DataProvider>(() => new DataProvider());
-        private string connectionSTR;
+        public string connectionSTR;
 
         public static DataProvider Instance
         {
