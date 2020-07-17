@@ -1,6 +1,7 @@
 ﻿Create database QLGBDVDQG1
 
 use QLGBDVDQG1
+set dateformat dmy
 
 
 create table DANGNHAP
@@ -47,20 +48,16 @@ SoCauThu int ,
 DiemSo int ,
 BanThang int,
 BanThua int,
-
 )
-
-select * from DOIBONG
-delete from DOIBONG
 drop table DOIBONG
 go
-insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','5','0','0','0')
-insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','5','0','0','0')
-insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '5','0','0','0')
+insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','10','0','0','0')
+insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','10','0','0','0')
+insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '10','0','0','0')
 
-INSERT INTO DOIBONG values ('DTFC','Dong Thap','SVD Dong Thap','0','0')
-INSERT INTO DOIBONG values ('AGFC','An Giang','SVD An Giang','0','0')
-INSERT INTO DOIBONG values ('BDFC','Binh Dinh','SVD Quy Nhon','0','0')
+INSERT INTO DOIBONG values ('DTFC','Dong Thap','SVD Dong Thap','10','0','0','0')
+INSERT INTO DOIBONG values ('AGFC','An Giang','SVD An Giang','10','0','0','0')
+INSERT INTO DOIBONG values ('BDFC','Binh Dinh','SVD Quy Nhon','10','0','0','0')
 
 go
 create table BANTHANG
@@ -93,10 +90,6 @@ MaVongDau varchar(45),
 BANTHANGDN int,
 BANTHANGKH int,
 )
-
-
-delete from TRANDAU
-select* from TRANDAU
 
 
 create table VONGDAU 
@@ -201,13 +194,6 @@ DELETE FROM CAUTHU WHERE MaCauThu='HA03'
 
 
 ---------------------------------------------------------------------------------
-insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','5','0','0','0') -- Hoang Anh gia lai
-insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','5','0','0','0') -- Ha Noi
-insert into DOIBONG values ('HCMC','Tp.Ho Chi Minh' , 'SVD Thong Nhat', '5','0','0','0') -- HCM
-
-INSERT INTO DOIBONG values ('DTFC','Dong Thap','SVD Dong Thap','0','0') -- Dong Thap 
-INSERT INTO DOIBONG values ('AGFC','An Giang','SVD An Giang','0','0') -- An giang
-INSERT INTO DOIBONG values ('BDFC','Binh Dinh','SVD Quy Nhon','0','0') -- Binh Dinh
 
 
 
@@ -223,6 +209,7 @@ INSERT INTO DOIBONG values ('BDFC','Binh Dinh','SVD Quy Nhon','0','0') -- Binh D
  insert into CAUTHU values ( 'HA08', 'Nguyen Van Toan', '12-04-1996', 'Trong Nuoc' , 'Thi Dau 2 nam' ,'Khoe manh' , 'HAGL')
  insert into CAUTHU values ( 'HA09', 'Nguyen Huu Canh', '01-01-1998', 'Trong Nuoc' , 'Thi Dau 3 nam' ,'Khoe manh' , 'HAGL')
  insert into CAUTHU values ( 'HA10', 'Nguyen Thanh Dat', '10-07-2000', 'Trong Nuoc' , 'Thi Dau 3 nam' ,'Khoe manh' , 'HAGL') 
+
 
  ------------HA NOI-------------------
 
@@ -296,59 +283,105 @@ INSERT INTO DOIBONG values ('BDFC','Binh Dinh','SVD Quy Nhon','0','0') -- Binh D
 
 
 
-insert into TRANDAU values ('VB007' , 'DTFC' , 'AGFC' , '13-01-2020' , '4:00' , 'SVD Dong Thap' , '04', 'VB','0','4',)
 
-	insert into BANTHANG values ('0015' , 'AG08' , 'TrucTiep' , '4:05' , 'VB007')
-	insert into BANTHANG values ('0016' , 'AG09' , 'DaPhat' , '4:10' , 'VB007')
-	insert into BANTHANG values ('0017' , 'AG08' , 'TrucTiep' , '4:032' , 'VB007')
-	insert into BANTHANG values ('0018' , 'AG10' , 'TrucTiep' , '4:50' , 'VB007')
+
+
+-- BAN THANG BAN DAU
+
+
+
+
+
+
+
+-- Tran Dau Ban Dau
+
+insert into TRANDAU values ('VB001' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '30', 'VB','3','0' )
+
+	insert into BANTHANG values ('0001' , 'HA05' , 'TrucTiep' , '23' , 'VB001')
+	insert into BANTHANG values ('0002' , 'HA05' , 'Penalty' , '48' , 'VB001')
+	insert into BANTHANG values ('0003' , 'HA05' , 'TrucTiep' , '65' , 'VB001')
+
+insert into TRANDAU values ('VB002' , 'HNFC' , 'HCMC' , '03-01-2020 ' , '5:00' , 'SVD Thong Nhat' , '03', 'VB','0','3' )
+
+	insert into BANTHANG values ('0004' , 'SG10' , 'TrucTiep' , '48' , 'VB002')
+	insert into BANTHANG values ('0005' , 'SG10' , 'DaPhat' , '50' , 'VB002')
+	insert into BANTHANG values ('0006' , 'SG10' , 'DaPhat' , '75' , 'VB002')
+
+insert into TRANDAU values ('VB003' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '7:00' , 'Gia Lai' , '11', 'VB','1','1' )
+
+	insert into BANTHANG values ('0007' , 'SG10' , 'TrucTiep' , '70' , 'VB003')
+	insert into BANTHANG values ('0008' , 'SG10' , 'DaPhat' , '72' , 'VB003')
+
+insert into TRANDAU values ('VB004' , 'HAGL' , 'HNFC' , '05-01-2020 ' , '3:00' , 'Gia Lai' , '30', 'VB','3','0' )
+	
+	insert into BANTHANG values ('0009' , 'HA11' , 'DaPhat' , '12' , 'VB004')
+	insert into BANTHANG values ('0010' , 'HA11' , 'DaPhat' , '15' , 'VB004')
+	insert into BANTHANG values ('0011' , 'HA11' , 'TrucTiep' , '30' , 'VB004')
+
+
+insert into TRANDAU values ('VB005' , 'HNFC' , 'HCMC' , '07-01-2020 ' , '3:00' , 'My Dinh' , '00', 'VB','0','0' )
+
+
+insert into TRANDAU values ('VB006' , 'HNFC' , 'HAGL' , '09-01-2020 ' , '5:00' , 'My Dinh' , '22', 'VB','2','2' )
+	
+	insert into BANTHANG values ('0012' , 'HA11' , 'DaPhat' , '5' , 'VB006')
+	insert into BANTHANG values ('0013' , 'HA11' , 'TrucTiep' , '10' , 'VB006')
+	insert into BANTHANG values ('0014' , 'HN05' , 'TrucTiep' , '24' , 'VB006')
+	insert into BANTHANG values ('0015' , 'HN07' , 'TrucTiep' , '75' , 'VB006')
+
+insert into TRANDAU values ('VB007' , 'DTFC' , 'AGFC' , '13-01-2020' , '4:00' , 'SVD Dong Thap' , '03', 'VB','0','3')
+
+	insert into BANTHANG values ('0016' , 'AG09' , 'DaPhat' , '48' , 'VB007')
+	insert into BANTHANG values ('0017' , 'AG08' , 'TrucTiep' , '55' , 'VB007')
+	insert into BANTHANG values ('0018' , 'AG10' , 'TrucTiep' , '70' , 'VB007')
 
 insert into TRANDAU values ('VB008' , 'DTFC' , 'BDFC' , '14-01-2020' , '5:00' , 'SVD Dong Thap' , '03', 'VB','0','3' )
 
-	insert into BANTHANG values ('0019' , 'BD10' , 'TrucTiep' , '5:10' , 'VB008')
-	insert into BANTHANG values ('0020' , 'BD10' , 'TrucTiep' , '5:12' , 'VB008')
-	insert into BANTHANG values ('0021' , 'BD10' , 'TrucTiep' , '5:13' , 'VB008')
+	insert into BANTHANG values ('0019' , 'BD10' , 'TrucTiep' , '2' , 'VB008')
+	insert into BANTHANG values ('0020' , 'BD10' , 'TrucTiep' , '35' , 'VB008')
+	insert into BANTHANG values ('0021' , 'BD10' , 'TrucTiep' , '88' , 'VB008')
 
 insert into TRANDAU values ('VB009' , 'AGFC' , 'BDFC' , '15-01-2020' , '5:00' , 'SVD An Giang' , '20', 'VB','2','0' )
 
-	insert into BANTHANG values ('0022' , 'AG08' , 'TrucTiep' , '5:10' , 'VB009')
-	insert into BANTHANG values ('0023' , 'AG08' , 'TrucTiep' , '6:10' , 'VB009')
+	insert into BANTHANG values ('0022' , 'AG08' , 'TrucTiep' , '14' , 'VB009')
+	insert into BANTHANG values ('0023' , 'AG08' , 'TrucTiep' , '79' , 'VB009')
 
 insert into TRANDAU values ('VB010' , 'AGFC' , 'BDFC' , '16-01-2020' , '5:30' , 'SVD An Giang' , '11', 'VB','1','0' )
 
-	insert into BANTHANG values ('0024' , 'AG09' , 'TrucTiep' , '5:45' , 'VB010')
-	insert into BANTHANG values ('0025' , 'BD10' , 'TrucTiep' , '6:30' , 'VB010')
+	insert into BANTHANG values ('0024' , 'AG09' , 'TrucTiep' , '54' , 'VB010')
+	insert into BANTHANG values ('0025' , 'BD10' , 'TrucTiep' , '67' , 'VB010')
 
 insert into TRANDAU values ('VB011' , 'BDFC' , 'AGFC' , '17-01-2020' , '6:00' , 'SVD Quy Nhon' , '20', 'VB','2','0' )
 
-	insert into BANTHANG values ('0026' , 'BD10' , 'DaPhat' , '6:23' , 'VB011')
-	insert into BANTHANG values ('0027' , 'BD10' , 'TrucTiep' , '6:59' , 'VB011')
+	insert into BANTHANG values ('0026' , 'BD10' , 'DaPhat' , '78' , 'VB011')
+	insert into BANTHANG values ('0027' , 'BD10' , 'TrucTiep' , '90' , 'VB011')
 	
 insert into TRANDAU values ('VB012' , 'BDFC' , 'DTFC' , '18-01-2020' , '7:00' , 'SVD Quy Nhon' , '10', 'VB','1','0' )
 
-	insert into BANTHANG values ('0028' , 'BD10' , 'TrucTiep' , '7:24' , 'VB012')
+	insert into BANTHANG values ('0028' , 'BD10' , 'TrucTiep' , '65' , 'VB012')
 
 insert into TRANDAU values ('VB013' , 'HAGL' , 'AGFC' , '19-01-2020' , '7:30' , 'Gia Lai' , '11', 'VB','1','1' )
 
-	insert into BANTHANG values ('0029' , 'AG08' , 'TrucTiep' , '7:39' , 'VB013')
-	insert into BANTHANG values ('0030' , 'AG10' , 'TrucTiep' , '8:23' , 'VB013')
+	insert into BANTHANG values ('0029' , 'AG08' , 'TrucTiep' , '35' , 'VB013')
+	insert into BANTHANG values ('0030' , 'AG10' , 'TrucTiep' , '49' , 'VB013')
 
 insert into TRANDAU values ('VB014' , 'HAGL' , 'DTFC' , '20-01-2020' , '4:00' , 'Gia Lai' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB015' , 'HAGL' , 'BDFC' , '21-01-2020' , '4:00' , 'Gia Lai' , '02', 'VB','0','2' )
 
-	insert into BANTHANG values ('0031' , 'BD10' , 'TrucTiep' , '4:18' , 'VB015')
-	insert into BANTHANG values ('0032' , 'BD10' , 'TrucTiep' , '4:54' , 'VB015')
+	insert into BANTHANG values ('0031' , 'BD10' , 'TrucTiep' , '18' , 'VB015')
+	insert into BANTHANG values ('0032' , 'BD10' , 'TrucTiep' , '54' , 'VB015')
 
 insert into TRANDAU values ('VB016' , 'HNFC' , 'BDFC' , '22-01-2020' , '4:30' , 'Gia Lai' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB017' , 'Ha Noi' , 'AGFC' , '23-01-2020' , '5:30' , 'Gia Lai' , '02', 'VB','0','0' )
+insert into TRANDAU values ('VB017' , 'HNFC' , 'AGFC' , '23-01-2020' , '5:30' , 'Gia Lai' , '02', 'VB','0','0' )
 
-	insert into BANTHANG values ('0033' , 'AG07' , 'DaPhat' , '5:48' , 'VB017')
-	insert into BANTHANG values ('0034' , 'AG08' , 'TrucTiep' , '6:12' , 'VB017')
+	insert into BANTHANG values ('0033' , 'AG07' , 'DaPhat' , '48' , 'VB017')
+	insert into BANTHANG values ('0034' , 'AG08' , 'TrucTiep' , '72' , 'VB017')
 
 insert into TRANDAU values ('VB018' , 'HNFC' , 'DTFC' , '24-01-2020' , '5:00' , 'Gia Lai' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB019' , 'HCMC' , 'DTFC' , '25-01-2020' , '6:00' , 'Gia Lai' , '10', 'VB','1','0' )
 
-	insert into BANTHANG values ('0035' , 'SG05' , 'Penalty' , '6:28' , 'VB019')
+	insert into BANTHANG values ('0035' , 'SG05' , 'Penalty' , '28' , 'VB019')
 
 insert into TRANDAU values ('VB020' , 'HCMC' , 'AGFC' , '26-01-2020' , '7:00' , 'Gia Lai' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB021' , 'HCMC' , 'BDFC' , '27-01-2020' , '5:30' , 'Gia Lai' , '00', 'VB','0','0' )
@@ -363,35 +396,5 @@ insert into TRANDAU values ('VB027' , 'AGFC' , 'HAGL' , '04-02-2020' , '6:00' , 
 insert into TRANDAU values ('VB028' , 'BDFC' , 'HAGL' , '05-02-2020' , '7:00' , 'SVD Quy Nhon' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB020' , 'DTFC' , 'HAGL' , '07-02-2020' , '4:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
 insert into TRANDAU values ('VB030' , 'DTFC' , 'HNFC' , '10-02-2020' , '6:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
-
-
--- BAN THANG BAN DAU
-
-
-insert into BANTHANG values ('0001' , 'HA05' , 'TrucTiep' , '4:05' , 'VB001')
-insert into BANTHANG values ('0002' , 'HA05' , 'Penalty' , '4:32' , 'VB001')
-insert into BANTHANG values ('0003' , 'HA05' , 'TrucTiep' , '4:78' , 'VB001')
-
-insert into BANTHANG values ('0004' , 'SG10' , 'TrucTiep' , '5:30 ' , 'VB002')
-insert into BANTHANG values ('0005' , 'SG10' , 'DaPhat' , '5:35 ' , 'VB002')
-insert into BANTHANG values ('0006' , 'SG10' , 'DaPhat' , '6:10 ' , 'VB002')
-
-insert into BANTHANG values ('0007' , 'SG10' , 'TrucTiep' , '7:21' , 'VB003')
-insert into BANTHANG values ('0008' , 'SG10' , 'DaPhat' , '8:26' , 'VB003')
-
-insert into BANTHANG values ('0009' , 'HA11' , 'DaPhat' , '3:30' , 'VB004')
-insert into BANTHANG values ('0010' , 'HA11' , 'DaPhat' , '3:50' , 'VB004')
-insert into BANTHANG values ('0011' , 'HA11' , 'TrucTiep' , '4:18' , 'VB004')
-
-insert into BANTHANG values ('0012' , 'SG03' , 'TrucTiep' , '7:07' , 'VB006')
-insert into BANTHANG values ('0013' , 'SG03' , 'Penalty' , '7:49' , 'VB006')
-insert into BANTHANG values ('0014' , 'SG03' , 'DaPhat' , '8:30' , 'VB006')
-
--- Tran Dau Ban Dau
-
-insert into TRANDAU values ('VB001' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '31', 'VB','3','1' )
-insert into TRANDAU values ('VB002' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '14', 'VB','1','4' )
-insert into TRANDAU values ('VB003' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '11', 'VB','1','1' )
-insert into TRANDAU values ('VB004' , 'HAGL' , 'HCMC' , '03-01-2020 ' , '5:00' , 'Gia Lai' , '33', 'VB','3','3' )
 
 
