@@ -45,6 +45,7 @@
             this.lb_gbd = new Guna.UI.WinForms.GunaButton();
             this.gunaGradientPanel3 = new Guna.UI.WinForms.GunaGradientPanel();
             this.pnlMain = new Guna.UI.WinForms.GunaPanel();
+            this.BackgroundWorker_cnstr = new System.ComponentModel.BackgroundWorker();
             this.pnl_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gunaGradientPanel3.SuspendLayout();
@@ -397,6 +398,11 @@
             this.pnlMain.Size = new System.Drawing.Size(1254, 697);
             this.pnlMain.TabIndex = 4;
             // 
+            // BackgroundWorker_cnstr
+            // 
+            this.BackgroundWorker_cnstr.WorkerReportsProgress = true;
+            this.BackgroundWorker_cnstr.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker_cnstr_DoWork);
+            // 
             // frmQLGBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -441,5 +447,6 @@
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel3;
         public Guna.UI.WinForms.GunaButton lb_gbd;
         public Guna.UI.WinForms.GunaPanel pnlMain;
+        private System.ComponentModel.BackgroundWorker BackgroundWorker_cnstr;
     }
 }

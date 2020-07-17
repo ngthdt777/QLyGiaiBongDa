@@ -7,27 +7,54 @@ using System.Data;
 using System.Windows.Forms;
 using QlyGiaiBongDa.GUI;
 using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections;
+using System.Threading;
+using System.ComponentModel;
 
-namespace QlyGiaiBongDa.BLL
+namespace QlyGiaiBongDa.DAL
 {
     public class DataProvider
     {
-        private static DataProvider instance;
+        private static readonly Lazy<DataProvider> instance = new Lazy<DataProvider>(() => new DataProvider());
+        private string connectionSTR;
+
         public static DataProvider Instance
         {
             get
             {
-                if (instance == null) instance = new DataProvider();
-                return DataProvider.instance;
+                return instance.Value;
             }
-            private set => instance = value;
+
         }
         private DataProvider() { }
 
-      //  public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True"; 
+        //public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True"; 
 
-       public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
+        //public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG1;Integrated Security=True";
 
+        public void UpdateConnection()
+        {
+            string connectionStrType = String.Format(@"Data Source={0}\SQLEXPRESS;Initial Catalog=QLPhongKham;Integrated Security=True", Environment.MachineName);
+
+            SqlConnection con = new SqlConnection(connectionStrType);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception e)
+            {
+                connectionStrType = String.Format(@"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG1;Integrated Security=True");
+                Console.WriteLine(String.Format("Exception: {0}\nNew connection string: {1}", e.Message, connectionStrType));
+            }
+            con.Close();
+
+            var config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+            config.AppSettings.Settings["ConnectionString"].Value = connectionStrType;
+            config.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+            connectionSTR = ConfigurationManager.AppSettings["ConnectionString"];
+        }
 
         public DataTable ExecuteQuery(string query)
         {

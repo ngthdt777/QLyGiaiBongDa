@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QlyGiaiBongDa.DAL;
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -17,8 +18,30 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
+        private void BackgroundWorker_cnstr_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+            DataProvider.Instance.UpdateConnection();
+
+        }
+
+
+    /*    private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            txb_account.Enabled = true;
+            txb_pass.Enabled = true;
+            btt_login.Enabled = true;
+
+            label_connectionStatus.Text = "Cập nhật connection string thành công";
+        }
+    */
+
         private void frmQLGBD_Load(object sender, EventArgs e)
         {
+            if (!BackgroundWorker_cnstr.IsBusy)
+            {
+                BackgroundWorker_cnstr.RunWorkerAsync();
+            }
             pnlMain.Controls.Add(usrHomepage.Instance);
             usrHomepage.Instance.Dock = DockStyle.Fill;
             usrHomepage.Instance.BringToFront();

@@ -8,6 +8,7 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using QlyGiaiBongDa.DAL;
 
 
 
