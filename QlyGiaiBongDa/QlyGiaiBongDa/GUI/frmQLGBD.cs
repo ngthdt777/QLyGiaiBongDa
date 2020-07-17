@@ -21,7 +21,7 @@ namespace QlyGiaiBongDa.GUI
         private void BackgroundWorker_cnstr_DoWork(object sender, DoWorkEventArgs e)
         {
 
-            DataProvider.Instance.UpdateConnection();
+        //    DataProvider.Instance.UpdateConnection();
 
         }
 
