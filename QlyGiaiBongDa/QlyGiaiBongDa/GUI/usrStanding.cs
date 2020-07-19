@@ -43,11 +43,14 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.DisplayMember = "TenDoi";
             cbb_team_name.ValueMember = "TenDoi";
             cbb_team_name.DataSource = ObjStandingBLL.Instance.GetTeam();
-           
+            dgv_BXH.DataSource = ObjStandingBLL.Instance.GetlistStanding();
+
 
         }
 
-        private void gunaButton3_Click(object sender, EventArgs e)
+
+
+        private void btt_stading_find_Click(object sender, EventArgs e)
         {
             dgv_BXH.DataSource = ObjStandingBLL.Instance.FindTeam();
         }

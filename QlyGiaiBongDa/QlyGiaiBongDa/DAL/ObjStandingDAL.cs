@@ -72,7 +72,7 @@ namespace QlyGiaiBongDa.DAL
             DataTable dt = new DataTable();
             string tendoi = usrStanding.Instance.cbb_team_name.Text;
             string LoadQuery = "SELECT MaDoi,DiemSo,BanThang,BanThua FROM DOIBONG" +
-                " where Tendoi = '"+tendoi+"' ";
+            " where Tendoi = '"+tendoi+"' ";
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 

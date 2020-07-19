@@ -31,21 +31,10 @@ namespace QlyGiaiBongDa.GUI
 
         private void usrHomepage_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btt_team_view_Click(object sender, EventArgs e)
-        {
-            dgv_Home.Visible = btt_team_add.Visible = btt_team_era.Visible = btt_team_fix.Visible = true;
-            lb_team_id.Visible = true; tb_MaDoi.Visible = true;
-            lb_team_name.Visible = true; tb_TenDoi.Visible = true;
-            lb_team_san.Visible = true; tb_SanNha.Visible = true;
-            lb_team_slg.Visible = true; cb_Team_slgct.Visible = true;
-            btt_team_view.Text = "Tải lại";
             dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
             cb_Team_slgct.Text = "0";
-
         }
+
         public static int demkhoangtrang(string str)
         {
             int bien_dem = 0;

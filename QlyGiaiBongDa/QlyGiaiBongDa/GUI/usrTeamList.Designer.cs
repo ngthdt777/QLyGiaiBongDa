@@ -212,9 +212,6 @@
             this.cb_hsdb_loaict.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_hsdb_loaict.ForeColor = System.Drawing.Color.Black;
             this.cb_hsdb_loaict.FormattingEnabled = true;
-            this.cb_hsdb_loaict.Items.AddRange(new object[] {
-            "TrongNuoc",
-            "NgoaiNuoc"});
             this.cb_hsdb_loaict.Location = new System.Drawing.Point(781, 171);
             this.cb_hsdb_loaict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_hsdb_loaict.Name = "cb_hsdb_loaict";
@@ -248,7 +245,7 @@
             this.btt_back.Image = ((System.Drawing.Image)(resources.GetObject("btt_back.Image")));
             this.btt_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_back.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_back.Location = new System.Drawing.Point(1066, 170);
+            this.btt_back.Location = new System.Drawing.Point(1066, 225);
             this.btt_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_back.Name = "btt_back";
             this.btt_back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -441,7 +438,7 @@
             this.tb_MaDoi.FocusedForeColor = System.Drawing.Color.Black;
             this.tb_MaDoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_MaDoi.ForeColor = System.Drawing.Color.Black;
-            this.tb_MaDoi.Location = new System.Drawing.Point(327, 52);
+            this.tb_MaDoi.Location = new System.Drawing.Point(327, 50);
             this.tb_MaDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_MaDoi.Name = "tb_MaDoi";
             this.tb_MaDoi.PasswordChar = '\0';
@@ -513,7 +510,7 @@
             this.dgv_HSDB.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_HSDB.EnableHeadersVisualStyles = false;
             this.dgv_HSDB.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_HSDB.Location = new System.Drawing.Point(0, 364);
+            this.dgv_HSDB.Location = new System.Drawing.Point(-1, 364);
             this.dgv_HSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_HSDB.Name = "dgv_HSDB";
             this.dgv_HSDB.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -610,7 +607,7 @@
             this.Btt_xoa.Image = ((System.Drawing.Image)(resources.GetObject("Btt_xoa.Image")));
             this.Btt_xoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_xoa.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btt_xoa.Location = new System.Drawing.Point(875, 627);
+            this.Btt_xoa.Location = new System.Drawing.Point(875, 640);
             this.Btt_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btt_xoa.Name = "Btt_xoa";
             this.Btt_xoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -618,7 +615,7 @@
             this.Btt_xoa.OnHoverForeColor = System.Drawing.Color.White;
             this.Btt_xoa.OnHoverImage = null;
             this.Btt_xoa.OnPressedColor = System.Drawing.Color.Black;
-            this.Btt_xoa.Size = new System.Drawing.Size(169, 52);
+            this.Btt_xoa.Size = new System.Drawing.Size(169, 39);
             this.Btt_xoa.TabIndex = 4;
             this.Btt_xoa.Text = "Xoá";
             this.Btt_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -638,7 +635,7 @@
             this.btt_Them.Image = ((System.Drawing.Image)(resources.GetObject("btt_Them.Image")));
             this.btt_Them.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_Them.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_Them.Location = new System.Drawing.Point(677, 627);
+            this.btt_Them.Location = new System.Drawing.Point(677, 640);
             this.btt_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_Them.Name = "btt_Them";
             this.btt_Them.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -646,7 +643,7 @@
             this.btt_Them.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_Them.OnHoverImage = null;
             this.btt_Them.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_Them.Size = new System.Drawing.Size(169, 52);
+            this.btt_Them.Size = new System.Drawing.Size(169, 39);
             this.btt_Them.TabIndex = 5;
             this.btt_Them.Text = "Thêm";
             this.btt_Them.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -666,7 +663,7 @@
             this.Btt_sua.Image = ((System.Drawing.Image)(resources.GetObject("Btt_sua.Image")));
             this.Btt_sua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btt_sua.Location = new System.Drawing.Point(1069, 627);
+            this.Btt_sua.Location = new System.Drawing.Point(1069, 640);
             this.Btt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btt_sua.Name = "Btt_sua";
             this.Btt_sua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -674,7 +671,7 @@
             this.Btt_sua.OnHoverForeColor = System.Drawing.Color.White;
             this.Btt_sua.OnHoverImage = null;
             this.Btt_sua.OnPressedColor = System.Drawing.Color.Black;
-            this.Btt_sua.Size = new System.Drawing.Size(169, 52);
+            this.Btt_sua.Size = new System.Drawing.Size(169, 39);
             this.Btt_sua.TabIndex = 6;
             this.Btt_sua.Text = "Sửa";
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

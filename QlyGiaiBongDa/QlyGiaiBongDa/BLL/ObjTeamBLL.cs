@@ -41,6 +41,10 @@ namespace QlyGiaiBongDa.BLL
             return ObjTeamDAL.Instance.LoadNameTeam();
         }
 
+        public void GetNextIDPlayer()
+        {
+            ObjTeamDAL.Instance.GetNextIDPlayer();
+        }
 
         public DataTable GetListPlayer()
         {
@@ -48,16 +52,25 @@ namespace QlyGiaiBongDa.BLL
         }
 
 
+        public void GetTeamID()
+        {
+            ObjTeamDAL.Instance.GetTeamID();
+        }
+
 
         public void AddPlayer()
         {
            ObjTeamDAL.Instance.AddPlayer();
         }
 
+        public void CountForeign()
+        {
+            ObjTeamDAL.Instance.CountForeign();
+        }
+        
 
 
-
-       public DataTable GetPlayerType()
+        public DataTable GetPlayerType()
         {
             return ObjTeamDAL.Instance.LoadPlayerType();
         }
@@ -83,11 +96,6 @@ namespace QlyGiaiBongDa.BLL
             ObjTeamDAL.Instance.DeleteTeam();
         }
 
-
-        public void Bindings()
-        {
-            ObjTeamDAL.Instance.Bindings();
-        }
 
 
 

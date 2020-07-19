@@ -49,7 +49,7 @@ namespace QlyGiaiBongDa.GUI
             cb_hsdb_loaict.DisplayMember = "LoaiCauThu";
             cb_hsdb_loaict.ValueMember = "LoaiCauThu";
             cb_hsdb_loaict.DataSource = ObjTeamBLL.Instance.GetPlayerType();
-
+        
 
         }
 
@@ -124,6 +124,7 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.AddPlayer();
+                Bindings();
 
             }
         }
@@ -133,7 +134,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_Team_View_Click(object sender, EventArgs e)
         {
-            CountForeign();
+            ObjTeamBLL.Instance.CountForeign();
             dgv_HSDB.Visible = true;
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = true;
             lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible = true;
@@ -141,8 +142,10 @@ namespace QlyGiaiBongDa.GUI
             lb_team_name.Visible = cbb_team_name.Visible= false;
             lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = true;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible= true;
-            btt_Team_View.Text = "Tải lại";
             dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
+            ObjTeamBLL.Instance.GetTeamID();
+            ObjTeamBLL.Instance.GetNextIDPlayer();
+            btt_Team_View.Visible = false;
         }
 
 
@@ -187,20 +190,6 @@ namespace QlyGiaiBongDa.GUI
         }
 
         // su kien xoa
-        private void Btn_xoa_Click_1(object sender, EventArgs e)
-        {
-            ObjTeamBLL.Instance.DeleteTeam();
-            if (tb_MaDoi.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn đội", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            ObjTeamBLL.Instance.Bindings();
-        }
-
-
-
-
-
 
 
 
@@ -225,11 +214,13 @@ namespace QlyGiaiBongDa.GUI
         private void Btt_xoa_Click(object sender, EventArgs e)
         {
             ObjTeamBLL.Instance.DeletePlayer();
+            Bindings();
         }
 
         private void Btt_sua_Click(object sender, EventArgs e)
         {
             ObjTeamBLL.Instance.UpdatePlayer();
+            Bindings();
         }
 
         private void btt_back_Click(object sender, EventArgs e)
@@ -241,32 +232,33 @@ namespace QlyGiaiBongDa.GUI
             lb_team_name.Visible = cbb_team_name.Visible = true;
             lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = false;
             btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = false;
-            btt_Team_View.Text = "Hiển thị";
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = false;
+            btt_Team_View.Visible = true;
         }
-       public string connectionSTR = DataProvider.Instance.connectionSTR;
 
-        private void CountForeign()
-        {
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                string tendoi = usrTeamList.Instance.cbb_team_name.Text;
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("Select Count(LoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG"+
-"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND LoaiCauThu = 'Ngoai Nuoc' AND DOIBONG.TenDoi = '"+tendoi+ "'",connection);
-
-                SqlDataReader da = cmd.ExecuteReader();
-                while (da.Read())
-                {
-                    usrTeamList.Instance.lb_hsdb_sctnq.Text = da.GetValue(0).ToString();
-                }
-            }
-        }
 
         private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Chọn hiển thị để xem thông tin cầu thủ");
         }
+
+        public void Bindings()
+        {
+            ObjTeamBLL.Instance.CountForeign();
+            ObjTeamBLL.Instance.GetNextIDPlayer();
+            tb_hsdb_tenct.Clear();
+            tb_hsdb_tgiantd.Clear();
+            dtp_cauthu_ngsinh.DataBindings.Clear();
+            tb_hsdb_thetrang.Clear();
+
+        } 
+
+
+
+
+
+
+
     }
 }

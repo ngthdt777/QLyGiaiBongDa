@@ -49,7 +49,9 @@ DiemSo int ,
 BanThang int,
 BanThua int,
 )
-drop table DOIBONG
+
+
+
 go
 insert into DOIBONG values ('HAGL','Hoang Anh Gia Lai','Gia Lai','10','0','0','0')
 insert into DOIBONG values ('HNFC','Ha Noi' ,'My Dinh','10','0','0','0')

@@ -8,6 +8,7 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace QlyGiaiBongDa.DAL
 {
@@ -87,6 +88,75 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+
+        public void CountForeign()
+        {
+            using (SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionSTR))
+            {
+                string tendoi = usrTeamList.Instance.cbb_team_name.Text;
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("Select Count(LoaiCauThu) AS SoCauThuNgoaiQuoc from CAUTHU, DOIBONG" +
+"               where CAUTHU.MaDoi = DOIBONG.MaDoi AND LoaiCauThu = 'Ngoai Nuoc' AND DOIBONG.TenDoi = '" + tendoi + "'", connection);
+
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    usrTeamList.Instance.lb_hsdb_sctnq.Text = da.GetValue(0).ToString();
+                }
+            }
+        }
+
+
+
+
+        public void GetTeamID()
+        {
+            using (SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionSTR))
+            {
+                string tendoi = usrTeamList.Instance.cbb_team_name.Text;
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("Select MaDoi from DOIBONG where TenDoi = '" + tendoi + "'", connection);
+
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    usrTeamList.Instance.tb_MaDoi.Text = da.GetValue(0).ToString();
+                    usrTeamList.Instance.tb_MaDoi.ReadOnly = true;
+                    usrTeamList.Instance.tb_MaDoi.TextAlign = HorizontalAlignment.Center;
+                    usrTeamList.Instance.tb_MaDoi.BaseColor = Color.DarkGray;
+                }
+            }
+        }
+
+
+        public void GetNextIDPlayer()
+        {
+
+            string tendoi = usrTeamList.Instance.cbb_team_name.Text;
+
+            using (SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionSTR))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 MaCauThu FROM DOIBONG,CAUTHU where TenDoi = '" + tendoi + "' and DOIBONG.MaDoi = CauThu.MaDoi ORDER BY MaCauThu DESC", connection);
+
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    string mact = da.GetValue(0).ToString();
+                    int nextid = Int32.Parse(mact.Substring(2, 2))+1;
+                    usrTeamList.Instance.tb_hsdb_mact.Text =  mact.Substring(0,2) + nextid.ToString() ;
+                    usrTeamList.Instance.tb_hsdb_mact.ReadOnly = true;
+                    usrTeamList.Instance.tb_hsdb_mact.TextAlign = HorizontalAlignment.Center;
+                    usrTeamList.Instance.tb_hsdb_mact.BaseColor = Color.DarkGray;
+                }
+            }
+
+
+
+        }
+
+
+
         public DataTable LoadListPlayer()
         {
             string TenDoi = usrTeamList.Instance.cbb_team_name.Text;
@@ -133,6 +203,7 @@ namespace QlyGiaiBongDa.DAL
                     if (result > 0)
                     {
                         MessageBox.Show(" Đã thêm cầu thủ ");
+                        usrTeamList.Instance.dgv_HSDB.DataSource= LoadListPlayer();
                     }
 
             }
@@ -294,18 +365,6 @@ namespace QlyGiaiBongDa.DAL
 
 
 
-        public void Bindings()
-        {
-          //  System.Windows.Forms.UserControl u = new usrTeam();
-
-            usrTeamList.Instance.tb_MaDoi.DataBindings.Clear();
-      //      usrTeam.Instance.tb_TenDoi.DataBindings.Clear();
-            usrTeamList.Instance.tb_MaDoi.DataBindings.Add(new Binding("Text", usrTeamList.Instance.dgv_HSDB.DataSource, "MaDoi"));
-        //    usrTeam.Instance.tb_TenDoi.DataBindings.Add(new Binding("Text", ((usrTeam)u).dgv_HSDB.DataSource, "TenDoi"));
-
-            // Ban thay doi cua Duy Bao
-            usrTeamList.Instance.DataBindings.Clear();
-        }
     }
 }
 
