@@ -44,11 +44,7 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.ValueMember = "TenDoi";
             cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
 
-            cb_hsdb_loaict.AutoCompleteSource = AutoCompleteSource.ListItems;
-            cb_hsdb_loaict.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb_hsdb_loaict.DisplayMember = "LoaiCauThu";
-            cb_hsdb_loaict.ValueMember = "LoaiCauThu";
-            cb_hsdb_loaict.DataSource = ObjTeamBLL.Instance.GetPlayerType();
+            cb_hsdb_loaict.Text = null;
         
 
         }
@@ -252,13 +248,15 @@ namespace QlyGiaiBongDa.GUI
             dtp_cauthu_ngsinh.DataBindings.Clear();
             tb_hsdb_thetrang.Clear();
 
-        } 
+        }
 
-
-
-
-
-
-
+        private void cb_hsdb_loaict_DropDown(object sender, EventArgs e)
+        {
+            cb_hsdb_loaict.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cb_hsdb_loaict.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_hsdb_loaict.DisplayMember = "LoaiCauThu";
+            cb_hsdb_loaict.ValueMember = "LoaiCauThu";
+            cb_hsdb_loaict.DataSource = ObjTeamBLL.Instance.GetPlayerType();
+        }
     }
 }

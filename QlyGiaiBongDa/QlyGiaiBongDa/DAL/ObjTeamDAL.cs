@@ -101,7 +101,9 @@ namespace QlyGiaiBongDa.DAL
                 SqlDataReader da = cmd.ExecuteReader();
                 while (da.Read())
                 {
-                    usrTeamList.Instance.lb_hsdb_sctnq.Text = da.GetValue(0).ToString();
+                    string slg = da.GetValue(0).ToString();
+                    usrTeamList.Instance.lb_hsdb_sctnq.Text = slg.ToString();
+                    usrTeamList.Instance.lb_hsdb_sctnq.Font = new Font("Segoe UI SemiLight", 10.2f);
                 }
             }
         }
@@ -148,6 +150,7 @@ namespace QlyGiaiBongDa.DAL
                     usrTeamList.Instance.tb_hsdb_mact.ReadOnly = true;
                     usrTeamList.Instance.tb_hsdb_mact.TextAlign = HorizontalAlignment.Center;
                     usrTeamList.Instance.tb_hsdb_mact.BaseColor = Color.DarkGray;
+                    usrTeamList.Instance.tb_hsdb_tenct.Focus();
                 }
             }
 
@@ -269,13 +272,17 @@ namespace QlyGiaiBongDa.DAL
             DataTable dt = DataProvider.Instance.ExecuteQuery(CheckQuery);
             if (dt.Rows.Count != 0)
             {
-                MessageBox.Show("Bạn có chắc sẽ xóa");
-                string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
-                string DeletePlayer = "DELETE FROM CauThu WHERE MaDoi = '" + id + "'";
-                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
-                if (result > 0)
+                var resultDialog = MessageBox.Show("Bạn có chắc muốn xóa đội bóng?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (resultDialog == DialogResult.OK)
                 {
-                    MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                    string DeletePlayer = "DELETE FROM CauThu WHERE MaDoi = '" + id + "'";
+                    int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
@@ -348,13 +355,16 @@ namespace QlyGiaiBongDa.DAL
 
             if (usrTeamList.Instance.tb_hsdb_mact.Text != "")
             {
-                MessageBox.Show("Bạn có chắc sẽ xóa");
+                var resultDialog = MessageBox.Show("Bạn có chắc muốn xóa cầu thủ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                string DeleteQuery = "DELETE FROM CAUTHU WHERE MaCauThu = '" + id + "'";
-                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
-                if (result > 0)
+                if (resultDialog == DialogResult.OK)
                 {
-                    MessageBox.Show("Cầu thủ đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string DeleteQuery = "DELETE FROM CAUTHU WHERE MaCauThu = '" + id + "'";
+                    int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Cầu thủ đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
 

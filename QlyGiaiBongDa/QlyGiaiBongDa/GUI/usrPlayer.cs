@@ -39,6 +39,7 @@ namespace QlyGiaiBongDa.GUI
         {
             //   dgv_TCCT.DataSource = ObjPlayerBLL.Instance.GetListFindPlayer();
             dgv_TCCT.DataSource = ObjPlayerBLL.Instance.LoadListPlayer();
+            Bindings();
         }
 
         private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -61,18 +62,42 @@ namespace QlyGiaiBongDa.GUI
 
         private void usrPlayer_Load_1(object sender, EventArgs e)
         {
-            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
-            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbb_team_name.DisplayMember = "TenDoi";
-            cbb_team_name.ValueMember = "TenDoi";
-            cbb_team_name.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+            cbb_team_name.Text = null;
+            
+            cb_LoaiCT.Text = null;
 
+        }
 
+        private void cb_LoaiCT_DropDown(object sender, EventArgs e)
+        {
+           
             cb_LoaiCT.AutoCompleteSource = AutoCompleteSource.ListItems;
             cb_LoaiCT.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_LoaiCT.DisplayMember = "LoaiCauThu";
             cb_LoaiCT.ValueMember = "LoaiCauThu";
             cb_LoaiCT.DataSource = ObjPlayerBLL.Instance.GetPlayerType();
+        }
+
+        private void cbb_team_name_DropDown(object sender, EventArgs e)
+        {
+            cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbb_team_name.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbb_team_name.DisplayMember = "TenDoi";
+            cbb_team_name.ValueMember = "TenDoi";
+            cbb_team_name.DataSource = ObjPlayerBLL.Instance.GetNameTeam();
+        }
+
+
+        private void  Bindings()
+        {
+            tb_HoTen.Clear();
+            tb_MaCT.Clear();
+            tb_tgian.Clear();
+            tb_tuoimax.Clear();
+            tb_tuoimin.Clear();
+            cbb_team_name.DataSource = null; 
+            cb_LoaiCT.DataSource = null;
+            //cb_LoaiSoSanh.Text = "";
         }
     }
 }

@@ -78,16 +78,17 @@ namespace QlyGiaiBongDa.GUI
                 tb_SanNha.Focus();
                 return false;
             }
-            if(tb_MaDoi.Text.Length<4 || tb_MaDoi.Text.Length>4)
+            if(tb_MaDoi.Text.Length<0 || tb_MaDoi.Text.Length>4)
             {
                 MessageBox.Show("Mã đội chỉ được nhập 4 kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            if(demkhoangtrang(tb_TenDoi.Text)<=2)
+           /* if(demkhoangtrang(tb_TenDoi.Text)<=)
             {
                 MessageBox.Show("Tên đội không được ít hơn 3 từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
+            */
             if(tb_TenDoi.Text.Length>45)
             {
                 MessageBox.Show("Tên đội quá nhiều kí tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,24 +106,30 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.AddTeam();
-              
+                Bindings();
             }
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            
         }
 
         private void btt_team_era_Click(object sender, EventArgs e)
         {
             ObjTeamBLL.Instance.DeleteTeam();
+            Bindings();
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            
+
         }
 
-  /*   public void  dgv_Home_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
+        /*   public void  dgv_Home_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+              {
 
-            tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[0].Value.ToString();
-            tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells[3].Value.ToString();
-        }
-*/
+                  tb_MaDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[0].Value.ToString();
+                  tb_TenDoi.Text = dgv_Home.Rows[e.RowIndex].Cells[1].Value.ToString();
+                  tb_SCT.Text = dgv_Home.Rows[e.RowIndex].Cells[2].Value.ToString();
+                  tb_SanNha.Text = dgv_Home.Rows[e.RowIndex].Cells[3].Value.ToString();
+              }
+      */
         private void dgv_Home_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
@@ -140,10 +147,21 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjTeamBLL.Instance.UpdateTeam();
+                Bindings();
             }
+            dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
             
+
         }
 
-        
+        private void Bindings()
+        {
+            tb_MaDoi.Clear();
+            tb_SanNha.Clear();
+            tb_TenDoi.Clear();
+            cb_Team_slgct.Text = "0";
+        }
+
+
     }
 }

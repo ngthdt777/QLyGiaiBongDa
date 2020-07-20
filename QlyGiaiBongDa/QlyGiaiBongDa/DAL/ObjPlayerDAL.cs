@@ -126,15 +126,9 @@ namespace QlyGiaiBongDa.DAL
                                 " where MaCauThu "+ id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
                                  " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +
                                  " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi";
-            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
-            int result = DataProvider.Instance.ExecuteNonQuery(LoadQuery);
-     
+           dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
-           if(result<0)
-           {
-              MessageBox.Show("Đã tìm được cầu thủ phù hợp");
-           }
-            return dt;
+           return dt;
         }
 
 

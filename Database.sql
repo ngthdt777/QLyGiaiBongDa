@@ -402,3 +402,9 @@ insert into TRANDAU values ('VB020' , 'DTFC' , 'HAGL' , '07-02-2020' , '4:00' , 
 insert into TRANDAU values ('VB030' , 'DTFC' , 'HNFC' , '10-02-2020' , '6:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
 
 
+SELECT Count (MaBanThang) as [ SoBanThang ] 
+from CAUTHU,BANTHANG 
+where CAUTHU.MaCauThu = BANTHANG.MaCauThu  
+	    having  Count (MaBanThang) >3
+GROUP by TenCauThu
+

@@ -182,7 +182,7 @@
             this.lb_hsdb_sctnq.BackColor = System.Drawing.Color.Transparent;
             this.lb_hsdb_sctnq.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_sctnq.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_sctnq.Location = new System.Drawing.Point(445, 226);
+            this.lb_hsdb_sctnq.Location = new System.Drawing.Point(370, 231);
             this.lb_hsdb_sctnq.Name = "lb_hsdb_sctnq";
             this.lb_hsdb_sctnq.Size = new System.Drawing.Size(0, 32);
             this.lb_hsdb_sctnq.TabIndex = 23;
@@ -192,11 +192,11 @@
             // 
             this.lb_hsdb_soctngoaiquoc.AutoSize = true;
             this.lb_hsdb_soctngoaiquoc.BackColor = System.Drawing.Color.Transparent;
-            this.lb_hsdb_soctngoaiquoc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hsdb_soctngoaiquoc.Font = new System.Drawing.Font("Segoe UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_soctngoaiquoc.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_soctngoaiquoc.Location = new System.Drawing.Point(171, 226);
+            this.lb_hsdb_soctngoaiquoc.Location = new System.Drawing.Point(169, 235);
             this.lb_hsdb_soctngoaiquoc.Name = "lb_hsdb_soctngoaiquoc";
-            this.lb_hsdb_soctngoaiquoc.Size = new System.Drawing.Size(278, 32);
+            this.lb_hsdb_soctngoaiquoc.Size = new System.Drawing.Size(181, 23);
             this.lb_hsdb_soctngoaiquoc.TabIndex = 22;
             this.lb_hsdb_soctngoaiquoc.Text = "Số cầu thủ ngoại quốc:";
             this.lb_hsdb_soctngoaiquoc.Visible = false;
@@ -221,6 +221,7 @@
             this.cb_hsdb_loaict.TabIndex = 21;
             this.cb_hsdb_loaict.TabStop = false;
             this.cb_hsdb_loaict.Visible = false;
+            this.cb_hsdb_loaict.DropDown += new System.EventHandler(this.cb_hsdb_loaict_DropDown);
             // 
             // dtp_cauthu_ngsinh
             // 
@@ -228,7 +229,7 @@
             this.dtp_cauthu_ngsinh.Location = new System.Drawing.Point(781, 114);
             this.dtp_cauthu_ngsinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_cauthu_ngsinh.Name = "dtp_cauthu_ngsinh";
-            this.dtp_cauthu_ngsinh.Size = new System.Drawing.Size(341, 29);
+            this.dtp_cauthu_ngsinh.Size = new System.Drawing.Size(240, 29);
             this.dtp_cauthu_ngsinh.TabIndex = 20;
             this.dtp_cauthu_ngsinh.Visible = false;
             // 
@@ -326,7 +327,7 @@
             this.tb_hsdb_tenct.Name = "tb_hsdb_tenct";
             this.tb_hsdb_tenct.PasswordChar = '\0';
             this.tb_hsdb_tenct.SelectedText = "";
-            this.tb_hsdb_tenct.Size = new System.Drawing.Size(239, 37);
+            this.tb_hsdb_tenct.Size = new System.Drawing.Size(200, 37);
             this.tb_hsdb_tenct.TabIndex = 13;
             this.tb_hsdb_tenct.Visible = false;
             // 
@@ -381,7 +382,7 @@
             this.lb_hsdb_Tenct.BackColor = System.Drawing.Color.Transparent;
             this.lb_hsdb_Tenct.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hsdb_Tenct.ForeColor = System.Drawing.Color.Black;
-            this.lb_hsdb_Tenct.Location = new System.Drawing.Point(167, 170);
+            this.lb_hsdb_Tenct.Location = new System.Drawing.Point(167, 175);
             this.lb_hsdb_Tenct.Name = "lb_hsdb_Tenct";
             this.lb_hsdb_Tenct.Size = new System.Drawing.Size(154, 32);
             this.lb_hsdb_Tenct.TabIndex = 9;
@@ -518,7 +519,7 @@
             this.dgv_HSDB.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_HSDB.RowTemplate.Height = 24;
             this.dgv_HSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_HSDB.Size = new System.Drawing.Size(1251, 259);
+            this.dgv_HSDB.Size = new System.Drawing.Size(1251, 247);
             this.dgv_HSDB.TabIndex = 3;
             this.dgv_HSDB.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_HSDB.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -607,7 +608,7 @@
             this.Btt_xoa.Image = ((System.Drawing.Image)(resources.GetObject("Btt_xoa.Image")));
             this.Btt_xoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_xoa.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btt_xoa.Location = new System.Drawing.Point(875, 640);
+            this.Btt_xoa.Location = new System.Drawing.Point(875, 632);
             this.Btt_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btt_xoa.Name = "Btt_xoa";
             this.Btt_xoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -615,7 +616,7 @@
             this.Btt_xoa.OnHoverForeColor = System.Drawing.Color.White;
             this.Btt_xoa.OnHoverImage = null;
             this.Btt_xoa.OnPressedColor = System.Drawing.Color.Black;
-            this.Btt_xoa.Size = new System.Drawing.Size(169, 39);
+            this.Btt_xoa.Size = new System.Drawing.Size(169, 45);
             this.Btt_xoa.TabIndex = 4;
             this.Btt_xoa.Text = "Xoá";
             this.Btt_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -635,7 +636,7 @@
             this.btt_Them.Image = ((System.Drawing.Image)(resources.GetObject("btt_Them.Image")));
             this.btt_Them.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_Them.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_Them.Location = new System.Drawing.Point(677, 640);
+            this.btt_Them.Location = new System.Drawing.Point(677, 632);
             this.btt_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_Them.Name = "btt_Them";
             this.btt_Them.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -643,7 +644,7 @@
             this.btt_Them.OnHoverForeColor = System.Drawing.Color.White;
             this.btt_Them.OnHoverImage = null;
             this.btt_Them.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_Them.Size = new System.Drawing.Size(169, 39);
+            this.btt_Them.Size = new System.Drawing.Size(169, 45);
             this.btt_Them.TabIndex = 5;
             this.btt_Them.Text = "Thêm";
             this.btt_Them.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -663,7 +664,7 @@
             this.Btt_sua.Image = ((System.Drawing.Image)(resources.GetObject("Btt_sua.Image")));
             this.Btt_sua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Btt_sua.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btt_sua.Location = new System.Drawing.Point(1069, 640);
+            this.Btt_sua.Location = new System.Drawing.Point(1069, 632);
             this.Btt_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btt_sua.Name = "Btt_sua";
             this.Btt_sua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -671,7 +672,7 @@
             this.Btt_sua.OnHoverForeColor = System.Drawing.Color.White;
             this.Btt_sua.OnHoverImage = null;
             this.Btt_sua.OnPressedColor = System.Drawing.Color.Black;
-            this.Btt_sua.Size = new System.Drawing.Size(169, 39);
+            this.Btt_sua.Size = new System.Drawing.Size(169, 45);
             this.Btt_sua.TabIndex = 6;
             this.Btt_sua.Text = "Sửa";
             this.Btt_sua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

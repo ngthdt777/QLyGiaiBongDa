@@ -41,7 +41,6 @@ namespace QlyGiaiBongDa.DAL
         public DataTable LoadListRoundMatch()
         {
             string vdau = usrCreateMatch.Instance.cb_VongDau.Text;
-            MessageBox.Show(vdau);
             DataTable dt = new DataTable();
 
             string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,BANTHANGDN, BANTHANGKH from VONGDAU,TRANDAU" +

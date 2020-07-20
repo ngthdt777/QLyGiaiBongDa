@@ -54,6 +54,11 @@ namespace QlyGiaiBongDa.GUI
         {
             dgv_BXH.DataSource = ObjStandingBLL.Instance.FindTeam();
         }
+
+        private void btt_Standing_back_Click(object sender, EventArgs e)
+        {
+            dgv_BXH.DataSource = ObjStandingBLL.Instance.GetlistStanding();
+        }
     }
 
     
