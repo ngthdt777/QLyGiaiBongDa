@@ -45,15 +45,17 @@ namespace QlyGiaiBongDa.DAL
             }
         }
 
-   /*     public void ExecuteReader(string query)
-        {
+   /*    public SqlDataReader ExecuteReader(string query)
+       {
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
+                return reader;
             }
-        }
+            
+       }
 */
 
 

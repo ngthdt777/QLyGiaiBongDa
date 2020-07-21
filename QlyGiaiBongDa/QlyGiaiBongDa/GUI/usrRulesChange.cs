@@ -63,17 +63,17 @@ namespace QlyGiaiBongDa.GUI
 
         private void btt_RC_Done_1_Click(object sender, EventArgs e)
         {
-            TuoiMin = Int32.Parse(nm_tuoimin.ToString());
-            TuoiMax = Int32.Parse(nm_tuoimax.ToString());
-            SoLgMin = Int32.Parse(nm_slgmin.ToString());
-            SoLgMax = Int32.Parse(nm_slgmax.ToString());
-            ForeignMax = Int32.Parse(nm_formax.ToString());
+            TuoiMin = Int32.Parse(nm_tuoimin.Value.ToString());
+            TuoiMax = Int32.Parse(nm_tuoimax.Value.ToString());
+            SoLgMin = Int32.Parse(nm_slgmin.Value.ToString());
+            SoLgMax = Int32.Parse(nm_slgmax.Value.ToString());
+            ForeignMax = Int32.Parse(nm_formax.Value.ToString());
         }
 
         private void btt_RC_Done_2_Click(object sender, EventArgs e)
         {
             
-            MaxTimeScore = Int32.Parse(nm_maxtimescore.ToString());
+            MaxTimeScore = Int32.Parse(nm_maxtimescore.Value.ToString());
         }
 
      
@@ -110,7 +110,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btn_Reload_Click(object sender, EventArgs e)
         {
-            ObjthamsoDAL.Instance.LoadGoalType();
+            dgv_LoaiBanThang.DataSource = ObjthamsoDAL.Instance.LoadGoalType();
         }
     }
 }

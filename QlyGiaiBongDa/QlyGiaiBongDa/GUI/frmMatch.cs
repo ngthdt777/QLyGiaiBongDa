@@ -51,6 +51,16 @@ namespace QlyGiaiBongDa.GUI
             cb_doikhach.DisplayMember = "MaDoi";
             cb_doikhach.ValueMember = "MaDoi";
             cb_doikhach.DataSource = ObjPlayerBLL.Instance.GetCodeTeam();
+
+
+            
+        }
+
+
+
+        private void cb_VongDau_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          //  ObjRoundBLL.Instance.GetNextMatchID();
         }
     }
 }

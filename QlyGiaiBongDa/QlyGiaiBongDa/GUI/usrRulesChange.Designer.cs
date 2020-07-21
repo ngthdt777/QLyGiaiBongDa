@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrRulesChange));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
@@ -51,6 +51,7 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.btn_Reload = new Guna.UI.WinForms.GunaButton();
             this.tb_LoaiBan = new Guna.UI.WinForms.GunaTextBox();
             this.btn_XoaBan = new Guna.UI.WinForms.GunaButton();
             this.btn_ThemBan = new Guna.UI.WinForms.GunaButton();
@@ -60,7 +61,6 @@
             this.btt_RC_Done_2 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.btn_Reload = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiBanThang)).BeginInit();
@@ -393,6 +393,33 @@
             this.gunaGroupBox1.Text = "Quy định bàn thắng-Xếp hạng";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // btn_Reload
+            // 
+            this.btn_Reload.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Reload.AnimationHoverSpeed = 0.07F;
+            this.btn_Reload.AnimationSpeed = 0.03F;
+            this.btn_Reload.BaseColor = System.Drawing.Color.Teal;
+            this.btn_Reload.BorderColor = System.Drawing.Color.Black;
+            this.btn_Reload.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Reload.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Reload.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reload.ForeColor = System.Drawing.Color.Black;
+            this.btn_Reload.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reload.Image")));
+            this.btn_Reload.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_Reload.Location = new System.Drawing.Point(740, 303);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Reload.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Reload.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Reload.OnHoverImage = null;
+            this.btn_Reload.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Reload.Size = new System.Drawing.Size(51, 39);
+            this.btn_Reload.TabIndex = 49;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
             // tb_LoaiBan
             // 
             this.tb_LoaiBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -471,8 +498,8 @@
             // 
             // dgv_LoaiBanThang
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_LoaiBanThang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_LoaiBanThang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_LoaiBanThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -480,25 +507,25 @@
             this.dgv_LoaiBanThang.BackgroundColor = System.Drawing.Color.White;
             this.dgv_LoaiBanThang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_LoaiBanThang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_LoaiBanThang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_LoaiBanThang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_LoaiBanThang.ColumnHeadersHeight = 26;
             this.dgv_LoaiBanThang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LoaiBanThang});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_LoaiBanThang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_LoaiBanThang.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_LoaiBanThang.EnableHeadersVisualStyles = false;
             this.dgv_LoaiBanThang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_LoaiBanThang.Location = new System.Drawing.Point(397, 214);
@@ -605,33 +632,6 @@
             this.gunaLabel3.Size = new System.Drawing.Size(295, 32);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Thời điểm ghi bàn tối đa";
-            // 
-            // btn_Reload
-            // 
-            this.btn_Reload.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Reload.AnimationHoverSpeed = 0.07F;
-            this.btn_Reload.AnimationSpeed = 0.03F;
-            this.btn_Reload.BaseColor = System.Drawing.Color.Teal;
-            this.btn_Reload.BorderColor = System.Drawing.Color.Black;
-            this.btn_Reload.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Reload.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Reload.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reload.ForeColor = System.Drawing.Color.Black;
-            this.btn_Reload.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reload.Image")));
-            this.btn_Reload.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_Reload.Location = new System.Drawing.Point(740, 303);
-            this.btn_Reload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Reload.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Reload.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Reload.OnHoverImage = null;
-            this.btn_Reload.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Reload.Size = new System.Drawing.Size(51, 39);
-            this.btn_Reload.TabIndex = 49;
-            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // usrRulesChange
             // 

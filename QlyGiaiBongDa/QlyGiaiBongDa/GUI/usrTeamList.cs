@@ -32,10 +32,10 @@ namespace QlyGiaiBongDa.GUI
         public usrTeamList()
         {
             InitializeComponent();
-            
+
         }
 
-       private void usrTeam_Load(object sender, EventArgs e)
+        private void usrTeam_Load(object sender, EventArgs e)
         {
             // dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListTeam();
             cbb_team_name.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -45,7 +45,7 @@ namespace QlyGiaiBongDa.GUI
             cbb_team_name.DataSource = ObjTeamBLL.Instance.GetNameTeam();
 
             cb_hsdb_loaict.Text = null;
-        
+            tb_hsdb_tgiantd.Text = "<Thi Dau ? nam>";
 
         }
 
@@ -63,7 +63,7 @@ namespace QlyGiaiBongDa.GUI
                 tb_MaDoi.Focus();
                 return false;
             }
-            if((ObjRulesChangeBLL.Instance.CheckTuoiMax() == false ) && (ObjRulesChangeBLL.Instance.CheckTuoiMin() == false))
+            if ((ObjRulesChangeBLL.Instance.CheckTuoiMax() == false) && (ObjRulesChangeBLL.Instance.CheckTuoiMin() == false))
             {
                 dtp_cauthu_ngsinh.Focus();
                 return false;
@@ -93,7 +93,7 @@ namespace QlyGiaiBongDa.GUI
 
                 return false;
             }
-            if (string.IsNullOrEmpty(tb_hsdb_tgiantd.Text))
+            if (string.IsNullOrEmpty(tb_hsdb_tgiantd.Text) || (tb_hsdb_tgiantd.Text=="<Thi Dau ? nam>"))
             {
                 MessageBox.Show("Bạn chưa nhập thời gian thi đấu của cầu thủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tb_hsdb_tgiantd.Focus();
@@ -133,11 +133,11 @@ namespace QlyGiaiBongDa.GUI
             ObjTeamBLL.Instance.CountForeign();
             dgv_HSDB.Visible = true;
             lb_hsdb_soctngoaiquoc.Visible = lb_hsdb_sctnq.Visible = true;
-            lb_team_id.Visible= lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible = true;
-            tb_MaDoi.Visible= tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = tb_hsdb_thetrang.Visible =  true;
-            lb_team_name.Visible = cbb_team_name.Visible= false;
+            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible = true;
+            tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = tb_hsdb_thetrang.Visible = true;
+            lb_team_name.Visible = cbb_team_name.Visible = false;
             lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = true;
-            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible= true;
+            btt_Them.Visible = Btt_xoa.Visible = Btt_sua.Visible = btt_back.Visible = true;
             dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
             ObjTeamBLL.Instance.GetTeamID();
             ObjTeamBLL.Instance.GetNextIDPlayer();
@@ -157,7 +157,7 @@ namespace QlyGiaiBongDa.GUI
             if (index >= 0)
             {
                 tb_MaDoi.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaDoi"].Value.ToString();
-                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();            
+                tb_hsdb_mact.Text = dgv_HSDB.Rows[e.RowIndex].Cells["MaCauThu"].Value.ToString();
                 dtp_cauthu_ngsinh.Text = dgv_HSDB.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
                 cb_hsdb_loaict.Text = dgv_HSDB.Rows[e.RowIndex].Cells["LoaiCauThu"].Value.ToString();
                 tb_hsdb_tenct.Text = dgv_HSDB.Rows[e.RowIndex].Cells["TenCauThu"].Value.ToString();
@@ -223,7 +223,7 @@ namespace QlyGiaiBongDa.GUI
         {
             btt_back.Visible = false;
             dgv_HSDB.Visible = false;
-            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible= false;
+            lb_team_id.Visible = lb_hsdb_mact.Visible = lb_hsdb_Tenct.Visible = lb_hsdb_loaict.Visible = lb_hsdb_ngsinh.Visible = lb_hsdb_thetrang.Visible = false;
             tb_MaDoi.Visible = tb_hsdb_mact.Visible = tb_hsdb_tenct.Visible = cb_hsdb_loaict.Visible = dtp_cauthu_ngsinh.Visible = tb_hsdb_thetrang.Visible = false;
             lb_team_name.Visible = cbb_team_name.Visible = true;
             lb_hsdb_tgiantd.Visible = tb_hsdb_tgiantd.Visible = false;
@@ -258,5 +258,6 @@ namespace QlyGiaiBongDa.GUI
             cb_hsdb_loaict.ValueMember = "LoaiCauThu";
             cb_hsdb_loaict.DataSource = ObjTeamBLL.Instance.GetPlayerType();
         }
+
     }
 }

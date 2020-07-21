@@ -89,6 +89,7 @@ namespace QlyGiaiBongDa.GUI
             if (CheckData())
             {
                 ObjGoalDetailBLL.Instance.AddGoal();
+                dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
             }
 
         }
@@ -110,11 +111,13 @@ namespace QlyGiaiBongDa.GUI
         private void Btt_xoa_Click(object sender, EventArgs e)
         {
             ObjGoalDetailBLL.Instance.DeleteGoal();
+            dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
         }
 
         private void Btt_sua_Click(object sender, EventArgs e)
         {
             ObjGoalDetailBLL.Instance.UpdateGoal();
+            dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
         }
 
         private void lb_Guide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

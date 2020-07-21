@@ -131,13 +131,17 @@ namespace QlyGiaiBongDa.DAL
 
             if (usrGoalDetail.Instance.tb_MaBanThang.Text != "")
             {
-                MessageBox.Show("Bạn có chắc sẽ xóa");
+                var resultDialog = MessageBox.Show("Bạn có chắc muốn xóa bàn thắng?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                string DeleteQuery = "DELETE FROM BANTHANG WHERE MaBanThang= '" + MaBan + "'";
-                int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
-                if (result > 0)
+                if (resultDialog == DialogResult.OK)
                 {
-                    MessageBox.Show("Bàn thắng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string DeleteQuery = "DELETE FROM BANTHANG WHERE MaBanThang= '" + MaBan + "'";
+                    int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Bàn thắng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
 

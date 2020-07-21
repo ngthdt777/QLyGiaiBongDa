@@ -54,7 +54,6 @@
             this.btn_PhatSinh = new Guna.UI.WinForms.GunaButton();
             this.vONGDAUTableAdapter = new QlyGiaiBongDa.QLGBDVDQGDataSet1TableAdapters.VONGDAUTableAdapter();
             this.btt_team_era = new Guna.UI.WinForms.GunaGradientButton();
-            this.btt_match_update = new Guna.UI.WinForms.GunaGradientButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vONGDAUBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLGBDVDQGDataSet1)).BeginInit();
@@ -358,7 +357,7 @@
             this.btt_team_era.Image = ((System.Drawing.Image)(resources.GetObject("btt_team_era.Image")));
             this.btt_team_era.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_era.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_team_era.Location = new System.Drawing.Point(614, 611);
+            this.btt_team_era.Location = new System.Drawing.Point(806, 611);
             this.btt_team_era.Name = "btt_team_era";
             this.btt_team_era.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btt_team_era.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -372,39 +371,10 @@
             this.btt_team_era.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btt_team_era.Click += new System.EventHandler(this.btt_team_era_Click);
             // 
-            // btt_match_update
-            // 
-            this.btt_match_update.AnimationHoverSpeed = 0.07F;
-            this.btt_match_update.AnimationSpeed = 0.03F;
-            this.btt_match_update.BaseColor1 = System.Drawing.Color.Teal;
-            this.btt_match_update.BaseColor2 = System.Drawing.Color.Teal;
-            this.btt_match_update.BorderColor = System.Drawing.Color.Black;
-            this.btt_match_update.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btt_match_update.FocusedColor = System.Drawing.Color.Empty;
-            this.btt_match_update.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_match_update.ForeColor = System.Drawing.Color.Black;
-            this.btt_match_update.Image = ((System.Drawing.Image)(resources.GetObject("btt_match_update.Image")));
-            this.btt_match_update.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_match_update.ImageSize = new System.Drawing.Size(25, 25);
-            this.btt_match_update.Location = new System.Drawing.Point(760, 611);
-            this.btt_match_update.Name = "btt_match_update";
-            this.btt_match_update.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btt_match_update.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btt_match_update.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btt_match_update.OnHoverForeColor = System.Drawing.Color.White;
-            this.btt_match_update.OnHoverImage = null;
-            this.btt_match_update.OnPressedColor = System.Drawing.Color.Black;
-            this.btt_match_update.Size = new System.Drawing.Size(183, 57);
-            this.btt_match_update.TabIndex = 24;
-            this.btt_match_update.Text = "Tải lại";
-            this.btt_match_update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btt_match_update.Click += new System.EventHandler(this.btt_match_update_Click);
-            // 
             // usrCreateMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btt_match_update);
             this.Controls.Add(this.btt_team_era);
             this.Controls.Add(this.btn_PhatSinh);
             this.Controls.Add(this.dgv_TLTD);
@@ -434,7 +404,6 @@
         public QLGBDVDQGDataSet1TableAdapters.VONGDAUTableAdapter vONGDAUTableAdapter;
         public System.Windows.Forms.ComboBox cb_VongDau;
         private Guna.UI.WinForms.GunaGradientButton btt_team_era;
-        private Guna.UI.WinForms.GunaGradientButton btt_match_update;
         public Guna.UI.WinForms.GunaDataGridView dgv_TLTD;
         private Guna.UI.WinForms.GunaLinkLabel lb_Guide;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTranDau;

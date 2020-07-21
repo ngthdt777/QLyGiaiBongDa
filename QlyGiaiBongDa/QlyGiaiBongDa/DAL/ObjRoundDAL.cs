@@ -8,6 +8,7 @@ using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Drawing;
 
 
 namespace QlyGiaiBongDa.DAL
@@ -66,8 +67,8 @@ namespace QlyGiaiBongDa.DAL
             string santhidau = ((frmMatch)f).tb_match_court.Text;
             string vongdau = ((frmMatch)f).cb_VongDau.Text;
             string Tiso = ((frmMatch)f).tb_match_tiso.Text;
-            string BanThang = ((frmMatch)f).tb_BanthangNha.Text;
-            string BanThua = ((frmMatch)f).Tb_BanThangKh.Text;
+            string BanThang = Tiso.Substring(0, 1) ;
+            string BanThua = Tiso.Substring(1, 1);
             string Gio = ((frmMatch)f).tb_GioThiDau.Text;
         
 
@@ -140,6 +141,51 @@ namespace QlyGiaiBongDa.DAL
             }
             return dt;
         }
+
+   /*     public void GetNextMatchID()
+        {
+
+                frmMatch.Instance.tb_match_id.Text = "";
+                string vdau = frmMatch.Instance.cb_VongDau.Text;
+                string matd;
+                string Query ="Select TOP 1 MaTranDau from TRANDAU,VONGDAU where TenVongDau = '" +vdau +"' and TRANDAU.MaVongDau = VONGDAU.MaVongDau ORDER BY MaTranDau DESC";
+
+                SqlDataReader da = DataProvider.Instance.ExecuteReader(Query);
+                while (da.Read())
+                {
+                    matd = da.GetValue(0).ToString();
+                    int nextid = Int32.Parse(matd.Substring(2, 3)) + 1;
+                    frmMatch.Instance.tb_match_id.Text = matd.Substring(0, 3) + nextid.ToString();
+                    frmMatch.Instance.tb_match_id.ReadOnly = true;
+                    frmMatch.Instance.tb_match_id.TextAlign = HorizontalAlignment.Center;
+                    frmMatch.Instance.tb_match_id.BaseColor = Color.DarkGray;
+                    frmMatch.Instance.cb_doinha.Focus();
+                    
+                    
+                }
+
+                if (frmMatch.Instance.tb_match_id.Text == "")
+                {
+
+                    string Query_second = "Select MaVongDau from VONGDAU where TenVongDau = '" + vdau + "'";
+
+                    da = DataProvider.Instance.ExecuteReader(Query_second);
+                    while (da.Read())
+                    {
+                        matd = da.GetValue(0).ToString() + "001";
+                        frmMatch.Instance.tb_match_id.Text = matd;
+                        frmMatch.Instance.tb_match_id.ReadOnly = true;
+                        frmMatch.Instance.tb_match_id.TextAlign = HorizontalAlignment.Center;
+                        frmMatch.Instance.tb_match_id.BaseColor = Color.DarkGray;
+                        frmMatch.Instance.cb_doinha.Focus();
+
+                    }
+
+                }
+
+
+
+        }*/
 
 
 

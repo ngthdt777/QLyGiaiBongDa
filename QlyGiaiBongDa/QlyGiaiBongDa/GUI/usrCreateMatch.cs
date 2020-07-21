@@ -65,13 +65,14 @@ namespace QlyGiaiBongDa.GUI
 
         private void btn_PhatSinh_Click(object sender, EventArgs e)
         {
-            frmMatch f = new frmMatch();
-            f.ShowDialog();
+            frmMatch.Instance.ShowDialog();
+
         }
 
         private void btt_team_era_Click(object sender, EventArgs e)
         {
             ObjRoundBLL.Instance.DeleteMatch();
+            dgv_TLTD.DataSource = ObjRoundBLL.Instance.GetListRoundMatch();
         }
   //-------------------------------------------------------------------------------------------------------------------
 

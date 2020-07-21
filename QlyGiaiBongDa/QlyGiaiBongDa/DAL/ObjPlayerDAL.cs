@@ -110,7 +110,7 @@ namespace QlyGiaiBongDa.DAL
                 tuoi_max = "<"+ "(SELECT CAST('" + usrPlayer.Instance.tb_tuoimax.Text + "' as int))";
             else tuoi_max = "is not null";
 
-            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tgian.Text))
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tgian.Text) || (usrPlayer.Instance.tb_tgian.Text!="<Thi Dau ? nam>"))
                 tgian = "='" + usrPlayer.Instance.tb_tgian.Text + "'";
             else tgian= "is not null";
 

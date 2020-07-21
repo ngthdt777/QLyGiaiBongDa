@@ -62,5 +62,12 @@ namespace QlyGiaiBongDa.BLL
             return ObjMatchDAL.Instance.LoadRound();
         }
 
+
+    /*    public void GetNextMatchID()
+        {
+            ObjRoundDAL.Instance.GetNextMatchID();
+        }
+        */
+
     }
 }

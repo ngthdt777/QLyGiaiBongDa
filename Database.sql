@@ -119,7 +119,7 @@ INSERT into LOAIBANTHANG values ('DaPhat')
 
 
 go 
-drop trigger CapNhatDiem
+
 create Trigger CapNhatDiem on TRANDAU for INSERT, UPDATE
 as 
 BEGIN
@@ -192,10 +192,6 @@ BEGIN
 	WHERE MaDoi=@MADOI;
 END
 
-
-DELETE FROM CAUTHU WHERE MaCauThu='HA03'
-
-DELETE FROM CAUTHU WHERE MaDoi = 'HAGL'
 
 ---------------------------------------------------------------------------------
 	
@@ -285,6 +281,7 @@ DELETE FROM CAUTHU WHERE MaDoi = 'HAGL'
  insert into CAUTHU values ( 'BD10', 'Thanos', '01-01-1990', 'Ngoai Nuoc' , 'Thi Dau 100 nam' ,'Rat khoe manh', 'BDFC')
 ------------------------------------------------TRAN DAU-----------------------------
 
+DELETE FROM CAUTHU Where LoaiCauThu = 'TrongNuoc' or LoaiCauThu ='NgoaiNuoc'
 
 
 
@@ -387,24 +384,37 @@ insert into TRANDAU values ('VB019' , 'HCMC' , 'DTFC' , '25-01-2020' , '6:00' , 
 
 	insert into BANTHANG values ('0035' , 'SG05' , 'Penalty' , '28' , 'VB019')
 
-insert into TRANDAU values ('VB020' , 'HCMC' , 'AGFC' , '26-01-2020' , '7:00' , 'Gia Lai' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB021' , 'HCMC' , 'BDFC' , '27-01-2020' , '5:30' , 'Gia Lai' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB022' , 'AGFC' , 'HCMC' , '28-01-2020' , '4:00' , 'SVD An Giang' , '00', 'VB','0','0' )	
-insert into TRANDAU values ('VB023' , 'BDFC' , 'HNFC' , '29-01-2020' , '4:30' , 'SVD Quy Nhon' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB024' , 'AGFC' , 'HNFC' , '30-01-2020' , '4:00' , 'SVD An Giang' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB025' , 'DTFC' , 'HCMC' , '02-02-2020' , '5:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB026' , 'BDFC' , 'HCMC' , '03-02-2020' , '6:00' , 'SVD Quy Nhon' , '00', 'VB','0','0' )
+insert into TRANDAU values ('VB020' , 'HCMC' , 'AGFC' , '26-01-2020' , '7:00' , 'Gia Lai' , null, 'VB',null,null )
+insert into TRANDAU values ('VB021' , 'HCMC' , 'BDFC' , '27-01-2020' , '5:30' , 'Gia Lai' , null, 'VB',null,null )
+insert into TRANDAU values ('VB022' , 'AGFC' , 'HCMC' , '28-01-2020' , '4:00' , 'SVD An Giang' , null, 'VB',null,null)	
+insert into TRANDAU values ('VB023' , 'BDFC' , 'HNFC' , '29-01-2020' , '4:30' , 'SVD Quy Nhon' , null, 'VB',null,null )
+insert into TRANDAU values ('VB024' , 'AGFC' , 'HNFC' , '30-01-2020' , '4:00' , 'SVD An Giang' , null, 'VB',null,null )
+insert into TRANDAU values ('VB025' , 'DTFC' , 'HCMC' , '02-02-2020' , '5:00' , 'SVD Dong Thap' , null, 'VB',null,null )
+insert into TRANDAU values ('VB026' , 'BDFC' , 'HCMC' , '03-02-2020' , '6:00' , 'SVD Quy Nhon' , null, 'VB',null,null )
 
 
-insert into TRANDAU values ('VB027' , 'AGFC' , 'HAGL' , '04-02-2020' , '6:00' , 'SVD An Giang' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB028' , 'BDFC' , 'HAGL' , '05-02-2020' , '7:00' , 'SVD Quy Nhon' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB020' , 'DTFC' , 'HAGL' , '07-02-2020' , '4:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
-insert into TRANDAU values ('VB030' , 'DTFC' , 'HNFC' , '10-02-2020' , '6:00' , 'SVD Dong Thap' , '00', 'VB','0','0' )
+insert into TRANDAU values ('VB027' , 'AGFC' , 'HAGL' , '04-02-2020' , '6:00' , 'SVD An Giang' , null, 'VB',null,null )
+insert into TRANDAU values ('VB028' , 'BDFC' , 'HAGL' , '05-02-2020' , '7:00' , 'SVD Quy Nhon' ,null, 'VB',null,null )
+insert into TRANDAU values ('VB020' , 'DTFC' , 'HAGL' , '07-02-2020' , '4:00' , 'SVD Dong Thap' ,null, 'VB',null,null )
+insert into TRANDAU values ('VB030' , 'DTFC' , 'HNFC' , '10-02-2020' , '6:00' , 'SVD Dong Thap' ,null, 'VB',null,null )
+
 
 
 SELECT Count (MaBanThang) as [ SoBanThang ] 
 from CAUTHU,BANTHANG 
-where CAUTHU.MaCauThu = BANTHANG.MaCauThu  
-	    having  Count (MaBanThang) >3
+where CAUTHU.MaCauThu = BANTHANG.MaCauThu   
 GROUP by TenCauThu
 
+
+SELECT CAUTHU.MaCauThu,TenCauThu,DATEDIFF(YY,NgaySinh,GETDATE()) AS [AGE],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang,Count (MaBanThang) as [ SoBanThang ] FROM CAUTHU,DOIBONG,BANTHANG
+where CAUTHU.MaCauThu is not null and TenCauThu is not null and LoaiCauThu is not null 
+	and DOIBONG.TenDoi is not null and ThoiGianThiDau='Thi dau 3 nam' and TinhTrang='Khoe manh'
+	and DATEDIFF(YY,NgaySinh,GETDATE()) >18 and DATEDIFF(YY,NgaySinh,GETDATE()) <30 and CAUTHU.MaCauThu = BANTHANG.MaCauThu  and CAUTHU.MaDoi = DOIBONG.MaDoi
+GROUP BY CAUTHU.MaCauThu,TenCauThu,NgaySinh,LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang
+
+Select MaVongDau from VONGDAU where TenVongDau = 'BanKet'  and TRANDAU.MaVongDau = VONGDAU.MaVongDau
+
+
+SELECT TenCauThu, TenDoi, LoaiCauThu, COUNT(BANTHANG.MaCauThu) as [Số Bàn Thắng ]FROM DOIBONG, CAUTHU, BANTHANG, TRANDAU
+           where DOIBONG.MaDoi = CAUTHU.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu and BANTHANG.MaTranDau = TRANDAU.MaTranDau and TRANDAU.MaVongDau = 'VB' 
+          GROUP BY TenCauThu,TenDoi,LoaiCauThu

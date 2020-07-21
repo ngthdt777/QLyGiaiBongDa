@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Guna.UI.WinForms.GunaLabel lb_player_id;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.cb_LoaiCT = new Guna.UI.WinForms.GunaComboBox();
@@ -44,8 +44,6 @@
             this.tb_tuoimax = new Guna.UI.WinForms.GunaTextBox();
             this.tb_tuoimin = new Guna.UI.WinForms.GunaTextBox();
             this.tb_tgian = new Guna.UI.WinForms.GunaTextBox();
-            this.cb_LoaiSoSanh = new Guna.UI.WinForms.GunaComboBox();
-            this.nmc_BanThang = new Guna.UI.WinForms.GunaNumeric();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,6 +62,7 @@
             this.ThoiGianThiDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
+            this.cb_sobanthang = new System.Windows.Forms.ComboBox();
             lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
@@ -112,6 +111,7 @@
             this.gb_HSDB.BackColor = System.Drawing.Color.Transparent;
             this.gb_HSDB.BaseColor = System.Drawing.Color.White;
             this.gb_HSDB.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gb_HSDB.Controls.Add(this.cb_sobanthang);
             this.gb_HSDB.Controls.Add(this.cb_LoaiCT);
             this.gb_HSDB.Controls.Add(this.cbb_team_name);
             this.gb_HSDB.Controls.Add(this.tb_thetrang);
@@ -120,8 +120,6 @@
             this.gb_HSDB.Controls.Add(this.tb_tuoimax);
             this.gb_HSDB.Controls.Add(this.tb_tuoimin);
             this.gb_HSDB.Controls.Add(this.tb_tgian);
-            this.gb_HSDB.Controls.Add(this.cb_LoaiSoSanh);
-            this.gb_HSDB.Controls.Add(this.nmc_BanThang);
             this.gb_HSDB.Controls.Add(this.label5);
             this.gb_HSDB.Controls.Add(this.label4);
             this.gb_HSDB.Controls.Add(this.label3);
@@ -265,7 +263,7 @@
             // 
             // tb_tgian
             // 
-            this.tb_tgian.BaseColor = System.Drawing.Color.White;
+            this.tb_tgian.BaseColor = System.Drawing.Color.Gainsboro;
             this.tb_tgian.BorderColor = System.Drawing.Color.Silver;
             this.tb_tgian.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_tgian.FocusedBaseColor = System.Drawing.Color.White;
@@ -280,49 +278,7 @@
             this.tb_tgian.SelectedText = "";
             this.tb_tgian.Size = new System.Drawing.Size(155, 37);
             this.tb_tgian.TabIndex = 18;
-            // 
-            // cb_LoaiSoSanh
-            // 
-            this.cb_LoaiSoSanh.BackColor = System.Drawing.Color.Transparent;
-            this.cb_LoaiSoSanh.BaseColor = System.Drawing.Color.White;
-            this.cb_LoaiSoSanh.BorderColor = System.Drawing.Color.Silver;
-            this.cb_LoaiSoSanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_LoaiSoSanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_LoaiSoSanh.FocusedColor = System.Drawing.Color.Empty;
-            this.cb_LoaiSoSanh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_LoaiSoSanh.ForeColor = System.Drawing.Color.Black;
-            this.cb_LoaiSoSanh.FormattingEnabled = true;
-            this.cb_LoaiSoSanh.Items.AddRange(new object[] {
-            ">",
-            ">=",
-            "<",
-            "<=",
-            "="});
-            this.cb_LoaiSoSanh.Location = new System.Drawing.Point(768, 98);
-            this.cb_LoaiSoSanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cb_LoaiSoSanh.Name = "cb_LoaiSoSanh";
-            this.cb_LoaiSoSanh.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cb_LoaiSoSanh.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cb_LoaiSoSanh.Size = new System.Drawing.Size(115, 30);
-            this.cb_LoaiSoSanh.TabIndex = 17;
-            // 
-            // nmc_BanThang
-            // 
-            this.nmc_BanThang.BaseColor = System.Drawing.Color.White;
-            this.nmc_BanThang.BorderColor = System.Drawing.Color.Silver;
-            this.nmc_BanThang.ButtonColor = System.Drawing.Color.Gray;
-            this.nmc_BanThang.ButtonForeColor = System.Drawing.Color.White;
-            this.nmc_BanThang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmc_BanThang.ForeColor = System.Drawing.Color.Black;
-            this.nmc_BanThang.Location = new System.Drawing.Point(905, 98);
-            this.nmc_BanThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nmc_BanThang.Maximum = ((long)(9999999));
-            this.nmc_BanThang.Minimum = ((long)(0));
-            this.nmc_BanThang.Name = "nmc_BanThang";
-            this.nmc_BanThang.Size = new System.Drawing.Size(75, 30);
-            this.nmc_BanThang.TabIndex = 16;
-            this.nmc_BanThang.Text = "gunaNumeric3";
-            this.nmc_BanThang.Value = ((long)(0));
+            this.tb_tgian.Text = "<Thi Dau ? nam>";
             // 
             // label5
             // 
@@ -478,8 +434,8 @@
             // 
             // dgv_TCCT
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgv_TCCT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -487,14 +443,14 @@
             this.dgv_TCCT.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_TCCT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TCCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_TCCT.ColumnHeadersHeight = 30;
             this.dgv_TCCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
@@ -502,14 +458,14 @@
             this.LoaiCauThu,
             this.ThoiGianThiDau,
             this.TenDoi});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgv_TCCT.EnableHeadersVisualStyles = false;
             this.dgv_TCCT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.Location = new System.Drawing.Point(3, 340);
@@ -580,6 +536,69 @@
             this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
             this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
             // 
+            // cb_sobanthang
+            // 
+            this.cb_sobanthang.DropDownHeight = 100;
+            this.cb_sobanthang.FormattingEnabled = true;
+            this.cb_sobanthang.IntegralHeight = false;
+            this.cb_sobanthang.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50"});
+            this.cb_sobanthang.Location = new System.Drawing.Point(768, 99);
+            this.cb_sobanthang.MaxDropDownItems = 5;
+            this.cb_sobanthang.Name = "cb_sobanthang";
+            this.cb_sobanthang.Size = new System.Drawing.Size(72, 36);
+            this.cb_sobanthang.TabIndex = 28;
+            // 
             // usrPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -606,7 +625,6 @@
         private Guna.UI.WinForms.GunaLabel lb_player_name;
         private Guna.UI.WinForms.GunaLabel lb_player_type;
         private Guna.UI.WinForms.GunaLabel lb_player_team;
-        private Guna.UI.WinForms.GunaNumeric nmc_BanThang;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -615,7 +633,6 @@
         public Guna.UI.WinForms.GunaTextBox tb_HoTen;
         public Guna.UI.WinForms.GunaTextBox tb_MaCT;
         public Guna.UI.WinForms.GunaTextBox tb_tgian;
-        public Guna.UI.WinForms.GunaComboBox cb_LoaiSoSanh;
         public Guna.UI.WinForms.GunaTextBox tb_tuoimax;
         public Guna.UI.WinForms.GunaTextBox tb_tuoimin;
         public Guna.UI.WinForms.GunaDataGridView dgv_TCCT;
@@ -630,5 +647,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         public Guna.UI.WinForms.GunaComboBox cb_LoaiCT;
+        public System.Windows.Forms.ComboBox cb_sobanthang;
     }
 }
