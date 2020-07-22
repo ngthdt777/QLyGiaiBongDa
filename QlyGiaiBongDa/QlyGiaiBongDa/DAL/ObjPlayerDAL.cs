@@ -85,7 +85,7 @@ namespace QlyGiaiBongDa.DAL
 
 
             if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_MaCT.Text))
-                id = "='"+usrPlayer.Instance.tb_MaCT.Text+"'";
+                id = "='"+ usrPlayer.Instance.tb_MaCT.Text+"'";
             else id = "is not null";
 
             if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_HoTen.Text))
@@ -110,18 +110,19 @@ namespace QlyGiaiBongDa.DAL
                 tuoi_max = "<"+ "(SELECT CAST('" + usrPlayer.Instance.tb_tuoimax.Text + "' as int))";
             else tuoi_max = "is not null";
 
-            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tgian.Text) || (usrPlayer.Instance.tb_tgian.Text!="<Thi Dau ? nam>"))
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_tgian.Text) && (usrPlayer.Instance.tb_tgian.Text!="<Thi Dau ? nam>"))
                 tgian = "='" + usrPlayer.Instance.tb_tgian.Text + "'";
             else tgian= "is not null";
 
 
-            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_thetrang.Text))
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_thetrang.Text)) 
                 thetrang = "='" + usrPlayer.Instance.tb_thetrang.Text + "'";
             else thetrang = "is not null";
 
 
 
             DataTable dt = new DataTable();
+
             string LoadQuery = "SELECT DISTINCT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[Tuổi Cầu Thủ],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang FROM CAUTHU,DOIBONG" +
                                 " where MaCauThu "+ id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
                                  " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +

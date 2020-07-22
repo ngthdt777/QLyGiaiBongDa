@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             Guna.UI.WinForms.GunaLabel lb_player_id;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
+            this.cb_sobanthang = new System.Windows.Forms.ComboBox();
             this.cb_LoaiCT = new Guna.UI.WinForms.GunaComboBox();
             this.cbb_team_name = new Guna.UI.WinForms.GunaComboBox();
             this.tb_thetrang = new Guna.UI.WinForms.GunaTextBox();
@@ -62,7 +63,6 @@
             this.ThoiGianThiDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
-            this.cb_sobanthang = new System.Windows.Forms.ComboBox();
             lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
@@ -141,6 +141,69 @@
             this.gb_HSDB.TabIndex = 2;
             this.gb_HSDB.Text = "Thông tin tìm kiếm";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // cb_sobanthang
+            // 
+            this.cb_sobanthang.DropDownHeight = 100;
+            this.cb_sobanthang.FormattingEnabled = true;
+            this.cb_sobanthang.IntegralHeight = false;
+            this.cb_sobanthang.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50"});
+            this.cb_sobanthang.Location = new System.Drawing.Point(768, 99);
+            this.cb_sobanthang.MaxDropDownItems = 5;
+            this.cb_sobanthang.Name = "cb_sobanthang";
+            this.cb_sobanthang.Size = new System.Drawing.Size(72, 36);
+            this.cb_sobanthang.TabIndex = 28;
             // 
             // cb_LoaiCT
             // 
@@ -434,8 +497,8 @@
             // 
             // dgv_TCCT
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_TCCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_TCCT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -443,14 +506,14 @@
             this.dgv_TCCT.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_TCCT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TCCT.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TCCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TCCT.ColumnHeadersHeight = 30;
             this.dgv_TCCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCauThu,
@@ -458,14 +521,14 @@
             this.LoaiCauThu,
             this.ThoiGianThiDau,
             this.TenDoi});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_TCCT.EnableHeadersVisualStyles = false;
             this.dgv_TCCT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.Location = new System.Drawing.Point(3, 340);
@@ -536,69 +599,6 @@
             this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
             this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
             // 
-            // cb_sobanthang
-            // 
-            this.cb_sobanthang.DropDownHeight = 100;
-            this.cb_sobanthang.FormattingEnabled = true;
-            this.cb_sobanthang.IntegralHeight = false;
-            this.cb_sobanthang.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50"});
-            this.cb_sobanthang.Location = new System.Drawing.Point(768, 99);
-            this.cb_sobanthang.MaxDropDownItems = 5;
-            this.cb_sobanthang.Name = "cb_sobanthang";
-            this.cb_sobanthang.Size = new System.Drawing.Size(72, 36);
-            this.cb_sobanthang.TabIndex = 28;
-            // 
             // usrPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,7 +621,6 @@
 
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
-        private Guna.UI.WinForms.GunaButton btn_TimKiem;
         private Guna.UI.WinForms.GunaLabel lb_player_name;
         private Guna.UI.WinForms.GunaLabel lb_player_type;
         private Guna.UI.WinForms.GunaLabel lb_player_team;
@@ -648,5 +647,6 @@
         public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         public Guna.UI.WinForms.GunaComboBox cb_LoaiCT;
         public System.Windows.Forms.ComboBox cb_sobanthang;
+        public Guna.UI.WinForms.GunaButton btn_TimKiem;
     }
 }

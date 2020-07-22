@@ -32,36 +32,6 @@ namespace QlyGiaiBongDa.GUI
             InitializeComponent();
         }
 
-        private void btn_CapNhat_Click(object sender, EventArgs e)
-        {
-            dgv_TLTD.DataSource = ObjRoundBLL.Instance.GetListRoundMatch();
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.vONGDAUTableAdapter.FillBy(this.qLGBDVDQGDataSet1.VONGDAU);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.vONGDAUTableAdapter.FillBy(this.qLGBDVDQGDataSet1.VONGDAU);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
 
         private void btn_PhatSinh_Click(object sender, EventArgs e)
         {
@@ -77,11 +47,7 @@ namespace QlyGiaiBongDa.GUI
   //-------------------------------------------------------------------------------------------------------------------
 
 
-        private void dgv_TLTD_CellStyleContentChanged(object sender, DataGridViewCellStyleContentChangedEventArgs e)
-        {
-
-        }
-
+  
         private void btt_match_update_Click(object sender, EventArgs e)
         {
             ObjRoundBLL.Instance.GetListRoundMatch();
@@ -160,6 +126,11 @@ namespace QlyGiaiBongDa.GUI
             cb_VongDau.DataSource = ObjRoundBLL.Instance.GetRound();
             cb_VongDau.Text = " Chọn vòng đấu ";
             
+        }
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            dgv_TLTD.DataSource = ObjRoundBLL.Instance.GetListRoundMatch();
         }
     }
 }

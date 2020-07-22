@@ -30,17 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrCreateMatch));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_creatematch = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.lb_Guide = new Guna.UI.WinForms.GunaLinkLabel();
             this.cb_VongDau = new System.Windows.Forms.ComboBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btn_CapNhat = new Guna.UI.WinForms.GunaButton();
+            this.btn_timkiem = new Guna.UI.WinForms.GunaButton();
             this.vONGDAUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLGBDVDQGDataSet1 = new QlyGiaiBongDa.QLGBDVDQGDataSet1();
             this.dgv_TLTD = new Guna.UI.WinForms.GunaDataGridView();
             this.MaTranDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoiChuNha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,11 +51,9 @@
             this.BANTHANGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BANTHANGKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_PhatSinh = new Guna.UI.WinForms.GunaButton();
-            this.vONGDAUTableAdapter = new QlyGiaiBongDa.QLGBDVDQGDataSet1TableAdapters.VONGDAUTableAdapter();
             this.btt_team_era = new Guna.UI.WinForms.GunaGradientButton();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vONGDAUBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLGBDVDQGDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TLTD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +90,7 @@
             this.gb_HSDB.Controls.Add(this.lb_Guide);
             this.gb_HSDB.Controls.Add(this.cb_VongDau);
             this.gb_HSDB.Controls.Add(this.gunaLabel1);
-            this.gb_HSDB.Controls.Add(this.btn_CapNhat);
+            this.gb_HSDB.Controls.Add(this.btn_timkiem);
             this.gb_HSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_HSDB.LineColor = System.Drawing.Color.Gainsboro;
             this.gb_HSDB.Location = new System.Drawing.Point(3, 77);
@@ -143,45 +140,39 @@
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Vòng thi đấu";
             // 
-            // btn_CapNhat
+            // btn_timkiem
             // 
-            this.btn_CapNhat.AnimationHoverSpeed = 0.07F;
-            this.btn_CapNhat.AnimationSpeed = 0.03F;
-            this.btn_CapNhat.BaseColor = System.Drawing.Color.Transparent;
-            this.btn_CapNhat.BorderColor = System.Drawing.Color.Black;
-            this.btn_CapNhat.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_CapNhat.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_CapNhat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CapNhat.ForeColor = System.Drawing.Color.Black;
-            this.btn_CapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhat.Image")));
-            this.btn_CapNhat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_CapNhat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_CapNhat.Location = new System.Drawing.Point(757, 55);
-            this.btn_CapNhat.Name = "btn_CapNhat";
-            this.btn_CapNhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_CapNhat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_CapNhat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_CapNhat.OnHoverImage = null;
-            this.btn_CapNhat.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_CapNhat.Size = new System.Drawing.Size(42, 37);
-            this.btn_CapNhat.TabIndex = 20;
-            this.btn_CapNhat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_CapNhat.Click += new System.EventHandler(this.btn_CapNhat_Click);
+            this.btn_timkiem.AnimationHoverSpeed = 0.07F;
+            this.btn_timkiem.AnimationSpeed = 0.03F;
+            this.btn_timkiem.BaseColor = System.Drawing.Color.Transparent;
+            this.btn_timkiem.BorderColor = System.Drawing.Color.Black;
+            this.btn_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_timkiem.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_timkiem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.Black;
+            this.btn_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_timkiem.Image")));
+            this.btn_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_timkiem.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_timkiem.Location = new System.Drawing.Point(757, 55);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_timkiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_timkiem.OnHoverImage = null;
+            this.btn_timkiem.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_timkiem.Size = new System.Drawing.Size(42, 37);
+            this.btn_timkiem.TabIndex = 20;
+            this.btn_timkiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
             // vONGDAUBindingSource
             // 
             this.vONGDAUBindingSource.DataMember = "VONGDAU";
-            this.vONGDAUBindingSource.DataSource = this.qLGBDVDQGDataSet1;
-            // 
-            // qLGBDVDQGDataSet1
-            // 
-            this.qLGBDVDQGDataSet1.DataSetName = "QLGBDVDQGDataSet1";
-            this.qLGBDVDQGDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgv_TLTD
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_TLTD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_TLTD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_TLTD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -189,14 +180,14 @@
             this.dgv_TLTD.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_TLTD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TLTD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TLTD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TLTD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_TLTD.ColumnHeadersHeight = 30;
             this.dgv_TLTD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTranDau,
@@ -208,14 +199,14 @@
             this.TySo,
             this.BANTHANGDN,
             this.BANTHANGKH});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TLTD.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TLTD.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_TLTD.EnableHeadersVisualStyles = false;
             this.dgv_TLTD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TLTD.Location = new System.Drawing.Point(3, 221);
@@ -339,10 +330,6 @@
             this.btn_PhatSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_PhatSinh.Click += new System.EventHandler(this.btn_PhatSinh_Click);
             // 
-            // vONGDAUTableAdapter
-            // 
-            this.vONGDAUTableAdapter.ClearBeforeFill = true;
-            // 
             // btt_team_era
             // 
             this.btt_team_era.AnimationHoverSpeed = 0.07F;
@@ -386,7 +373,6 @@
             this.gb_HSDB.ResumeLayout(false);
             this.gb_HSDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vONGDAUBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLGBDVDQGDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TLTD)).EndInit();
             this.ResumeLayout(false);
 
@@ -396,12 +382,10 @@
 
         private Guna.UI.WinForms.GunaButton lb_creatematch;
         private Guna.UI.WinForms.GunaGroupBox gb_HSDB;
-        private Guna.UI.WinForms.GunaButton btn_CapNhat;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaButton btn_PhatSinh;
         public System.Windows.Forms.BindingSource vONGDAUBindingSource;
-        public QLGBDVDQGDataSet1 qLGBDVDQGDataSet1;
-        public QLGBDVDQGDataSet1TableAdapters.VONGDAUTableAdapter vONGDAUTableAdapter;
+      
         public System.Windows.Forms.ComboBox cb_VongDau;
         private Guna.UI.WinForms.GunaGradientButton btt_team_era;
         public Guna.UI.WinForms.GunaDataGridView dgv_TLTD;
@@ -415,5 +399,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TySo;
         private System.Windows.Forms.DataGridViewTextBoxColumn BANTHANGDN;
         private System.Windows.Forms.DataGridViewTextBoxColumn BANTHANGKH;
+        public Guna.UI.WinForms.GunaButton btn_timkiem;
     }
 }

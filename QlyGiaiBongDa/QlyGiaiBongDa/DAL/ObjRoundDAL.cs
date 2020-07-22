@@ -44,8 +44,8 @@ namespace QlyGiaiBongDa.DAL
             string vdau = usrCreateMatch.Instance.cb_VongDau.Text;
             DataTable dt = new DataTable();
 
-            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,BANTHANGDN, BANTHANGKH from VONGDAU,TRANDAU" +
-            " where VONGDAU.TenVongDau = '"+vdau+ "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau";
+            string LoadQuery = "select MaTranDau, DoiChuNha, DoiKhach,NgayThiDau,GioThiDau,SanThiDau,TySo,BANTHANGDN,BANTHANGKH from TRANDAU, VONGDAU"+
+           " where TenVongDau= '"+vdau+"'  and   VongDau.MaVongDau = TranDau.MaVongDau  ";
                
 
             dt = DataProvider.Instance.ExecuteQuery(LoadQuery);

@@ -37,8 +37,7 @@ namespace QlyGiaiBongDa.GUI
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            //   dgv_TCCT.DataSource = ObjPlayerBLL.Instance.GetListFindPlayer();
-            dgv_TCCT.DataSource = ObjPlayerBLL.Instance.LoadListPlayer();
+            dgv_TCCT.DataSource = ObjPlayerBLL.Instance.GetListFindPlayer();         
             Bindings();
         }
 

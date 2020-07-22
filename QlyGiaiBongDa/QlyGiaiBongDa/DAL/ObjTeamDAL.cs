@@ -276,19 +276,21 @@ namespace QlyGiaiBongDa.DAL
 
                 if (resultDialog == DialogResult.OK)
                 {
-                    string DeleteQuery = "DELETE FROM DOIBONG WHERE MaDoi = '" + id + "'";
+                    string DeleteQuery = "DELETE DOIBONG WHERE MaDoi = '" +id+ "'";
 
-                    string DeletePlayer = "DELETE FROM CauThu WHERE MaDoi = '" + id + "'";
+                    string DeletePlayer = "DELETE CauThu WHERE MaDoi = '" +id+ "'";
 
-                    string DeleteMatch = "DELETE FROM TRANDAU" +
-                                        "where(DoiChuNha = '" + id + "' and TySo is null)" +
-                                        "or(DoiKhach = '" + id + "' and TySo is null)";
+                    string DeleteMatch1 = "DELETE TRANDAU Where DoiChuNha = '" +id+ "' ";
+
+                    string DeleteMatch2 = "DELETE TRANDAU Where DoiKhach = '" +id+ "' ";
+
 
                     int result = DataProvider.Instance.ExecuteNonQuery(DeleteQuery);
                     if (result > 0)
                     {
                         DataProvider.Instance.ExecuteNonQuery(DeletePlayer);
-                        DataProvider.Instance.ExecuteNonQuery(DeleteMatch);
+                        DataProvider.Instance.ExecuteNonQuery(DeleteMatch1);
+                        DataProvider.Instance.ExecuteNonQuery(DeleteMatch2);
 
                         MessageBox.Show("Đội bóng đã bị xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
