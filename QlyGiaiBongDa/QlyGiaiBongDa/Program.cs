@@ -17,7 +17,7 @@ namespace QlyGiaiBongDa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQLGBD());
+            Application.Run(new frmLogin());
 
         }
     }
