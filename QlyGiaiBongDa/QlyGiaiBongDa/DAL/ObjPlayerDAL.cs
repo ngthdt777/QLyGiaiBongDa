@@ -81,7 +81,7 @@ namespace QlyGiaiBongDa.DAL
 
         public DataTable LoadListFindPlayer()
         {
-            string id, ten, loaict, doibong, tuoi_min, tuoi_max, tgian,thetrang;
+            string id, ten, loaict, doibong, tuoi_min, tuoi_max, tgian,thetrang,sobanthang;
 
 
             if (!string.IsNullOrEmpty(usrPlayer.Instance.tb_MaCT.Text))
@@ -119,14 +119,31 @@ namespace QlyGiaiBongDa.DAL
                 thetrang = "='" + usrPlayer.Instance.tb_thetrang.Text + "'";
             else thetrang = "is not null";
 
-
+            if (!string.IsNullOrEmpty(usrPlayer.Instance.cb_sobanthang.Text))
+                sobanthang = "='" + usrPlayer.Instance.cb_sobanthang.Text + "'";
+            else sobanthang = "is not null";
 
             DataTable dt = new DataTable();
 
-            string LoadQuery = "SELECT DISTINCT MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[Tuổi Cầu Thủ],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang FROM CAUTHU,DOIBONG" +
-                                " where MaCauThu "+ id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
+            string LoadQuery;
+
+            if (string.IsNullOrEmpty(usrPlayer.Instance.cb_sobanthang.Text) || usrPlayer.Instance.cb_sobanthang.Text == "0")
+            {
+                LoadQuery = "SELECT DISTINCT CAUTHU.MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[TuoiCauThu],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang FROM CAUTHU,DOIBONG" +
+                                " where CAUTHU.MaCauThu " + id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
                                  " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +
-                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi";
+                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi ";
+                                 
+            }
+            else
+            {
+                LoadQuery = "SELECT DISTINCT CAUTHU.MaCauThu,TenCauThu,DATEDIFF(YY, NgaySinh, GETDATE()) AS[TuoiCauThu],LoaiCauThu,TenDoi,ThoiGianThiDau,TinhTrang,Count(MaBanThang) As [ Số Bàn Thắng ] FROM CAUTHU,DOIBONG,BANTHANG" +
+                                " where CAUTHU.MaCauThu " + id + " and TenCauThu " + ten + " and LoaiCauThu " + loaict + " " +
+                                 " and DOIBONG.TenDoi " + doibong + "  and ThoiGianThiDau " + tgian + " and TinhTrang " + thetrang + " " +
+                                 " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_min + " and DATEDIFF(YY, NgaySinh, GETDATE())" + tuoi_max + " and CAUTHU.MaDoi = DOIBONG.MaDoi and CAUTHU.MaCauThu = BANTHANG.MaCauThu " +
+                                 "GROUP BY CAUTHU.MaCauThu,TenCauThu,LoaiCauThu,ThoiGianThiDau,TinhTrang,CAUTHU.MaDoi,NgaySinh,TenDoi " +
+                                 "Having COUNT(MaBanThang) " + sobanthang;
+            }
            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
 
            return dt;

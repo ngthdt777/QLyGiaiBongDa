@@ -86,6 +86,16 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+        public DataTable LoadRound()
+        {
+            DataTable dt = new DataTable();
+            string LoadQuery = "SELECT TenVongDau from VONGDAU";
+            dt = DataProvider.Instance.ExecuteQuery(LoadQuery);
+            return dt;
+        }
+
+
+
         public void UpdateMatch()
         {
             System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["frmMatch"];
@@ -115,7 +125,35 @@ namespace QlyGiaiBongDa.DAL
         }
 
 
+        public Boolean CheckID()
+        {
+            int matd_updating = Int32.Parse(frmMatch.Instance.tb_match_id.Text.Substring(2, 3));
+            string vdau = frmMatch.Instance.cb_VongDau.Text;
 
+            using (SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionSTR))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 MaTranDau " +
+                    "from  TRANDAU,VONGDAU " +
+                    "where TRANDAU.MaVongDau = '" + vdau + "' and TRANDAU.MaVongDau = VONGDAU.MaVongDau ORDER BY MaTranDAu DESC", connection);
+
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    int matd_having = Int32.Parse(da.GetValue(0).ToString().Substring(2, 3)) ;
+                    if ( (matd_updating - 1) == matd_having )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã Trận Đấu mới nhất là: " + matd_having + ". Vui lòng điền lại Mã Trận Đấu","Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
 
 
 

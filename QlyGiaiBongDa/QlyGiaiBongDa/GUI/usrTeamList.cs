@@ -121,7 +121,7 @@ namespace QlyGiaiBongDa.GUI
             {
                 ObjTeamBLL.Instance.AddPlayer();
                 Bindings();
-
+                dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
             }
         }
 
@@ -211,12 +211,14 @@ namespace QlyGiaiBongDa.GUI
         {
             ObjTeamBLL.Instance.DeletePlayer();
             Bindings();
+            dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
         }
 
         private void Btt_sua_Click(object sender, EventArgs e)
         {
             ObjTeamBLL.Instance.UpdatePlayer();
             Bindings();
+            dgv_HSDB.DataSource = ObjTeamBLL.Instance.GetListPlayer();
         }
 
         private void btt_back_Click(object sender, EventArgs e)

@@ -77,7 +77,6 @@
     <Compile Include="DAL\ObjTeamDAL.cs" />
     <Compile Include="DAL\ObjPlayerTypeDAL.cs" />
     <Compile Include="DAL\ObjthamsoDAL.cs" />
-    <Compile Include="DAL\ObjMatchDAL.cs" />
     <Compile Include="DAL\ObjRoundDAL.cs" />
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>

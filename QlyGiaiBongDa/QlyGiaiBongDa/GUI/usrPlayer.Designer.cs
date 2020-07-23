@@ -33,7 +33,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usrPlayer));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gb_HSDB = new Guna.UI.WinForms.GunaGroupBox();
             this.cb_sobanthang = new System.Windows.Forms.ComboBox();
@@ -57,12 +62,14 @@
             this.lb_player_type = new Guna.UI.WinForms.GunaLabel();
             this.lb_player_team = new Guna.UI.WinForms.GunaLabel();
             this.dgv_TCCT = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             this.MaCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianThiDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
+            this.TuoiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             lb_player_id = new Guna.UI.WinForms.GunaLabel();
             this.gb_HSDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TCCT)).BeginInit();
@@ -520,15 +527,17 @@
             this.TenCauThu,
             this.LoaiCauThu,
             this.ThoiGianThiDau,
-            this.TenDoi});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TinhTrang,
+            this.TenDoi,
+            this.TuoiCauThu});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TCCT.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_TCCT.EnableHeadersVisualStyles = false;
             this.dgv_TCCT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.Location = new System.Drawing.Point(3, 340);
@@ -563,9 +572,17 @@
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_TCCT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // gunaImageReplaceColor1
+            // 
+            this.gunaImageReplaceColor1.Image = null;
+            this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
+            this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
+            // 
             // MaCauThu
             // 
             this.MaCauThu.DataPropertyName = "MaCauThu";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaCauThu.DefaultCellStyle = dataGridViewCellStyle3;
             this.MaCauThu.HeaderText = "Mã Cầu Thủ";
             this.MaCauThu.Name = "MaCauThu";
             // 
@@ -578,6 +595,8 @@
             // LoaiCauThu
             // 
             this.LoaiCauThu.DataPropertyName = "LoaiCauThu";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LoaiCauThu.DefaultCellStyle = dataGridViewCellStyle4;
             this.LoaiCauThu.HeaderText = "Loại Cầu Thủ";
             this.LoaiCauThu.Name = "LoaiCauThu";
             // 
@@ -587,17 +606,29 @@
             this.ThoiGianThiDau.HeaderText = "Thời gian thi đấu";
             this.ThoiGianThiDau.Name = "ThoiGianThiDau";
             // 
+            // TinhTrang
+            // 
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TinhTrang.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TinhTrang.HeaderText = "Tình Trạng";
+            this.TinhTrang.Name = "TinhTrang";
+            // 
             // TenDoi
             // 
             this.TenDoi.DataPropertyName = "TenDoi";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TenDoi.DefaultCellStyle = dataGridViewCellStyle6;
             this.TenDoi.HeaderText = "Tên Đội";
             this.TenDoi.Name = "TenDoi";
             // 
-            // gunaImageReplaceColor1
+            // TuoiCauThu
             // 
-            this.gunaImageReplaceColor1.Image = null;
-            this.gunaImageReplaceColor1.NewColor = System.Drawing.Color.Empty;
-            this.gunaImageReplaceColor1.OldColor = System.Drawing.Color.White;
+            this.TuoiCauThu.DataPropertyName = "TuoiCauThu";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TuoiCauThu.DefaultCellStyle = dataGridViewCellStyle7;
+            this.TuoiCauThu.HeaderText = "Tuổi Cầu Thủ";
+            this.TuoiCauThu.Name = "TuoiCauThu";
             // 
             // usrPlayer
             // 
@@ -639,14 +670,16 @@
         private Guna.UI.WinForms.GunaImageReplaceColor gunaImageReplaceColor1;
         public Guna.UI.WinForms.GunaTextBox tb_thetrang;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianThiDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
         public Guna.UI.WinForms.GunaComboBox cbb_team_name;
         public Guna.UI.WinForms.GunaComboBox cb_LoaiCT;
         public System.Windows.Forms.ComboBox cb_sobanthang;
         public Guna.UI.WinForms.GunaButton btn_TimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianThiDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TuoiCauThu;
     }
 }
