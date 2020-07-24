@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 
 
+
 namespace QlyGiaiBongDa.DAL
 {
     class banthang
@@ -77,7 +78,7 @@ namespace QlyGiaiBongDa.DAL
             return dt;
         }
 
-       
+      
      
 
     }

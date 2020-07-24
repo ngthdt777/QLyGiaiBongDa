@@ -27,7 +27,7 @@ namespace QlyGiaiBongDa.DAL
             private set => instance = value;
         }
         private DataProvider() { }
-        public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLGBDVDQG;Integrated Security=True"; //-- MayDat
+        public string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLYGIAIBD;Integrated Security=True"; //-- MayDat
 
         //public string connectionSTR = @"Data Source=DESKTOP-9OUV00A;Initial Catalog=QLGBDVDQG;Integrated Security=True";
 

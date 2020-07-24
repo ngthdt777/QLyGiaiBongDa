@@ -162,6 +162,5 @@ namespace QlyGiaiBongDa.GUI
             cb_Team_slgct.Text = "0";
         }
 
-
     }
 }

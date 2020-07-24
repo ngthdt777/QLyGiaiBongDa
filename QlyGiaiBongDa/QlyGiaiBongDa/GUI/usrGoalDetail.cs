@@ -80,6 +80,7 @@ namespace QlyGiaiBongDa.GUI
             cb1.ValueMember = "LoaiBanThang";
             cb1.DataSource = ObjGoalDetailBLL.Instance.GetGoalType(); 
             dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
+            ObjGoalDetailBLL.Instance.GetNextIDGoal();
         }
 
 
@@ -90,6 +91,7 @@ namespace QlyGiaiBongDa.GUI
             {
                 ObjGoalDetailBLL.Instance.AddGoal();
                 dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
+                ObjGoalDetailBLL.Instance.GetNextIDGoal();
             }
 
         }
@@ -112,6 +114,7 @@ namespace QlyGiaiBongDa.GUI
         {
             ObjGoalDetailBLL.Instance.DeleteGoal();
             dgv_CTBT.DataSource = ObjGoalDetailBLL.Instance.GetListGoal();
+            ObjGoalDetailBLL.Instance.GetNextIDGoal();
         }
 
         private void Btt_sua_Click(object sender, EventArgs e)

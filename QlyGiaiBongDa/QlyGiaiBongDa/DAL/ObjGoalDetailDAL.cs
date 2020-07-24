@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 using QlyGiaiBongDa.GUI;
 using QlyGiaiBongDa.BLL;
-
+using System.Drawing;
 
 
 
@@ -145,6 +145,30 @@ namespace QlyGiaiBongDa.DAL
                 }
             }
 
+        }
+
+
+
+        public void GetNextIDGoal()
+        {
+
+            using (SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionSTR))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 MaBanThang FROM BANTHANG ORDER BY MaBanThang DESC", connection);
+
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    string mabt = da.GetValue(0).ToString();
+                    int nextid = Int32.Parse(mabt.Substring(2, 2)) + 1;
+                    usrGoalDetail.Instance.tb_MaBanThang.Text = mabt.Substring(0, 2) + nextid.ToString();
+                    usrGoalDetail.Instance.tb_MaBanThang.ReadOnly = true;
+                    usrGoalDetail.Instance.tb_MaBanThang.TextAlign = HorizontalAlignment.Center;
+                    usrGoalDetail.Instance.tb_MaBanThang.BaseColor = Color.DarkGray;
+                    usrGoalDetail.Instance.tb_MaCauThu.Focus();
+                }
+            }
         }
     }
 }

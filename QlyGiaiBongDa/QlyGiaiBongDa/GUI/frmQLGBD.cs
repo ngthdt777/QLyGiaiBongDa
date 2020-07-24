@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QlyGiaiBongDa.DAL;
+using QlyGiaiBongDa.BLL;
 
 namespace QlyGiaiBongDa.GUI
 {
@@ -79,13 +80,19 @@ namespace QlyGiaiBongDa.GUI
         private void btt_homepage_Click(object sender, EventArgs e)
         {
             if (!pnlMain.Controls.Contains(usrHomepage.Instance))
-            {
+            {                
                 pnlMain.Controls.Add(usrHomepage.Instance);
                 usrHomepage.Instance.Dock = DockStyle.Fill;
                 usrHomepage.Instance.BringToFront();
+                usrHomepage.Instance.dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+
             }
             else
+            {
                 usrHomepage.Instance.BringToFront();
+                usrHomepage.Instance.dgv_Home.DataSource = ObjTeamBLL.Instance.GetListTeam();
+            }
+                
         }
 
         private void btt_dieule_Click(object sender, EventArgs e)

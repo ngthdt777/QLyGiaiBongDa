@@ -55,5 +55,12 @@ namespace QlyGiaiBongDa.BLL
         {
           return  ObjGoalDetailDAL.Instance.LoadGoalType();
         }
+
+
+        public void GetNextIDGoal()
+        {
+            ObjGoalDetailDAL.Instance.GetNextIDGoal();
+        }
+
     }
 }

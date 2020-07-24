@@ -41,7 +41,8 @@ namespace QlyGiaiBongDa.BLL
         public DataTable GetRound()
         {
             return ObjGoalDAL.Instance.LoadRound();
-         }
-        
+        }
+
+
     }
 }

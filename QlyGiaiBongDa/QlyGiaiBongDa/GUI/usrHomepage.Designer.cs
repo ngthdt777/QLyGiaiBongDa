@@ -168,7 +168,7 @@
             this.gb_HSDB.Location = new System.Drawing.Point(3, 2);
             this.gb_HSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_HSDB.Name = "gb_HSDB";
-            this.gb_HSDB.Size = new System.Drawing.Size(1248, 279);
+            this.gb_HSDB.Size = new System.Drawing.Size(1231, 279);
             this.gb_HSDB.TabIndex = 11;
             this.gb_HSDB.Text = "Thông tin đội bóng";
             this.gb_HSDB.TextLocation = new System.Drawing.Point(10, 8);
